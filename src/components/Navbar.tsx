@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useSession, signIn, signOut } from 'next-auth/react'
 import { useState } from 'react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -24,10 +25,12 @@ export default function Navbar() {
                 <div className="flex justify-between h-16">
                     <div className="flex items-center">
                         <Link href="/" className="flex-shrink-0 flex items-center space-x-3">
-                            <img
+                            <Image
                                 src="/logo.png"
                                 alt="Selçuk Karateke Logo"
-                                className="h-10 w-10 rounded-full object-cover border-2 border-brand-primary/30"
+                                width={40}
+                                height={40}
+                                className="rounded-full object-cover border-2 border-brand-primary/30"
                             />
                             <span className="text-2xl font-bold theme-text">Selçuk Karateke</span>
                         </Link>

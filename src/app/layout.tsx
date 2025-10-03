@@ -1,9 +1,12 @@
 import { ReactNode } from 'react'
 import Link from 'next/link'
+import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import AuthProvider from '@/components/providers/AuthProvider'
 // import Web3Provider from '@/components/providers/Web3Provider'
 import './globals.css'
+
+const inter = Inter({ subsets: ['latin'] })
 
 interface LayoutProps {
   children: ReactNode
@@ -12,10 +15,7 @@ interface LayoutProps {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <head>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-      </head>
-      <body className="min-h-screen bg-gray-50 font-inter">
+      <body className={`min-h-screen bg-gray-50 dark:bg-gray-900 ${inter.className}`}>
         <AuthProvider>
           {/* <Web3Provider> */}
           <Navbar />
