@@ -51,9 +51,9 @@ export default function RootLayout({ children }: LayoutProps) {
                 <div>
                   <h4 className="text-lg font-semibold mb-4">Rechtliches</h4>
                   <ul className="space-y-2">
-                    <li><a href="/impressum" className="text-gray-300 hover:text-white transition-colors">Imprint</a></li>
-                    <li><a href="/privacy" className="text-gray-300 hover:text-white transition-colors">Privacy</a></li>
-                    <li><a href="/terms" className="text-gray-300 hover:text-white transition-colors">Terms</a></li>
+                    <li><Link href="/imprint" className="text-gray-300 hover:text-white transition-colors">Imprint</Link></li>
+                    <li><Link href="/privacy" className="text-gray-300 hover:text-white transition-colors">Privacy</Link></li>
+                    <li><Link href="/terms" className="text-gray-300 hover:text-white transition-colors">Terms</Link></li>
                   </ul>
                 </div>
               </div>
