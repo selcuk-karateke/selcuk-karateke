@@ -12,7 +12,7 @@ export default function AGB() {
                             <p className="text-gray-600">
                                 Diese Allgemeinen Geschäftsbedingungen gelten für alle Dienstleistungen und
                                 Produkte von Selçuk Karateke, Möckernstraße 115, 10963 Berlin (nachfolgend
-                                "Anbieter" oder "wir").
+                                &quot;Anbieter&quot; oder &quot;wir&quot;).
                             </p>
                         </div>
 

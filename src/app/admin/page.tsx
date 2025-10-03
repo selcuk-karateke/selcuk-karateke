@@ -217,7 +217,7 @@ export default function AdminDashboard() {
                             <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                             <div className="flex-1">
                                 <p className="font-semibold text-gray-900">Blog-Post veröffentlicht</p>
-                                <p className="text-sm text-gray-600">"Web3-Integration in Next.js" - vor 1 Tag</p>
+                                <p className="text-sm text-gray-600">&quot;Web3-Integration in Next.js&quot; - vor 1 Tag</p>
                             </div>
                         </div>
                         <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">

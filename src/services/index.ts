@@ -1,4 +1,15 @@
 // Services Layer - Business Logic
+
+interface ProjectInput {
+    title: string
+    description: string
+    image?: string
+    technologies: string[]
+    githubUrl?: string
+    liveUrl?: string
+    featured?: boolean
+}
+
 export class ProjectService {
     static async getAllProjects() {
         const { prisma } = await import('@/lib/prisma')
@@ -22,26 +33,25 @@ export class ProjectService {
         })
     }
 
-    static async createProject(data: {
-        title: string
-        description: string
-        image?: string
-        technologies: string[]
-        githubUrl?: string
-        liveUrl?: string
-        featured?: boolean
-    }) {
+    static async createProject(data: ProjectInput) {
         const { prisma } = await import('@/lib/prisma')
         return prisma.project.create({
-            data
+            data: {
+                ...data,
+                technologies: data.technologies.join(', ')
+            }
         })
     }
 
-    static async updateProject(id: string, data: any) {
+    static async updateProject(id: string, data: Partial<ProjectInput>) {
         const { prisma } = await import('@/lib/prisma')
+        const updateData: Record<string, unknown> = { ...data }
+        if (data.technologies) {
+            updateData.technologies = data.technologies.join(', ')
+        }
         return prisma.project.update({
             where: { id },
-            data
+            data: updateData
         })
     }
 

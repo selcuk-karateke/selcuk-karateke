@@ -3,7 +3,7 @@ import { prisma } from '@/lib/prisma'
 
 export async function POST(
     request: NextRequest,
-    { params }: { params: { slug: string } }
+    { params }: { params: Promise<{ slug: string }> }
 ) {
     try {
         const { author, email, content } = await request.json()
@@ -12,9 +12,12 @@ export async function POST(
             return NextResponse.json({ error: 'All fields are required' }, { status: 400 })
         }
 
+        // Await params in Next.js 15
+        const { slug } = await params
+
         // Find the post by slug
         const post = await prisma.post.findUnique({
-            where: { slug: params.slug }
+            where: { slug }
         })
 
         if (!post) {

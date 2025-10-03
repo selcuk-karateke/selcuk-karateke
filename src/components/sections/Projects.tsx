@@ -31,7 +31,7 @@ export default function Projects() {
                 description: 'Robust Laravel Backend with API development and database integration. Complete REST API with authentication and authorization.',
                 technologies: ['Laravel', 'PHP', 'MySQL', 'API', 'Authentication'],
                 githubUrl: 'https://github.com/selcuk-karateke/laravel-backend',
-                liveUrl: null,
+                liveUrl: undefined,
                 featured: true
             },
             {
@@ -40,7 +40,7 @@ export default function Projects() {
                 description: 'Interactive Counter application with modern UI/UX design. Demonstrates state management and responsive design principles.',
                 technologies: ['PHP', 'JavaScript', 'HTML5', 'CSS3'],
                 githubUrl: 'https://github.com/selcuk-karateke/counter',
-                liveUrl: null,
+                liveUrl: undefined,
                 featured: true
             },
             {
@@ -49,7 +49,7 @@ export default function Projects() {
                 description: 'Event Management System for invitations and events. Features include RSVP tracking and guest management.',
                 technologies: ['JavaScript', 'HTML5', 'CSS3', 'Event Management'],
                 githubUrl: 'https://github.com/selcuk-karateke/event-einladung',
-                liveUrl: null,
+                liveUrl: undefined,
                 featured: true
             },
             {
@@ -58,7 +58,7 @@ export default function Projects() {
                 description: 'Local development environment with Docker and automated deployment scripts. Optimized for PHP development.',
                 technologies: ['PHP', 'Docker', 'Development Environment', 'Automation'],
                 githubUrl: 'https://github.com/selcuk-karateke/dev.karafinds.local',
-                liveUrl: null,
+                liveUrl: undefined,
                 featured: false
             },
             {

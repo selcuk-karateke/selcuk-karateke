@@ -63,7 +63,7 @@ export default function Contact() {
                         Contact
                     </h2>
                     <p className="text-xl theme-text-secondary max-w-3xl mx-auto">
-                        Let's talk about your next project
+                        Let&apos;s talk about your next project
                     </p>
                 </motion.div>
 

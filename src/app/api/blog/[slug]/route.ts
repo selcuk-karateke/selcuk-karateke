@@ -3,10 +3,11 @@ import { BlogService } from '@/services'
 
 export async function GET(
     request: NextRequest,
-    { params }: { params: { slug: string } }
+    { params }: { params: Promise<{ slug: string }> }
 ) {
     try {
-        const post = await BlogService.getPostBySlug(params.slug)
+        const { slug } = await params
+        const post = await BlogService.getPostBySlug(slug)
         if (!post) {
             return NextResponse.json({ error: 'Post not found' }, { status: 404 })
         }

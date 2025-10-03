@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import AuthProvider from '@/components/providers/AuthProvider'
 // import Web3Provider from '@/components/providers/Web3Provider'
@@ -39,11 +40,11 @@ export default function RootLayout({ children }: LayoutProps) {
                 <div>
                   <h4 className="text-lg font-semibold mb-4">Navigation</h4>
                   <ul className="space-y-2">
-                    <li><a href="/" className="text-gray-300 hover:text-white transition-colors">Start</a></li>
-                    <li><a href="/about" className="text-gray-300 hover:text-white transition-colors">Über mich</a></li>
-                    <li><a href="/projects" className="text-gray-300 hover:text-white transition-colors">Projekte</a></li>
-                    <li><a href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</a></li>
-                    <li><a href="/contact" className="text-gray-300 hover:text-white transition-colors">Kontakt</a></li>
+                    <li><Link href="/" className="text-gray-300 hover:text-white transition-colors">Start</Link></li>
+                    <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">Über mich</Link></li>
+                    <li><Link href="/projects" className="text-gray-300 hover:text-white transition-colors">Projekte</Link></li>
+                    <li><Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
+                    <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Kontakt</Link></li>
                   </ul>
                 </div>
 

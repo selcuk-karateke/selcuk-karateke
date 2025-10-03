@@ -24,7 +24,7 @@ export default function Datenschutz() {
                             <p className="text-gray-600 mb-4">
                                 <strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br />
                                 Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber.
-                                Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle"
+                                Dessen Kontaktdaten können Sie dem Abschnitt &quot;Hinweis zur Verantwortlichen Stelle&quot;
                                 in dieser Datenschutzerklärung entnehmen.
                             </p>
                             <p className="text-gray-600">
