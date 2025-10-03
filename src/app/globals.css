@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #A63D33;
+    --color-secondary: #D9985F;
+    --color-bg: #ffffff;
+    --color-bg-secondary: #f8fafc;
+    --color-text: #1e293b;
+    --color-text-secondary: #64748b;
+    --color-border: #e2e8f0;
+  }
+
+  [data-theme="dark"] {
+    --color-primary: #f97316;
+    --color-secondary: #fbbf24;
+    --color-bg: #0f172a;
+    --color-bg-secondary: #1e293b;
+    --color-text: #f1f5f9;
+    --color-text-secondary: #cbd5e1;
+    --color-border: #334155;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@layer components {
+  .glass {
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    backdrop-filter: blur(8px);
+  }
+  
+  .gradient-text {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-lg;
+  }
+
+  .theme-bg {
+    background-color: var(--color-bg);
+  }
+
+  .theme-bg-secondary {
+    background-color: var(--color-bg-secondary);
+  }
+
+  .theme-text {
+    color: var(--color-text);
+  }
+
+  .theme-text-secondary {
+    color: var(--color-text-secondary);
+  }
+
+  .theme-border {
+    border-color: var(--color-border);
+  }
+
+  .theme-primary {
+    color: var(--color-primary);
+  }
+
+  .theme-primary-bg {
+    background-color: var(--color-primary);
+  }
+
+  .theme-secondary {
+    color: var(--color-secondary);
+  }
+
+  .theme-secondary-bg {
+    background-color: var(--color-secondary);
+  }
+
+  /* High contrast variants for better readability */
+  .theme-text-high-contrast {
+    color: var(--color-text);
+    font-weight: 600;
+  }
+
+  .theme-bg-card {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  [data-theme="dark"] .theme-bg-card {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .floating {
+    animation: floating 6s ease-in-out infinite;
+  }
+  
+  .floating-delay-2 {
+    animation: floating 6s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+  
+  .floating-delay-3 {
+    animation: floating 6s ease-in-out infinite;
+    animation-delay: 3s;
+  }
+  
+  .floating-delay-4 {
+    animation: floating 6s ease-in-out infinite;
+    animation-delay: 4s;
+  }
+  
+  @keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+}
