@@ -117,6 +117,31 @@ export default function Datenschutz() {
                             </p>
                         </div>
 
+                        <div className="mb-8">
+                            <h3 className="text-xl font-semibold text-gray-700 mb-3">Facebook/Meta Integration</h3>
+                            <p className="text-gray-600 mb-4">
+                                Diese Website kann mit Facebook/Meta-Diensten integriert werden. Bei der Nutzung
+                                dieser Integration werden folgende Daten verarbeitet:
+                            </p>
+                            <ul className="list-disc list-inside text-gray-600 ml-4 mb-4">
+                                <li>Facebook App ID und Secret für Authentifizierung</li>
+                                <li>Benutzerdaten bei Facebook-Login (Name, E-Mail, Profilbild)</li>
+                                <li>Session-Daten für die Anmeldung</li>
+                            </ul>
+                            <p className="text-gray-600 mb-4">
+                                <strong>Zweck der Verarbeitung:</strong> Bereitstellung von Login-Funktionalität
+                                und Integration mit Facebook-Diensten.
+                            </p>
+                            <p className="text-gray-600 mb-4">
+                                <strong>Rechtsgrundlage:</strong> Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.
+                            </p>
+                            <p className="text-gray-600">
+                                <strong>Datenlöschung:</strong> Sie können Ihre Daten jederzeit löschen lassen.
+                                Weitere Informationen finden Sie auf unserer Seite zur
+                                <a href="/data-deletion" className="text-blue-600 hover:text-blue-800 underline">Datenlöschung</a>.
+                            </p>
+                        </div>
+
                         <h2 className="text-2xl font-semibold text-gray-800 mb-4">6. eRecht24 Safe Sharing</h2>
 
                         <div className="mb-8">
