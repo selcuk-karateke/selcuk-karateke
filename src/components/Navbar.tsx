@@ -58,7 +58,7 @@ export default function Navbar() {
                                         onClick={() => signOut()}
                                         className="theme-primary-bg hover:opacity-90 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
                                     >
-                                        Abmelden
+                                        Sign Out
                                     </button>
                                 </>
                             ) : (
@@ -66,7 +66,7 @@ export default function Navbar() {
                                     onClick={() => signIn()}
                                     className="theme-primary-bg hover:opacity-90 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
                                 >
-                                    Anmelden
+                                    Sign In
                                 </button>
                             )}
                         </div>
@@ -116,7 +116,7 @@ export default function Navbar() {
                                         }}
                                         className="bg-red-600 hover:bg-red-700 text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium mt-2"
                                     >
-                                        Abmelden
+                                        Sign Out
                                     </button>
                                 </div>
                             ) : (
@@ -127,7 +127,7 @@ export default function Navbar() {
                                     }}
                                     className="bg-blue-600 hover:bg-blue-700 text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium mt-2"
                                 >
-                                    Anmelden
+                                    Sign In
                                 </button>
                             )}
                         </div>
