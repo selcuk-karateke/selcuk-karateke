@@ -1,0 +1,49 @@
+<div class="row">
+	<div class="col-sm-6">
+		<h2>Input:</h2>
+		<form method="post" action="">  
+			<label>Firstname: <span class="error">* </span></label>
+			<input type="text" class="form-control" type="text" id="fname" name="firstname"></input>
+			<br>
+			
+			<label>Lastname: <span class="error">* </span></label>
+			<input type="text" class="form-control" type="text" id="lname" name="lastname"></input>
+			<br>
+	 
+			<label for="action">
+			<button type="button" class="btn btn-block" id="lname" name="action" disabled>Submit</button></label>
+		</form>
+		<br>
+		<label>Change Content
+		<button type="button" class="btn btn-primary btn-block" onclick="test1()">Test 1 (AJAX/JSON)</button></label>
+		<label>Change Content
+		<button type="button" class="btn btn-primary btn-block" onclick="test2()">Test 2 (only AJAX)</button></label>
+	</div>
+	<div class="col-sm-6">
+		<h2>Output:</h2>
+		Firstname: <span id='fname_ok'></span> <span id='fname_err'></span>
+		<br/>
+		Lastname: <span id='lname_ok'></span> <span id='lname_err'></span>
+		<br/>
+		Secret Message: <span id='secret_ok'></span> <span id='secret_err'></span>
+		<br/>
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+		  <div class="modalContent alert alert-danger">
+			<span class="close">&times;</span>
+			<p id="modalText">Some text in the Modal..</p>
+		  </div>
+		</div>
+	</div>
+	<div class="col-sm-6">
+
+	<h2>Your Search:</h2>
+
+	<form>
+		<input type="text" class="form-control" size="30" onkeyup="showResult(this.value)">
+		<div id="livesearch"></div>
+	</form>
+
+	</div>
+</div>
+<script src="/proj/proj3/js/func.js"></script>

@@ -1,0 +1,38 @@
+// Styling for the navbar
+#mainNav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  .navbar-brand {
+    color: #FFF;
+  }
+  .navbar-nav {
+    margin-top: 1rem;
+    li.nav-item {
+      a.nav-link {
+        color: #FFF;
+        &:hover {
+          color: $primary;
+        }
+        &:active,
+        &:focus {
+          color: #FFF;
+        }
+        &.active {
+          color: $primary;
+        }
+      }
+    }
+  }
+  .navbar-toggler {
+    font-size: 80%;
+    padding: 0.8rem;
+  }
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+}

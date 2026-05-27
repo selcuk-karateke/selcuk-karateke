@@ -1,0 +1,101 @@
+<div class="row">
+	<div class="col-sm-6">
+		<h2>Input:</h2>
+		<div class="input-group">
+			<div class="input-group-prepend">
+			<span class="input-group-text">Arbeit</span>
+			<button class="btn btn-outline-secondary" id="btn1" onclick="t(15,1);" type="button"><i class="fas fa-pause fa-fw"></i></button>
+			<button class="btn btn-outline-secondary" id="btn2" onclick="t(28,2);" type="button"><i class="fas fa-wrench fa-fw"></i></button>
+			</div>
+			<input type="text" class="form-control" id="time" placeholder="" aria-label="" aria-describedby="basic-addon1" disabled>
+		</div>
+	</div>
+	<div class="col-sm-6">
+		
+	</div>
+</div>
+<script>
+
+// Arbeitszeiterfassung
+var today = new Date();	
+var body = document.body;
+var title = document.title;
+var btn1 = document.getElementById("btn1");
+var btn2 = document.getElementById("btn2");
+var interval1;
+setInterval(myTimer, 1000);
+var pause;
+var resume;
+var container;
+function startTimer(duration, display, type) {
+	container = type;
+	sessionStorage.setItem('type', type);	
+	var timer = duration, minutes, seconds;
+	clearInterval(interval1);
+	btn1.disabled = btn2.disabled = pause = false;
+	interval1 = setInterval(function () {
+		
+		resume = timer / 60;
+		sessionStorage.setItem('time', timer);
+
+		minutes = parseInt(timer / 60, 10)
+		seconds = parseInt(timer % 60, 10);
+		minutes = minutes < 10 ? "0" + minutes : minutes;
+		seconds = seconds < 10 ? "0" + seconds : seconds;
+		display.value = minutes + ":" + seconds;
+		document.title = "(" + minutes + ":" + seconds + ") " + title;
+		document.querySelector('#inp_screen').placeholder = "(" + minutes + ":" + seconds + ") ";
+		if (--timer < 0 || pause == true) {
+			timer = duration;
+			//setTimeout(function() { alert('EXPIRED'); }, 500);
+			if(type == 1){
+				body.style.background = "lightblue";
+				btn1.style.background = "lightgrey";
+			} else {
+				body.style.background = "lightgreen";
+				btn2.style.background = "lightgrey";
+			}
+			btn1.disabled = btn2.disabled = false;
+			pause == false ? display.value = "EXPIRED" : display.value = "PAUSED";
+			document.title = title;
+			document.querySelector('#inp_screen').placeholder = pause;
+			document.getElementById('audiofile').play();
+			clearInterval(interval1);
+		}
+	}, 1000);
+}
+function p(){
+	pause = true; // stoppt die Funktion startTimer()
+	document.getElementById("btn"+container).setAttribute("onclick", "t("+resume+","+container+")");
+}
+function t(min,type){
+	// Ändere Attribut
+	document.getElementById("btn"+type).setAttribute("onclick", "p()");
+	// Wechsle Attribut zurück
+	if(type == 1){
+		document.getElementById("btn2").setAttribute("onclick", "t(28,2)");
+		btn1.style.background="lightblue";
+		btn1.disabled = true;
+	} else if (type == 2){
+		document.getElementById("btn1").setAttribute("onclick", "t(15,1)");
+		btn2.style.background="lightgreen";
+		btn2.disabled = true;	
+	}
+
+	h = today.getHours();
+	if (h >= 8 && h <= 23) {
+		var ms = 60 * min,
+		display = document.querySelector('#time');
+		startTimer(ms, display, type);
+		body.style.background = "lightred";
+	} else {
+		document.querySelector('#time').value = "TIME TO SLEEP";
+		body.style.background = "lightblue";
+	}
+}
+// Zeige aktuelle Uhrzeit
+function myTimer() {
+    var d = new Date();
+    document.querySelector('#loctime').value = d.toLocaleTimeString();
+}
+</script>

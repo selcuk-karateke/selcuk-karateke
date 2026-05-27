@@ -1,0 +1,78 @@
+// Styling for Debugging
+.row { margin: 0; }
+p { margin-bottom: 0rem;}
+.dbg { 
+	bottom: 0px; 
+	right: 0px;
+	left: 0px;
+	z-index:999;
+	font-family: monospace;
+	background: rgba(0, 0, 0, .8);
+	color: white;
+	cursor: help;
+}
+.dbg-bar {
+	top: 0px; 
+	right: 0px;
+	left: 0px;
+	z-index: 999;
+	font-family: monospace;
+	color: white;
+	cursor: help;
+}
+.bg-req {
+	background-color: rgba(155, 255, 255, .8);
+}
+.progress-bar {
+    width: 0;
+    color: #fff;
+    background-color: #337ab7;
+    transition: width .6s ease;
+}
+
+.progress {
+    height: auto;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .2);
+	color:white;
+    border-radius:0px;
+}
+@-webkit-keyframes marquee {
+    0% {text-indent: 100%;}
+    100% {text-indent: 0%;}
+}
+@-webkit-keyframes marquee1 {
+	100% {top: 200px;}
+    0% {top: 20px;}
+}
+input.marquee {
+    position: relative;
+    -webkit-animation: marquee infinite; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 10s; /* Safari 4.0 - 8.0 */
+    animation: marquee infinite;
+    animation-duration: 10s;
+}
+input.marquee:hover {
+    animation-play-state: paused
+}
+span.marquee1 {
+	position: relative;
+    -webkit-animation: marquee1 infinite; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 10s; /* Safari 4.0 - 8.0 */
+    animation: marquee1 infinite;
+    animation-duration: 10s;
+}
+span.marquee1:hover {
+    animation-play-state: paused
+}
+
+
+/* DIV scroolbar */
+.anyClass {
+
+}
+ul#water_display li{
+	float:left;
+	list-style: none;
+	padding: 5px;
+}

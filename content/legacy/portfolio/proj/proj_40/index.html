@@ -1,0 +1,138 @@
+<style>
+table { border: 2px solid black }
+td { border: thin solid black }
+
+</style>
+
+
+
+
+<div class="row">
+<div class="col">
+<h2>Input:</h2>
+<h4>Angestellte/r:  ,  Jahre alt</h4>
+<p>Externer Link: <a href="http://lohnsteuertabelle.com.de/#Lohnsteuertabelle_berechnen">Lohnsteuertabelle berechnen</a></p>
+
+<form action="#" method="post">
+	<div class="col-sm">Bruttogehalt (in €)
+	<input type="text" class="form-control" name="brutto" placeholder="Bruttogehalt" value=""/></div>
+	
+	<div class="col-sm">Vermögenswirks. Sparvetrag<br/>(in €)
+	<input type="text" class="form-control" name="vw" placeholder="Vermögenswirks. Sparv." value=""/></div>
+	<div class="col-sm">
+	AN (<span id="an"></span> €)<br/>
+	AG (<span id="ag"></span> €)
+	<input type="range" class="form-control" id="myRange" name="vw_anteil" min="0" max="100" value=""></div>
+	<div class="col-sm">Lohnsteuer
+	<input type="text" class="form-control" name="steuer" placeholder="Lohnsteuer" value=""/></div>
+	<div class="col-sm">Solidaritätszuschlag</div>
+	<div class="row mb-0">
+		<div class="col">
+			<input class="form-control" type="text" name="solz" placeholder="Solidaritätszuschlag (in €)" value=""/>
+		</div>
+		<div class="col">
+			<input class="form-control" type="text" name="solz_pro" placeholder="Solidaritätszuschlag (in %)" value=""/>
+		</div>
+	</div>
+	<div class="col-sm">Krankenversicherung</div>
+	<div class="row mb-0">
+		<div class="col">
+			<input class="form-control" type="text" name="kvs" placeholder="Krankenversicherung (in €)" value=""/>
+		</div>
+		<div class="col">
+			<input class="form-control" type="text" name="kvs_pro" placeholder="Krankenversicherung (in %)" value=""/>
+		</div>
+	</div>		
+	<div class="col-sm">Krankenversicherung (gesetzl. Zusatzbeitrag)</div>
+	<div class="row mb-0">
+		<div class="col">
+			<input class="form-control" type="text" name="kvs_zusatz" placeholder="Zusatzbeitrag zur KV (in %)" value=""/>
+		</div>
+		<div class="col">
+			<input class="form-control" type="text" name="kvs_zusatz_pro" placeholder="Zusatzbeitrag zur KV (in %)" value=""/>
+		</div>
+	</div>
+	<div class="col-sm">
+	AN ( €)<br/>
+	AG ( €)
+	</div>
+	<div class="col-sm">Kirchensteuer
+	<input type="text" class="form-control" name="kisteuer" id="kisteuer" placeholder="Lohnsteuer" value="" 
+	/></div>
+	<div class="col-sm">
+		<div class="form-check form-check-inline">
+		  <input class="form-check-input" type="radio" name="anrede" id="inlineRadio1" value="m"   >
+		  <label class="form-check-label" for="inlineRadio1">m</label>
+		</div>
+		<div class="form-check form-check-inline">
+		  <input class="form-check-input" type="radio" name="anrede" id="inlineRadio2" value="w"   >
+		  <label class="form-check-label" for="inlineRadio2">w</label>
+		</div>
+	</div>
+	<div class="col-sm-12"><h4>Zusatz:</h4></div>
+	<div class="col-sm">Vorname
+	<input type="text" class="form-control" name="vorname" placeholder="Vorname" value="" /></div>
+	<div class="col-sm">Nachname
+	<input type="text" class="form-control" name="nachname" placeholder="Nachname" value="" /></div>
+	<div class="col-sm">E-Mail
+	<input type="email" class="form-control" name="email" placeholder="E-Mail" value="" /></div>
+	<div class="col-sm">Geburtstag
+	<input type="date" class="form-control" name="gebtag" placeholder="Geburtstag" value="" /></div>
+	<div class="col-sm">Familienstand
+	<select class="form-control" name="famstand">
+		<option value="1" >verheiratet</option>
+		<option value="2" >ledig</option>
+		<option value="3" >geschieden</option>
+	</select>
+	</div>
+	<div class="col-sm">Anzahl der Kinder
+	<input type="text" class="form-control" name="kinder" placeholder="Anzahl der Kinder" value="" /></div>
+	<div class="col-sm">Kirche
+	<input type="checkbox" name="kirche" id="ki" onclick="myFunction()" value="1"  /></div>
+	<div class="col-sm"></div>
+	<div class="col-sm"><button type="reset" class="btn btn-primary">Reset</button>
+	<button type="submit" class="btn btn-primary">Submit</button></div>
+</form>
+
+<h2>Output:</h2>
+<div class="col-sm-6">Bruttogehalt</div>
+<div class="col-sm-6"> €</div>
+
+<div class="col-sm-6">Beitragsmessungsgrenze <br/>(Kranken- u. Pflegevers.)</div>
+<div class="col-sm-6"> €</div>
+
+<div class="col-sm-6">Steuer- u. sozialversicherungs-<br>pflichtiges Gehalt</div>
+<div class="col-sm-6"> €</div>	
+
+<div class="col-sm-6">Steuersatz<br>(ohne Tabelle 20xx)</div>
+<div class="col-sm-6"> €</div>
+
+<div class="col-sm-6">Nettowert</div>
+<div class="col-sm-6"> €</div>
+
+</div>
+</div>
+
+<script>
+var slider = document.getElementById("myRange");
+var an = document.getElementById("an");
+var ag = document.getElementById("ag");
+slider.oninput = function() {
+	an.innerHTML = (- (this.value * 1) * ()/100).toFixed(2) + " € = "+
+	(this.value * 1)+" %";
+	ag.innerHTML = ((this.value * 1) * ()/100).toFixed(2) + " € = "+
+	(100 - this.value * 1)+" %";
+}
+
+function myFunction() {
+  var ki = document.getElementById("ki");
+  var kisteuer = document.getElementById("kisteuer");
+
+  if (ki.checked == true){
+    kisteuer.disabled = false;
+  } else {
+	kisteuer.value = 0;
+    kisteuer.disabled = true;
+  }
+}	
+</script>

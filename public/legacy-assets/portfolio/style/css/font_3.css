@@ -1,0 +1,11 @@
+@import url(//fonts.googleapis.com/css?family=Cantarell&subset=latin);
+@import url(//fonts.googleapis.com/css?family=Istok+Web&subset=latin);
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Cantarell', serif;
+    -webkit-font-smoothing: none;
+}
+a,p {
+    font-family: 'Istok Web', serif;
+    -webkit-font-smoothing: none;
+}

@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
+    "dev:turbo": "next dev --turbopack",
+    "dev:clean": "node -e \"try{require('fs').rmSync('.next',{recursive:true,force:true})}catch(e){}\" && next dev",
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
@@ -15,7 +17,13 @@
     "db:studio": "prisma studio",
     "db:seed": "tsx prisma/seed.ts",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "legacy:extract": "tsx scripts/extract-legacy-content.ts",
+    "legacy:assets": "tsx scripts/sync-legacy-assets.ts",
+    "legacy:sync": "npm run legacy:extract && npm run legacy:assets",
+    "education:import": "tsx scripts/import-education-floors.ts",
+    "exercises:import": "tsx scripts/import-exercises.ts",
+    "content:import": "npm run legacy:extract && npm run education:import && npm run exercises:import"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.9",

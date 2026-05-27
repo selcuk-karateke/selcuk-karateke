@@ -1,0 +1,304 @@
+{
+  "kind": "structured",
+  "entryId": 1,
+  "sections": [
+    {
+      "title": "Zahlen",
+      "entries": [
+        {
+          "id": "nzahlen",
+          "subtitle": "Natürliche Zahlen",
+          "description": "<pre>0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10; …</pre>"
+        },
+        {
+          "id": "gzahlen",
+          "subtitle": "Ganze Zahlen",
+          "description": "Alle natürlichen Zahlen + deren Negative: \r\n\t\t\t\t<pre>0; 1; -1; 2; -2; …</pre>"
+        },
+        {
+          "id": "razahlen",
+          "subtitle": "Rationale Zahlen",
+          "description": "Alle Brüche:\r\n\t\t\t\tOben: Zähler Unten: Nenner\r\nZwei Interpretationen: (1) 3 geteilt durch 4 = 0,75 oder (2) 3 von 4\r\n\r\nWelche Kommazahlen sind als Bruch darstellbar?\r\nEndliche Dezimalzahlen sind immer als Bruch darstellbar.\r\nIst die Dezimalzahl periodisch, ist sie als Bruch darstellbar. In allen anderen Fällen geht das nicht.\r\n\r\n\t\t\t\t<pre>0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10; …</pre>"
+        },
+        {
+          "id": "rezahlen",
+          "subtitle": "Reelle Zahlen",
+          "description": "Alle Brüche:\r\n\t\t\t\tReelle Zahlen = Alle Kommazahlen = alle Rationalen + alle Irrationale Zahlen"
+        },
+        {
+          "id": "pzahlen",
+          "subtitle": "Primzahlen",
+          "description": "<pre>2; 3; 5; 7; 9; 11; 13; 17; 19</pre>\r\n\t\t\t\t= alle Zahlen, die nur durch sich selbst teilbar sind<hr/>Beispiel: <br/>\r\n\t\t\t\t<pre>625 = 5 * 125 = 5 * 5 * 25 = 5 * 5 * 5 * 5 = 5⁴\r\nroot(2)= 1,414…\r\nroot(3)= 1,732…\r\nroot(4)= 2\r\n</pre>\r\n<table>\r\n<tbody>\r\n<tr>\r\n<td>\r\n<p>ist teilbar durch &hellip;</p>\r\n</td>\r\n<td>\r\n<p>falls</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>2</p>\r\n</td>\r\n<td>\r\n<p>letzte Ziffer ist gerade</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>3</p>\r\n</td>\r\n<td>\r\n<p>Quersumme ist durch 3 teilbar (auch iteriert)</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>5</p>\r\n</td>\r\n<td>\r\n<p>letzte Ziffer ist 0 oder 5</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>6</p>\r\n</td>\r\n<td>\r\n<p>2* 3*</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>7</p>\r\n</td>\r\n<td>&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>8</p>\r\n</td>\r\n<td>\r\n<p>letzten 3 Ziffer sind durch 8 teilbar</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>9</p>\r\n</td>\r\n<td>\r\n<p>Quersumme ist durch 9 teilbar (auch iteriert)</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>10</p>\r\n</td>\r\n<td>\r\n<p>letzte Zahl ist 10</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>",
+          "note": "Jede natürliche Zahl lässt sich eindeutig (bis auf die Reihenfolge) in Primfaktoren zerlegen"
+        },
+        {
+          "id": "dsystem",
+          "subtitle": "Dezimalsystem",
+          "description": "Stellenwertsystem mit Basis 10 (0-9), das bedeutet: \r\n<p>Die Zahl 12345 bedeutet:</p>\r\n<table>\r\n<tbody>\r\n<tr>\r\n<td>\r\n<p><strong>10<sup>4</sup></strong></p>\r\n</td>\r\n<td>\r\n<p><strong>10<sup>3</sup></strong></p>\r\n</td>\r\n<td>\r\n<p><strong>10<sup>2</sup></strong></p>\r\n</td>\r\n<td>\r\n<p><strong>10<sup>1</sup></strong></p>\r\n</td>\r\n<td>\r\n<p><strong>10<sup>0</sup></strong></p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>10000</p>\r\n</td>\r\n<td>\r\n<p>1000</p>\r\n</td>\r\n<td>\r\n<p>100</p>\r\n</td>\r\n<td>\r\n<p>10</p>\r\n</td>\r\n<td>\r\n<p>1</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>1</p>\r\n</td>\r\n<td>\r\n<p>2</p>\r\n</td>\r\n<td>\r\n<p>3</p>\r\n</td>\r\n<td>\r\n<p>4</p>\r\n</td>\r\n<td>\r\n<p>5</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>"
+        },
+        {
+          "id": "bsystem",
+          "subtitle": "Bin&auml;rsystem",
+          "description": "<p>Im Bin&auml;rsystem bedeutet 11011: Basis = 2; Ziffern = 0; 1</p>\r\n<table>\r\n<tbody>\r\n<tr>\r\n<td>\r\n<p><strong>2<sup>4</sup></strong></p>\r\n</td>\r\n<td>\r\n<p><strong>2<sup>3</sup></strong></p>\r\n</td>\r\n<td>\r\n<p><strong>2<sup>2</sup></strong></p>\r\n</td>\r\n<td>\r\n<p><strong>2<sup>1</sup></strong></p>\r\n</td>\r\n<td>\r\n<p><strong>2<sup>0</sup></strong></p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>16</p>\r\n</td>\r\n<td>\r\n<p>8</p>\r\n</td>\r\n<td>\r\n<p>4</p>\r\n</td>\r\n<td>\r\n<p>2</p>\r\n</td>\r\n<td>\r\n<p>1</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>1</p>\r\n</td>\r\n<td>\r\n<p>1</p>\r\n</td>\r\n<td>\r\n<p>0</p>\r\n</td>\r\n<td>\r\n<p>1</p>\r\n</td>\r\n<td>\r\n<p>1</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>"
+        },
+        {
+          "id": "hdsystem",
+          "subtitle": "Hexadezimalsystem",
+          "description": "<p>Basis = 16; Ziffern = 0-9; A; B; C; D; E; F</p>\r\n<p>Die Zahl AB bedeutet:</p>\r\n<table>\r\n<tbody>\r\n<tr>\r\n<td>\r\n<p><strong>16<sup>4</sup></strong></p>\r\n</td>\r\n<td>\r\n<p><strong>16<sup>3</sup></strong></p>\r\n</td>\r\n<td>\r\n<p><strong>16<sup>2</sup></strong></p>\r\n</td>\r\n<td>\r\n<p><strong>16<sup>1</sup></strong></p>\r\n</td>\r\n<td>\r\n<p><strong>16<sup>0</sup></strong></p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>65536</p>\r\n</td>\r\n<td>\r\n<p>4096</p>\r\n</td>\r\n<td>\r\n<p>256</p>\r\n</td>\r\n<td>\r\n<p>16</p>\r\n</td>\r\n<td>\r\n<p>1</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>&nbsp;</p>\r\n</td>\r\n<td>\r\n<p>&nbsp;</p>\r\n</td>\r\n<td>\r\n<p>&nbsp;</p>\r\n</td>\r\n<td>\r\n<p>A</p>\r\n</td>\r\n<td>\r\n<p>B</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p>AB = B*1 + 10*16</p>"
+        }
+      ]
+    },
+    {
+      "title": "Flächenberechnung",
+      "entries": [
+        {
+          "id": "quadrat",
+          "subtitle": "Quadrat",
+          "formula": "<br/>\r\n\t\t\t\t\t`A = a^2 = a&middot;a`<br>\r\n\t\t\t\t\t`U = 4a`<br>\r\n\t\t\t\t\t`d = a&middot;sqrt(2)`<br>",
+          "supplement": "`(a^2 + a^2 = d^2)`",
+          "question": "Wie groß ist der Flächeninhalt eines Quadrats mit der Seitenlänge `a=4m`?",
+          "calculation": "<pre>\r\na * a = a²\r\n4 cm * 4 cm = 16 cm²\r\n</pre>",
+          "answer": "Der Fläche ist 16 cm².",
+          "note": "",
+          "imageSrc": "/legacy-assets/portfolio/img/math/quadrat.png"
+        },
+        {
+          "id": "test",
+          "subtitle": "Test",
+          "formula": "",
+          "supplement": "",
+          "question": "",
+          "calculation": "<pre>\r\n</pre>",
+          "answer": "",
+          "note": "",
+          "imageSrc": "/legacy-assets/portfolio/img/math/quadrat.png"
+        },
+        {
+          "id": "rechteck",
+          "subtitle": "Rechteck",
+          "imageSrc": "/legacy-assets/portfolio/img/math/rechteck.png",
+          "imageAlt": "Rechteck"
+        },
+        {
+          "id": "parallelogramm",
+          "subtitle": "Parallelogramm",
+          "imageSrc": "/legacy-assets/portfolio/img/math/parallelogramm.png",
+          "imageAlt": "Parallelogramm",
+          "formula": "`A = g&middot;h`<br>\r\n\t`U = 2a + 2b`"
+        },
+        {
+          "id": "dreieck",
+          "subtitle": "Dreieck",
+          "imageSrc": "/legacy-assets/portfolio/img/math/dreieck.png",
+          "imageAlt": "Dreieck",
+          "formula": "`A = 1/2&middot;c&middot;h_c = c&middot;h_c/2`<br>\r\n\t`U = a + b + c`"
+        },
+        {
+          "id": "glschenk-dreieck",
+          "subtitle": "Gleichschenkliges Dreieck",
+          "imageSrc": "/legacy-assets/portfolio/img/math/gleichschenkliges_dreieck.png",
+          "imageAlt": "Gleichschenkliges Dreieck",
+          "formula": "`h = sqrt(s^2 - (a/2)^2)`<br>\r\n\tPythagoras: `(a/2)^2 + h^2 = s^2` bzw. `a^2/4 + h^2 = s^2`<br>\r\n\t`A = a&middot;h/2`<br>\r\n\t`U = a + 2s`"
+        },
+        {
+          "id": "glseit-dreieck",
+          "subtitle": "Gleichseitiges Dreieck",
+          "imageSrc": "/legacy-assets/portfolio/img/math/gleichseitiges_dreieck.png",
+          "imageAlt": "Gleichseitiges Dreieck",
+          "formula": "`h = sqrt(3&middot;a/2)`<br>\r\n\t`A = a&middot;h/2`<br>\r\n\t`U = 3a`"
+        },
+        {
+          "id": "trapez",
+          "subtitle": "Trapez",
+          "imageSrc": "/legacy-assets/portfolio/img/math/trapez.png",
+          "imageAlt": "Trapez",
+          "formula": "`A = 1/2&middot;(a + c) &middot;h = (a + c)&middot;h/2`<br>\r\n\t`U = a + b + c + d`"
+        },
+        {
+          "id": "glschenk-trapez",
+          "subtitle": "Gleichschenkliges Trapez",
+          "imageSrc": "/legacy-assets/portfolio/img/math/gleichschenkliges_trapez.png",
+          "imageAlt": "Gleichschenkliges Trapez",
+          "formula": "`A = (a + c) &middot;h/2`<br>\r\n\t`b = sqrt(h^2 + (a - c)^2 / 4)`<br>\r\n\tPythagoras: `b^2 = h^2 + (a – c)^2/4`<br>\r\n\t`U = a + c + 2b`"
+        },
+        {
+          "id": "kreis",
+          "subtitle": "Kreis",
+          "formula": "`r = d/2 bzw. d = 2&middot;r`<br>\r\n\t\t`U = 2&middot;p&middot;r = p&middot;d`<br>\r\n\t\t`A = p&middot;r^2 oder A = p&middot;d^2/4`"
+        },
+        {
+          "id": "kreisring",
+          "subtitle": "Kreisring",
+          "formula": "`r = d/2 bzw. d = 2&middot;r`<br>\r\n\t\t`b = r &middot; p &middot; a /180°` (`b` wird auch oft mit `ba` bezeichnet.)<br>\r\n\t\t`A = r2 &middot; p &middot; a/360°`<br>\r\n\t\tAußerdem gilt `A = b&middot;r/2` (falls `b` und `r` gegeben ist und `A` berechnet werden soll)."
+        },
+        {
+          "id": "kreisausschnitt",
+          "subtitle": "Kreisausschnitt",
+          "description": "<p></p>"
+        }
+      ]
+    },
+    {
+      "title": "Gleichungen",
+      "entries": [
+        {
+          "id": "liniear",
+          "subtitle": "Liniear",
+          "formula": "<h4>Addition</h4>\r\n<pre>\r\nx + 2 = 5  | -2\r\nx = 3\r\n</pre>\r\n\t\t<h4>Subtraktion</h4>\r\n<pre>x - 5 = 2  | + 5\r\nx = 7</pre>\r\n\t\t<h4>Multiplikation</h4>\r\n<pre>Beispiele\r\n1) 5 · x = 15  | :5\r\nx = 3\r\n\r\n2) 0,5x = 2  | :0,5\r\nx = 4\r\n\r\n3) 5 = 0,2x  | :0,2\r\n25 = x</pre>\r\n\t\t<h4>Division</h4>\r\n\t\t<pre>   \r\n</pre>"
+        },
+        {
+          "id": "col15Content",
+          "subtitle": "leer",
+          "description": "<p></p>\r\n\t\t<p></p>"
+        },
+        {
+          "id": "col16Content",
+          "subtitle": "leer",
+          "description": "<p></p>\r\n\t\t<p></p>"
+        },
+        {
+          "id": "col17Content",
+          "subtitle": "leer",
+          "description": "<p></p>\r\n\t\t<p></p>"
+        },
+        {
+          "id": "col18Content",
+          "subtitle": "leer",
+          "description": "<p></p>\r\n\t\t<p></p>"
+        }
+      ]
+    },
+    {
+      "title": "Dreisatz",
+      "entries": [
+        {
+          "id": "proportional",
+          "subtitle": "Proportional",
+          "formula": "<p>Frage: Ein Pkw verbraucht auf 100 km 9,6 Liter Benzin.<br>\r\n\t\tMit einer Tankf&uuml;llung kommt er 540 km weit.<br>\r\n\t\tWie viel Liter fasst der Tank?<br>\r\n\t\tDas Ergebnis ist auf ganze Liter aufzurunden.</p>\r\n\t\t<p>Rechnung:</p>\r\n<pre>100 km = 9,6 Liter\r\n540 km = ? Liter\r\n---\r\n100 km = 9,6 Liter\r\n1 km = der 100. Teil\r\n540 km = 540 mal soviel\r\n---\r\n9,6 l * 540 / 100 = 51,84 l ~ 52 l</pre>\r\n\t\t<p>Antwort: Der Tank fasst 52 Liter.</p>"
+        },
+        {
+          "id": "antiproportional",
+          "subtitle": "Antiproportional",
+          "formula": "<p>Frage: Drei Arbeiter ben&ouml;tigen f&uuml;r eine Hofeinfahrt 11,5 Stunden.<br>\r\n\t\tWie lange brauchen 5 Arbeiter?</p>\r\n\t\t<p>Rechnung:</p>\r\n<pre>3 Arbeiter = 11,5 h\r\n5 Arbeiter =    ? h\r\n---\r\n3 Arbeiter = 11,5 h\r\n1 Arbeiter = 3 mal solange\r\n5 Arbeiter = den 5. Teil der Zeit\r\n---\r\n11,5 h * 3 / 5 = 6,9 h</pre>\r\n\t\t<p>Antwort: 5 Arbeiter brauchen 6,9 Stunden, also etwa 7 Stunden.</p>"
+        },
+        {
+          "id": "col21Content",
+          "subtitle": "leer"
+        },
+        {
+          "id": "col22Content",
+          "subtitle": "leer"
+        },
+        {
+          "id": "col23Content",
+          "subtitle": "leer"
+        },
+        {
+          "id": "col24Content",
+          "subtitle": "leer"
+        }
+      ]
+    },
+    {
+      "title": "Prozent- /Zinsrechnung",
+      "entries": [
+        {
+          "id": "grund-prozentwert",
+          "subtitle": "Grund- /Prozentwert",
+          "formula": "<p>`W = p * G / 100` | oder | `G = 100 * W / p`</p>\r\n\t\t<p>Frage: Es wurde ein Bus gemietet um eine Gruppe von 50 Personen ins Theater zu fahren. Von diesen 50 Personen haben jedoch erst 30% die Fahrt bezahlt. Wie viele Personen haben bereits bezahlt?</p>\r\n\t\t<p>Rechnung:</p>\r\n<pre>W = p * G / 100\r\nW = 30 * 50 Personen / 100\r\nW = 15 Personen</pre>\r\n\t\t<p>Antwort: Dem Text entnehmen wir, dass G = 50 Personen sein muss. Der Prozentsatz ergibt sich zu p% = 30% und damit ist die Prozentzahl p = 30. Den Prozentwert W suchen wir. Mit diesen Angaben gehen wir in die Gleichung und erhalten W = 15 Personen. Es haben somit erst 15 Personen die Fahrt bezahlt.Dem Text entnehmen wir, dass G = 50 Personen sein muss. Der Prozentsatz ergibt sich zu p% = 30% und damit ist die Prozentzahl p = 30. Den Prozentwert W suchen wir. Mit diesen Angaben gehen wir in die Gleichung und erhalten W = 15 Personen. Es haben somit erst 15 Personen die Fahrt bezahlt.</p>"
+        },
+        {
+          "id": "prozentsatz",
+          "subtitle": "Prozentsatz",
+          "formula": "<p>`p = 100 * W / G`</p>\r\n\t\t<p>Frage: Ein Autoh&auml;ndler kauft ein Auto f&uuml;r 10.000 Euro. Zwei Monate sp&auml;ter schafft er es dieses f&uuml;r 12.000 Euro wieder zu verkaufen. Wie viel Prozent Gewinn hat er damit erwirtschaftet?</p>\r\n\t\t<p>Rechnung:</p>\r\n<pre>p = 100 * W / G\r\np = 100 * 2000 Euro / 10000 Euro\r\np = 20\r\np% = 20%</pre>\r\n\t\t<p>Antwort: Wir entnehmen der Aufgabenstellung, dass G = 10.000 Euro ist. Außerdem können wir W = 12.000 Euro - 10.000 Euro = 2.000 Euro ermitteln. Der Händler verkauft den Wagen somit 2.000 Euro teurer als er ihn eingekauft hat. Mit diesen Angaben gehen wir in die Gleichung und ermitteln die Prozentzahl zu p = 20 und den Prozentsatz zu p% = 20%. Also hat der Händler 20% Gewinn erwirtschaftet.</p><mark>Merke: Die Prozentrechnung und der Dreisatz hängen mathematisch ganz Eng zusammen.</mark>"
+        }
+      ]
+    },
+    {
+      "title": "Zinsrechnung",
+      "entries": [
+        {
+          "id": "jahreszins",
+          "subtitle": "Jahreszins",
+          "formula": "<p>`Z = K * P / 100`</p>\r\n\t\t<p>Frage: Auf einem Sparbuch werden 1200 Euro f&uuml;r einen Zeitraum von einem Jahr mit 3 Prozent verzinst. Wie viel Zinsen erh&auml;lt der Inhaber des Sparbuchs nach einem Jahr?</p>\r\n\t\t<p>Rechnung:</p>\r\n<pre>Z = K * p / 100\r\nZ = 1200 Euro * 3 / 100 = 36 Euro</pre>\r\n\t\t<p>Antwort: Dem Text entnehmen wir, dass K = 1200 Euro und p = 3 ist. Dies setzen wir in die eben genannte Formel ein.</p><mark>Merke: Der Grundwert wird in der Zinsrechnung als Kapital bezeichnet, der Prozentsatz wird zum Zinssatz und der Prozentwert wird zu den Zinsen. Deutsche Banken rechnen das Jahr mit 360 Tagen und den Monat mit 30 Tagen.</mark>"
+        },
+        {
+          "id": "monatszins",
+          "subtitle": "Monatszins",
+          "formula": "<p>`Z = K * p * m / 100 * 12`</p>\r\n\t\t<p>Frage: Ein Guthaben von 18000 Euro wird f&uuml;r einen Zeitraum von 7 Monaten und einem Zinssatz von 4% festgelegt. Wie viel Zinsen fallen an?</p>\r\n\t\t<p>Rechnung:</p>\r\n<pre>Z = K * p * m / 100 * 12\r\nZ = 18000 Euro * 4 * 7 / 100 * 12 = 420 Euro</pre>\r\n\t\t<p>Dem Text entnehmen wir, dass K = 18000 Euro, p = 4 und m = 7 ist. Diese Angaben setzen wir in die Formel ein und berechnen die Zinsen.</p>"
+        },
+        {
+          "id": "tageszins",
+          "subtitle": "Tageszins",
+          "formula": "<p>`Z = K * P * t / 100 * 360`</p>\r\n\t\t<p>Frage: Ein Guthaben von 7600 Euro wird f&uuml;r 120 Tage zu einem Zinssatz von 5 Prozent festgelegt. Wie viel Zinsen fallen f&uuml;r diesen Zeitraum an?</p>\r\n\t\t<p>Rechnung:</p>\r\n<pre>Z = K * p * t / 100 * 360\r\nZ = 7600 Euro * 5 * 120 / 100 * 360 = 126.67 Euro</pre>\r\n\t\t<p>Wir entnehmen dem Text, dass K = 7600 Euro, p = 5 und t = 120 ist. Diese Informationen setzen wir in die Formel ein und berechnen die Zinsen.</p>"
+        },
+        {
+          "id": "zinssatz",
+          "subtitle": "Zinssatz",
+          "formula": "<p>`p = Z * 100 / K`</p>\r\n\t\t<p>`p = Z * 1200 / K * m`</p>\r\n\t\t<p>`p = Z * 36000 / K * t`</p>"
+        },
+        {
+          "id": "kapital",
+          "subtitle": "Kapital",
+          "formula": "<p>`K = Z * 100 / p`</p>\r\n\t\t<p>`K = Z * 1200 / p * m`</p>\r\n\t\t<p>`K = Z * 36000 / p * t`</p>"
+        },
+        {
+          "id": "zeit",
+          "subtitle": "Zeit",
+          "formula": "<p>`m = Z * 1200 / K * p`</p>\r\n\t\t<p>`t = Z * 36000 / K * p`</p>"
+        }
+      ]
+    },
+    {
+      "title": "Zinseszins",
+      "entries": [
+        {
+          "id": "endkapital",
+          "subtitle": "Endkapital",
+          "formula": "<p>`K_(VERZINST) = K_(ANFANG) * (1 + p/100)^n`</p>\r\n\t\t<p>Frage: Ein Guthaben von 1200 Euro wird zu einem Zinssatz von 4 Prozent f&uuml;r einen Zeitraum von 5 Jahren festgelegt. Wie hoch ist das Guthaben nach dieser Zeit?</p>\r\n<pre>K_v = K_a * (1 + P / 100)^n\r\nK_v = K_a * (1 + P / 100)^n\r\nK_v = 1200 Euro * (1 + 4 / 100)^5\r\nK_v = 1200 Euro * (1,04)^5\r\nK_v = 1200 Euro * 1,21665\r\nK_v = 1459,98 Euro</pre>\r\n\t\t<p>Antwort: Wir entnehmen dem Text, dass K<sub>ANFANG</sub> = 1200 Euro, p = 4 und n = 5 ist. Diese Angaben setzen wir in die Formel zum Zinseszins ein und berechnen das Ergebnis K<sub>VERZINST</sub>. Nach 5 Jahren beträgt das verzinste Kapital 1459,98 Euro.</p>"
+        },
+        {
+          "id": "anfangskapital",
+          "subtitle": "Anfangskapital",
+          "formula": "<p>`K_(ANFANG) = K_(VERZINST) / (1 + p/100)^n`</p>\r\n\t\t<p>Frage: Wie viel Geld muss man anlegen, um nach 4 Jahren und bei einem Zinssatz von 3 Prozent ein Guthaben von 8000 Euro zu erhalten?</p>\r\n<pre>K_a = K_v / (1 + P / 100)^n\r\nK_a = 8000 Euro / (1 + 3 / 100)^4\r\nK_a = 8000 Euro / (1,03)^4\r\nK_a = 1200 Euro / 1,1255\r\nK_a = 7107,90 Euro</pre>\r\n\t\t<p>Antwort: Dem Text entnehmen wir, dass K<sub>VERZINST</sub> = 8000 Euro, p = 3 und n = 4 ist. Diese Angaben setzen wir in die Formel ein.</p>"
+        },
+        {
+          "id": "zz-zinssatz",
+          "subtitle": "Zinssatz",
+          "formula": "<p>`p = 100 * root(n)((K_(VERZINST) / K_(ANFANG))) -1`</p>\r\n\t\t<p>Frage: Ein Guthaben von 800 Euro wurde 4 Jahre verzinst. Das Guthaben betr&auml;gt nach der Verzinsung 980 Euro. Wie hoch war der Zinssatz?</p>\r\n<pre>p = 100 * root(n)((K_v / K_a)) - 100\r\np = 100 * root(4)((980 Euro / 800 Euro)) -100\r\np = 100 * root(4)((1,225) - 100)\r\np = 100 * 1,052 - 100\r\np = 105,2 - 100\r\np = 5,2</pre>\r\n\t\t<p>Antwort: Dem Text entnehmen wir, dass n = 4, K<sub>VERZINST</sub> = 980 Euro und K<sub>ANFANG</sub> = 800 Euro ist. Diese Daten setzen wir in die Formel ein.</p>"
+        },
+        {
+          "id": "zz-zeit",
+          "subtitle": "Zeit (Jahre)",
+          "formula": "<p>`n = (lg(K_(VERZINST)/K_(ANFANG)))/(lg(1+(p/100)))`</p>\r\n\t\t<p>Frage: Auf einem Sparbuch befinden sich 1000 Euro, der Zinssatz betr&auml;gt 5 Prozent. Nach welcher Zeit hat sich das Geld auf dem Sparbuch verdoppelt?</p>\r\n<pre>n = (lg(K_v/K_a))/(lg(1+(p/100)))\r\nn = (lg(2000 Euro/1000 Euro))/(lg(1+(5/100)))\r\nn = (0,30103/0,02119)\r\nn = 14,2</pre>\r\n\t\t<p>Antwort: Dem Text entnehmen wir, dass K<sub>ANFANG</sub> = 1000 Euro, K<sub>VERZINST</sub> = 2000 Euro und p = 5 ist. Diese Angaben setzen wir in die Formel ein. Das \"lg\" ist &uuml;brigens keine Variable, sondern steht f&uuml;r den <strong>dekadischen Logarithmus.</strong></p>"
+        },
+        {
+          "id": "col37Content",
+          "subtitle": "leer"
+        },
+        {
+          "id": "col38Content",
+          "subtitle": "leer"
+        },
+        {
+          "id": "col39Content",
+          "subtitle": "leer"
+        },
+        {
+          "id": "col40Content",
+          "subtitle": "leer"
+        }
+      ]
+    }
+  ],
+  "introHeadings": [
+    "Zahlen",
+    "Flächenberechnung",
+    "Volumenberechnung",
+    "Gleichungen",
+    "Dreisatz",
+    "Prozent- /Zinsrechnung",
+    "Zinsrechnung",
+    "Zinseszins"
+  ]
+}

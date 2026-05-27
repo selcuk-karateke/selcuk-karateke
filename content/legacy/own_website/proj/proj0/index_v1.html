@@ -1,0 +1,58 @@
+<p style="float: right;"></p>
+    <header>
+        <div class="headline">
+            <h1 id="headline">Mittels FORM</h1>
+        </div>
+        <div class="teaser">
+            <h2 id="teaser">in die DB speichern und anzeigen</h2>
+        </div>
+        
+    </header>
+
+
+
+
+
+
+<div class="grid-container">
+<div class="grid-item">
+    <h2>Your Form:</h2>
+    <p><span class="error">* required field.</span></p>
+    <form method="post" action="">  
+        Firstname: <span class="error">* </span>
+        <input type="text" name="firstname" value="">
+        <br>
+        Lastname: <span class="error">* </span>
+        <input type="text" name="lastname" value="">
+        <br>
+        E-mail: <span class="error">* </span>
+        <input type="text" name="email" value="">
+        <br>
+        Website: <span class="error"></span>
+        <input type="text" name="website" value="">
+        <br>
+        Comment: <textarea name="comment" rows="5" cols="40"></textarea>
+        <br>
+        Country:   
+        <select id="country" name="country">
+            <option value="au">Australia</option>
+            <option value="ca">Canada</option>
+            <option value="usa">USA</option>
+        </select>
+        <br>
+        Gender: <span class="error">* </span>
+        <input type="radio" name="gender" value="female" >Female
+        <input type="radio" name="gender" value="male" >Male
+        <br>
+        Search:
+        <input class="src" type="text" name="search" placeholder="Search..">
+        <br>
+        <input type="submit" name="submit" value="Submit">  
+    </form>
+</div>
+
+<div class="grid-item">
+    
+</div>
+
+</div>

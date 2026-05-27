@@ -1,0 +1,211 @@
+{
+  "kind": "prose",
+  "entryId": 10,
+  "sections": [
+    {
+      "id": "Algorithmus",
+      "title": "Algorithmus",
+      "html": "<p>Folgende Anweisung zur L&ouml;sung von Aufgaben</p>\r\n\t\t\t\t\t\t<ul>\r\n\t\t\t\t\t\t\t<li>Anweisungen sind eindeutig, elementar, ausf&uuml;hrbar.</li>\r\n\t\t\t\t\t\t\t<li>Folge ist endlich (Anfang - Ende).</li>\r\n\t\t\t\t\t\t</ul>\r\n\t\t\t\t\t\t<p><span>Bei gleichen Eingangswerten liefert die Folge das gleiche\r\n\t\t\t\t\t\tErgebnis.</span></p>"
+    },
+    {
+      "id": "Programmiersprache",
+      "title": "Programmiersprache",
+      "html": "<p>Sprache zum Formulieren von Anweisungen f&uuml;r den Computer. Sprache\r\n\t\t\t\t\t\tbesteht aus einer Anzahl von grundlegenden Begriffen, den\r\n\t\t\t\t\t\tSchl&uuml;sselw&ouml;rtern.</p>\r\n\t\t\t\t\t\t<p>Anweisungen werden aus Schl&uuml;sselw&ouml;rter, Variablen,\r\n\t\t\t\t\t\tOperatoren, Referenzen u. a. aufgebaut. Die Anweisungen sind nach\r\n\t\t\t\t\t\tfestgelegten Regeln aufzubauen - Syntax und Semantik.</p>"
+    },
+    {
+      "id": "Syntax",
+      "title": "Syntax",
+      "html": "Rechtschreibung der Anweisung"
+    },
+    {
+      "id": "Semantik",
+      "title": "Semantik",
+      "html": "Bedeutung der Anweisung"
+    },
+    {
+      "id": "Compiler",
+      "title": "Compiler",
+      "html": "<p>Programm zum &Uuml;bersetzen von Quellcode:</p>\r\n\t\t\t\t\t\t<p>Java Compiler erzeugt Bytecode (*.class) - java.exe</p>\r\n\t\t\t\t\t\t<p>C++ Compiler erzeugt Objekt-Code (*.obj)</p>"
+    },
+    {
+      "id": "Interpreter",
+      "title": "Interpreter",
+      "html": "<p>Programm welches Anweisungen in Maschinencode &uuml;bertr&auml;gt und\r\n\t\t\t\t\t\tsofort ausf&uuml;hrt.</p>\r\n\t\t\t\t\t\t<p>Visual Basic Script: *.vbs</p>\r\n\t\t\t\t\t\t<p>Java-Interpreter: *.class (Bytecode wird vom Interpreter in\r\n\t\t\t\t\t\tMaschinencode &uuml;bertragen und ausgef&uuml;hrt</p>"
+    },
+    {
+      "id": "Referenz",
+      "title": "Referenz",
+      "html": "<p>Verweis auf ein Objekt</p>"
+    },
+    {
+      "id": "Null_Referenz",
+      "title": "Null (Null Referenz)",
+      "html": "<p>&bdquo;leere&ldquo; Referenz die einen Platz im Arbeitsspeicher\r\n\t\t\t\t\t\tf&uuml;r eine Objekt Referenz freih&auml;lt.</p>"
+    },
+    {
+      "id": "Datentyp",
+      "title": "Datentyp",
+      "html": "<p>Datentyp beschreibt die Variablenart und legt damit den Umfang des zu\r\n\t\t\t\t\t\treservierenden Speichers fest.</p>"
+    },
+    {
+      "id": "Strukturanweisungen",
+      "title": "Strukturanweisungen",
+      "html": "<p>Auswahlanweisungen (<strong>if</strong>, <strong>switch</strong>) und\r\n\t\t\t\t\t\tSchleifenanweisungen (<strong>while</strong>, <strong>do</strong>\r\n\t\t\t\t\t\t<strong>while</strong>, <strong>for</strong>)</p>"
+    },
+    {
+      "id": "Klasse",
+      "title": "Klasse",
+      "html": "<p>Klasse ist der Bauplan f&uuml;r Objekte oder Klasse beschreibt den\r\n\t\t\t\t\t\tAufbau der Objekte. (Klassen definieren Objekttypen.)</p>\r\n\t\t\t\t\t\t<p>Klassen enthalten die Eigenschaften und Methoden der Objekte.</p>"
+    },
+    {
+      "id": "Instanz",
+      "title": "Instanz",
+      "html": "<p>Synonym&nbsp; f&uuml;r Objekt</p>"
+    },
+    {
+      "id": "Prinzipien_OOP",
+      "title": "Prinzipien OOP",
+      "html": "<p>Vererbung ,</p>\r\n\t\t\t\t\t\t<p>Polymorphie,</p>\r\n\t\t\t\t\t\t<p>Datenkapselung</p>"
+    },
+    {
+      "id": "Datenkapselung",
+      "title": "Datenkapselung",
+      "html": "<p><strong>Eigenschaften</strong> von Objekten werden gekapselt (Privater\r\n\t\t\t\t\t\tZugriff). Zugriff auf Eigenschaften &uuml;ber Methoden.</p>"
+    },
+    {
+      "id": "Polymorphie",
+      "title": "Polymorphie",
+      "html": "<p><strong>Methoden</strong> k&ouml;nnen vielgestaltig sein.</p>\r\n\t\t\t\t\t\t<p>&Uuml;berladen &ndash; gleiche Methoden mit unterschiedlichen\r\n\t\t\t\t\t\tParametern.</p>\r\n\t\t\t\t\t\t<p>&Uuml;berschreiben &ndash; &uuml;berschreiben von Methoden der\r\n\t\t\t\t\t\tBasisklasse.</p>"
+    },
+    {
+      "id": "Vererbung",
+      "title": "Vererbung",
+      "html": "<p><strong>Klassen</strong> k&ouml;nnen auf Basis vorhandener Klassen\r\n\t\t\t\t\t\tdefiniert werden. (<strong>extends</strong>)</p>\r\n\t\t\t\t\t\t<p>(Generalisierung und Spezialisierung sind Vorgehensweisen beim\r\n\t\t\t\t\t\tEntwurf/Modellierung von Vererbungsstrukturen)</p>"
+    },
+    {
+      "id": "Methode",
+      "title": "Methode",
+      "html": "<p>Methode enth&auml;lt die Funktionalit&auml;t/Verhalten eines\r\n\t\t\t\t\t\tObjektes.</p>\r\n\t\t\t\t\t\t<p>Signatur: Methodenname und Parametervariablen mit Argumenten</p>\r\n\t\t\t\t\t\t<p>Merke: Methode gibt einen/keinen Wert zur&uuml;ck.</p>\r\n\t\t\t\t\t\t<p>Argument ist der konkrete Wert, welcher in die Parametervariable\r\n\t\t\t\t\t\teingetragen wird und zur Ausf&uuml;hrung der Methode genutzt wird.</p>"
+    },
+    {
+      "id": "Klassenmethode",
+      "title": "Klassenmethode",
+      "html": "<p>Objektunabh&auml;ngige Methode , wird mit\r\n\t\t\t\t\t\t<strong>static</strong>&nbsp; gekennzeichnet Methodenaufruf:&nbsp;\r\n\t\t\t\t\t\t<strong>Klassenname.methodenname(argumente)</strong></p>\r\n\t\t\t\t\t\t<p>Beispiel:</p>\r\n\t\t\t\t\t\t<p><strong>int wert&nbsp; = Sammlung.runden(123.45678, 2);</strong></p>\r\n\t\t\t\t\t\t<p><strong>double zufallswert = Math.random();</strong></p>"
+    },
+    {
+      "id": "Instanzmethode",
+      "title": "Instanzmethode",
+      "html": "<p>Methode eines Objektes,</p>\r\n\t\t\t\t\t\t<p>Methodenaufruf:</p>\r\n\t\t\t\t\t\t<p><strong>Objektreferenz.methodenname(argumente)</strong></p>\r\n\t\t\t\t\t\t<p>Beispiel:</p>\r\n\t\t\t\t\t\t<p><strong>int zinsen = konto.verzinsen();</strong></p>\r\n\t\t\t\t\t\t<p><strong>int umfang = rectangle.berechneUmfang();</strong></p>"
+    },
+    {
+      "id": "Eigenschaft",
+      "title": "Eigenschaft",
+      "html": "<p>Eigenschaften sind die Variablen der Objekte.</p>"
+    },
+    {
+      "id": "Attribut",
+      "title": "Attribut",
+      "html": "<p>Synonym f&uuml;r Eigenschaft, Objektvariable, (engl. field)</p>"
+    },
+    {
+      "id": "Klassenvariable",
+      "title": "Klassenvariable",
+      "html": "<p>Variable unabh&auml;ngig von einem konkreten Objekt;</p>\r\n\t\t\t\t\t\t<p>Beispiel: Zinssatz f&uuml;r alle Konten der Kontoverwaltung</p>\r\n\t\t\t\t\t\t<p><strong>Math.PI</strong></p>\r\n\t\t\t\t\t\t<p><strong>System.out</strong></p>"
+    },
+    {
+      "id": "Instanzvariable",
+      "title": "Instanzvariable",
+      "html": "<p>Variablen eines Objektes</p>"
+    },
+    {
+      "id": "col51Content",
+      "title": "Superklasse",
+      "html": "<p>Basisklasse im Rahmen der Vererbung</p>"
+    },
+    {
+      "id": "Subklasse",
+      "title": "Subklasse",
+      "html": "<p>Abgeleitete Klasse im Rahmen der Vererbung</p>"
+    },
+    {
+      "id": "Modifizierer",
+      "title": "Modifizierer",
+      "html": "<p>final, static, private, public, protected</p>"
+    },
+    {
+      "id": "final",
+      "title": "final",
+      "html": "<p>endg&uuml;ltig, nicht ver&auml;nderbar</p>\r\n\t\t\t\t\t\t<p>finale Variablen &ndash; Konstanten</p>\r\n\t\t\t\t\t\t<p>finale Methoden &ndash; nicht &auml;nderbar, nicht\r\n\t\t\t\t\t\t&uuml;berschreibbar</p>\r\n\t\t\t\t\t\t<p>finale Klassen &ndash; nicht ableitbar</p>"
+    },
+    {
+      "id": "static",
+      "title": "static",
+      "html": "<p>Kennzeichnung der Klassenelemente (Methoden, Eigenschaften)</p>"
+    },
+    {
+      "id": "public",
+      "title": "public",
+      "html": "<p>Kennzeichnung &nbsp;von &ouml;ffentlichen Elementen,</p>\r\n\t\t\t\t\t\t<p>Direkter Zugriff immer m&ouml;glich.</p>"
+    },
+    {
+      "id": "protected",
+      "title": "protected",
+      "html": "<p>Kennzeichnung von gesch&uuml;tzten Elementen</p>\r\n\t\t\t\t\t\t<p>Auf gesch&uuml;tzten Elementen</p>\r\n\t\t\t\t\t\t<p>Auf gesch&uuml;tztes Element kann nur aus der Subklasse direkt\r\n\t\t\t\t\t\tzugegriffen werden.</p>"
+    },
+    {
+      "id": "java_lang",
+      "title": "java.lang",
+      "html": "<p>Java-Sprachpaket enth&auml;lt grundlegende Klassen der\r\n\t\t\t\t\t\tProgrammiersprache. Klassen dieses Paketes brauchen nicht importiert\r\n\t\t\t\t\t\twerden.</p>"
+    },
+    {
+      "id": "java_lang_Object",
+      "title": "java_lang_Object",
+      "html": "<p>Klasse Object ist die Superklasse aller Klassen; sie ist die Wurzel\r\n\t\t\t\t\t\tjeder Vererbungshierarchie</p>"
+    },
+    {
+      "id": "toString",
+      "title": "String toString()",
+      "html": "<p>Methode der Klasse Object und wird in der Regel\r\n\t\t\t\t\t\t&uuml;berschrieben;&nbsp; <strong><span>rEck ist die Objektreferenz,\r\n\t\t\t\t\t\tautomatischer Aufruf der\r\n\t\t\t\t\t\ttoString-Methode</span></strong><span></span></p>\r\n\t\t\t\t\t\t<p><strong>System.out.println(rEck);</strong></p>"
+    },
+    {
+      "id": "equals",
+      "title": "boolean equals()",
+      "html": "<p>Methode der Klasse Object und sollte &uuml;berschrieben werden, um\r\n\t\t\t\t\t\tObjekte auf Identit&auml;t zu vergleichen.</p>\r\n\t\t\t\t\t\t<p>String wort1 = &bdquo;Hallo&ldquo;, String wort2 =\r\n\t\t\t\t\t\t&bdquo;Hallo&ldquo;;</p>\r\n\t\t\t\t\t\t<p>if (wort1.equal(wort2)) &hellip;</p>\r\n\t\t\t\t\t\t<p>// == ist nur f&uuml;r Gleichheitspr&uuml;fung der Objektreferenzen\r\n\t\t\t\t\t\tz.B. if (wort1 == wort2)</p>"
+    },
+    {
+      "id": "Interface",
+      "title": "Interface",
+      "html": "<p>Spezielle Klasse mit Methodendeklarationen; mittels Interface kann die\r\n\t\t\t\t\t\tFunktionalit&auml;t von Klassen vorgeschrieben werden.</p>\r\n\t\t\t\t\t\t<p>Interface&nbsp; (im Paket java.lang) enth&auml;lt eine\r\n\t\t\t\t\t\tMethodendeklaration (abstract)&nbsp; int compareTo(T o)</p>\r\n\t\t\t\t\t\t<p>Objekte der Klassen, welche Comparable&lt;T&gt; implementieren, sind\r\n\t\t\t\t\t\tvergleichbar. Dazu muss in der Klasse die Methode &uuml;berschrieben\r\n\t\t\t\t\t\twerden</p>\r\n\t\t\t\t\t\t<hr>\r\n\t\t\t\t\t\t<p>T steht f&uuml;r einen beliebigen Objekttyp.</p>"
+    },
+    {
+      "id": "throws",
+      "title": "throws",
+      "html": "<p>Exception wird weiter geworfen</p>"
+    },
+    {
+      "id": "Abstrakte_Methode",
+      "title": "Abstrakte Methode",
+      "html": "<p>Abstrakte Methode wird nur (durch den Methodenkopf) deklariert. Sie\r\n\t\t\t\t\t\tenth&auml;lt keine Anweisungen/Algorithmen/Funktionalit&auml;t.</p>\r\n\t\t\t\t\t\t<p><strong>public</strong> abstract double berechnenPreis (int tags);</p>"
+    },
+    {
+      "id": "Abstrakte_Klasse",
+      "title": "Abstrakte Klasse",
+      "html": "<p>Enth&auml;lt mindestens eine abstrakte Methode (und viele weitere\r\n\t\t\t\t\t\tMethoden und Eigenschaften).</p>\r\n\t\t\t\t\t\t<p>Von ihr kann kein Objekt definiert werden &ndash; kann nicht\r\n\t\t\t\t\t\tinstanziiert werden.</p>"
+    },
+    {
+      "id": "Exception",
+      "title": "Exception",
+      "html": "<p>Ausnahmesituation, welche w&auml;hrend der Laufzeit von Programmen\r\n\t\t\t\t\t\teintreten kann.</p>\r\n\t\t\t\t\t\t<p>Werfen von Exception: throw new Exception\r\n\t\t\t\t\t\t(&bdquo;Meldungstext&ldquo;);</p>\r\n\t\t\t\t\t\t<p>Weiterwerfen einer Exception:</p>\r\n\t\t\t\t\t\t<p>public long pruefen (String strNummer)</p>\r\n\t\t\t\t\t\t<p>throws DataFormatException(&hellip;)</p>\r\n\t\t\t\t\t\t<p>Fangen einer Exception:</p>\r\n\t\t\t\t\t\t<p>try { <span>// exceptionwerfende Methode}</span></p>\r\n\t\t\t\t\t\t<p>catch (Exception e)</p>\r\n\t\t\t\t\t\t<p>{ <span>//Behandlung der Ausnahmesituation}</span></p>"
+    },
+    {
+      "id": "RegEx",
+      "title": "RegEx",
+      "html": "<p>Regular Expression &ndash; Regul&auml;rer Ausdruck ist eine\r\n\t\t\t\t\t\tZeichenkette, welche zum Vergleich/Pr&uuml;fen/Suchen/u.a.m. von Strings\r\n\t\t\t\t\t\tverwendet wird.</p>"
+    }
+  ],
+  "toc": [],
+  "headings": [
+    "Begriffe und Definitionen",
+    "..."
+  ]
+}

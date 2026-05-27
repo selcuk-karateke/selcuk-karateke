@@ -1,0 +1,68 @@
+{
+  "kind": "prose",
+  "entryId": 8,
+  "sections": [
+    {
+      "id": "ddl",
+      "title": "Definition DBS, DBSM und DB",
+      "html": "<ul>\r\n<li>Das Datenbankmanagementsystem (DBMS) ist f&uuml;r die Verwaltung der\r\nDatenbank(-en) zust&auml;ndig.</li>\r\n<li>Die Datenbank speichert die Informationen in Form von einzelnen\r\nDatens&auml;tzen ab.</li>\r\n<li>Ein Datenbanksystem unterst&uuml;tzt die computergest&uuml;tzte\r\nDatenverarbeitung von Informationen, die durch eine Datenbankapplikation\r\nerzeugt und verarbeitet werden.</li>\r\n</ul>"
+    },
+    {
+      "id": "db",
+      "title": "Beispiel einer Datenbank",
+      "html": ""
+    },
+    {
+      "id": "dbms",
+      "title": "Anforderungen/ Funktionen eines DBMS",
+      "html": "<p>Die wesentlichen Funktionen von heutigen Datenbankmanagementsystemen\r\nsind:</p>\r\n<ul>\r\n<li>Speicherung, &Uuml;berschreibung und L&ouml;schung von Daten</li>\r\n<li>Verwaltung der Metadaten</li>\r\n<li>Vorkehrungen zur Datensicherheit</li>\r\n<li>Vorkehrungen zum Datenschutz</li>\r\n<li>Vorkehrungen zur Datenintegrit&auml;t</li>\r\n<li>Erm&ouml;glichung des Mehrbenutzerbetriebs durch das\r\nTransaktionskonzept</li>\r\n<li>Optimierung von Abfragen</li>\r\n<li>Erm&ouml;glichung von Triggern und Stored Procedures</li>\r\n<li>Bereitstellung von Kennzahlen &uuml;ber Technik und Betrieb des\r\nDBMS</li>\r\n</ul>"
+    },
+    {
+      "id": "col1Content",
+      "title": "Systemarchitekturen",
+      "html": "<ul>\r\n<li>Desktop Datenbanken f&uuml;r einfache Anwendungen\r\n(Einbenutzerbetrieb) l&auml;uft nur auf einem PC</li>\r\n<li>Desktop Datenbanken f&uuml;r wenige Benutzer (Mehrbenutzerbetrieb)\r\nl&auml;uft auf einem externen Medium (Netzwerklaufwerk etc.)</li>\r\n<li>Client/Server Datenbanken l&auml;uft auf einem Server-PC und\r\nexklusiven Zugriff auf Datenbankdateien.</li>\r\n</ul>"
+    },
+    {
+      "id": "col2Content",
+      "title": "SQL Definition",
+      "html": "<p>bedeutet Structured Query Language und ist eine Datenbanksprache zur\r\nDefinition von Datenstrukturen in relationalen Datenbanken sowie zum\r\nBearbeiten (Einf&uuml;gen, Ver&auml;ndern, L&ouml;schen) und Abfragen von\r\ndarauf basierenden Datenbest&auml;nden.</p>"
+    },
+    {
+      "id": "col3Content",
+      "title": "Datenbankmodelle",
+      "html": "<p>Ein Datenbankmodell ist die theoretische Grundlage f&uuml;r eine\r\nDatenbank und legt fest, auf welche Art und Weise die Daten im\r\nDatenbanksystem gespeichert und bearbeitet werden k&ouml;nnen.</p>\r\n<ul>\r\n<li><strong>Relationale Datenbanken</strong><br>\r\nDer Aufbau besteht ausschlie&szlig;lich aus Tabellen und zwischen diesen\r\nTabellen bestehen mathematisch fundierte Beziehungen. Leicht\r\nprogrammierbar, aber erfordert viel PC-Leistung.</li>\r\n<li><strong>Objektorientierte Datenbanken</strong><br>\r\nk&ouml;nnen Tabellen enthalte, die weitere Tabellen besitzen, daher\r\nkomplexer als Relationale Datenbanken und oft h&ouml;herer Aufwand\r\nf&uuml;r seine Programmierer.</li>\r\n<li><strong>Hierarchische Datenbanken</strong><br>\r\nist die &auml;lteste, daf&uuml;r aber der schnellste, weil sie geringere\r\nRedundanzen bildet, da hier eine Monohierarchie genutzt wird (also vom\r\nRoot zum Knoten).</li>\r\n<li><strong>Netzwerkartige Datenbanken<br></strong> stehen &uuml;ber ein\r\nbeliebig aufgebautes Netz, die miteinander in Verbindung stehen.\r\nFlexibilit&auml;t wird dadurch erh&ouml;ht.</li>\r\n</ul>"
+    },
+    {
+      "id": "col4Content",
+      "title": "Drei Ebenen der Datenbanken",
+      "html": "<ul>\r\n<li>physische Sicht auf die Daten, die interne Ebene</li>\r\n<li>logische Gesamtsicht auf die Daten, die konzeptionelle Ebene</li>\r\n<li>Benutzersichten auf die Daten, die externe Ebene</li>\r\n</ul>"
+    },
+    {
+      "id": "col5Content",
+      "title": "Phasen des Datenbankentwurfs",
+      "html": "<p><strong>Kosten-/ Nutzenanalyse:</strong> Sammeln und Analysieren der\r\nAnforderungen an die neue Datenbank</p>\r\n<p><strong>Konzeptueller Entwurf:</strong> Systemunabh&auml;ngiger\r\nEntwurf der Datenbank nach Anwendungsfunktionen</p>\r\n<p><strong>Verteilungsentwurf:</strong> Bei verteilten Datenbanken\r\nsystemunabh&auml;ngiger Entwurf des verteilten Systems</p>\r\n<p><strong>Logischer Entwurf:</strong> Auswahl eines Datenbankmodells und\r\nAbbildung des konzeptuellen Entwurfs auf das Datenbankmodell</p>\r\n<p><strong>Datendefinition:</strong> Datendefinition, d. h. Codierung und\r\nProgrammierung mithilfe eines DBMS, Definition der Benutzersichten</p>\r\n<p><strong>Phsischer Entwurf:</strong> Definition der Zugriffstrukturen\r\nim physischen Entwurf</p>\r\n<p><strong>Implementierung und Wartung:</strong> Installation der\r\nDatenbank-Anwendung, Anpassung, Testphase</p>"
+    },
+    {
+      "id": "col6Content",
+      "title": "Relationale Datenbanken Grundbegriffe",
+      "html": "<ul>\r\n<li>Tabellen Grundbegriffe</li>\r\n<li>Zelle, Spalte, Zeile, Zeile = Datensatz,\r\nPrim&auml;rschl&uuml;ssel</li>\r\n<li>Schl&uuml;ssel und <strong><u>Beziehungen</u></strong> ( Seite\r\n19-20, 1.2 )</li>\r\n</ul>"
+    },
+    {
+      "id": "col7Content",
+      "title": "SQL ( DDL, DML, DCL ) Befehlsgruppen",
+      "html": "<p>Wichtige Grundbefehle:</p>\r\n<div class=\"table-responsive\">\r\n<table class=\"table\" width=100%>\r\n<tbody>\r\n<tr>\r\n<td>\r\n<p>CREATE</p>\r\n<p>TABLE tabellenname (</p>\r\n<p>attribute1, attribute2,&nbsp; &hellip;</p>\r\n<p>);</p>\r\n</td>\r\n<td>\r\n<p>Erstellt eine Tabelle mit attributen</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>-- Dies ist ein Kommentar</p>\r\n</td>\r\n<td>\r\n<p>Schreibweise von Kommentaren</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>ALTER</p>\r\n<p>TABLE tabellenname</p>\r\n<p>ADD</p>\r\n<p>DROP</p>\r\n<p>CHANGE</p>\r\n</td>\r\n<td>\r\n<p>Tabelle ver&auml;ndern</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>DROP</p>\r\n<p>TABLE tabelle;</p>\r\n</td>\r\n<td>\r\n<p>L&ouml;scht Tabelle</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>CREATE</p>\r\n<p>DROP</p>\r\n<p>ALTER</p>\r\n<p>TRUNCATE</p>\r\n</td>\r\n<td>\r\n<p>DDL Anweisungen</p>\r\n<p>&nbsp;</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>INSERT</p>\r\n<p>DELETE</p>\r\n<p>UPDATE</p>\r\n<p>SELECT</p>\r\n</td>\r\n<td>\r\n<p>DML Anweisungen</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>SELECT *</p>\r\n<p>FROM Kunden \\G;</p>\r\n</td>\r\n<td>\r\n<p>Vertikale Ansicht</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>SELECT</p>\r\n<p>Vorname AS Firstname,</p>\r\n<p>Nachname AS Lastname,</p>\r\n<p>telefon AS Phone</p>\r\n<p>FROM Kunden;</p>\r\n</td>\r\n<td>\r\n<p>Ausgew&auml;hlte Datens&auml;tze&nbsp; unter ge&auml;nderten\r\nTabellenkopf anzeigen lassen</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>DELETE</p>\r\n<p>FROM Kunden</p>\r\n<p>WHERE knr = 2;</p>\r\n</td>\r\n<td>\r\n<p>L&ouml;sche von Tabelle wenn Bedingung Wahr</p>\r\n<p>Delete l&ouml;scht immer ganze Zeilen</p>\r\n<p>In diesem Fall l&ouml;scht man sogar die Komplette zweite Zeile\r\nsodass sie nichtmehr belegt werden kann</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>INSERT</p>\r\n<p>INTO Kunden</p>\r\n<p>(Vorname, Nachname, Strasse, PLZ, Telefon)</p>\r\n<p>VALUES</p>\r\n<p>('Ender', 'Apaydin', 'Mohrenstr. 8a', '10117', '0900222222'),</p>\r\n<p>('Scott', 'B&auml;rbock', 'M&ouml;llendorffstr. 52',\r\n'10367','03012341');</p>\r\n</td>\r\n<td>\r\n<p>Insert Beispiel</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>UPDATE Kunden</p>\r\n<p>SET</p>\r\n<p>Nachname = 'Lehmann',</p>\r\n<p>Vorname = 'Kevin'</p>\r\n<p>WHERE KNr = 3;</p>\r\n</td>\r\n<td>\r\n<p>Update Beispiel</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p>&nbsp;</p>"
+    },
+    {
+      "id": "col8Content",
+      "title": "leer",
+      "html": ""
+    },
+    {
+      "id": "col21Content",
+      "title": "leer",
+      "html": ""
+    }
+  ],
+  "toc": [],
+  "headings": []
+}

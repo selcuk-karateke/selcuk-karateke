@@ -1,0 +1,15 @@
+{
+  "kind": "prose",
+  "entryId": 2,
+  "sections": [
+    {
+      "id": "col1",
+      "title": "Test",
+      "html": "<p>Test</p>"
+    }
+  ],
+  "toc": [],
+  "headings": [
+    "Vokabeln"
+  ]
+}

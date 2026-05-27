@@ -1,0 +1,6 @@
+@import url(//fonts.googleapis.com/css?family=Geo&subset=latin);
+
+* {
+    font-family: 'Geo', serif;
+    -webkit-font-smoothing: none;
+}

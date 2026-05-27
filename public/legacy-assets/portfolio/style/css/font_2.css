@@ -1,0 +1,11 @@
+@import url(//fonts.googleapis.com/css?family=Dosis&subset=latin);
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro&subset=latin);
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Dosis', serif;
+    -webkit-font-smoothing: none;
+}
+a,p {
+    font-family: 'Source Sans Pro', serif;
+    -webkit-font-smoothing: none;
+}

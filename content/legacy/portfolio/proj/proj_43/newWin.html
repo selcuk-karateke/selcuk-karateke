@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<script>
+    var oldWindow = opener.oldWindow; // das alte fenster
+    var testVar = oldWindow.testVar; // testvariable vom alten fenster
+    
+    document.write(testVar); // ausgabe
+
+    function closeWindow(){
+       window.close();
+       oldWindow.testFunc(); // testfunktion vom alten fenster
+    }
+    
+</script>
+
+<div class="">
+	<div class="">
+		<h2>Output:</h2>
+		<!-- neues fenster schliessen -->
+		<button class="" onclick="closeWindow()">Neues Fenster schließen</button>
+	</div>
+</div>

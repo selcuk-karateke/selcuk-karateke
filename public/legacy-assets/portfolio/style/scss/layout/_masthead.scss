@@ -1,0 +1,31 @@
+.masthead {
+  padding-top: calc(6rem + 74px);
+  padding-bottom: 6rem;
+  .masthead-heading {
+    font-size: 2.75rem;
+    line-height: 2.75rem;
+  }
+  .masthead-subheading {
+    font-size: 1.25rem;
+  }
+  .masthead-avatar {
+    width: 15rem;
+  }
+}
+
+.headr {
+	border-bottom: 3px solid $secondary;
+	//background-color: $primary;
+	//background: url(fallback.png);
+	background-image: url(/img/asdf.svg), none;
+	background-repeat: no-repeat;
+}
+.headr-navbar {
+	border-bottom: 3px solid $primary;
+	background-repeat: no-repeat;
+}
+.headr-img {
+	border-radius: 50%;
+	border: 3px solid $secondary;
+}
+

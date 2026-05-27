@@ -1,0 +1,285 @@
+<div class=col>
+<h3><a data-toggle=collapse href=#ddl>Definition DBS, DBSM und
+DB</a></h3>
+<div class=collapse id=ddl>
+<ul>
+<li>Das Datenbankmanagementsystem (DBMS) ist f&uuml;r die Verwaltung der
+Datenbank(-en) zust&auml;ndig.</li>
+<li>Die Datenbank speichert die Informationen in Form von einzelnen
+Datens&auml;tzen ab.</li>
+<li>Ein Datenbanksystem unterst&uuml;tzt die computergest&uuml;tzte
+Datenverarbeitung von Informationen, die durch eine Datenbankapplikation
+erzeugt und verarbeitet werden.</li>
+</ul>
+</div>
+</div>
+<div class=col>
+<h3><a data-toggle=collapse href=#db>Beispiel einer Datenbank</a></h3>
+<div class=collapse id=db></div>
+</div>
+<div class=col>
+<h3><a data-toggle=collapse href=#dbms>Anforderungen/ Funktionen eines
+DBMS</a></h3>
+<div class=collapse id=dbms>
+<p>Die wesentlichen Funktionen von heutigen Datenbankmanagementsystemen
+sind:</p>
+<ul>
+<li>Speicherung, &Uuml;berschreibung und L&ouml;schung von Daten</li>
+<li>Verwaltung der Metadaten</li>
+<li>Vorkehrungen zur Datensicherheit</li>
+<li>Vorkehrungen zum Datenschutz</li>
+<li>Vorkehrungen zur Datenintegrit&auml;t</li>
+<li>Erm&ouml;glichung des Mehrbenutzerbetriebs durch das
+Transaktionskonzept</li>
+<li>Optimierung von Abfragen</li>
+<li>Erm&ouml;glichung von Triggern und Stored Procedures</li>
+<li>Bereitstellung von Kennzahlen &uuml;ber Technik und Betrieb des
+DBMS</li>
+</ul>
+</div>
+</div>
+<div class=col>
+<h3><a data-toggle=collapse href=#col1Content>Systemarchitekturen</a></h3>
+<div class=collapse id=col1Content>
+<ul>
+<li>Desktop Datenbanken f&uuml;r einfache Anwendungen
+(Einbenutzerbetrieb) l&auml;uft nur auf einem PC</li>
+<li>Desktop Datenbanken f&uuml;r wenige Benutzer (Mehrbenutzerbetrieb)
+l&auml;uft auf einem externen Medium (Netzwerklaufwerk etc.)</li>
+<li>Client/Server Datenbanken l&auml;uft auf einem Server-PC und
+exklusiven Zugriff auf Datenbankdateien.</li>
+</ul>
+</div>
+</div>
+<div class=col>
+<h3><a data-toggle=collapse href=#col2Content>SQL Definition</a></h3>
+<div class=collapse id=col2Content>
+<p>bedeutet Structured Query Language und ist eine Datenbanksprache zur
+Definition von Datenstrukturen in relationalen Datenbanken sowie zum
+Bearbeiten (Einf&uuml;gen, Ver&auml;ndern, L&ouml;schen) und Abfragen von
+darauf basierenden Datenbest&auml;nden.</p>
+</div>
+</div>
+<div class=col>
+<h3><a data-toggle=collapse href=#col3Content>Datenbankmodelle</a></h3>
+<div class=collapse id=col3Content>
+<p>Ein Datenbankmodell ist die theoretische Grundlage f&uuml;r eine
+Datenbank und legt fest, auf welche Art und Weise die Daten im
+Datenbanksystem gespeichert und bearbeitet werden k&ouml;nnen.</p>
+<ul>
+<li><strong>Relationale Datenbanken</strong><br>
+Der Aufbau besteht ausschlie&szlig;lich aus Tabellen und zwischen diesen
+Tabellen bestehen mathematisch fundierte Beziehungen. Leicht
+programmierbar, aber erfordert viel PC-Leistung.</li>
+<li><strong>Objektorientierte Datenbanken</strong><br>
+k&ouml;nnen Tabellen enthalte, die weitere Tabellen besitzen, daher
+komplexer als Relationale Datenbanken und oft h&ouml;herer Aufwand
+f&uuml;r seine Programmierer.</li>
+<li><strong>Hierarchische Datenbanken</strong><br>
+ist die &auml;lteste, daf&uuml;r aber der schnellste, weil sie geringere
+Redundanzen bildet, da hier eine Monohierarchie genutzt wird (also vom
+Root zum Knoten).</li>
+<li><strong>Netzwerkartige Datenbanken<br></strong> stehen &uuml;ber ein
+beliebig aufgebautes Netz, die miteinander in Verbindung stehen.
+Flexibilit&auml;t wird dadurch erh&ouml;ht.</li>
+</ul>
+</div>
+</div>
+<div class=col>
+<h3><a data-toggle=collapse href=#col4Content>Drei Ebenen der
+Datenbanken</a></h3>
+<div class=collapse id=col4Content>
+<ul>
+<li>physische Sicht auf die Daten, die interne Ebene</li>
+<li>logische Gesamtsicht auf die Daten, die konzeptionelle Ebene</li>
+<li>Benutzersichten auf die Daten, die externe Ebene</li>
+</ul>
+</div>
+</div>
+<div class=col>
+<h3><a data-toggle=collapse href=#col5Content>Phasen des
+Datenbankentwurfs</a></h3>
+<div class=collapse id=col5Content>
+<p><strong>Kosten-/ Nutzenanalyse:</strong> Sammeln und Analysieren der
+Anforderungen an die neue Datenbank</p>
+<p><strong>Konzeptueller Entwurf:</strong> Systemunabh&auml;ngiger
+Entwurf der Datenbank nach Anwendungsfunktionen</p>
+<p><strong>Verteilungsentwurf:</strong> Bei verteilten Datenbanken
+systemunabh&auml;ngiger Entwurf des verteilten Systems</p>
+<p><strong>Logischer Entwurf:</strong> Auswahl eines Datenbankmodells und
+Abbildung des konzeptuellen Entwurfs auf das Datenbankmodell</p>
+<p><strong>Datendefinition:</strong> Datendefinition, d. h. Codierung und
+Programmierung mithilfe eines DBMS, Definition der Benutzersichten</p>
+<p><strong>Phsischer Entwurf:</strong> Definition der Zugriffstrukturen
+im physischen Entwurf</p>
+<p><strong>Implementierung und Wartung:</strong> Installation der
+Datenbank-Anwendung, Anpassung, Testphase</p>
+</div>
+</div>
+<div class=col>
+<h3><a data-toggle=collapse href=#col6Content>Relationale Datenbanken
+Grundbegriffe</a></h3>
+<div class=collapse id=col6Content>
+<ul>
+<li>Tabellen Grundbegriffe</li>
+<li>Zelle, Spalte, Zeile, Zeile = Datensatz,
+Prim&auml;rschl&uuml;ssel</li>
+<li>Schl&uuml;ssel und <strong><u>Beziehungen</u></strong> ( Seite
+19-20, 1.2 )</li>
+</ul>
+</div>
+</div>
+<div class=col>
+<h3><a data-toggle=collapse href=#col7Content>SQL ( DDL, DML, DCL )
+Befehlsgruppen</a></h3>
+<div class=collapse id=col7Content>
+<p>Wichtige Grundbefehle:</p>
+<div class=table-responsive>
+<table class=table width=100%>
+<tbody>
+<tr>
+<td>
+<p>CREATE</p>
+<p>TABLE tabellenname (</p>
+<p>attribute1, attribute2,&nbsp; &hellip;</p>
+<p>);</p>
+</td>
+<td>
+<p>Erstellt eine Tabelle mit attributen</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>-- Dies ist ein Kommentar</p>
+</td>
+<td>
+<p>Schreibweise von Kommentaren</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>ALTER</p>
+<p>TABLE tabellenname</p>
+<p>ADD</p>
+<p>DROP</p>
+<p>CHANGE</p>
+</td>
+<td>
+<p>Tabelle ver&auml;ndern</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>DROP</p>
+<p>TABLE tabelle;</p>
+</td>
+<td>
+<p>L&ouml;scht Tabelle</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>CREATE</p>
+<p>DROP</p>
+<p>ALTER</p>
+<p>TRUNCATE</p>
+</td>
+<td>
+<p>DDL Anweisungen</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>INSERT</p>
+<p>DELETE</p>
+<p>UPDATE</p>
+<p>SELECT</p>
+</td>
+<td>
+<p>DML Anweisungen</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>SELECT *</p>
+<p>FROM Kunden \G;</p>
+</td>
+<td>
+<p>Vertikale Ansicht</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>SELECT</p>
+<p>Vorname AS Firstname,</p>
+<p>Nachname AS Lastname,</p>
+<p>telefon AS Phone</p>
+<p>FROM Kunden;</p>
+</td>
+<td>
+<p>Ausgew&auml;hlte Datens&auml;tze&nbsp; unter ge&auml;nderten
+Tabellenkopf anzeigen lassen</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>DELETE</p>
+<p>FROM Kunden</p>
+<p>WHERE knr = 2;</p>
+</td>
+<td>
+<p>L&ouml;sche von Tabelle wenn Bedingung Wahr</p>
+<p>Delete l&ouml;scht immer ganze Zeilen</p>
+<p>In diesem Fall l&ouml;scht man sogar die Komplette zweite Zeile
+sodass sie nichtmehr belegt werden kann</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>INSERT</p>
+<p>INTO Kunden</p>
+<p>(Vorname, Nachname, Strasse, PLZ, Telefon)</p>
+<p>VALUES</p>
+<p>('Ender', 'Apaydin', 'Mohrenstr. 8a', '10117', '0900222222'),</p>
+<p>('Scott', 'B&auml;rbock', 'M&ouml;llendorffstr. 52',
+'10367','03012341');</p>
+</td>
+<td>
+<p>Insert Beispiel</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>UPDATE Kunden</p>
+<p>SET</p>
+<p>Nachname = 'Lehmann',</p>
+<p>Vorname = 'Kevin'</p>
+<p>WHERE KNr = 3;</p>
+</td>
+<td>
+<p>Update Beispiel</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<div class=col>
+<h3><a data-toggle=collapse href=#col8Content>leer</a></h3>
+<div class=collapse id=col8Content></div>
+</div>
+<div class=col>
+<h3><a data-toggle=collapse href=#col21Content>leer</a></h3>
+<div class=collapse id=col21Content></div>
+</div>
+<div class=col>
+<h3><a data-toggle=collapse href=#col21Content>leer</a></h3>
+<div class=collapse id=col21Content></div>
+</div>
+<div class=col>
+<h3><a data-toggle=collapse href=#col21Content>leer</a></h3>
+<div class=collapse id=col21Content></div>
+</div>

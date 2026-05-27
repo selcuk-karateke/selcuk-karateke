@@ -1,0 +1,88 @@
+{
+  "kind": "prose",
+  "entryId": 10,
+  "sections": [
+    {
+      "id": "col1Content",
+      "title": "Gedächtnisarten",
+      "html": "<p>Ultrakurzzeitgedächtnis: Es speichert für kurze Dauer aller Informationen entscheidet in Sekunden über Weiterleitung in das Kurzeitgedächtnis.</p>\r\n\t\t<p>Kurzzeitgedächtnis: Dieses speichert für 5 bis 20 Minuten Informationen, die vergessen werden können (z.B. Rechnungsbeträge einige Telefonnummern) was vom Kurzzeitgedächtnis als wichtig betrachtet wird, hat die Chance auf eine feste Speicherung im Langzeitgedächtnis.</p>\r\n\t\t<p>Langzeitgedächtnis: Hier werden Informationen für lange Zeit gespeichert bzw. immer. Der Abruf kann gestört sein, weil Gelerntes nicht strukturiert abgelegt wurde bzw. Aktuelles das Abgelegte überlagert.</p>"
+    },
+    {
+      "id": "col2Content",
+      "title": "Wahrscheinlichkeit",
+      "html": "<p>Mit welcher Wahrscheinlichkeit gelangt Information ins Langzeitgedächtnis?</p>\r\n\t\t<p>Lesen = 10%</p>\r\n\t\t<p>Hören = 20%</p>\r\n\t\t<p>Sehen = 30%</p>\r\n\t\t<p>Hören + Sehen = 50%</p>\r\n\t\t<p>Selbst sagen = 70%</p>\r\n\t\t<p>Selbst machen = 90%</p>"
+    },
+    {
+      "id": "col3Content",
+      "title": "Definition von Lernen",
+      "html": "<p>Lernen ist:</p>\r\n\t\t<ul>\r\n\t\t\t<li class=\"list-group-item\">komplexer</li>\r\n\t\t\t<li class=\"list-group-item\">auf biologischer</li>\r\n\t\t\t<li class=\"list-group-item\">und psychologischer Ebene</li>\r\n\t\t</ul>\r\n\t\t<p>ablaufender Vorgang, der zu einer relativ dauerhaften Verhaltensänderung aufgrund von Erfahrung führt.</p>"
+    },
+    {
+      "id": "col4Content",
+      "title": "Biologische Ebene",
+      "html": "<h4>Anzahl Nervenzellen (Neuronen)</h4>\r\n\t\t<ul>\r\n\t\t\t<li class=\"list-group-item\">beim Menschen:<br>\r\n\t\t\t1.000.000.000.000 (10<sup>12</sup>) 1 Billion</li>\r\n\t\t\t<li class=\"list-group-item\">bei der Ratte/Taube:<br>\r\n\t\t\t1.000.000.000 (10<sup>9</sup>) 1 Milliarde</li>\r\n\t\t\t<li style=\"list-style: none; display: inline\">\r\n\t\t\t\t<p></p>\r\n\t\t\t\t<p>Diese sind über Nervenbahnen untereinander verbunden; an deren Kreuzungen (Synapsen) \" verständigen\" sich Nervenzellen über spezielle Botenstoffen (Transmitter).</p>\r\n\t\t\t\t<h4>Aspekte der \"biologischen Ebene\"/praktische Folgen:</h4>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"list-group-item\">Bie einem Ausfall von Nervenstraßen (Unfall, Krankheit), kann das Gehirn neue Nervenbahnen zwischen Nervenzellen knüpfen</li>\r\n\t\t\t<li class=\"list-group-item\">Lebenslanges Lernen ist normal, möglich und sinnvoll</li>\r\n\t\t\t<li class=\"list-group-item\">Der Begriff \"abgeschlossenen Berufsausbildung\" ist eigentlich ein \"Unwort\"</li>\r\n\t\t\t<li class=\"list-group-item\">Die Vorstellung des Gedächtnisses als \"Behälter\" oder\" Festplatte\" ist nur im Ansatz richtig: Die Kapazität (1012 Nervenzellen) kann im menschlichen Leben nicht ausgeschöpft</li>\r\n\t\t</ul>"
+    },
+    {
+      "id": "col5Content",
+      "title": "Schwerpunkt der Gehirnhälften",
+      "html": "<h4>Links</h4>\r\n\t\t<ul>\r\n\t\t\t<li class=\"list-group-item\">Sprache, Daten</li>\r\n\t\t\t<li class=\"list-group-item\">erfasst das Einzelne</li>\r\n\t\t\t<li class=\"list-group-item\">denkt in Worten</li>\r\n\t\t\t<li class=\"list-group-item\">regelgeleitetes Denken</li>\r\n\t\t\t<li class=\"list-group-item\">Kommunikation:<br>\r\n\t\t\tAufschlag in Sachebene</li>\r\n\t\t\t<li style=\"list-style: none; display: inline\">\r\n\t\t\t\t<h4>Rechts</h4>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"list-group-item\">Bilder, Gefühle</li>\r\n\t\t\t<li class=\"list-group-item\">erfasst das Ganze</li>\r\n\t\t\t<li class=\"list-group-item\">denkt in Bildern</li>\r\n\t\t\t<li class=\"list-group-item\">offenes, kreatives Denken</li>\r\n\t\t\t<li class=\"list-group-item\">Komumunikation:<br>\r\n\t\t\tAufschlag in Beziehungsebene</li>\r\n\t\t</ul>"
+    },
+    {
+      "id": "col6Content",
+      "title": "Aspekte der psychol. Ebene",
+      "html": "<h4>Lernbereiche: kognitiv, affektiv, psychomotorisch</h4>\r\n\t\t<table class=\"table\">\r\n\t\t\t<thead>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<th>LERNBEREICH</th>\r\n\t\t\t\t\t<th>BETRIFFT</th>\r\n\t\t\t\t</tr>\r\n\t\t\t</thead>\r\n\t\t\t<tbody>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td>kognitiv:</td>\r\n\t\t\t\t\t<td>den Verstand</td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td>affektiv:</td>\r\n\t\t\t\t\t<td>die Gefühle (Emotionen)</td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td>psychomotorisch:</td>\r\n\t\t\t\t\t<td>Bewegungsabläufe</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</tbody>\r\n\t\t</table>\r\n\t\t<p><mark>Effektives Lernen heißt auch: affektives Lernen! \"Lernen mit Freude (Motivation) und Verstand\"</mark></p>"
+    },
+    {
+      "id": "col7Content",
+      "title": "Motivationsarten",
+      "html": "<p>... aus dem eigenen Wollen heraus</p>\r\n\t\t<h4>\" primäre (INTRINSISCHE) Motivation:</h4>\r\n\t\t<p>\"Ich lerne, weil mich die Sache interessiert\"</p>\r\n\t\t<p>\"Ich arbeite, weil ich Spaß daran habe\"</p>\r\n\t\t<p></p>\r\n\t\t<hr>\r\n\t\t<p></p>\r\n\t\t<p>... von außen durch Anreize in Gang gebracht</p>\r\n\t\t<h4>\" sekundäre (EXTRINSISCHE)Motivation:</h4>\r\n\t\t<p>\"Ich lerne, um eine gute Note zu bekommen\"</p>\r\n\t\t<p>\"Ich arbeite, um Geld zu verdienen\"</p>"
+    },
+    {
+      "id": "col8Content",
+      "title": "Definition von Lernen",
+      "html": "<h4>Formales Lernen</h4>\r\n\t\t<p>Lernen, das üblicherweise in einer Bildungs- oder Ausbildungseinrichtung stattfindet, (in Bezug auf Lernziele, Lernzeit oder Lernförderung) strukturiert ist und zur Zertifizierung führt. Formales Lernen ist aus der Sicht des Lernenden zielgerichtet.</p>\r\n\t\t<p>Beispiel: Schule, Studium</p>\r\n\t\t<h4>Nonformales Lernen</h4>\r\n\t\t<p>Lernen, das nicht in Bildungs- oder Ausbildungseinrichtung stattfindet und üblicherweise nicht zur Zertifizierung führt. Gleichwohl ist es Systematisch (in Bezug auf Lernziele, Lerndauer oder Lernmittel). Aus der Sicht der Lernenden ist es zielgerichtet.</p>\r\n\t\t<p>Beispiel: Selbststudium, gezielte Informationssammlung und Weiterbildung am Arbeitsplatz</p>\r\n\t\t<h4>Informelles Lernen</h4>\r\n\t\t<p>Lernen, das im Altag, im Familienkreis oder in der Freizeit Stattfindet. Es ist , (in Bezug auf Lernziele, Lernzeit oder Lernförderung) nicht strukturiert und führt üblicherweise nicht zur Zertifizierung. Informelles Lernen ist in den meisten Fällen weniger zielgerichtet und eher beiläufig.</p>\r\n\t\t<p>Beispiel: zusätzliches Erlernen von Fertigkeiten am Arbeitsplatz, bei einem Hobby oder von Familienmitglieder.</p>"
+    },
+    {
+      "id": "col9Content",
+      "title": "Lerntypen",
+      "html": "<p>Verschiedene Modelle betonen die Sinneseindrücke, die während der Informationsübertragung zur Geltung kommen. Diese verwenden unterschiedliche Bezeichnungen für dieselben oder ähnliche Lernstile welche in vier grundlegende Typen dargestellt werden:</p>\r\n\t\t<div style=\"margin-left: 2em\">\r\n\t\t\t1. \"Visuelles Lernen\" : lernen durch Schauen"
+    },
+    {
+      "id": "col10Content",
+      "title": "Lernstile",
+      "html": "<p><b>\"Divergierer\"</b> bzw. Entdecker: lernen gut durch konkrete Erfahrungen und reflektierte Beobachtungen</p>\r\n\t\t<p><b>\"Assimilierer\"</b> bzw. Denker: bevorzugen reflektiertes Beobachten und abstrakte Begriffsbildung sowie theoretische Modelle</p>\r\n\t\t<p><b>\"Konvergierer\"</b> bzw. Entscheider: lernen gut durch abstrakte Begriffsbildung und aktives Experimentieren</p>\r\n\t\t<p><b>\"Akkomodierer\"</b> bzw. Praktiker: mögen aktives Experimentieren und konkrete Erfahrungen (Haller & Nowack, 2013).</p>"
+    },
+    {
+      "id": "col11Content",
+      "title": "Aktivisten (Aktivist)",
+      "html": "<p>\" zeichnen sich durch große Handlungsbereitschaft aus.</p>\r\n\t\t<p>Sie sind offen für alles Neue, lassen sich vorurteilsfrei auf neue Erfahrungen ein, sind am Hier und Jetzt orientiert. Handeln ist ihre oberste Priorität, es wird der Reflexion und dem Nachdenken über mögliche Folgen vorangestellt.</p>\r\n\t\t<p>Nach der aufregenden Implementierungsphase entsteht schnell mangelndes Interesse und Neugierde auf eine andere Herausforderung. Aktivisten versuchen, kontinuierliche Tätigkeiten und langfristige Planungen zu vermeiden.</p>\r\n\t\t<p>Sie sind gesellig, suchen Kontakt zu anderen Menschen, wollen aber stets im Mittelpunkt stehen.</p>\r\n\t\t<p><mark>Die Philosophie der Aktivisten lautet: \"Einmal probiere ich alles aus!\"</mark></p>"
+    },
+    {
+      "id": "col12Content",
+      "title": "Nachdenker (Reflector)",
+      "html": "<p>\" sind, wie es der Name bereits sagt, nachdenkliche Typen.</p>\r\n\t\t<p>Sie sammeln ihre Erfahrungen im Hintergrund und untersuchen diese aus verschiedenen Perspektiven. Bevor sie zu einem Entschluss kommen, unterziehen sie ihre Beobachtungen einem ausführlichen Reflexionsprozess.</p>\r\n\t\t<p>Das abwägen möglicher Konsequenzen bestimmt das Handeln. Konkrete Entscheidungen erfolgen erst nach einer ausreichenden Sammlung und Analyse der Daten, daher werden sie lange aufgeschoben.</p>\r\n\t\t<p>Der Nachdenker erwägt alle denkbaren Möglichkeiten, bevor er handelt. Gerne beobachtet er andere Menschen bei ihren Tätigkeiten. Bei Treffen und Besprechungen sitzt er möglichst weit hinten.</p>\r\n\t\t<p><mark>Die Philosophie der Nachdenker lautet: \"Sei vorsichtig!\"</mark></p>"
+    },
+    {
+      "id": "col13Content",
+      "title": "Theoretiker (Theorist)",
+      "html": "<p>\" sind in der Lage, Beobachtungen zu systematisieren, und können sie mit komplexen Theorien verbinden.</p>\r\n\t\t<p>Grundsätzliche Aussagen und Vermutungen, Prinzipien, Theorien, Modelle und systematisches Denken liegen dieser Type. Ihr Denken ist durch sequentiell aufeinander folgende einzelne Schritte gekennzeichnet.</p>\r\n\t\t<p>Aufgrund ihres Perfektionismus sind sie erst zufrieden, wenn alle Dinge in ein rationales Schema passen.</p>\r\n\t\t<p>Subjektive Bewertungen und Emotionen lehnen sie ab. Für sie zählen nur die Logik und die überprüfbare Gewissheit.</p>\r\n\t\t<p><mark>Die Philosophie der Theoretiker lautet: \"Wenn es logisch ist, dann passt es!\"</mark></p>"
+    },
+    {
+      "id": "col14Content",
+      "title": "Pragmatiker (Pragmatist)",
+      "html": "<p>\"suchen ständig nach neuen Ideen, Theorien und Techniken, um auszuprobieren, ob sie funktionieren.</p>\r\n\t\t<p>Bei der praktischen Umsetzung von Idee, Theorien und Techniken haben sie ihre besonderen stärken. Sie neigen dazu die Geduld zu verlieren, wenn Diskussionen nicht enden und Standpunkte immer wieder wiederholt werden.</p>\r\n\t\t<p>Bei Problemlösungen gehen sie zweckorientiert vor. Wenn Probleme auftauchen, betrachten sie das als eine Herausforderung.</p>\r\n\t\t<p><mark>Die Philosophie der Pragmatiker lautet: \"Wenn es funktioniert, ist es gut!\"</mark></p>"
+    },
+    {
+      "id": "col15Content",
+      "title": "Lerntechniken",
+      "html": "<h4>Speed-Reading</h4>\r\n\t\t<p>... kann helfen, Texte schneller zu lesen und trotzdem mehr von ihr zu behalten.</p>\r\n\t\t<h4>Mind-Mapping</h4>\r\n\t\t<p>... ist insbesondere hilfreich, wenn viele Informationen und Unterpunkte eines Themengebiets im Gedächtnis verankert werden sollen.</p>\r\n\t\t<h4>Loci-Methode</h4>\r\n\t\t<p>... ist den Meisten aus dem Fernsehen bekannt. Sie eignet sich insbesondere für das Auswendiglernen vieler Informationen und arbeitet anhand von Vorstellungsbildern, die an bestimmten Orten \"abgelegt\" werden und beim Gedanken an diesen Orten wieder auftauchen.</p>\r\n\t\t<div style=\"margin-left: 2em\">\r\n\t\t\t1= Bad"
+    },
+    {
+      "id": "col40Content",
+      "title": "leer",
+      "html": ""
+    }
+  ],
+  "toc": [],
+  "headings": []
+}

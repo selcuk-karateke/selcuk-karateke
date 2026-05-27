@@ -1,0 +1,83 @@
+<div class="container col-sm-12">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Questions</h1>
+            <!--Formular um neue Fragen hinzuzufügen-->
+            <form id="send" method="POST" action="index.php">
+            <input id="question" type="text" name="question" placeholder="add new question" required/>
+            <select style="width:150px" class="form-control" id="categorie_id" name="categorie_id">
+            
+            </select>
+            <button type="submit" class="btn btn-primary">Create New Question</button>
+            </form>
+            
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <!-- Tabelle um Datensätze anzuzeigen-->
+            <table class="table table-bordered table-striped" style="width:800px">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Categorie</th>
+                    <th>Read</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                    <th>Wiki</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                
+            </tbody>
+            </table>
+            
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Categories</h3>
+            <!--Formular um neue Kategorien hinzuzufügen-->
+            <form id="send" method="POST" action="index.php">
+            <input id="categorie" type="text" name="categorie" placeholder="add new categorie" required/>
+            <button type="submit" class="btn btn-primary">Create New Categorie</button>
+            </form>
+            
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <!-- Categorie Tabelle Datensätze anzuzeigen-->
+            <table class="table table-bordered table-striped" style="width:800px">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Categories</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-12">
+            
+            <button class="btn btn-info" data-toggle="collapse" data-target="#mindsetinfo">Mindset Info</button>
+            <div id="mindsetinfo" class="collapse">
+                
+            
+            
+            </div>
+            <p>Advantage, Disadvantage, Argument, Counter-argument, Thesis, Antithesis, Hypothesis & Fact </p>
+            <p>Quellen: <a href="https://de.wiktionary.org/wiki/" target="_blank">Wiktionary</a></p>
+        </div>
+    </div>
+</div>

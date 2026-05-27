@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="/proj/proj4/css/default.css">
+
+<div class="row">
+	<div class="col-sm-6">
+		<h2>Input:</h2>
+		<form name="form" action="">
+			<label for="eType">Type:</label>
+			<select class="custom-select" name="eType" id="eType" size="1"> <!-- select an elem -->
+				<option value="" disabled selected>Select type</option>
+				<option value="input">Make Input</option>
+				<option value="button">Make Button</option>
+				<option value="select">Make Select</option>
+			</select>
+			<div id="eAttrib" style="display:none">
+				<label for="eAttrib">Attrib:</label>
+				<select name="eAttrib" size="1"> <!-- select a <input, ...> element -->
+					<option value="text">Text</option>
+					<option value="email">E-Mail</option>
+				</select>
+			</div>
+			<label for="eTarget">Target:</label>
+			<select class="custom-select" name="eTarget" size="1"> <!-- select a <input, ...> element -->
+				<option value="target1">Target 1</option>
+				<option value="target2">Target 2</option>
+				<option value="target3">Target 3</option>
+			</select>
+			<label for="eContent">Content:</label>
+			<input type="text" class="form-control" name="eContent" size="50">
+			<label></label>
+			<button type="button" class="btn btn-primary btn-block" id="button">Create</button> <!-- start creating with JS -->
+			<label></label>
+			<button type="button" class="btn btn-primary btn-block" disabled>Update</button>
+			<label></label>
+			<button type="button" class="btn btn-primary btn-block" disabled>Delete</button>
+			<label></label>
+			<button type="button" class="btn btn-primary btn-block" disabled>Truncate</button>
+		</form>
+	</div>
+	<div class="col-sm-6">
+		<h2>Output:</h2>
+		<div class="jumbotron">
+			<p id="target1">1.</p>
+			<p id="target2">2.</p>
+			<p id="target3">3.</p>
+		</div>
+	</div>
+
+	<div class="col-sm-6">
+	</div>
+</div>
+
+<script src="/proj/proj4/js/func.js"></script>

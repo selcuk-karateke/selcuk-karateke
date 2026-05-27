@@ -1,0 +1,26 @@
+// Styling for page sections
+.page-section {
+  padding: 6rem 0;
+  .page-section-heading {
+    font-size: 2.25rem;
+    line-height: 2rem;
+  }
+}
+
+@mixin grid($cols, $mgn){
+  float: left;
+  width: ((100% - (($cols - 1) * $mgn)) / $cols );
+  margin-right: $mgn;
+  margin-bottom: $mgn;
+  &:nth-child(#{$cols}n){
+    margin-right: 0;
+  }
+}
+
+.grid-section li{
+  @include grid(3, 1%);
+  list-style: none;
+  img{
+    width: 100%;
+  }
+}

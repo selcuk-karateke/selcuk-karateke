@@ -1,7 +1,11 @@
 import Link from 'next/link'
-import { notFound } from 'next/navigation'
+import { notFound, redirect } from 'next/navigation'
 import { getLegacyRoute, getLegacyRoutesBySource, legacyRoutes } from '@/data/legacyRoutes'
 import LegacyFeaturePanel from '@/components/legacy/LegacyFeaturePanel'
+import LegacyPageContent from '@/components/legacy/LegacyPageContent'
+import { loadParsedLegacyPage } from '@/lib/legacyPage'
+import { ownWebsiteFloors, portfolioEducationFloors } from '@/data/educationFloors'
+import '../../legacy.css'
 
 export function generateStaticParams() {
   return legacyRoutes.map((route) => ({
@@ -24,11 +28,26 @@ export default async function LegacyRoutePage({
       <div className="min-h-screen theme-bg">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h1 className="text-4xl font-bold theme-text mb-3">
-            {source === 'portfolio' ? 'portfolio' : 'own_website'} Routes
+            {source === 'portfolio' ? 'Portfolio' : 'Own Website'}
           </h1>
           <p className="theme-text-secondary mb-8">
-            Complete mapped routes from the legacy PHP system. Each route opens a migrated page
-            with functional mock behavior where required.
+            {source === 'portfolio' ? (
+              <>
+                Bildungsinhalte findest du unter{' '}
+                <Link href="/education" className="theme-primary hover:opacity-80">
+                  /education
+                </Link>
+                .
+              </>
+            ) : (
+              <>
+                Stockwerke der alten Website unter{' '}
+                <Link href="/akademie" className="theme-primary hover:opacity-80">
+                  /akademie
+                </Link>
+                .
+              </>
+            )}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -40,7 +59,6 @@ export default async function LegacyRoutePage({
               >
                 <p className="font-semibold theme-text">{route.title}</p>
                 <p className="text-sm theme-text-secondary mt-1">/{route.route}</p>
-                <p className="text-xs theme-text-secondary mt-2">Feature: {route.feature}</p>
               </Link>
             ))}
           </div>
@@ -52,29 +70,57 @@ export default async function LegacyRoutePage({
   const route = getLegacyRoute(source, slug)
   if (!route) notFound()
 
+  if (source === 'portfolio' && slug[0] === 'educ' && slug.length === 2) {
+    const floorId = slug[1]
+    if (portfolioEducationFloors.some((f) => f.id === floorId)) {
+      redirect(`/education/${floorId}`)
+    }
+  }
+
+  if (source === 'own_website' && slug.length === 1) {
+    const floorId = slug[0]
+    if (ownWebsiteFloors.some((f) => f.id === floorId)) {
+      redirect(`/akademie/${floorId}`)
+    }
+  }
+
+  if (source === 'portfolio' && slug[0] === 'exer') {
+    if (slug[0] === 'exer' && slug.length === 1) redirect('/uebungen/index')
+    if (slug[0] === 'exer' && slug[1] === 'buecheranzeige') redirect('/uebungen/buecheranzeige')
+    if (slug[0] === 'exer' && slug[1] === 'buechererfassung') redirect('/uebungen/buechererfassung')
+    if (slug[0] === 'exer' && slug[1] === 'pdotest') redirect('/uebungen/pdotest')
+    if (slug[0] === 'exer' && slug[1] === 'exer_11') redirect('/uebungen/exer-11')
+    if (slug[0] === 'exer' && slug[1] === 'galerie' && slug[2] === 'upload') redirect('/uebungen/galerie-upload')
+    if (slug[0] === 'exer' && slug[1] === 'galerie') redirect('/uebungen/galerie')
+    if (slug[0] === 'exer' && slug[1] === 'news' && slug[2] === 'test') redirect('/uebungen/news-test')
+  }
+
+  const page = loadParsedLegacyPage(source, slug.join('/'))
+
   return (
     <div className="min-h-screen theme-bg">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="mb-8">
           <Link href={`/legacy/${source}`} className="text-sm theme-primary hover:opacity-80">
-            ← Back to {source} routes
+            ← Zurück
           </Link>
           <h1 className="text-4xl font-bold theme-text mt-3">{route.title}</h1>
-          <p className="theme-text-secondary mt-2">
-            Legacy route: <code>/legacy/{route.source}/{route.route}</code>
-          </p>
-          <p className="theme-text-secondary text-sm mt-1">Source file: {route.sourcePath}</p>
         </div>
 
-        <div className="theme-bg-card border theme-border rounded-xl p-6 mb-8">
-          <h2 className="text-xl font-semibold theme-text mb-3">Migration Status</h2>
-          <p className="theme-text-secondary">
-            This route is available in the new system and wired to a functional mock
-            implementation for its legacy behavior.
-          </p>
-        </div>
+        {page?.html && page.parsed ? (
+          <LegacyPageContent parsed={page.parsed} fallbackHtml={page.html} />
+        ) : (
+          <div className="theme-bg-card border theme-border rounded-xl p-6">
+            <p className="theme-text">Für diese Seite liegt noch kein Inhalt vor.</p>
+          </div>
+        )}
 
-        <LegacyFeaturePanel route={route} />
+        {route.feature !== 'none' && (
+          <div className="mt-10">
+            <h2 className="text-lg font-semibold theme-text mb-3">Funktion</h2>
+            <LegacyFeaturePanel route={route} />
+          </div>
+        )}
       </div>
     </div>
   )

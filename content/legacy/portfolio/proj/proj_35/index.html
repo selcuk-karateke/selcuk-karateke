@@ -1,0 +1,46 @@
+<div class="row">
+	<div class="col-sm-6">
+		<h2>Subject:</h2>
+		<img class="img-fluid" src="proj/proj1/img/resistor-short-circuit.jpg" alt="image">
+		<p>Kein Metall ist ein idealer Leiter, sondern besitzt einen Widerstand. Wenn ein Strom fließt, kommen deshalb die Elektronen nie ganz ungehindert voran. Bestimmte Materialien, wie beispielsweise Kohle, sind weder ein guter elektrischer Leiter noch ein Isolator, der keinen Stromfluss mehr zulässt. Die Techniker nennen sie deshalb Widerstandsmaterialien und stellen daraus Bauelemente her, die Widerstände heißen.</p>
+		<p><i>Dabei gelten folgende Zusammenhänge:</i> Je kleiner der Stromfluss (I), desto größer ist der Widerstand (R), und je größer die Spannung (U) wird, umso größer ist auch der Strom (I), der fließen kann. Man spricht dabei vom Ohmschen Gesetz, das Georg Simon Ohm entdeckt hatte. Dieses Gesetz drückt man in folgender Formel aus: U = R x I. Der elektrische Widerstand wird in der Maßeinheit Ohm (?) angegeben. Jedes elektronische Multimeter kann Widerstände von wenigen Ohm über viele Kiloohm (k?) bis zu zwei Megaohm (M?) messen. Kilo steht dabei für 10^3, Mega für 10^6. Ein Kiloohm sind deshalb 1.000 Ohm, ein Megaohm entspricht einer Million Ohm.</p>
+		<p><i>Quelle - Das große Elektronik-Praktiker-Buch (Frank Sichla)</i></p>
+	</div>
+	<div class="col-sm-6">
+		<h2 id="headline">In-/Output</h2>
+		<canvas id="cs"></canvas>
+		<h3>Größe</h3>
+		<p>Bitte geben Sie eine Zahl zwischen 1-999 ein.</p>
+		<input class="form-control" id="gr" name="groesse" onkeyup="update()" placeholder="Größe" type="text">
+		<p></p>
+		<h3>Toleranz</h3>
+		<p>Optional: Wählen Sie eine Toleranz. Ab 0,5%</p>
+		<p>
+			<select class="selectpicker" id="to" name="toleranz" onchange="update(this.value)">
+				<option disabled value="0.05">0,05%</option>
+				<option disabled value="0.1">0,1%</option>
+				<option disabled value="0.25">0,25%</option>
+				<option value="0.5">0,5%</option>
+				<option value="1">1%</option>
+				<option value="2">2%</option>
+				<option value="5">5%</option>
+				<option value="10">10%</option>
+			</select>
+		</p>
+		<h3>Farben</h3>
+		<table id="farben"></table>
+		<p></p>
+		<h3>Reverse</h3>
+		<table id="reverse" hidden></table>
+		<p></p>
+		<h3>Info</h3>
+		<table id="info"></table>
+	</div>
+	<div class="col-sm-6">
+		<h2 id="reiheUe">E-Reihe (experimentell)</h2>
+		<p id="gewaehlt"></p>
+		<div id="waehle"></div>
+		<table id="reiheT"></table>
+	</div>
+</div>
+<script src="/proj/proj1/js/main.js"></script>

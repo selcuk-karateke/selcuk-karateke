@@ -1,0 +1,70 @@
+<div class="row content">
+
+
+<div class="col-sm-12 text-left">
+
+<div class="headline">
+    <h1 id="headline">Mittels FORM (0)</h1>
+</div>
+<div class="teaser">
+    <h2 id="teaser">in die DB speichern und anzeigen</h2>
+</div>
+
+
+
+<div class="grid-container">
+<div class="grid-item">
+    <h2>Your Form:</h2>
+    <p><span class="error">* required field.</span></p>
+    <form method="post" action="">  
+        <label>Firstname: <span class="error">* </span></label>
+        <input type="text" id="fname" name="firstname" value="">
+        <br>
+        <label>Lastname: <span class="error">* </span></label>
+        <input type="text" id="lname" name="lastname" value="">
+        <br>
+        <label>E-mail: <span class="error">* </span></label>
+        <input type="text" name="email" value="">
+        <br>
+        <label>Website: <span class="error"></span></label>
+        <input type="text" name="website" value="">
+        <br>
+        <label for="comment">Comment:</label>
+        <textarea name="comment" id="comment" rows="5" cols="40"></textarea>
+        <br>
+        <label>Country:</label>
+        <select id="country" class="selectpicker" multiple>
+            <option value="de">Germany</option>
+            <option value="au">Australia</option>
+            <option value="ca">Canada</option>
+            <option value="us">USA</option>
+        </select>
+        <br>
+        <label>Gender: <span class="error">* </span></label>
+        <input type="radio" name="gender" id="male" value="male" >Male
+        <input type="radio" name="gender" id="female" value="female" >Female
+        <input type="radio" name="gender" id="other" value="other" >Other
+        <br>
+        <label>Age: <span class="error">* </span></label>
+        <input type="date" name="age" id="age" value="$age">
+        <br>
+        <label>Search</label>
+        <input class="src" type="text" name="search" placeholder="Search..">
+        <br>
+        <label for="action"></label>
+        <button name="action">Submit</button>
+    </form>
+</div> 
+
+<div class="grid-item">
+  
+
+</div> 
+
+<div class="grid-item">
+
+</div> 
+</div>
+
+</div>
+</div>

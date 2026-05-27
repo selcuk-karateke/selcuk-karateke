@@ -1,0 +1,58 @@
+<div class="row content">
+        
+        
+        <div class="col-sm-12 text-left">
+            <div class="headline">
+            <h1 id="headline"></h1>
+            </div>
+            <div class="teaser">
+            <h2 id="teaser"></h2>
+            </div>
+                <div class="container">
+                    <div class="col-sm-4 text-left">
+                        <img src="/legacy-assets/own_website/img/resistor-short-circuit.jpg">
+                        <h4>Der Widerstand</h4>
+                        <p id="text">Kein Metall ist ein idealer Leiter, sondern besitzt einen Widerstand. Wenn ein Strom fließt, kommen deshalb die Elektronen nie ganz ungehindert voran. Bestimmte Materialien, wie beispielsweise Kohle, sind weder ein guter elektrischer Leiter noch ein Isolator, der keinen Stromfluss mehr zulässt. Die Techniker nennen sie deshalb Widerstandsmaterialien und stellen daraus Bauelemente her, die Widerstände heißen.</p>
+                        <p id="text"><i>Dabei gelten folgende Zusammenhänge:</i> Je kleiner der Stromfluss (I), desto größer ist der Widerstand (R), und je größer die Spannung (U) wird, umso größer ist auch der Strom (I), der fließen kann. Man spricht dabei vom Ohmschen Gesetz, das Georg Simon Ohm entdeckt hatte. Dieses Gesetz drückt man in folgender Formel aus: U = R x I. Der elektrische Widerstand wird in der Maßeinheit Ohm (?) angegeben. Jedes elektronische Multimeter kann Widerstände von wenigen Ohm über viele Kiloohm (k?) bis zu zwei Megaohm (M?) messen. Kilo steht dabei für 10^3, Mega für 10^6. Ein Kiloohm sind deshalb 1.000 Ohm, ein Megaohm entspricht einer Million Ohm.</p>
+                        <p id="text"><i>Quelle - Das große Elektronik-Praktiker-Buch (Frank Sichla)</i></p>
+                    </div>
+                    <div class="col-sm-4 text-left">
+                        <canvas id="cs"></canvas>
+                        <h4>Größe</h4>
+                        <p>Bitte geben Sie eine Zahl zwischen 1-999 ein.</p>
+                        <input id="gr" name="groesse" onkeyup="update()" placeholder="Größe" type="text">
+                        <p></p>
+                        <h4>Toleranz</h4>
+                        <p>Optional: Wählen Sie eine Toleranz. Ab 0,5%</p>
+                        <p>
+                            <select id="to" name="toleranz" onchange="update(this.value)">
+                                <option disabled value="0.05">0,05%</option>
+                                <option disabled value="0.1">0,1%</option>
+                                <option disabled value="0.25">0,25%</option>
+                                <option value="0.5">0,5%</option>
+                                <option value="1">1%</option>
+                                <option value="2">2%</option>
+                                <option value="5">5%</option>
+                                <option value="10">10%</option>
+                            </select>
+                        </p>
+                        <h4>Farben</h4>
+                        <table id="farben"></table>
+                        <p></p>
+                        <h4>Reverse</h4>
+                        <table id="reverse"></table>
+                        <p></p>
+                        <h4>Info</h4>
+                        <table id="info"></table>
+                    </div>
+                    <div class="col-sm-4 text-left">
+                        <h4 id="reiheUe">E-Reihe</h4>
+                        <p id="gewaehlt"></p>
+                        <div id="waehle"></div>
+                        <table id="reiheT"></table>
+                    </div>
+                </div>
+            <script src="/legacy-assets/own_website/js/main.js" type="text/javascript"></script> 
+            
+        </div>
+    </div>

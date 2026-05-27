@@ -1,0 +1,55 @@
+{
+  "kind": "prose",
+  "entryId": 8,
+  "sections": [
+    {
+      "id": "ddl",
+      "title": "Definition DBS, DBSM und DB",
+      "html": "<ul>\r\n<li>Das Datenbankmanagementsystem (DBMS) ist f&uuml;r die Verwaltung der\r\nDatenbank(-en) zust&auml;ndig.</li>\r\n<li>Die Datenbank speichert die Informationen in Form von einzelnen\r\nDatens&auml;tzen ab.</li>\r\n<li>Ein Datenbanksystem unterst&uuml;tzt die computergest&uuml;tzte\r\nDatenverarbeitung von Informationen, die durch eine Datenbankapplikation\r\nerzeugt und verarbeitet werden.</li>\r\n</ul>"
+    },
+    {
+      "id": "db",
+      "title": "Beispiel einer Datenbank",
+      "html": ""
+    },
+    {
+      "id": "dbms",
+      "title": "Anforderungen/ Funktionen eines DBMS",
+      "html": "<p>Die wesentlichen Funktionen von heutigen Datenbankmanagementsystemen\r\nsind:</p>\r\n<ul>\r\n<li>Speicherung, &Uuml;berschreibung und L&ouml;schung von Daten</li>\r\n<li>Verwaltung der Metadaten</li>\r\n<li>Vorkehrungen zur Datensicherheit</li>\r\n<li>Vorkehrungen zum Datenschutz</li>\r\n<li>Vorkehrungen zur Datenintegrit&auml;t</li>\r\n<li>Erm&ouml;glichung des Mehrbenutzerbetriebs durch das\r\nTransaktionskonzept</li>\r\n<li>Optimierung von Abfragen</li>\r\n<li>Erm&ouml;glichung von Triggern und Stored Procedures</li>\r\n<li>Bereitstellung von Kennzahlen &uuml;ber Technik und Betrieb des\r\nDBMS</li>\r\n</ul>"
+    },
+    {
+      "id": "col1Content",
+      "title": "Systemarchitekturen",
+      "html": "<ul>\r\n<li>Desktop Datenbanken f&uuml;r einfache Anwendungen\r\n(Einbenutzerbetrieb) l&auml;uft nur auf einem PC</li>\r\n<li>Desktop Datenbanken f&uuml;r wenige Benutzer (Mehrbenutzerbetrieb)\r\nl&auml;uft auf einem externen Medium (Netzwerklaufwerk etc.)</li>\r\n<li>Client/Server Datenbanken l&auml;uft auf einem Server-PC und\r\nexklusiven Zugriff auf Datenbankdateien.</li>\r\n</ul>"
+    },
+    {
+      "id": "col2Content",
+      "title": "SQL Definition",
+      "html": "<p>bedeutet Structured Query Language und ist eine Datenbanksprache zur\r\nDefinition von Datenstrukturen in relationalen Datenbanken sowie zum\r\nBearbeiten (Einf&uuml;gen, Ver&auml;ndern, L&ouml;schen) und Abfragen von\r\ndarauf basierenden Datenbest&auml;nden.</p>"
+    },
+    {
+      "id": "col3Content",
+      "title": "Datenbankmodelle",
+      "html": "<p>Ein Datenbankmodell ist die theoretische Grundlage f&uuml;r eine\r\nDatenbank und legt fest, auf welche Art und Weise die Daten im\r\nDatenbanksystem gespeichert und bearbeitet werden k&ouml;nnen.</p>\r\n<ul>\r\n<li><strong>Relationale Datenbanken</strong><br>\r\nDer Aufbau besteht ausschlie&szlig;lich aus Tabellen und zwischen diesen\r\nTabellen bestehen mathematisch fundierte Beziehungen. Leicht\r\nprogrammierbar, aber erfordert viel PC-Leistung.</li>\r\n<li><strong>Objektorientierte Datenbanken</strong><br>\r\nk&ouml;nnen Tabellen enthalte, die weitere Tabellen besitzen, daher\r\nkomplexer als Relationale Datenbanken und oft h&ouml;herer Aufwand\r\nf&uuml;r seine Programmierer.</li>\r\n<li><strong>Hierarchische Datenbanken</strong><br>\r\nist die &auml;lteste, daf&uuml;r aber der schnellste, weil sie geringere\r\nRedundanzen bildet, da hier eine Monohierarchie genutzt wird (also vom\r\nRoot zum Knoten).</li>\r\n<li><strong>Netzwerkartige Datenbanken<br></strong> stehen &uuml;ber ein\r\nbeliebig aufgebautes Netz, die miteinander in Verbindung stehen.\r\nFlexibilit&auml;t wird dadurch erh&ouml;ht.</li>\r\n</ul>"
+    },
+    {
+      "id": "col4Content",
+      "title": "Drei Ebenen der Datenbanken",
+      "html": "<ul>\r\n<li>physische Sicht auf die Daten, die interne Ebene</li>\r\n<li>logische Gesamtsicht auf die Daten, die konzeptionelle Ebene</li>\r\n<li>Benutzersichten auf die Daten, die externe Ebene</li>\r\n</ul>"
+    },
+    {
+      "id": "col5Content",
+      "title": "Phasen des Datenbankentwurfs",
+      "html": "<p><strong>Kosten-/ Nutzenanalyse:</strong> Sammeln und Analysieren der\r\nAnforderungen an die neue Datenbank</p>\r\n<p><strong>Konzeptueller Entwurf:</strong> Systemunabh&auml;ngiger\r\nEntwurf der Datenbank nach Anwendungsfunktionen</p>\r\n<p><strong>Verteilungsentwurf:</strong> Bei verteilten Datenbanken\r\nsystemunabh&auml;ngiger Entwurf des verteilten Systems</p>\r\n<p><strong>Logischer Entwurf:</strong> Auswahl eines Datenbankmodells und\r\nAbbildung des konzeptuellen Entwurfs auf das Datenbankmodell</p>\r\n<p><strong>Datendefinition:</strong> Datendefinition, d. h. Codierung und\r\nProgrammierung mithilfe eines DBMS, Definition der Benutzersichten</p>\r\n<p><strong>Phsischer Entwurf:</strong> Definition der Zugriffstrukturen\r\nim physischen Entwurf</p>\r\n<p><strong>Implementierung und Wartung:</strong> Installation der\r\nDatenbank-Anwendung, Anpassung, Testphase</p>"
+    },
+    {
+      "id": "col6Content",
+      "title": "Relationale Datenbanken Grundbegriffe",
+      "html": "<ul>\r\n<li>Tabellen Grundbegriffe</li>\r\n<li>Zelle, Spalte, Zeile, Zeile = Datensatz,\r\nPrim&auml;rschl&uuml;ssel</li>\r\n<li>Schl&uuml;ssel und <strong><u>Beziehungen</u></strong> ( Seite\r\n19-20, 1.2 )</li>\r\n</ul>"
+    }
+  ],
+  "toc": [],
+  "headings": [
+    ""
+  ]
+}

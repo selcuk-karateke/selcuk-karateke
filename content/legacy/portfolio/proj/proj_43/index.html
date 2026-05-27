@@ -1,0 +1,31 @@
+<script>
+	var newWindow = "";
+	var oldWindow = this.window; // brauchen wir für die neue Seite, darf in keiner funktion stehen
+	function openNewWindow(){
+		newWindow = window.open("/proj/proj8/newWin.php","newWin","width=200,height=200,scrollbars=no");
+		newWindow.focus();
+	}
+	
+	var testVar = 42;
+	function testFunc() { alert('Neues Fenster wird geschlossen!'); }
+	function goBack() { window.history.back(); }	
+</script>
+<div class="row">
+	<div class="col-sm-6">
+		<h2>Input:</h2>
+		<p>mit js</p>
+		<!-- über js -->
+		<!-- neues fenster öffnen -->
+		<button class="btn btn-secondary" onclick="openNewWindow()">Neues Fenster öffnen</button>
+		<!-- neues fenster schliessen -->
+		<button class="btn btn-secondary" onclick="newWindow.close();">Neues Fenster schließen</button>
+
+		<br>
+		<!-- ohne js -->
+		<p>ohne js</p>
+		<button class="btn btn-secondary" onclick="window.open(this.href,this.target,'width=200,height=200')">Neues Fenster öffnen</button>
+		<br>
+		<p>Zurück</p>
+		<button class="btn btn-secondary" onclick="goBack()">Go Back</button>
+	</div>
+</div>

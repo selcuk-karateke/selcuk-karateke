@@ -1,0 +1,62 @@
+<div class="row content">
+
+
+<div class="col-sm-12 text-left">
+
+<div class="headline">
+    <h1 id="headline">AJAX mit JSON nutzen (3)</h1>
+</div>
+<div class="teaser">
+    <h2 id="teaser">Werte ohne Seite zu laden senden und empfangen</h2>
+</div>
+
+<div class="grid-container">
+<div class="grid-item">
+    <h2>Your Form:</h2>
+    <form method="post" action="">  
+        <label>Firstname: <span class="error">* </span></label>
+        <input type="text" id="fname" name="firstname"></input>
+        <br>
+        
+        <label>Lastname: <span class="error">* </span></label>
+        <input type="text" id="lname" name="lastname"></input>
+        <br>
+ 
+        <label for="action"></label>
+        <button id="lname" name="action" disabled>Submit</button>
+    </form>
+    <br>
+    <label></label>
+    <button onclick="test1()">Change Content (AJAX/JSON)</button>
+    <label></label>
+    <button onclick="test2()">Change Content (only AJAX)</button>
+</div> 
+
+<div class="grid-item">
+
+
+<div id="myModal" class="modal">
+  <div class="modalContent alert alert-danger">
+    <span class="close">&times;</span>
+    <p id="modalText">Some text in the Modal..</p>
+  </div>
+</div>
+<script>
+
+</script>
+</div> 
+
+<div class="grid-item">
+
+<h2>Your Search:</h2>
+
+<form>
+    <input type="text" size="30" onkeyup="showResult(this.value)">
+    <div id="livesearch"></div>
+</form>
+
+</div> 
+</div>
+
+</div>
+</div>

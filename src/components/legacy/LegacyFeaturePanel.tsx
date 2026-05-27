@@ -4,18 +4,6 @@ import { useState } from 'react'
 import type { LegacyRoute } from '@/data/legacyRoutes'
 
 export default function LegacyFeaturePanel({ route }: { route: LegacyRoute }) {
-  if (route.feature === 'none') {
-    return (
-      <div className="theme-bg-card border theme-border rounded-xl p-6">
-        <h3 className="text-lg font-semibold theme-text mb-2">Rendered Legacy Content</h3>
-        <p className="theme-text-secondary">
-          Static route migration complete. This page is available and integrated in the Next.js
-          routing tree.
-        </p>
-      </div>
-    )
-  }
-
   if (route.feature === 'contact') return <ContactMock />
   if (route.feature === 'login') return <LoginMock />
   if (route.feature === 'search') return <SearchMock />

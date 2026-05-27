@@ -1,0 +1,90 @@
+<div class="row">
+	<div class="col-sm-6">
+		<h2>Input:</h2>
+		<div class="input-group">
+			<div class="input-group-prepend">
+			<span class="input-group-text">Wasser</span>
+			<button class="btn btn-outline-secondary" id="water_reset" onclick="reset();" type="button"><i class="fa fa-redo fa-fw"></i></button>
+			<button class="btn btn-outline-secondary" id="water_counter" onclick="count();" type="button"><i class="fa fa-plus fa-fw"></i></button>
+			</div>
+			<input type="text" class="form-control" id="water" placeholder="" aria-label="" aria-describedby="basic-addon1" disabled>
+		</div>
+	</div>
+	<div class="col-sm-6">
+		<h2>Output:</h2>
+		<ul id="water_display"></ul>
+	</div>
+</div>
+
+<script>
+// Variablen
+var today = new Date();
+var h = today.getHours();
+setInterval(myWater, 1000 * 60 * 60);
+
+// Warte bis Dokument geladen ist
+window.onload = function () {
+	// Rufe Funktion auf
+	myWater();
+	// Speichere Einträge zwischen, falls welche in dieser Sitzung bereits gespeichert wurden 
+	var _time = sessionStorage.getItem('time');
+	var _type = sessionStorage.getItem('type');	
+	// Rufe Funktion auf, falls zwischengespeicherte Einträge vorhanden sind
+	if(_time >= 1){
+		_time /= 60;
+		t(_time,_type);
+	}
+}
+
+// Prüfe wie oft Wassereinheiten verbraucht wurden und speichere diesen Wert zwischen
+var _gCount = sessionStorage.getItem('gCount') == null ? sessionStorage.setItem('gCount', 0) : sessionStorage.getItem('gCount');
+// Einige vorgegebene Variablen
+var a = 7;		// Wann beginnt der Tag?
+var b = 24; 	// Wie viel Stunden hat der Tag?
+var c = 8;		// Wie viel Stunden Schlaf pro Tag?
+var d = b-c;	// Wie oft am Tag wird getrunken?
+var points = []; // Setze Wassereinheiten
+var water_display = document.getElementById('water_display');
+var water_counter = document.getElementById('water_counter');
+
+// Setze alles Daten zurück
+function reset(){
+	sessionStorage.setItem('gCount', 0)
+	_gCount = 0;
+	myWater();
+};
+// Erhöhe Wassereinheit um 1
+function count(){
+	++_gCount;
+	sessionStorage.setItem('gCount', _gCount)
+	myWater();
+}
+// Wassereinheiten anzeigen
+function myWater(){
+	water.value = _gCount; // Hole aktuellen Wert der Wasseranzeige
+	points = []; // Array für Wassereinheiten
+	water_display.innerHTML = ''; // Anzeige leeren
+	for (var i = 0; i < d; i++){
+		points[i] = a+i;
+		if(h > a + i-1 + _gCount * 1){
+			water_display.innerHTML += '<li id="w'+i+'" onmouseleave="myWater()"><i class="fa fa-tint fa-fw text-primary" onmouseover="ctrl_wu(this,1)" onmouseup="ctrl_wu(this,2)" ></i></li>';
+		} else {
+			water_display.innerHTML += '<li id="w'+i+'"><i class="fa fa-tint fa-fw"></i></li>';
+		}
+	}
+}
+// TODO: Wassereinheiten kontrollieren und beim Klick ID auslesen und ggf. Wassereinheit verändern
+function ctrl_wu(elem,y) {
+    var w_displ = document.getElementById("water_display");
+    // var w_count = w_displ.childNodes.length;
+    // console.log(w_count);
+    var id;
+    for (var i = 0; i < 15-_gCount; i++) {
+		if(y == 1){
+			elem.setAttribute("class", "fa fa-tint fa-fw text-info");
+		} else {
+			elem.setAttribute("class", "fa fa-tint fa-fw text-success"); 
+		}
+    }
+}
+</script>

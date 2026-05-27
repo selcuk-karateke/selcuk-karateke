@@ -1,0 +1,182 @@
+{
+  "kind": "prose",
+  "entryId": 4,
+  "sections": [
+    {
+      "id": "Rechtsentstehung",
+      "title": "Rechtsentstehung",
+      "html": "<p>Recht wird durch den <strong>Parlament</strong> beschlossen (politische Mehrheiten)\r\n\t<strong>Rechtsnormen</strong> (S.98 Arbeitsbl&auml;tter)</p>\r\n\t<p>Gesetzesrecht -&gt; legislative Gewalt</p>"
+    },
+    {
+      "id": "Rechtsnormen",
+      "title": "Rechtsnormen",
+      "html": "<p>Gesetze,<br>\r\n\tVerordnungen,<br>\r\n\tVerwaltungsvorschriften,<br>\r\n\tHandelsrecht,</p>\r\n\t<p>Autonome Satzungen,<br>\r\n\tGewohnheitsrecht und<br>\r\n\tRichterrecht</p>"
+    },
+    {
+      "id": "Rechtsordnung",
+      "title": "Rechtsordnung",
+      "html": "<h2>Aufbau der Rechtsordnung</h2>\r\n\t<table>\r\n\t  <tbody>\r\n\t\t<tr>\r\n\t\t  <td width=\"307\">\r\n\t\t\t<h3>&Ouml;ffentliches Recht</h3>\r\n\t\t  </td>\r\n\t\t  <td width=\"307\">\r\n\t\t\t<h3>Privates Recht</h3>\r\n\t\t  </td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t  <td width=\"307\">\r\n\t\t\t<p>&middot; Strafrecht (StGB)</p>\r\n\t\t\t<p>&middot; Steuerrecht (UmSt)</p>\r\n\t\t\t<p>&middot; Staatsrecht (GG)</p>\r\n\t\t\t<p>&middot; Grundgesetz (GG)</p>\r\n\t\t\t<p>&middot; Stra&szlig;enverkehrsordnung (StVO)</p>\r\n\t\t  </td>\r\n\t\t  <td width=\"307\">\r\n\t\t\t<p>&middot; B&uuml;rgerliches Recht (BGB)</p>\r\n\t\t\t<p>&middot; Handelsrecht (HGB)</p>\r\n\t\t\t<p>&middot; Gesellschaftsrecht (GmbH Gesetz)</p>\r\n\t\t  </td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t  <td width=\"307\">\r\n\t\t\t<h3>Rechtssubjekte</h3>\r\n\t\t\t<h4>Nat&uuml;rliche Person</h4>\r\n\t\t\t<h4>Juristische Person</h4>\r\n\t\t\t<p>&middot; Kapitalgesellschaft</p>\r\n\t\t\t<p>&middot; Genossenschaften</p>\r\n\t\t  </td>\r\n\t\t  <td width=\"307\">\r\n\t\t\t<h3>Rechtssubjekte</h3>\r\n\t\t\t<h4>Nat&uuml;rliche Person</h4>\r\n\t\t\t<p>&hellip; hat Rechte und Pflichten</p>\r\n\t\t\t<h4>Juristische Person</h4>\r\n\t\t\t<p>Vereine und Firmen</p>\r\n\t\t\t<p>K&ouml;rperschaften (Bund, L&auml;nder, Gemeinden, AOK, IHK, Kirche),\r\n\t\t\tAnstalten (Rundfunk- und Fernsehanstalt, Sparkassen, Universit&auml;ten,\r\n\t\t\tStiftungen)</p>\r\n\t\t  </td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t  <td colspan=\"2\" width=\"614\">\r\n\t\t\t<h3>Ziel -&gt; Infrastruktur (Gesundheit, Bildung, Verteidigung, Verkehr)</h3>\r\n\t\t  </td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t  <td colspan=\"2\" width=\"614\">\r\n\t\t\t<h3>Rechtsobjekte</h3>\r\n\t\t\t<p>Sachen und Rechte</p>\r\n\t\t  </td>\r\n\t\t</tr>\r\n\t  </tbody>\r\n\t</table>"
+    },
+    {
+      "id": "Rechtsgeschaefte",
+      "title": "Rechtsgesch&auml;fte (Vertr&auml;ge)",
+      "html": "<table width=\"100%\">\r\n\t  <tbody>\r\n\t\t<tr>\r\n\t\t  <td colspan=\"2\" width=\"49%\">\r\n\t\t\t<h3><strong>Einseitige Rechtsgesch&auml;fte</strong></h3>\r\n\t\t  </td>\r\n\t\t  <td colspan=\"2\" width=\"50%\">\r\n\t\t\t<h3><strong>Zweiseitige Rechtsgesch&auml;fte</strong></h3>\r\n\t\t  </td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t  <td width=\"25%\">\r\n\t\t\t<h4>Empfangsbed&uuml;rftig</h4>\r\n\t\t  </td>\r\n\t\t  <td width=\"24%\">\r\n\t\t\t<h4>Nicht empfangs-bed&uuml;rftig</h4>\r\n\t\t  </td>\r\n\t\t  <td width=\"24%\">\r\n\t\t\t<h4>Einseitig verpflichtend</h4>\r\n\t\t  </td>\r\n\t\t  <td width=\"25%\">\r\n\t\t\t<h4>zweiseitig<br>\r\n\t\t\tverpflichtend</h4>\r\n\t\t  </td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t  <td width=\"25%\">\r\n\t\t\t<p>&middot; K&uuml;ndigung</p>\r\n\t\t\t<p>&middot; R&uuml;cktrittserkl&auml;rung (Willenserkl&auml;rung)</p>\r\n\t\t\t<p>&middot; Angebot</p>\r\n\t\t\t<p>&middot; Mahnung</p>\r\n\t\t\t<p>&middot; Vollmacht</p>\r\n\t\t\t<p>&middot; Widerruf</p>\r\n\t\t\t<p>&middot; Klageschrift</p>\r\n\t\t  </td>\r\n\t\t  <td width=\"24%\">\r\n\t\t\t<p>&middot; Testament</p>\r\n\t\t\t<p>&middot; Aufgabe des Eigentums</p>\r\n\t\t\t<p>&middot; Patientenverf&uuml;gung</p>\r\n\t\t\t<p>&middot; Auslobung (beispielsweise Such- oder Vermissten-anzeigen mit\r\n\t\t\tBelohnungs-versprechen)</p>\r\n\t\t  </td>\r\n\t\t  <td width=\"24%\">\r\n\t\t\t<p>&middot; Schenkungs-vertrag</p>\r\n\t\t\t<p>&middot; B&uuml;rgschafts-vertrag</p>\r\n\t\t  </td>\r\n\t\t  <td width=\"25%\">\r\n\t\t\t<p>&middot; Kaufvertrag</p>\r\n\t\t\t<p>&middot; Dienstvertrag</p>\r\n\t\t\t<p>&middot; Werkvertrag</p>\r\n\t\t\t<p>&middot; Mietvertrag</p>\r\n\t\t\t<p>&middot; Leihvertrag</p>\r\n\t\t\t<p>&middot; Pachtvertrag</p>\r\n\t\t\t<p>&middot; Darlehensvertrag&nbsp;</p>\r\n\t\t\t<p>&middot; Versicherungsvertrag</p>\r\n\t\t  </td>\r\n\t\t</tr>\r\n\t  </tbody>\r\n\t</table>\r\n\t<p>Try to solve the new Formula Cube! It works exactly like a Rubik's Cube but it is\r\n\tonly $2, from China. Learn to solve it with the tutorial on rubiksplace.com or use the\r\n\t<a href=\"https://www.grubiks.com/solvers/rubiks-cube-3x3x3/\">solver to calculate</a>\r\n\tthe solution in a few steps.</p>"
+    },
+    {
+      "id": "Sozialversicherung",
+      "title": "Sozialversicherung",
+      "html": "<h4>5 S&auml;ulen der gesetzl. Sozialversicherung</h4>\r\n\t<ul>\r\n\t  <li>Arbeitslosen-,</li>\r\n\t  <li>Kranken-,</li>\r\n\t  <li>Unfall-,</li>\r\n\t  <li>Pflege-,</li>\r\n\t  <li>Rentenversicherung</li>\r\n\t</ul>"
+    },
+    {
+      "id": "Besitzer",
+      "title": "Eigent&uuml;mer/Besitzer",
+      "html": "<ul>\r\n\t  <li>Eigentum (rechtliche Herrschaft &uuml;ber eine Sache)</li>\r\n\t  <li>Besitz (tats&auml;chliche Herrschaft &uuml;ber eine Sache)</li>\r\n\t</ul>"
+    },
+    {
+      "id": "Willenserklaerung",
+      "title": "Formen der Willenserkl&auml;rung",
+      "html": "<ul>\r\n\t  <li>rechtliche Schriftform K&uuml;ndigung, Mietvertrag</li>\r\n\t  <li>notarielle Beurkundung Grundst&uuml;ckskauf</li>\r\n\t</ul>"
+    },
+    {
+      "id": "Nichtigkeit",
+      "title": "Nichtigkeit und Anfechtbarkeit",
+      "html": "<h4>Nichtigkeit</h4>\r\n\t<ul>\r\n\t  <li>unzureichende Gesch&auml;ftsf&auml;higkeit (bsp. unter 18)</li>\r\n\t  <li>Ber&uuml;hrung von gesetzlichen Verboten</li>\r\n\t  <li>Abgabe einer Willenserkl&auml;rung durch einen Gesch&auml;ftsunf&auml;higen</li>\r\n\t  <li>Abgabe im Zustande der Bewusstlosigkeit oder St&ouml;rung der\r\n\t  Geistest&auml;tigkeit</li>\r\n\t  <li>Zustimmung eines gesetzlichen Vertreters erfolgt nicht</li>\r\n\t  <li>Versto&szlig; gegen eine vorgeschriebene gesetzliche Form</li>\r\n\t  <li>Versto&szlig; gegen ein gesetzliches Verbot</li>\r\n\t  <li>Sittenwidrigkeit (Versto&szlig; gegen gesetzliches Verbot)</li>\r\n\t  <li>Scherz-/Scheingesch&auml;ft</li>\r\n\t</ul>\r\n\t<p>Sittenwidrigkeit, Versto&szlig; gegen gesetzliches Verbot,\r\n\tScherz-/Scheingesch&auml;ft (S.98 Arbeitsbl&auml;tter) Gew&auml;hrleistung und\r\n\tGarantien</p>\r\n\t<h4>Anfechtbarkeit</h4>\r\n\t<ul>\r\n\t  <li>Erkl&auml;rungs-,</li>\r\n\t  <li>Inhaltsirrtum</li>\r\n\t</ul>"
+    },
+    {
+      "id": "Pflichten",
+      "title": "Pflichten",
+      "html": "<table>\r\n\t  <tbody>\r\n\t\t<tr>\r\n\t\t  <td width=\"307\">\r\n\t\t\t<h3>Verk&auml;ufer</h3>\r\n\t\t  </td>\r\n\t\t  <td width=\"307\">\r\n\t\t\t<h3>K&auml;ufer</h3>\r\n\t\t  </td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t  <td width=\"307\">\r\n\t\t\t<p>Der Verk&auml;ufer ist verpflichtet, die Ware <strong>ohne\r\n\t\t\tM&auml;ngel</strong> zu liefern. Er ist verpflichtet, die Ware an dem\r\n\t\t\tLieferungsdatum zu liefern. Er ist verpflichtet, das Eigentum zu\r\n\t\t\t&uuml;bertragen.</p>\r\n\t\t  </td>\r\n\t\t  <td width=\"307\">\r\n\t\t\t<p>Der K&auml;ufer ist verpflichtet, den Kaufpreis\r\n\t\t\t<strong>fristgem&auml;&szlig;</strong> zu zahlen. Er ist wiederum verpflichtet,\r\n\t\t\tden von ihm gekauften Gegenstand entgegenzunehmen.</p>\r\n\t\t  </td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t  <td width=\"307\">\r\n\t\t\t<p>&middot; &Uuml;bergabe der Ware</p>\r\n\t\t\t<p>&middot; Eigentums&uuml;bertrag der Ware/ Sache</p>\r\n\t\t\t<p>&middot; Annahme des Geldes</p>\r\n\t\t  </td>\r\n\t\t  <td width=\"307\">\r\n\t\t\t<p>&middot; &Uuml;bergabe des Geldes<br>\r\n\t\t\t(Zahlungsmittel, Wertaufbewahrung, Wertmess- bzw. Recheneinheit, Soziale\r\n\t\t\tFunktion etc.)</p>\r\n\t\t\t<p>&middot; Annahme der Ware</p>\r\n\t\t  </td>\r\n\t\t</tr>\r\n\t  </tbody>\r\n\t</table>"
+    },
+    {
+      "id": "Arten",
+      "title": "Arten",
+      "html": "<table width=\"100%\">\r\n<tbody>\r\n<tr>\r\n<td width=\"22%\">\r\n<p><strong>Art der Ware</strong></p>\r\n</td>\r\n<td width=\"24%\">\r\n<p><strong>Vertragspartner</strong></p>\r\n</td>\r\n<td width=\"30%\">\r\n<p><strong>Zahlungsbedingungen</strong></p>\r\n</td>\r\n<td width=\"22%\">\r\n<p><strong>Lieferbedingungen</strong></p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"22%\">\r\n<p><strong>Nach der Art und Beschaffenheit der Ware</strong></p>\r\n<p>&middot; St&uuml;ckkauf</p>\r\n<p>&middot; Gattungskauf</p>\r\n<p>&middot; Kauf auf Probe</p>\r\n<p>&middot; Kauf zur Probe</p>\r\n<p>&middot; Spezifikationskauf</p>\r\n</td>\r\n<td width=\"24%\">\r\n<p><strong>Nach den Vertragspartnern</strong></p>\r\n<p>&middot; Kaufvertrag</p>\r\n<p>&middot; Zwischen Verbrauchern</p>\r\n<p>&middot; Zwischen Verbraucher und Unternehmer</p>\r\n<p>&middot; Zwischen Kaufleuten</p>\r\n</td>\r\n<td width=\"30%\">\r\n<p><strong>Nach dem Zahlungszeitpunkt</strong></p>\r\n<p>&middot; Zahlung vor Lieferung (Vorkasse)</p>\r\n<p>&middot; Zahlung bei Lieferung</p>\r\n<p>&middot; Zahlung nach Lieferung (Kauf auf Rechnung, Ratenkauf)</p>\r\n</td>\r\n<td width=\"22%\">\r\n<p>Nach der Lieferzeit der Ware</p>\r\n<p>&middot; Tageskauf/Sofortkauf</p>\r\n<p>&middot; Terminkauf</p>\r\n<p>&middot; Kauf auf Abruf</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<h3>Art der Ware</h3>\r\n<ul>\r\n<li>St&uuml;ckkauf (einmalig, nicht ersetzbar)</li>\r\n<li>Gattungskauf (Poster von Monalisa)</li>\r\n<li>Ramschkauf</li>\r\n<li>Kauf auf Probe/ Besichtigung (wiederbeschaffbar, nach Gattungsmerkmalen)</li>\r\n<li>Spezifikationskauf</li>\r\n</ul>\r\n<h3>Vertragsarten</h3>\r\n<ul>\r\n<li>Verbraucher zu Verbraucher</li>\r\n<li>Verbraucher und Unternehmer</li>\r\n<li>Kaufleute zu Kaufleute</li>\r\n</ul>\r\n<h3>Zahlungszeitpunkt</h3>\r\n<ul>\r\n<li>&hellip;</li>\r\n</ul>\r\n<h3>Lieferzeitpunkt</h3>\r\n<ul>\r\n<li>Terminkauf</li>\r\n<li>Sofort</li>\r\n<li>Kauf auf Abruf</li>\r\n</ul>\r\n<h3>Kauf auf Probe</h3>\r\n<p>Der K&auml;ufer probiert die gekaufte Sache aus. Bei nicht gefallen der Ware kann diese nach einer bestimmten Frist zur&uuml;ckgegeben werden und der Kaufvertrag wird nichtig.</p>\r\n<h3>Kauf nach Probe (&bdquo;nach Muster&ldquo;)</h3>\r\n<p>Der K&auml;ufer probiert die gekaufte Sache aus, aber der Kaufvertrag entsteht nachgefallen.</p>\r\n<h3>Kauf zur Probe</h3>\r\n<p>Hier kauft ein Betrieb eine kleine Menge an Waren ein, testet sie, versucht sie bei den eigenen Abnehmern weiterzuverkaufen und dann, wenn dieses die W&uuml;nsche erf&uuml;llen kann, dann werden auch gr&ouml;&szlig;ere Mengen geordert.</p>"
+    },
+    {
+      "id": "Mangelhafte_Ware",
+      "title": "Mangelhafte Ware",
+      "html": "<h2>Mangelhafte Ware</h2>\r\n<p>Ist eine St&ouml;rung durch den Verk&auml;ufer, er liefert/&uuml;bergibt die Ware nicht frei von Sach- /Rechtsm&auml;ngeln!</p>\r\n<table width=\"100%\">\r\n<tbody>\r\n<tr>\r\n<td width=\"13%\">&nbsp;</td>\r\n<td width=\"38%\">\r\n<p><strong>K&auml;ufer</strong></p>\r\n</td>\r\n<td width=\"47%\">\r\n<p><strong>St&ouml;rung des Kaufvertrags durch&hellip;</strong></p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"13%\">\r\n<p><strong>Verk&auml;ufer</strong></p>\r\n</td>\r\n<td width=\"38%\">\r\n<p>Mangelfreie Lieferung</p>\r\n<p>(frei von Sach- und Rechtsm&auml;ngeln)</p>\r\n</td>\r\n<td width=\"47%\">\r\n<p>die Lieferung mangelhafter Ware<br /> -&gt; <a href=\"#_Arten_von_M&auml;ngeln\">mangelhafte Lieferung</a></p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"13%\">&nbsp;</td>\r\n<td width=\"38%\">\r\n<p>Lieferverz&ouml;gerung <br /> (rechtzeitige Lieferung)</p>\r\n</td>\r\n<td width=\"47%\">\r\n<p>versp&auml;tete Lieferung<br /> -&gt; <a href=\"#_Lieferverzug\">Lieferungsverzug</a></p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"13%\">&nbsp;</td>\r\n<td width=\"38%\">\r\n<p>Annahme des Kaufbetrags</p>\r\n</td>\r\n<td width=\"47%\">\r\n<p>Annahmeverweigerung des Kaufbetrags<br /> -&gt; <a href=\"#_Annahmeverzug\">Annahmeverzug</a></p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"13%\">&nbsp;</td>\r\n<td width=\"38%\">\r\n<p>Eigentums&uuml;bertragung</p>\r\n</td>\r\n<td width=\"47%\">\r\n<p>Nur Besitz&uuml;bergabe (geklautes Rad)</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"13%\">\r\n<p><strong>K&auml;ufer</strong></p>\r\n</td>\r\n<td width=\"38%\">\r\n<p>Rechtzeitige Zahlung</p>\r\n</td>\r\n<td width=\"47%\">\r\n<p>versp&auml;tete Zahlungsausf&uuml;hrung<br /> -&gt; <a href=\"#_Zahlungsverzug\">Zahlungsverzug</a></p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"13%\">&nbsp;</td>\r\n<td width=\"38%\">\r\n<p>Annahme der Ware/Kaufsache</p>\r\n</td>\r\n<td width=\"47%\">\r\n<p>Annahmeverweigerung der Ware/Kaufsache</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<h3>Arten von M&auml;ngeln</h3>\r\n<table>\r\n<tbody>\r\n<tr>\r\n<td width=\"307\">\r\n<h3>Sachm&auml;ngel</h3>\r\n</td>\r\n<td width=\"307\">\r\n<h3>Rechtsm&auml;ngel</h3>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"307\">\r\n<p>&middot; Beschaffenheit fehlt (Zustand)</p>\r\n<p>&middot; Beschaffenheit ist nicht vereinbart</p>\r\n<p>&middot; Falsche Montage</p>\r\n<p>&middot; Zu wenig / falsche Ware</p>\r\n</td>\r\n<td width=\"307\">\r\n<p>&middot; Eigent&uuml;mer der Ware</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>"
+    },
+    {
+      "id": "Lieferverzug",
+      "title": "Lieferverzug",
+      "html": "<p>Ist eine St&ouml;rung durch den Verk&auml;ufer, er kommt zu sp&auml;t oder gar nicht!</p>\r\n<table>\r\n<tbody>\r\n<tr>\r\n<td colspan=\"2\" width=\"614\">\r\n<h3>Rechte des K&auml;ufers</h3>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"307\">\r\n<p>&middot; Schadensersatz</p>\r\n</td>\r\n<td width=\"307\">\r\n<p>&middot; R&uuml;cktritt vom Kaufvertrag</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>"
+    },
+    {
+      "id": "Annahmeverzug",
+      "title": "Annahmeverzug",
+      "html": "<p>Ist eine St&ouml;rung durch den K&auml;ufer, er kommt zu sp&auml;t oder gar nicht!</p>\r\n<table>\r\n<tbody>\r\n<tr>\r\n<td colspan=\"3\" width=\"614\">\r\n<h3>1.1.1 Rechte des Verk&auml;ufers</h3>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"205\">\r\n<h4>Klage auf Annahme</h4>\r\n</td>\r\n<td width=\"205\">\r\n<h4>Notverkauf</h4>\r\n</td>\r\n<td width=\"205\">\r\n<h4>Kostenerstattung</h4>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"205\">\r\n<p>&middot; Freih&auml;ndig</p>\r\n<p>&middot; Versteigerung</p>\r\n</td>\r\n<td width=\"205\">&nbsp;</td>\r\n</tr>\r\n</tbody>\r\n</table>"
+    },
+    {
+      "id": "AGBs",
+      "title": "AGBs",
+      "html": "<ul>\r\n<li>vorformulierte Vertragsbedingungen um den Ablauf des t&auml;glichen Gesch&auml;ftsverkehrs einfacher und zeitsparender zu gestalten</li>\r\n<li>Abwicklung von Rechtsgesch&auml;ften: schneller, effizienter und unkomplizierter</li>\r\n<li><strong>Hinweisen </strong>(durch Aushang),</li>\r\n<li>K&auml;ufer muss <strong>zur Kenntnis nehmen</strong> k&ouml;nnen</li>\r\n<li>K&auml;ufer muss AGBs annehmen/ <strong>Zustimmung</strong></li>\r\n</ul>\r\n<h3>Was regeln AGBs?</h3>\r\n<p>Vertragspartner, Liefer- und Zahlungsbedingungen</p>\r\n<h3>Voraussetzungen damit AGBs Vertragsbestandteil werden?</h3>\r\n<p>Hinweis, Kenntnisnahme, Zustimmung</p>"
+    },
+    {
+      "id": "Umtauschrecht",
+      "title": "Umtauschrecht",
+      "html": "<p>14 Tage nur im Onlinehandel und bei Haust&uuml;rgesch&auml;ften (sonst Kulanz)</p>"
+    },
+    {
+      "id": "Freizeichnungsklauseln",
+      "title": "Freizeichnungsklauseln",
+      "html": "<p>Solange der Vorrat reicht<br /> unverbindliche Preisempfehlung (UVP)</p>"
+    },
+    {
+      "id": "Rechtsnormen_arbeit_Regel",
+      "title": "Rechtsnormen f&uuml;r arbeitsrechtliche Regelungen",
+      "html": "<ul>\r\n<li>Berufsbildungsgesetz (BBiG)</li>\r\n<li>B&uuml;rgerliche Gesetzbuch (BGB)</li>\r\n<li>Jugendarbeitsschutzgesetz (JuArbSchG)</li>\r\n<li>Arbeitszeitgesetz (ArbZG)</li>\r\n<li>Bundesurlaubsgesetz (BUrlG)</li>\r\n<li>Entgeltfortzahlungsgesetz (EFZG)</li>\r\n<li>Mutterschutzgesetz (MuschG)</li>\r\n</ul>"
+    },
+    {
+      "id": "Inhalte_Vertrages",
+      "title": "Inhalte des Vertrages",
+      "html": "<h2>Inhalte des Vertrages</h2>\r\n<ul>\r\n<li><a href=\"https://www.azubiyo.de/berufe/\">Ausbildungsberuf</a></li>\r\n<li>Vertragspartner und ihre Unterschriften</li>\r\n<li>inhaltliche und zeitliche Gliederung der Ausbildung</li>\r\n<li>Ausbildungsma&szlig;nahmen au&szlig;erhalb der Ausbildungsst&auml;tte <br /> (Seminar)</li>\r\n<li>Verg&uuml;tung sowie Urlaub</li>\r\n</ul>"
+    },
+    {
+      "id": "Pflicht_Betriebes",
+      "title": "Pflicht des Betriebes",
+      "html": "<ul>\r\n<li>Lehrpflicht</li>\r\n<li>Lohnzahlung</li>\r\n<li>Zeugnispflicht</li>\r\n</ul>"
+    },
+    {
+      "id": "Pflicht_Auszubildenden",
+      "title": "Pflicht des Auszubildenden",
+      "html": "<ul>\r\n<li>Lernpflicht</li>\r\n<li>Berichtsheftf&uuml;hrung</li>\r\n<li>Meldepflicht (Krankheit)</li>\r\n</ul>"
+    },
+    {
+      "id": "Kuendigung",
+      "title": "K&uuml;ndigung",
+      "html": "<h3>Probezeit</h3>\r\n<p>ohne Angabe von Gr&uuml;nden z. B. Azubi gef&auml;llt Ausbildung nicht, falls Minderj&auml;hrig muss Erziehungsberechtigter zustimmen.</p>\r\n<h3>K&uuml;ndigung</h3>\r\n<h4>Ordentliche:</h4>\r\n<ul>\r\n<li>Nach Probezeit, K&uuml;ndigungsfrist 4 Wochen</li>\r\n</ul>\r\n<h4>Au&szlig;erordentlich (fristlose):</h4>\r\n<p>Arbeitgeber und auch Azubis k&ouml;nnen k&uuml;ndigen, wenn ein wichtiger <strong>Grund</strong> vorliegt.</p>\r\n<p>Arbeitgeber:</p>\r\n<ul>\r\n<li>st&auml;ndige Unp&uuml;nktlichkeit</li>\r\n<li>Fernbleiben vom Unterricht</li>\r\n<li>Diebstahl</li>\r\n</ul>\r\n<p>Azubi:</p>\r\n<ul>\r\n<li>Nichtzahlung der Ausbildungsverg&uuml;tung</li>\r\n<li>Nichtgew&auml;hrung von Urlaub</li>\r\n</ul>"
+    },
+    {
+      "id": "Beginn_Ausbildung",
+      "title": "Beginn und Dauer der Ausbildung",
+      "html": "<ul>\r\n<li>Meistens 3 Jahre.</li>\r\n</ul>"
+    },
+    {
+      "id": "Arbeitszeit",
+      "title": "Arbeitszeit",
+      "html": "<ul>\r\n<li>5 Tage Woche, nicht mehr als 8,5 Stunden t&auml;glich<br /> (nach Jugendarbeitsschutzgesetz)</li>\r\n</ul>"
+    },
+    {
+      "id": "Probezeit",
+      "title": "Probezeit",
+      "html": "<ul>\r\n<li>Jugendliche: Mind. 1 Monat und h&ouml;chstens 4 Monate</li>\r\n<li>Erwachsene: 6 Monate</li>\r\n</ul>"
+    },
+    {
+      "id": "Urlaub",
+      "title": "Urlaub",
+      "html": ""
+    },
+    {
+      "id": "Verguetung",
+      "title": "Verg&uuml;tung",
+      "html": "<ul>\r\n<li>Zahlung und H&ouml;he</li>\r\n</ul>"
+    },
+    {
+      "id": "Duales_System",
+      "title": "Duales System",
+      "html": "<ul>\r\n<li>Betrieb, Berufsschule</li>\r\n<li>Betrieb stellt Betriebsmittel bereit</li>\r\n<li>Staat stellt Geb&auml;ude/Grundst&uuml;cke/Rechtsnormen</li>\r\n</ul>\r\n<h2>Unternehmen/ Betrieb</h2>\r\n<ul>\r\n<li>Praktischer Teil</li>\r\n</ul>\r\n<h2>Berufsschule</h2>\r\n<ul>\r\n<li>Theoretischer Teil</li>\r\n</ul>"
+    },
+    {
+      "id": "Inhalte_Vertrages1",
+      "title": "Inhalte des Vertrages",
+      "html": "<ul>\r\n<li>Beginn der Besch&auml;ftigung und Dauer der Probezeit</li>\r\n<li>K&uuml;ndigungsfristen</li>\r\n<li>Festlegungen zur Arbeitszeit und zum Arbeitsort</li>\r\n<li>&Uuml;bernahme von &Uuml;berstunden</li>\r\n<li>Art und H&ouml;he des Entgelts</li>\r\n<li>F&auml;lligkeit und zur Zahlungsweise</li>\r\n<li>Festlegungen von Zuwendungen <br /> wie Urlaubsgeld, Weihnachtsgeld, 13. Gehalt, Gestaltung verm&ouml;genswirksamer Leistungen</li>\r\n<li>Urlaubsanspruch</li>\r\n<li>Entgeltfortzahlung bei Arbeitsverhinderung</li>\r\n</ul>\r\n<p>Untersagung oder Anzeigepflicht von entgeltlichen Nebent&auml;tigkeiten, die den Arbeitseinsatz f&uuml;r diese Besch&auml;ftigung beeintr&auml;chtigen.</p>\r\n<p>Festlegungen zum Wettbewerbsverbot f&uuml;r die Zeit nach Beendigung des Arbeitsverh&auml;ltnisses.</p>\r\n<p>Festlegungen zur Befristung des Arbeitsverh&auml;ltnisses (unbefristet, befristet, M&ouml;glichkeit der &Auml;nderungsk&uuml;ndigung, K&uuml;ndigungsfristen und dgl.). Kann f&uuml;r ein weiteres Jahr verl&auml;ngert werden.</p>"
+    },
+    {
+      "id": "Pflichten1",
+      "title": "Pflichten (Rechte)",
+      "html": "<table>\r\n<tbody>\r\n<tr>\r\n<td width=\"307\">\r\n<h3>AN (AG)</h3>\r\n</td>\r\n<td width=\"307\">\r\n<h3>AG (AN)</h3>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"307\">\r\n<p>&middot; Dienstleistungs- /Arbeitspflicht,</p>\r\n<p>&middot; Verschwiegenheitspflicht,</p>\r\n<p>&middot; Krankmeldungspflicht <br /> (Anzeige der Arbeitsunf&auml;higkeit)</p>\r\n<p>&middot; Einhaltung gesetzlichen o. vertraglichen Wettbewerbsverbotes</p>\r\n<p>&middot; Haftpflicht</p>\r\n</td>\r\n<td width=\"307\">\r\n<p>&middot; Arbeitszeugnis ausstellen</p>\r\n<p>&middot; Vereinbarte Lohnzahlung, Lohnfortzahlung</p>\r\n<p>&middot; F&uuml;rsorgepflicht</p>\r\n<p>&middot; Recht auf Aktenansicht (Einsichtnahme)</p>\r\n<p>&middot; Informations- und Anh&ouml;rungspflicht</p>\r\n<p>&middot; Urlaubsgew&auml;hrung</p>\r\n<p>&middot; Zahlung von Urlaubsgeld</p>\r\n<p>&middot; Entgeltfortzahlung an gesetzliche Feiertagen, unverschuldeter Krankheitsfall</p>\r\n<p>&middot; Anmeldung gesetzlicher Sozialversicherung</p>\r\n<p>&middot; Lohnsteuerbescheinigung</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>"
+    },
+    {
+      "id": "Betriebsrat",
+      "title": "Betriebsrat (3 Beteiligungsgesetze)",
+      "html": "<ul>\r\n<li>Interessenvertretung der AN gegen&uuml;ber AG</li>\r\n<li>ab 5 st&auml;ndig Besch&auml;ftigten, von denen 3 w&auml;hlbar sein m&uuml;ssen</li>\r\n<li>L&auml;nge der Amtszeit betr&auml;gt 4 Jahre</li>\r\n</ul>\r\n<p>Mehrheit um Streik zu rechtfertigen? 75%</p>\r\n<p>Sitz des h&ouml;chsten deutschen Arbeitsgerichtes? Erfurt</p>\r\n<table>\r\n<tbody>\r\n<tr>\r\n<td width=\"158\">\r\n<h3>Rechte</h3>\r\n</td>\r\n<td width=\"255\">\r\n<h3>Aufgaben</h3>\r\n</td>\r\n<td width=\"206\">\r\n<h3>Organe</h3>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"158\">\r\n<p><strong>I</strong> Information</p>\r\n<p><strong>B</strong> Beratung</p>\r\n<p><strong>M</strong> Mitbestimmung</p>\r\n<p><strong>M </strong>Mitwirkung</p>\r\n</td>\r\n<td width=\"255\">\r\n<p>&middot; Kontrolle der Gesch&auml;ftsf&uuml;hrung</p>\r\n<p>&middot; &Uuml;berwachung</p>\r\n<p>&middot; F&ouml;rderung</p>\r\n</td>\r\n<td width=\"206\">\r\n<p>&middot; Einigungsstelle</p>\r\n<p>&middot; Wirtschaftsausschuss</p>\r\n<p>&middot; Betriebsausschuss</p>\r\n<p>&middot; Jugend- und Auszubildendenvertretung</p>\r\n<p>&middot; Betriebsversammlung</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<h3><br />&Uuml;berwachung</h3>\r\n<p>der zugunsten der AN geltenden Gesetze, Verordnungen, Unfallverh&uuml;tungsvorschriften, Tarifvertr&auml;ge, Betriebsvereinbarungen</p>\r\n<h3>F&ouml;rderung</h3>\r\n<p>der Belange von Jugendlichen uns Auszubildenden, Schwerbehinderten, &auml;lteren und ausl&auml;ndischen Arbeitnehmern</p>\r\n<h3>Mitbestimmung</h3>\r\n<p>Ebenen: betriebliche, unternehmerische</p>\r\n<ul>\r\n<li>Betriebsverfassungsgesetz seit 1972</li>\r\n<li>Mitbestimmungsgesetzt seit 1976</li>\r\n<li>Drittelbeteiligungsgesetz</li>\r\n<li>Bei AGs oder GmbHs mit &uuml;ber 2000 Mitarbeitern haben diese ein erweitertes Mitbestimmungsrecht.</li>\r\n</ul>\r\n<p>Personalvertretungsgesetz des Bundes und der L&auml;nder</p>\r\n<h3>Abmahnung/ Arbeitsrechtliche R&uuml;ge</h3>\r\n<ul>\r\n<li>Aufforderungen Pflichten einzuhalten</li>\r\n<li>Hinweisfunktion/ R&uuml;gefunktion, Warnfunktion, Beweissicherungs- und Dokumentationsfunktion</li>\r\n</ul>\r\n<h3>Tarif- bzw. Sozialpartner</h3>\r\n<ul>\r\n<li>Gewerkschaften, Arbeitgeber, Arbeitgeberverb&auml;nde</li>\r\n</ul>\r\n<h3>Tarifvertrag</h3>\r\n<ul>\r\n<li>Mantel- oder Rahmentarifvertrag (5-10 Jahre)</li>\r\n<li>Arbeitsbedingungen (Arbeitszeit, Urlaub, &hellip;)</li>\r\n<li>Verg&uuml;tungstarifvertrag (L&ouml;hne/Geh&auml;lter) -&gt;Laufzeit meist 24-36 Monate</li>\r\n</ul>\r\n<h3>Tarifautonomie</h3>\r\n<p>Bedeutet, dass die Vertreter der Arbeitgeber und Arbeitnehmer unabh&auml;ngig von anderen die Arbeitsbedingungen und Arbeitsverg&uuml;tungen in Tarifverhandlungen autonom vereinbaren k&ouml;nnen. Vor allem der Staat soll in diese Auseinandersetzung nicht eingreifen.</p>\r\n<h3>Arbeitskampf</h3>\r\n<ul>\r\n<li>Tarifverhandlung [evtl. <em>Warnstreiks]</em></li>\r\n<li>Erkl&auml;rung des Scheiterns</li>\r\n<li>Schlichtungsverfahren\r\n<ul>\r\n<li>Urabstimmung &uuml;ber Streik (75%)</li>\r\n</ul>\r\n</li>\r\n<li>Streik [evtl. <em>Gegenma&szlig;nahmen der Arbeitgeber-&gt;Aussperrung]</em></li>\r\n<li>Wiederaufnahme Verhandlungen\r\n<ul>\r\n<li>Urabstimmung &uuml;ber Ergebnis (25%)\r\n<ul>\r\n<li>Neuer Tarifvertrag</li>\r\n</ul>\r\n</li>\r\n</ul>\r\n</li>\r\n</ul>\r\n<h3>Wahlrecht (aktiv und passiv)</h3>\r\n<ul>\r\n<li><strong>aktiv</strong> Abgabe einer Wahlstimme</li>\r\n<li><strong>passiv </strong> Aufstellung zur Wahl</li>\r\n</ul>"
+    },
+    {
+      "id": "Kuendigung_Aufhebungsvertrag",
+      "title": "K&uuml;ndigung (Aufhebungsvertrag)",
+      "html": "<p>Betriebsrat kann die K&uuml;ndigung nicht verhindern, aber wiedersprechen. Mitglieder der Betriebsrat k&ouml;nnen nicht <strong>ordentlich*</strong> gek&uuml;ndigt werden.</p>\r\n<p>Das Arbeitsgericht kann sie verhindern (m&uuml;ndliche K&uuml;ndigung).</p>\r\n<p><strong>*</strong>Muss eine Abmahnung vorhanden sein. Angestellte in der Regel 6 Wochen zum Quartalsende. Abmahnungen verj&auml;hren nicht!<br /> Arbeiter zwischen 2 Wochen und drei Monaten (je nach Dauer der Betriebszugeh&ouml;rigkeit und Alter)</p>\r\n<h3>Gr&uuml;nde</h3>\r\n<p><strong>Au&szlig;erordentlich (fristlos):</strong> Es muss ein <strong>wichtiger Grund</strong> vorliegen:</p>\r\n<ul>\r\n<li>Betrug</li>\r\n<li>Diebstahl</li>\r\n<li>dauernde Verletzung von Pflichten</li>\r\n<li>nach einer Abmahnung</li>\r\n</ul>\r\n<h3>K&uuml;ndigungsschutz</h3>\r\n<ul>\r\n<li>Schutz vor K&uuml;ndigung in der Elternzeit</li>\r\n<li>Mutterschutz<br /> Schwangere haben von Anfang der Schwangerschaft bis zum Ablauf von vier Monaten nach der Entbindung besonderen K&uuml;ndigungsschutz</li>\r\n<li>Schwerbehinderte Arbeitnehmer (Zustimmung Integrationsamt)</li>\r\n<li>Betriebsrat (nur au&szlig;erordentlich) (4Jahre + 1 Jahr = 5 Jahre)</li>\r\n</ul>"
+    },
+    {
+      "id": "Probezeit1",
+      "title": "Probezeit",
+      "html": "<p>Ordentlich: 2 Wochen</p>\r\n<h2>Individueller Arbeitsvertrag</h2>\r\n<p>Lohnzahlung, Urlaubszeiten, Arbeitszeiten</p>"
+    },
+    {
+      "id": "leer",
+      "title": "leer",
+      "html": ""
+    }
+  ],
+  "toc": [],
+  "headings": [
+    "Aufbau der Rechtsordnung",
+    "Mangelhafte Ware",
+    "Inhalte des Vertrages",
+    "Unternehmen/ Betrieb",
+    "Berufsschule",
+    "Individueller Arbeitsvertrag",
+    "Europ&auml;ische Union&nbsp;",
+    "Geschichte"
+  ]
+}

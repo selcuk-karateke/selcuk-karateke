@@ -1,0 +1,43 @@
+{
+  "kind": "prose",
+  "entryId": 9,
+  "sections": [
+    {
+      "id": "col37Content",
+      "title": "Text anzeigen",
+      "html": "<script>\r\n\t\twindow.document.write(\"Dieser Text wurde mit 'document.write' angezeigt.\");\r\n\t\t//alert('alert');\r\n\t</script>\r\n\t<pre>window.document.write(\"Dieser Text wurde mit 'document.write' angezeigt.\");</pre>"
+    },
+    {
+      "id": "col38Content",
+      "title": "Datum und Zeit anzeigen",
+      "html": "<p id=\"demo\"></p>\r\n\t<script>\r\n\t\tdocument.getElementById('demo').innerHTML = Date();\r\n\t</script>\r\n\r\n\t<p>Script kann nur aufgerufen werden, wenn die HTML vorher geladen wird.</p>\r\n\t<p><button onclick=\"document.getElementById('demo').innerHTML = Date()\" type=\"button\">Update</button></p>\r\n\t<p id=\"demo\"></p>"
+    },
+    {
+      "id": "col39Content",
+      "title": "Überschrift &lt;h1&gt; ändern mit einer Prompt-Box",
+      "html": "<script type=\"text/javascript\">\r\n\t\tfunction ueberschriftAendern(){\r\n\t\t\tvar ue = prompt('Gib eine neue Überschrift ein');\r\n\t\t\tdocument.getElementById('a').innerHTML = ue;\r\n\t\t\talert('Überschrift wurde zu \"' + ue + '\" geändert!')\r\n\t\t}\r\n\t</script>\r\n\t<p><button onclick=\"ueberschriftAendern()\">Change</button></p>"
+    },
+    {
+      "id": "col40Content",
+      "title": "Bild wechseln",
+      "html": "<script type=\"text/javascript\">\r\n\t\t\tfunction bildAndern(){\r\n\t\t\t\tif (document.getElementById('b').src.endsWith('img/pic_bulboff.gif')) {\r\n\t\t\t\t\tdocument.getElementById('b').src = \"img/pic_bulbon.gif\";\r\n\t\t\t\t\tdocument.getElementById('c').innerHTML = \"done\";\r\n\t\t\t\t} else {\r\n\t\t\t\t\tdocument.getElementById('b').src = \"img/pic_bulboff.gif\";\r\n\t\t\t\t\tdocument.getElementById('c').innerHTML = \"clear\";\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t\t</script>\r\n\r\n\t\t<img id=\"b\" src=\"/legacy-assets/portfolio/img/pic_bulboff.gif\" style=\"width:50px\" alt=\"AUS\">\r\n\t\t<button onclick=\"bildAndern()\">Switch</button>\r\n\t\t<i id=\"c\" class=\"material-icons\">clear</i>"
+    },
+    {
+      "id": "col41Content",
+      "title": "Tabelle ändern",
+      "html": "<table>\r\n\t\t\t<tr>\r\n\t\t\t\t<td id=\"1\">1</td>\r\n\t\t\t\t<td id=\"2\">2</td>\r\n\t\t\t\t<td id=\"3\">3</td>\r\n\t\t\t</tr>\r\n\t\t\t<tr>\r\n\t\t\t\t<td id=\"4\">1</td>\r\n\t\t\t\t<td id=\"5\">2</td>\r\n\t\t\t\t<td id=\"6\">3</td>\r\n\t\t\t</tr>\r\n\t\t\t<tr>\r\n\t\t\t\t<td id=\"7\">1</td>\r\n\t\t\t\t<td id=\"8\">2</td>\r\n\t\t\t\t<td id=\"9\">3</td>\r\n\t\t\t</tr>\r\n\t\t</table>\r\n\r\n\t\t<button onclick=\"tabelleAendern()\">Change</button>\r\n\t\t<script>\r\n\t\t\tfunction tabelleAendern(){\r\n\t\t\t\t//$('#1').val(\"x\");\r\n\t\t\t\tdocument.getElementById('1').innerHTML = \"x\";\r\n\t\t\t\tdocument.getElementById('2').innerHTML = \"x\";\r\n\t\t\t\tdocument.getElementById('3').innerHTML = \"x\";\r\n\t\t\t}\r\n\t\t</script>"
+    },
+    {
+      "id": "col42Content",
+      "title": "Zeitmanipulation",
+      "html": "<div class=\"input-group input-group-xs\">\r\n\r\n\t\t\t<script type=\"text/javascript\">\r\n\t\t\t   function countDown(secs) {\r\n\t\t\t\t   document.getElementById('status').innerHTML = \"Please wait for \"+secs+\" seconds\";\r\n\r\n\t\t\t\t   if (secs < 1){\r\n\t\t\t\t   clearInterval(timer);\r\n\t\t\t\t   document.getElementById('status').innerHTML = '<p>Countdown complete!<\\/p>';\r\n\t\t\t\t   document.getElementById('status').innerHTML += '<a href=\"#\">Continue<\\/a>';\r\n\t\t\t\t   document.getElementById('inputCD').disabled = true;\r\n\t\t\t\t   document.getElementById('btnCD').disabled = true;\r\n\t\t\t\t   // playAudio(); \r\n\t\t\t\t   }\r\n\t\t\t\t   secs--;\r\n\t\t\t\t   var timer = setTimeout('countDown('+secs+')',1000);\r\n\t\t\t   }\r\n\t\t\t</script>\r\n\t\t\t\r\n\t\t\t<input class=\"form-control\" id=\"inputCD\" type=\"text\">\r\n\t\t\t<span class=\"input-group-btn\">\r\n\t\t\t\t<button class=\"btn btn-default\" id=\"btnCD\" \r\n\t\t\t\t\tonclick=\"countDown(document.getElementById('inputCD').value)\">\r\n\t\t\t\t\t<span class=\"input-group-btn\">OK</span>\r\n\t\t\t\t</button>\r\n\t\t\t</span>"
+    },
+    {
+      "id": "col43Content",
+      "title": "leer",
+      "html": ""
+    }
+  ],
+  "toc": [],
+  "headings": []
+}

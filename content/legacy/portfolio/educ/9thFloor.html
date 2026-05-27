@@ -1,0 +1,125 @@
+<div class="col">
+	<h3><a data-toggle="collapse" href="#col37Content">Text anzeigen</a></h3>
+	<div class="collapse" id="col37Content">
+	<script>
+		window.document.write("Dieser Text wurde mit 'document.write' angezeigt.");
+		//alert('alert');
+	</script>
+	<pre>window.document.write("Dieser Text wurde mit 'document.write' angezeigt.");</pre>
+	</div>
+</div>
+<div class="col">
+	<h3><a data-toggle="collapse" href="#col38Content">Datum und Zeit anzeigen</a></h3>
+	<div class="collapse" id="col38Content">
+	<p id="demo"></p>
+	<script>
+		document.getElementById('demo').innerHTML = Date();
+	</script>
+
+	<p>Script kann nur aufgerufen werden, wenn die HTML vorher geladen wird.</p>
+	<p><button onclick="document.getElementById('demo').innerHTML = Date()" type="button">Update</button></p>
+	<p id="demo"></p>
+	</div>
+</div>
+<div class="col">
+	<h3><a data-toggle="collapse" href="#col39Content" id='a'>Überschrift &lt;h1&gt; ändern mit einer Prompt-Box</a></h3>
+	<div class="collapse" id="col39Content">	
+	<script type="text/javascript">
+		function ueberschriftAendern(){
+			var ue = prompt('Gib eine neue Überschrift ein');
+			document.getElementById('a').innerHTML = ue;
+			alert('Überschrift wurde zu "' + ue + '" geändert!')
+		}
+	</script>
+	<p><button onclick="ueberschriftAendern()">Change</button></p>
+	</div>
+</div>
+<div class="col">
+	<h3><a data-toggle="collapse" href="#col40Content">Bild wechseln</a></h3>
+	<div class="collapse" id="col40Content">
+		<script type="text/javascript">
+			function bildAndern(){
+				if (document.getElementById('b').src.endsWith('img/pic_bulboff.gif')) {
+					document.getElementById('b').src = "img/pic_bulbon.gif";
+					document.getElementById('c').innerHTML = "done";
+				} else {
+					document.getElementById('b').src = "img/pic_bulboff.gif";
+					document.getElementById('c').innerHTML = "clear";
+				}
+			}
+			</script>
+
+		<img id="b" src="/legacy-assets/portfolio/img/pic_bulboff.gif" style="width:50px" alt="AUS">
+		<button onclick="bildAndern()">Switch</button>
+		<i id="c" class="material-icons">clear</i>
+	</div>
+</div>
+<div class="col">
+	<h3><a data-toggle="collapse" href="#col41Content">Tabelle ändern</a></h3>
+	<div class="collapse" id="col41Content">
+		<table>
+			<tr>
+				<td id="1">1</td>
+				<td id="2">2</td>
+				<td id="3">3</td>
+			</tr>
+			<tr>
+				<td id="4">1</td>
+				<td id="5">2</td>
+				<td id="6">3</td>
+			</tr>
+			<tr>
+				<td id="7">1</td>
+				<td id="8">2</td>
+				<td id="9">3</td>
+			</tr>
+		</table>
+
+		<button onclick="tabelleAendern()">Change</button>
+		<script>
+			function tabelleAendern(){
+				//$('#1').val("x");
+				document.getElementById('1').innerHTML = "x";
+				document.getElementById('2').innerHTML = "x";
+				document.getElementById('3').innerHTML = "x";
+			}
+		</script>
+	</div>
+</div>
+<div class="col">
+	<h3><a data-toggle="collapse" href="#col42Content">Zeitmanipulation</a></h3>
+	<p id="status"></p>
+	<div class="collapse" id="col42Content">
+		<div class="input-group input-group-xs">
+
+			<script type="text/javascript">
+			   function countDown(secs) {
+				   document.getElementById('status').innerHTML = "Please wait for "+secs+" seconds";
+
+				   if (secs < 1){
+				   clearInterval(timer);
+				   document.getElementById('status').innerHTML = '<p>Countdown complete!<\/p>';
+				   document.getElementById('status').innerHTML += '<a href="#">Continue<\/a>';
+				   document.getElementById('inputCD').disabled = true;
+				   document.getElementById('btnCD').disabled = true;
+				   // playAudio(); 
+				   }
+				   secs--;
+				   var timer = setTimeout('countDown('+secs+')',1000);
+			   }
+			</script>
+			
+			<input class="form-control" id="inputCD" type="text">
+			<span class="input-group-btn">
+				<button class="btn btn-default" id="btnCD" 
+					onclick="countDown(document.getElementById('inputCD').value)">
+					<span class="input-group-btn">OK</span>
+				</button>
+			</span>
+		</div>
+	</div>
+</div>
+<div class="col">
+	<h3><a data-toggle="collapse" href="#col43Content">leer</a></h3>
+	<div class="collapse" id="col43Content"></div>
+</div>

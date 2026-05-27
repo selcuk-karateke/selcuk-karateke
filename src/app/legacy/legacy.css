@@ -1,0 +1,88 @@
+.legacy-html-body {
+  line-height: 1.6;
+}
+
+.legacy-html-body h1,
+.legacy-html-body h2,
+.legacy-html-body h3,
+.legacy-html-body h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.legacy-html-body .col,
+.legacy-html-body .col-sm-6,
+.legacy-html-body .col-sm-12 {
+  margin-bottom: 0.75rem;
+}
+
+.legacy-html-body img {
+  max-width: 100%;
+  height: auto;
+}
+
+.legacy-html-body table {
+  width: 100%;
+}
+
+.legacy-html-body a[data-toggle='collapse'] {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.legacy-section-content img,
+.legacy-html-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.375rem;
+}
+
+.legacy-section-content pre,
+.legacy-html-body pre {
+  overflow-x: auto;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] .legacy-section-content pre,
+[data-theme='dark'] .legacy-html-body pre {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.legacy-section-content table,
+.legacy-html-body table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.legacy-section-content .list-group-item,
+.legacy-section-content li {
+  margin-bottom: 0.25rem;
+}
+
+.education-field mjx-container {
+  font-size: 110%;
+}
+
+.education-prose mjx-container,
+.education-field mjx-container {
+  display: inline-block;
+  margin: 0.15rem 0;
+}
+
+.education-prose table,
+.education-field table {
+  width: 100%;
+  margin: 0.75rem 0;
+  border-collapse: collapse;
+}
+
+.education-prose td,
+.education-prose th,
+.education-field td,
+.education-field th {
+  border: 1px solid var(--color-border, #e5e7eb);
+  padding: 0.35rem 0.5rem;
+  vertical-align: top;
+}

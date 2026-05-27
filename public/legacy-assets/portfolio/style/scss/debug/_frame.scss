@@ -1,0 +1,44 @@
+// Styling for Debugging
+.fig {
+  position: relative;
+  border: 3px dotted yellow;
+  margin: 0 0 0rem;
+  position: relative;
+  border: 3px dotted gainsboro;
+  background: #D7D447;
+}
+
+.figcap {
+  position: absolute;
+  padding: 5px;
+  bottom: 0.7%;
+  font-family: monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  width:100%;
+  background: yellow;
+  background-image: repeating-linear-gradient(45deg, black, black 15px, rgba(255,255,255,.1) 15px, rgba(255,255,255,.1) 30px);
+  opacity: 0.3;
+  
+  text-align: right;
+  color: white;
+}
+
+.figcap:hover {
+  color: black;
+  width:100%;
+  z-index: 10;
+  opacity: 0.3;
+  background-image: unset;
+}
+
+.figframe .figcap{
+  color: black;
+  width:100%;
+  z-index: 10;
+  opacity: 0.3;
+  background-image: unset;
+}
+.figframe{
+	border: 3px dotted red;
+}
