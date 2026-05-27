@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { type ReactNode, useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { UserGroupIcon } from '@heroicons/react/24/outline'
@@ -104,6 +104,28 @@ export default function ProjectsPage() {
           </div>
         </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.35 }}
+          className="theme-bg-card rounded-xl border theme-border p-8 mt-8"
+        >
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <h3 className="text-xl font-semibold theme-text">Need the full legacy scope?</h3>
+              <p className="theme-text-secondary">
+                See both historical PHP systems and all legacy modules in one consolidated view.
+              </p>
+            </div>
+            <Link
+              href="/legacy"
+              className="inline-flex items-center theme-primary-bg hover:opacity-90 text-white px-5 py-2.5 rounded-lg font-medium shrink-0"
+            >
+              Open Legacy Systems →
+            </Link>
+          </div>
+        </motion.div>
+
         <div className="text-center mt-16">
           <Link
             href="/contact"
@@ -122,7 +144,7 @@ function FilterBtn({
   active,
   onClick,
 }: {
-  children: React.ReactNode
+  children: ReactNode
   active: boolean
   onClick: () => void
 }) {
