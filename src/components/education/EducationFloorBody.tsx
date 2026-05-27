@@ -27,5 +27,5 @@ export default function EducationFloorBody({
     body = <p className="theme-text-secondary">Kein Inhalt verfügbar.</p>
   }
 
-  return <ContentWithToc items={toc}>{body}</ContentWithToc>
+  return <ContentWithToc items={toc} minItems={2}>{body}</ContentWithToc>
 }

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import TrainingOverviewStats from '@/components/sections/TrainingOverviewStats'
 
 export default function About() {
     const ref = useRef(null)
@@ -275,27 +276,7 @@ export default function About() {
                             </div>
                         </div>
 
-                        <div className="mt-8 bg-warm-dark-gray/10 rounded-lg p-6 border border-warm-dark-gray/20">
-                            <h4 className="text-xl font-bold theme-text mb-4">Overview</h4>
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                                <div className="bg-warm-dark-gray/20 rounded-lg p-4 border border-warm-dark-gray/30">
-                                    <div className="text-2xl font-bold theme-text">2.640</div>
-                                    <div className="text-sm theme-text-secondary">Total Hours</div>
-                                </div>
-                                <div className="bg-warm-dark-gray/20 rounded-lg p-4 border border-warm-dark-gray/30">
-                                    <div className="text-2xl font-bold theme-text">9</div>
-                                    <div className="text-sm theme-text-secondary">Modules</div>
-                                </div>
-                                <div className="bg-warm-dark-gray/20 rounded-lg p-4 border border-warm-dark-gray/30">
-                                    <div className="text-2xl font-bold theme-text">IHK</div>
-                                    <div className="text-sm theme-text-secondary">Certification</div>
-                                </div>
-                                <div className="bg-warm-dark-gray/20 rounded-lg p-4 border border-warm-dark-gray/30">
-                                    <div className="text-2xl font-bold theme-text">3</div>
-                                    <div className="text-sm theme-text-secondary">Years</div>
-                                </div>
-                            </div>
-                        </div>
+                        <TrainingOverviewStats />
                     </div>
                 </motion.div>
             </div>

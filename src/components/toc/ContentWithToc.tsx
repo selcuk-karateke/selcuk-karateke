@@ -6,11 +6,13 @@ const MIN_ITEMS = 3
 export default function ContentWithToc({
   items,
   children,
+  minItems = MIN_ITEMS,
 }: {
   items: TocItem[]
   children: React.ReactNode
+  minItems?: number
 }) {
-  if (items.length < MIN_ITEMS) {
+  if (items.length < minItems) {
     return <>{children}</>
   }
 

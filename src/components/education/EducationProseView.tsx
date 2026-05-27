@@ -1,5 +1,6 @@
 import type { ProseEducationFloor } from '@/types/education'
 import { decodeHtmlEntities } from '@/lib/decodeHtmlEntities'
+import { slugifyHeading } from '@/lib/toc/slugifyHeading'
 import { prepareMathHtml, rewriteLegacyImagePaths } from '@/lib/mathHtml'
 import EducationFigure, { hasEducationFigure } from '@/components/education/figures/EducationFigure'
 import MathHtml from '@/components/education/MathHtml'
@@ -15,7 +16,11 @@ export default function EducationProseView({
   return (
     <article className="space-y-6">
       {floor.headings.map((h) => (
-        <h2 key={h} className="text-2xl font-semibold theme-text scroll-mt-28">
+        <h2
+          key={h}
+          id={slugifyHeading(h)}
+          className="text-2xl font-semibold theme-text scroll-mt-28"
+        >
           {decodeHtmlEntities(h)}
         </h2>
       ))}
