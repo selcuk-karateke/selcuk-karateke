@@ -1,6 +1,4 @@
-'use client'
-
-import { useState } from 'react'
+import { profileContact } from '@/data/profile'
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
@@ -86,7 +84,10 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <h4 className="font-semibold theme-text">Address</h4>
-                                    <p className="theme-text-secondary">Möckernstraße 115<br />10963 Berlin, Germany</p>
+                                    <p className="theme-text-secondary">
+                                        {profileContact.street}<br />
+                                        {profileContact.city}, Germany
+                                    </p>
                                 </div>
                             </div>
 
@@ -99,11 +100,11 @@ export default function Contact() {
                                 <div>
                                     <h4 className="font-semibold theme-text">Phone</h4>
                                     <p className="theme-text-secondary">
-                                        <a href="tel:+493012074996" className="hover:theme-primary transition-colors">
-                                            030 12074996
+                                        <a href={profileContact.phoneHref} className="hover:theme-primary transition-colors">
+                                            {profileContact.phone}
                                         </a><br />
-                                        <a href="tel:+491774616695" className="hover:theme-primary transition-colors">
-                                            0177 4616695
+                                        <a href={profileContact.mobileHref} className="hover:theme-primary transition-colors">
+                                            {profileContact.mobile}
                                         </a>
                                     </p>
                                 </div>
@@ -118,8 +119,8 @@ export default function Contact() {
                                 <div>
                                     <h4 className="font-semibold theme-text">Email</h4>
                                     <p className="theme-text-secondary">
-                                        <a href="mailto:selcuk.karateke@live.de" className="hover:theme-primary transition-colors">
-                                            selcuk.karateke@live.de
+                                        <a href={`mailto:${profileContact.email}`} className="hover:theme-primary transition-colors">
+                                            {profileContact.email}
                                         </a>
                                     </p>
                                 </div>
@@ -132,10 +133,16 @@ export default function Contact() {
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold theme-text">Website</h4>
+                                    <h4 className="font-semibold theme-text">Links</h4>
                                     <p className="theme-text-secondary">
-                                        <a href="https://www.sellskitchen.de" target="_blank" rel="noopener noreferrer" className="hover:theme-primary transition-colors">
-                                            www.sellskitchen.de
+                                        <a href={profileContact.portfolioUrl} target="_blank" rel="noopener noreferrer" className="hover:theme-primary transition-colors">
+                                            selcuk.karateke.org
+                                        </a><br />
+                                        <a href={profileContact.companyUrl} target="_blank" rel="noopener noreferrer" className="hover:theme-primary transition-colors">
+                                            kawai-labs.com
+                                        </a><br />
+                                        <a href={profileContact.linkedInUrl} target="_blank" rel="noopener noreferrer" className="hover:theme-primary transition-colors">
+                                            LinkedIn
                                         </a>
                                     </p>
                                 </div>

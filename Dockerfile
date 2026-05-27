@@ -1,4 +1,4 @@
-# Coolify / Docker — Layer-Cache für schnellere Deploys (~3–5 min statt ~8 min)
+# Coolify: Dockerfile verwenden — Nixpacks ignoriert Layer-Cache (siehe COOLIFY-BUILD.md)
 FROM node:20-alpine AS base
 RUN apk add --no-cache libc6-compat openssl
 WORKDIR /app

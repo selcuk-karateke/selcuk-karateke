@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import TrainingOverviewStats from '@/components/sections/TrainingOverviewStats'
+import { profileContact, profileLanguages, profileSkills } from '@/data/profile'
 
 export default function About() {
     const ref = useRef(null)
@@ -43,10 +44,13 @@ export default function About() {
                             <h3 className="text-3xl font-bold theme-text mb-6">My Story</h3>
                             <div className="space-y-4 theme-text-secondary">
                                 <p>
-                                    👋 Hi, I&apos;m Selçuk! As a software developer, I am motivated, ready and open to any
-                                    programming language and environment. My journey began with training as a
-                                    computer science specialist at Comhard GmbH in Berlin. I worked as a PHP developer
-                                    at Bagobag GmbH until 2025 and am now self-employed at Kawai Labs.
+                                    👋 Hi, I&apos;m Selçuk — Fachinformatiker für Anwendungsentwicklung in Berlin.
+                                    Nach der IHK-Umschulung bei Comhard war ich u. a. PHP-Entwickler und Produktmanager
+                                    bei bagobag GmbH (2021–2026). Seit 2025 arbeite ich freiberuflich über{' '}
+                                    <a href={profileContact.companyUrl} className="theme-primary hover:opacity-80">
+                                        Kawai Labs
+                                    </a>
+                                    .
                                 </p>
                                 <p>
                                     👀 I&apos;m interested in coding - I passionately work with technologies like PHP, JavaScript,
@@ -81,24 +85,42 @@ export default function About() {
                         <div className="theme-secondary-bg rounded-2xl p-6 text-white card-hover shadow-sm">
                             <h4 className="text-xl font-bold mb-3">Current Position</h4>
                             <p className="text-white">
-                                Self-employed<br />
-                                Kawai Labs (since Feb 2025)
+                                Self-employed / Kawai Labs<br />
+                                since Feb 2025 ·{' '}
+                                <a href={profileContact.companyUrl} className="underline opacity-90">
+                                    kawai-labs.com
+                                </a>
                             </p>
                         </div>
 
                         <div className="bg-slate-600 rounded-2xl p-6 text-white card-hover shadow-sm">
                             <h4 className="text-xl font-bold mb-3">Languages</h4>
                             <p className="text-white">
-                                German (native), Turkish (native), English (fluent)
+                                {profileLanguages.map((l) => `${l.name} (${l.level})`).join(' · ')}
                             </p>
                         </div>
 
                         <div className="bg-slate-700 rounded-2xl p-6 text-white card-hover shadow-sm">
                             <h4 className="text-xl font-bold mb-3">Location</h4>
                             <p className="text-white">
-                                Berlin, Germany<br />
-                                Ready for remote work and travel
+                                {profileContact.street}<br />
+                                {profileContact.city}<br />
+                                Tel. {profileContact.phone}
                             </p>
+                        </div>
+
+                        <div className="theme-bg-card rounded-2xl p-6 border theme-border">
+                            <h4 className="text-xl font-bold theme-text mb-3">Kompetenzen</h4>
+                            <div className="flex flex-wrap gap-2">
+                                {profileSkills.map((skill) => (
+                                    <span
+                                        key={skill}
+                                        className="text-xs px-2.5 py-1 rounded-full border theme-border theme-text-secondary"
+                                    >
+                                        {skill}
+                                    </span>
+                                ))}
+                            </div>
                         </div>
 
                         <div className="bg-slate-800 rounded-2xl p-6 text-white card-hover shadow-sm">

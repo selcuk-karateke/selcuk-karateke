@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import Link from 'next/link'
 import { Inter } from 'next/font/google'
+import { profileContact } from '@/data/profile'
 import Navbar from '@/components/Navbar'
 import AuthProvider from '@/components/providers/AuthProvider'
 import { PomodoroProvider } from '@/components/pomodoro/PomodoroProvider'
@@ -29,15 +30,30 @@ export default function RootLayout({ children }: LayoutProps) {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div className="col-span-1 md:col-span-2">
                   <h3 className="text-lg font-semibold mb-4">Selçuk Karateke</h3>
-                  <p className="text-gray-300 mb-4">
-                    IT Specialist for Application Development with a passion for modern web technologies.
+                    <p className="text-gray-300 mb-4">
+                    {profileContact.title} — Portfolio & Lerninhalte.
                   </p>
                   <div className="space-y-2">
-                    <p className="text-gray-300">Möckernstraße 115</p>
-                    <p className="text-gray-300">10963 Berlin</p>
-                    <p className="text-gray-300">Tel: 030 12074996</p>
-                    <p className="text-gray-300">Mobil: 0177 4616695</p>
-                    <p className="text-gray-300">Email: selcuk.karateke@live.de</p>
+                    <p className="text-gray-300">{profileContact.street}</p>
+                    <p className="text-gray-300">{profileContact.city}</p>
+                    <p className="text-gray-300">
+                      Tel:{' '}
+                      <a href={profileContact.phoneHref} className="hover:text-white">
+                        {profileContact.phone}
+                      </a>
+                    </p>
+                    <p className="text-gray-300">
+                      Mobil:{' '}
+                      <a href={profileContact.mobileHref} className="hover:text-white">
+                        {profileContact.mobile}
+                      </a>
+                    </p>
+                    <p className="text-gray-300">
+                      Email:{' '}
+                      <a href={`mailto:${profileContact.email}`} className="hover:text-white">
+                        {profileContact.email}
+                      </a>
+                    </p>
                   </div>
                 </div>
 

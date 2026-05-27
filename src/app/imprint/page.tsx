@@ -1,4 +1,5 @@
 import Breadcrumb from '@/components/Breadcrumb'
+import { profileContact } from '@/data/profile'
 
 export default function Imprint() {
     return (
@@ -14,25 +15,28 @@ export default function Imprint() {
                         <div className="mb-8">
                             <h3 className="text-xl font-semibold text-gray-700 mb-3">Contact</h3>
                             <p className="text-gray-600 mb-2">
-                                <strong>Selçuk Karateke</strong><br />
-                                Möckernstraße 115<br />
-                                10963 Berlin<br />
+                                <strong>{profileContact.name}</strong><br />
+                                {profileContact.street}<br />
+                                {profileContact.city}<br />
                                 Germany
                             </p>
 
                             <p className="text-gray-600 mb-2">
                                 <strong>Contact:</strong><br />
-                                Telefon: 030 12074996<br />
-                                Mobil: 0177 4616695<br />
-                                Email: selcuk.karateke@live.de<br />
-                                Website: www.sellskitchen.de
+                                Telefon: {profileContact.phone}<br />
+                                Mobil: {profileContact.mobile}<br />
+                                Email: {profileContact.email}<br />
+                                Portfolio:{' '}
+                                <a href={profileContact.portfolioUrl} className="text-blue-600 hover:text-blue-800">
+                                    selcuk.karateke.org
+                                </a>
                             </p>
                         </div>
 
                         <div className="mb-8">
                             <h3 className="text-xl font-semibold text-gray-700 mb-3">Professional Title</h3>
                             <p className="text-gray-600">
-                                IT Specialist for Application Development<br />
+                                {profileContact.title}<br />
                                 Awarded in: Germany
                             </p>
                         </div>
@@ -48,9 +52,9 @@ export default function Imprint() {
                         <div className="mb-8">
                             <h3 className="text-xl font-semibold text-gray-700 mb-3">Responsible for Content according to § 55 Abs. 2 RStV</h3>
                             <p className="text-gray-600">
-                                Selçuk Karateke<br />
-                                Möckernstraße 115<br />
-                                10963 Berlin
+                                {profileContact.name}<br />
+                                {profileContact.street}<br />
+                                {profileContact.city}
                             </p>
                         </div>
 

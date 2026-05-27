@@ -1,4 +1,5 @@
 import Breadcrumb from '@/components/Breadcrumb'
+import { profileContact } from '@/data/profile'
 
 export default function Privacy() {
     return (
@@ -71,12 +72,12 @@ export default function Privacy() {
                                 The party responsible for processing data on this website is:
                             </p>
                             <p className="text-gray-600 mt-4">
-                                <strong>Selçuk Karateke</strong><br />
-                                Möckernstraße 115<br />
-                                10963 Berlin<br />
+                                <strong>{profileContact.name}</strong><br />
+                                {profileContact.street}<br />
+                                {profileContact.city}<br />
                                 Germany<br />
-                                Email: selcuk.karateke@live.de<br />
-                                Phone: 030 12074996
+                                Email: {profileContact.email}<br />
+                                Phone: {profileContact.phone}
                             </p>
                         </div>
 

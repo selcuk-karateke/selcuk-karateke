@@ -1,4 +1,5 @@
 import Breadcrumb from '@/components/Breadcrumb'
+import { profileContact } from '@/data/profile'
 
 export default function DataDeletion() {
     return (
@@ -52,7 +53,7 @@ export default function DataDeletion() {
                         <div className="mb-8">
                             <h3 className="text-xl font-semibold text-gray-700 mb-3">Option 2: By Phone</h3>
                             <p className="text-gray-600">
-                                Call us at <strong>030 12074996</strong> and let us know that
+                                Call us at <strong>{profileContact.phone}</strong> and let us know that
                                 you want to delete your data. We will process your request
                                 and send you a written confirmation by email.
                             </p>
@@ -94,12 +95,12 @@ export default function DataDeletion() {
                             </p>
                             <div className="bg-gray-50 p-4 rounded-lg mt-4">
                                 <p className="text-gray-700">
-                                    <strong>Selçuk Karateke</strong><br />
-                                    Möckernstraße 115<br />
-                                    10963 Berlin<br />
+                                    <strong>{profileContact.name}</strong><br />
+                                    {profileContact.street}<br />
+                                    {profileContact.city}<br />
                                     Germany<br />
-                                    Email: selcuk.karateke@live.de<br />
-                                    Phone: 030 12074996
+                                    Email: {profileContact.email}<br />
+                                    Phone: {profileContact.phone}
                                 </p>
                             </div>
                         </div>

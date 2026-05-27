@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { trainingOverview } from '@/data/profile'
 import { useInView } from 'framer-motion'
 
 function formatDe(value: number) {
@@ -62,9 +63,9 @@ export default function TrainingOverviewStats() {
   const ref = useRef<HTMLDivElement>(null)
   const inView = useInView(ref, { once: true, amount: 0.45 })
 
-  const hours = useCountUp(2640, inView, 1800, 0)
-  const modules = useCountUp(9, inView, 1200, 120)
-  const years = useCountUp(3, inView, 900, 360)
+  const hours = useCountUp(trainingOverview.totalHours, inView, 1800, 0)
+  const modules = useCountUp(trainingOverview.modules, inView, 1200, 120)
+  const years = useCountUp(trainingOverview.years, inView, 900, 360)
 
   return (
     <div
@@ -80,7 +81,7 @@ export default function TrainingOverviewStats() {
           {modules}
         </StatBox>
         <StatBox label="Certification" visible={inView} className="delay-150">
-          IHK
+          {trainingOverview.certification}
         </StatBox>
         <StatBox label="Years" visible={inView} className="delay-200">
           {years}
