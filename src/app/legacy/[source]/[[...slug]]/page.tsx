@@ -9,12 +9,8 @@ import { legacyExerciseToSlug } from '@/data/exerciseCatalog'
 import { ownWebsiteFloors, portfolioEducationFloors } from '@/data/educationFloors'
 import '../../legacy.css'
 
-export function generateStaticParams() {
-  return legacyRoutes.map((route) => ({
-    source: route.source,
-    slug: route.route.split('/'),
-  }))
-}
+/** Legacy-Archiv zur Laufzeit — spart ~75 statische Seiten beim Build. */
+export const dynamic = 'force-dynamic'
 
 export default async function LegacyRoutePage({
   params,

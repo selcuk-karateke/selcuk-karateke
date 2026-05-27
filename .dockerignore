@@ -1,0 +1,13 @@
+.git
+.github
+.cursor
+.next
+.next-dev
+node_modules
+npm-debug.log*
+.env*.local
+*.md
+!README.md
+terminals
+agent-transcripts
+assets

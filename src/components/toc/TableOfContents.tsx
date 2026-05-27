@@ -107,7 +107,9 @@ export default function TableOfContents({
         <button
           type="button"
           className="w-full flex items-center justify-between px-4 py-3 text-sm font-semibold theme-text"
-          aria-expanded={open}
+          {...(open
+            ? { 'aria-expanded': 'true' as const }
+            : { 'aria-expanded': 'false' as const })}
           onClick={() => setOpen((v) => !v)}
         >
           Inhaltsverzeichnis

@@ -470,7 +470,10 @@ export function FarbcodeExercise({ step = 51, title }: { step?: number; title?: 
         cells.push(
           <td
             key={`${r}-${g}-${b}`}
-            style={{ width: '2em', height: '2em', backgroundColor: `rgb(${r},${g},${b})` }}
+            className="farbcode-cell"
+            ref={(el) => {
+              if (el) el.style.backgroundColor = `rgb(${r},${g},${b})`
+            }}
           />
         )
       }
@@ -621,13 +624,14 @@ export function BooksFormExercise() {
           ).map(([name, label, req]) => (
             <p key={name} className="flex flex-row-reverse items-center gap-2 justify-end">
               <input
+                id={`book-${name}`}
                 name={name}
                 required={req}
                 className="border theme-border rounded px-3 py-2 flex-1 bg-transparent"
                 value={form[name]}
                 onChange={(e) => setForm((f) => ({ ...f, [name]: e.target.value }))}
               />
-              <label className="text-sm theme-text-secondary w-28 text-right">
+              <label htmlFor={`book-${name}`} className="text-sm theme-text-secondary w-28 text-right">
                 {label}
                 {req ? ' *' : ''}
               </label>
@@ -701,7 +705,11 @@ export function FileUploadExercise() {
             setName(preview ? 'Datei empfangen (lokal, kein Server-Upload)' : '')
           }}
         >
+          <label htmlFor="file-upload-demo" className="text-sm theme-text-secondary block">
+            Datei wählen
+          </label>
           <input
+            id="file-upload-demo"
             type="file"
             className="text-sm"
             onChange={(e) => {
@@ -1112,7 +1120,11 @@ export function MultiFileUploadExercise() {
         >
           {[0, 1, 2, 3].map((i) => (
             <p key={i} className="mb-2">
+              <label htmlFor={`multi-file-${i}`} className="text-sm theme-text-secondary block mb-1">
+                Datei {i + 1}
+              </label>
               <input
+                id={`multi-file-${i}`}
                 type="file"
                 className="text-sm"
                 onChange={(e) => {
@@ -1406,7 +1418,11 @@ export function GalleryExercise({ mode }: { mode: 'view' | 'upload' | 'setup' | 
       <>
         <Back />
         <Card title="Galerie Upload">
+          <label htmlFor="galerie-upload" className="text-sm theme-text-secondary block mb-1">
+            Bild hochladen
+          </label>
           <input
+            id="galerie-upload"
             type="file"
             accept="image/*"
             className="text-sm mb-3"

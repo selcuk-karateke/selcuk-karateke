@@ -5,6 +5,7 @@ const isDevServer = process.argv.includes('dev')
 
 const nextConfig: NextConfig = {
   distDir: isDevServer ? '.next-dev' : '.next',
+  output: 'standalone',
 }
 
 export default nextConfig
