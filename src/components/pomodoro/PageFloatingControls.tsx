@@ -7,6 +7,7 @@ import {
   PlayIcon,
   StopIcon,
 } from '@heroicons/react/24/solid'
+import { useTranslations } from 'next-intl'
 import { usePomodoro } from '@/components/pomodoro/PomodoroProvider'
 
 function ControlButton({
@@ -42,6 +43,7 @@ function ControlButton({
 
 export default function PageFloatingControls() {
   const { status, displayTime, mode, start, togglePause, stop } = usePomodoro()
+  const t = useTranslations('pomodoro')
   const [showScrollTop, setShowScrollTop] = useState(false)
 
   useEffect(() => {
@@ -73,16 +75,16 @@ export default function PageFloatingControls() {
           >
             {displayTime}
           </span>
-          {paused && <span className="text-xs theme-text-secondary">PAUSE</span>}
+          {paused && <span className="text-xs theme-text-secondary">{t('paused')}</span>}
         </div>
       )}
 
       {!active && (
         <>
-          <ControlButton label="Pomodoro Interrupt (15 min)" onClick={() => start('interrupt')} variant="primary">
+          <ControlButton label={t('interrupt15')} onClick={() => start('interrupt')} variant="primary">
             <span className="text-xs font-semibold">15</span>
           </ControlButton>
-          <ControlButton label="Pomodoro Work (28 min)" onClick={() => start('work')}>
+          <ControlButton label={t('work28')} onClick={() => start('work')}>
             <span className="text-xs font-semibold">28</span>
           </ControlButton>
         </>
@@ -90,7 +92,7 @@ export default function PageFloatingControls() {
 
       {(running || paused) && (
         <ControlButton
-          label={paused ? 'Fortsetzen' : 'Pause'}
+          label={paused ? t('resume') : t('pause')}
           onClick={togglePause}
           variant="primary"
         >
@@ -99,13 +101,13 @@ export default function PageFloatingControls() {
       )}
 
       {active && (
-        <ControlButton label="Timer stoppen" onClick={stop} variant="danger">
+        <ControlButton label={t('stop')} onClick={stop} variant="danger">
           <StopIcon className="h-5 w-5" />
         </ControlButton>
       )}
 
       {showScrollTop && (
-        <ControlButton label="Nach oben" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+        <ControlButton label={t('scrollTop')} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <ArrowUpIcon className="h-5 w-5" />
         </ControlButton>
       )}

@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { trainingOverview } from '@/data/profile'
 import { useInView } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 
 function formatDe(value: number) {
   return new Intl.NumberFormat('de-DE', { maximumFractionDigits: 0 }).format(value)
@@ -60,6 +61,7 @@ function StatBox({
 }
 
 export default function TrainingOverviewStats() {
+  const t = useTranslations('overview')
   const ref = useRef<HTMLDivElement>(null)
   const inView = useInView(ref, { once: true, amount: 0.45 })
 
@@ -72,18 +74,18 @@ export default function TrainingOverviewStats() {
       ref={ref}
       className="mt-8 bg-warm-dark-gray/10 rounded-lg p-6 border border-warm-dark-gray/20 scroll-mt-24"
     >
-      <h4 className="text-xl font-bold theme-text mb-4">Overview</h4>
+      <h4 className="text-xl font-bold theme-text mb-4">{t('title')}</h4>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-        <StatBox label="Total Hours" visible={inView}>
+        <StatBox label={t('totalHours')} visible={inView}>
           {formatDe(hours)}
         </StatBox>
-        <StatBox label="Modules" visible={inView} className="delay-75">
+        <StatBox label={t('modules')} visible={inView} className="delay-75">
           {modules}
         </StatBox>
-        <StatBox label="Certification" visible={inView} className="delay-150">
+        <StatBox label={t('certification')} visible={inView} className="delay-150">
           {trainingOverview.certification}
         </StatBox>
-        <StatBox label="Years" visible={inView} className="delay-200">
+        <StatBox label={t('years')} visible={inView} className="delay-200">
           {years}
         </StatBox>
       </div>

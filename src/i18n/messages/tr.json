@@ -1,0 +1,381 @@
+{
+  "meta": {
+    "description": "Uygulama geliştirme bilişim uzmanı — portföy, blog ve öğrenme içerikleri."
+  },
+  "nav": {
+    "home": "Ana sayfa",
+    "about": "Hakkımda",
+    "projects": "Projeler",
+    "education": "Eğitim",
+    "exercises": "Alıştırmalar",
+    "blog": "Blog",
+    "contact": "İletişim",
+    "admin": "Admin",
+    "signIn": "Giriş",
+    "signOut": "Çıkış",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat"
+  },
+  "footer": {
+    "tagline": "Portföy ve öğrenme içerikleri.",
+    "navigation": "Gezinti",
+    "legal": "Yasal",
+    "imprint": "Künye",
+    "privacy": "Gizlilik",
+    "terms": "Kullanım şartları",
+    "dataDeletion": "Veri silme",
+    "rights": "Tüm hakları saklıdır.",
+    "tel": "Tel.",
+    "mobile": "Mobil",
+    "email": "E-posta"
+  },
+  "lang": {
+    "label": "Dil",
+    "de": "Almanca",
+    "en": "İngilizce",
+    "tr": "Türkçe"
+  },
+  "pomodoro": {
+    "interrupt15": "Pomodoro mola (15 dk)",
+    "work28": "Pomodoro çalışma (28 dk)",
+    "resume": "Devam",
+    "pause": "Duraklat",
+    "stop": "Zamanlayıcıyı durdur",
+    "scrollTop": "Yukarı",
+    "paused": "DURAKLAT",
+    "expiredConfirm": "Pomodoro bitti (EXPIRED). Sıfırlansın mı?"
+  },
+  "common": {
+    "today": "bugün",
+    "current": "Güncel",
+    "hours": "saat",
+    "details": "Ayrıntılar",
+    "loading": "Yükleniyor…",
+    "send": "Gönder",
+    "sending": "Gönderiliyor…",
+    "success": "Başarıyla gönderildi.",
+    "error": "Gönderim hatası. Lütfen tekrar deneyin.",
+    "featured": "Öne çıkan",
+    "article": "Yazı",
+    "readMore": "Devamını oku →",
+    "backToBlog": "Bloga dön",
+    "noPosts": "Henüz yazı yok.",
+    "allProjects": "Tüm projeleri gör",
+    "viewGuided": "Rehberli projeleri gör →",
+    "leadershipTitle": "Proje liderliği ve teknik kabul",
+    "leadershipDesc": "Konseptten yayına kadar teknik olarak yönetilen ve kabul edilen ekip projeleri.",
+    "filterFeatured": "Öne çıkan",
+    "countryGermany": "Almanya"
+  },
+  "hero": {
+    "roles": [
+      "Yazılım Geliştirici",
+      "Full-Stack Geliştirici",
+      "PHP Uzmanı",
+      "Problem Çözücü"
+    ],
+    "tagline": "Modern web teknolojileri, full-stack geliştirme ve karmaşık sorunlara yenilikçi çözümler üzerine odaklanmış tutkulu bir geliştirici.",
+    "ctaProjects": "Projelerimi gör",
+    "ctaContact": "İletişime geç"
+  },
+  "about": {
+    "title": "Hakkımda",
+    "subtitle": "Profesyonel geçmişim, yeteneklerim ve programlamaya olan tutkum hakkında daha fazla bilgi edinin.",
+    "storyTitle": "Hikayem",
+    "storyP1": "👋 Merhaba, ben Selçuk — Berlin'de uygulama geliştirme alanında bilişim uzmanıyım. Comhard'daki IHK yeniden eğitiminden sonra bagobag GmbH'de (2021–2026) PHP geliştirici ve ürün yöneticisi olarak çalıştım. 2025'ten beri <kawai>Kawai Labs</kawai> üzerinden serbest çalışıyorum.",
+    "storyP2": "👀 Kodlamaya ilgi duyuyorum — PHP, JavaScript, Laravel, Vue.js, React ve Node.js gibi teknolojilerle tutkuyla çalışıyorum. Uzmanlığım; ürün yönetimi, HTML5, REST API'ler, MVC mimarisi ve nesne yönelimli programlamaya odaklanan backend ve frontend geliştirmeyi kapsıyor.",
+    "storyP3": "🌱 Şu anda bir geliştiricinin yaşamının temellerini öğreniyorum — mottom: \"Create a world beyond our mind\". Yenilikçi çözümler geliştirmek ve fikirleri ilerletmek için sürekli motiveyim. 👯 İlginç projelerde iş birliği arıyorum!",
+    "educationCard": {
+      "title": "Eğitim",
+      "ihk": "IHK sertifikası: Bilişim uzmanı — uygulama geliştirme",
+      "comhard": "Comhard GmbH, Berlin (2017–2019)",
+      "hours": "2.640 eğitim saati • 9 modül"
+    },
+    "currentPosition": "Güncel pozisyon",
+    "selfEmployed": "Serbest / Kawai Labs",
+    "since2025": "Şubat 2025'ten beri",
+    "languages": "Diller",
+    "location": "Konum",
+    "skills": "Yetenekler",
+    "githubTitle": "GitHub etkinliği",
+    "githubStats": "Son yılda 399 katkı\n31 depo • 2 takipçi • 4 takip",
+    "githubCta": "GitHub profilini gör",
+    "certsTitle": "Sertifikalar",
+    "detailedEducationTitle": "Ayrıntılı eğitim",
+    "telLabel": "Tel.",
+    "certs": {
+      "php-frameworks": {
+        "title": "PHP Frameworks",
+        "subtitle": "Laravel, Vue, React",
+        "meta": "BTA GmbH • Ağustos 2020"
+      },
+      "ui-ux": {
+        "title": "UI/UX Tasarım",
+        "subtitle": "Kullanıcı arayüzü ve deneyim tasarımı",
+        "meta": "BTA GmbH • Temmuz 2020"
+      },
+      "agile": {
+        "title": "Çevik Yönetim",
+        "subtitle": "Agile danışmanlık ve yönetim",
+        "meta": "BTA GmbH • Haziran 2020"
+      },
+      "software-dev": {
+        "title": "Yazılım Geliştirme",
+        "subtitle": "Temeller",
+        "meta": "Certiport • Ekim 2018",
+        "id": "ID: v8dm-XVN9"
+      },
+      "database": {
+        "title": "Veritabanı Yönetimi",
+        "subtitle": "Temeller",
+        "meta": "Certiport • Mart 2018",
+        "id": "ID: wdeU5-HaMm"
+      },
+      "network-admin": {
+        "title": "Ağ Yöneticisi",
+        "subtitle": "Ağ yönetimi",
+        "meta": "dama.go GmbH • Ağustos 2012"
+      },
+      "ms-specialist": {
+        "title": "Microsoft Specialist",
+        "subtitle": "Windows 7 Configuration",
+        "meta": "Microsoft • Aralık 2015",
+        "id": "ID: F503-5040"
+      },
+      "mcts": {
+        "title": "MCTS Windows Server 2008",
+        "subtitle": "Applications Infrastructure",
+        "meta": "Microsoft • Temmuz 2012",
+        "id": "ID: D952-3585"
+      },
+      "mcp": {
+        "title": "Microsoft Certified Professional",
+        "subtitle": "MCP sertifikası",
+        "meta": "Microsoft • Mayıs 2012",
+        "id": "ID: E924-7529"
+      }
+    },
+    "modules": {
+      "business": {
+        "title": "İşletme ve iş süreçleri",
+        "hours": "500 saat",
+        "items": [
+          "Genel işletme bilgisi",
+          "Hukuk ve sosyal bilimler",
+          "BT iş süreçleri için MS Office",
+          "Bilgisayar bilimcileri için matematik"
+        ]
+      },
+      "communication": {
+        "title": "İletişim",
+        "hours": "168 saat",
+        "items": [
+          "İletişim politikası",
+          "Kişisel pazarlama",
+          "Teknik İngilizce"
+        ]
+      },
+      "itSystems": {
+        "title": "BT sistemleri",
+        "hours": "396 saat",
+        "items": [
+          "Veri işleme temelleri",
+          "PC sistem donanım mimarisi",
+          "Elektrik mühendisliği temelleri",
+          "Uygulamalı eğitim"
+        ]
+      },
+      "networks": {
+        "title": "Ağlı BT sistemleri",
+        "hours": "348 saat",
+        "items": [
+          "Ağ temelleri",
+          "Linux işletim sistemi",
+          "Uygulamalı eğitim"
+        ]
+      },
+      "appDev": {
+        "title": "Uygulama geliştirme",
+        "hours": "908 saat",
+        "items": [
+          "HTML, CSS (40s)",
+          "Veritabanı geliştirme (144s)",
+          "Java SE OOP (260s)",
+          ".NET Framework C# (220s)",
+          "JavaScript ve PHP (120s)",
+          "Uygulama sistemi tasarımı",
+          "Microsoft sınav hazırlığı"
+        ]
+      },
+      "projectWork": {
+        "title": "Proje çalışması ve staj",
+        "hours": "1.200 saat",
+        "items": [
+          "Java SE projesi (80s)",
+          "IHK uzmanlaşma (80s)",
+          "Mesleki görevler (80s)",
+          "İşletme stajı (960s)"
+        ]
+      }
+    }
+  },
+  "skills": {
+    "title": "Yeteneklerim",
+    "subtitle": "Fikirleri hayata geçirmek için kullandığım teknolojiler ve araçlar",
+    "additionalKnowledge": "Ek bilgi",
+    "skillCategories": {
+      "Frontend": "Frontend",
+      "Backend": "Backend",
+      "Framework": "Framework",
+      "Database": "Veritabanı",
+      "Programming": "Programlama",
+      "Architecture": "Mimari",
+      "Tools": "Araçlar",
+      "System": "Sistem",
+      "Hardware": "Donanım",
+      "Language": "Dil"
+    },
+    "categories": {
+      "design": {
+        "title": "Tasarım ve grafik",
+        "items": ["Inkscape", "GIMP", "Blender"]
+      },
+      "animation": {
+        "title": "3D ve animasyon",
+        "items": ["Blender", "Unity"]
+      },
+      "hardware": {
+        "title": "Donanım ve IoT",
+        "items": ["Raspberry Pi", "3D baskı", "drone uçuşları"]
+      },
+      "office": {
+        "title": "Ofis ve verimlilik",
+        "items": ["Microsoft Office", "Microsoft 365", "SharePoint"]
+      },
+      "industry": {
+        "title": "Sektör bilgisi",
+        "items": ["Sağlık sektörü", "Ürün yönetimi"]
+      },
+      "apis": {
+        "title": "Web API'leri",
+        "items": ["REST API'ler", "Programlama arayüzleri"]
+      }
+    }
+  },
+  "projects": {
+    "title": "Projelerim",
+    "subtitle": "Profesyonel işten platformlar, entegrasyonlar, ML ve dahili araçlar",
+    "leadershipTitle": "Proje liderliği ve teknik kabul",
+    "leadershipDesc": "Konseptten yayına kadar teknik olarak yönetilen ve kabul edilen ekip projeleri.",
+    "viewGuided": "Rehberli projeleri gör →",
+    "viewAll": "Tüm {count} projeyi gör"
+  },
+  "experience": {
+    "title": "Profesyonel deneyim",
+    "subtitle": "Özgeçmişe göre iş deneyimi (Mayıs 2026 itibarıyla)",
+    "current": "Güncel",
+    "educationTraining": "Eğitim ve kurslar",
+    "trainingEdu": "Eğitim",
+    "trainingFurther": "İleri eğitim",
+    "positions": {
+      "kawai": "Bağımsız yazılım geliştirme, danışmanlık ve proje teslimi. Kawai Labs üzerinden şirketlere ek hizmetler.",
+      "bagobag": "PHP web uygulamaları, ürün yönetimi, HTML5, arayüzler ve ekipler arası proje çalışması.",
+      "ore": "BT sistemlerinin geliştirilmesi ve işletimi, ağ yönetimi.",
+      "giata": "PHP geliştirme ve müşteri projelerinde destek.",
+      "comhard": "IHK uygulama geliştirme bilişim uzmanı diploması. 9 modülde 2.640 saat — işletme, iletişim, BT sistemleri, ağlar, uygulama geliştirme (Java, C#, PHP, HTML/CSS, veritabanları), proje çalışması ve staj."
+    },
+    "education": {
+      "ihk-fach": {
+        "title": "IHK bilişim uzmanı — uygulama geliştirme",
+        "company": "Comhard GmbH, Berlin",
+        "period": "11/2016 – 11/2018"
+      },
+      "ihk-gastro": {
+        "title": "Konaklama sektörü uzmanı (IHK)",
+        "company": "Kiezküchen gGmbH, Berlin",
+        "period": "01/2006 – 07/2009"
+      },
+      "bta-php": {
+        "title": "PHP framework'leri, UI/UX tasarım, çevik yönetim",
+        "company": "BTA GmbH, Berlin",
+        "period": "05/2020 – 08/2020"
+      },
+      "damago-netz": {
+        "title": "Ağ yöneticisi",
+        "company": "Damago GmbH, Berlin",
+        "period": "03/2012 – 08/2012"
+      }
+    }
+  },
+  "contact": {
+    "title": "İletişim",
+    "subtitle": "Bir sonraki projeniz hakkında konuşalım",
+    "infoTitle": "İletişim bilgileri",
+    "address": "Adres",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "links": "Bağlantılar",
+    "availability": "Uygunluk",
+    "avail1": "Yeni projeler için uygun",
+    "avail2": "Uzaktan çalışma mümkün",
+    "avail3": "Seyahat edebilir",
+    "formTitle": "Mesaj gönder",
+    "name": "Ad",
+    "subject": "Konu",
+    "message": "Mesaj",
+    "send": "Mesaj gönder",
+    "sending": "Gönderiliyor…",
+    "success": "Teşekkürler! Mesajınız başarıyla gönderildi.",
+    "error": "Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.",
+    "placeholders": {
+      "name": "Adınız",
+      "email": "sizin@email.com",
+      "subject": "Mesajınızın konusu",
+      "message": "Projenizi veya talebinizi açıklayın…"
+    }
+  },
+  "overview": {
+    "title": "Genel bakış",
+    "totalHours": "Toplam saat",
+    "modules": "Modüller",
+    "certification": "Sertifikasyon",
+    "years": "Yıl"
+  },
+  "pages": {
+    "education": {
+      "title": "Eğitim",
+      "subtitle": "Portföyden öğrenme içerikleri (2019) — ayrıca eski siteden JavaScript ve işletme dersleri. Eski /akademie bağlantıları otomatik yönlendirilir."
+    },
+    "exercises": {
+      "title": "Alıştırmalar",
+      "subtitle": "Portföy ve eski siteden PHP alıştırmaları — mümkün olduğunda etkileşimli demolar.",
+      "portfolioSection": "Portföy",
+      "websiteSection": "Eski web sitesi"
+    },
+    "blog": {
+      "title": "Blogum",
+      "subtitle": "Düşünceler, eğitimler ve yazılım geliştirme dünyasına bakışlar",
+      "noPostsTitle": "Henüz yazı yok",
+      "noPostsDesc": "Blog hâlâ yapım aşamasında. Yakında web geliştirme ve daha fazlası hakkında ilginç yazılar bulacaksınız.",
+      "getInTouch": "İletişime geç",
+      "newsletterTitle": "Bültene abone ol",
+      "newsletterDesc": "En yeni yazıları ve güncellemeleri doğrudan gelen kutunuza alın.",
+      "subscribe": "Abone ol",
+      "emailPlaceholder": "E-posta adresiniz"
+    },
+    "projects": {
+      "title": "Projeler",
+      "subtitle": "{count} profesyonel proje — platformlar, entegrasyonlar, araçlar ve otomasyon.",
+      "featured": "Öne çıkan",
+      "all": "Tümü",
+      "leadershipTitle": "Proje liderliği ve teknik kabul",
+      "leadershipDesc": "{count} yönetilen proje — DataConverter, Prompt-Doc, görev yönetimi ve daha fazlası.",
+      "viewGuided": "Yönetilen projeleri gör →",
+      "legacyTitle": "Tam legacy kapsamı mı?",
+      "legacyDesc": "Tarihsel PHP sistemleri ve tüm legacy modüller tek bir görünümde.",
+      "legacyCta": "Legacy sistemleri aç →",
+      "getInTouch": "İletişime geç"
+    },
+    "educationOpen": "Aç →"
+  }
+}

@@ -1,0 +1,381 @@
+{
+  "meta": {
+    "description": "IT specialist for application development — portfolio, blog and learning content."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "education": "Education",
+    "exercises": "Exercises",
+    "blog": "Blog",
+    "contact": "Contact",
+    "admin": "Admin",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "footer": {
+    "tagline": "Portfolio & learning content.",
+    "navigation": "Navigation",
+    "legal": "Legal",
+    "imprint": "Imprint",
+    "privacy": "Privacy policy",
+    "terms": "Terms & conditions",
+    "dataDeletion": "Data deletion",
+    "rights": "All rights reserved.",
+    "tel": "Phone",
+    "mobile": "Mobile",
+    "email": "Email"
+  },
+  "lang": {
+    "label": "Language",
+    "de": "German",
+    "en": "English",
+    "tr": "Turkish"
+  },
+  "pomodoro": {
+    "interrupt15": "Pomodoro break (15 min)",
+    "work28": "Pomodoro work (28 min)",
+    "resume": "Resume",
+    "pause": "Pause",
+    "stop": "Stop timer",
+    "scrollTop": "Back to top",
+    "paused": "PAUSED",
+    "expiredConfirm": "Pomodoro finished (EXPIRED). Reset timer?"
+  },
+  "common": {
+    "today": "today",
+    "current": "Current",
+    "hours": "hours",
+    "details": "Details",
+    "loading": "Loading…",
+    "send": "Send",
+    "sending": "Sending…",
+    "success": "Sent successfully.",
+    "error": "Error sending. Please try again.",
+    "featured": "Featured",
+    "article": "Article",
+    "readMore": "Read more →",
+    "backToBlog": "Back to blog",
+    "noPosts": "No posts available.",
+    "allProjects": "View all projects",
+    "viewGuided": "View guided projects →",
+    "leadershipTitle": "Project leadership & technical acceptance",
+    "leadershipDesc": "Technically led and accepted team projects — from conception to release.",
+    "filterFeatured": "Featured",
+    "countryGermany": "Germany"
+  },
+  "hero": {
+    "roles": [
+      "Software Developer",
+      "Full-Stack Developer",
+      "PHP Specialist",
+      "Problem Solver"
+    ],
+    "tagline": "Passionate developer focused on modern web technologies, full-stack development and innovative solutions for complex problems.",
+    "ctaProjects": "View my projects",
+    "ctaContact": "Get in touch"
+  },
+  "about": {
+    "title": "About me",
+    "subtitle": "Learn more about my professional background, my skills and my passion for programming.",
+    "storyTitle": "My story",
+    "storyP1": "👋 Hi, I'm Selçuk — IT specialist for application development in Berlin. After my IHK retraining at Comhard, I worked as a PHP developer and product manager at bagobag GmbH (2021–2026), among other roles. Since 2025 I have been freelancing through <kawai>Kawai Labs</kawai>.",
+    "storyP2": "👀 I'm interested in coding — I work passionately with technologies like PHP, JavaScript, Laravel, Vue.js, React and Node.js. My expertise includes backend and frontend development with a focus on product management, HTML5, REST APIs, MVC architecture and object-oriented programming.",
+    "storyP3": "🌱 I'm currently learning the fundamentals of a developer's life — my motto: \"Create a world beyond our mind\". I'm constantly motivated to build innovative solutions and evolve ideas. 👯 I'm looking to collaborate on great projects!",
+    "educationCard": {
+      "title": "Education",
+      "ihk": "IHK certification: IT specialist — application development",
+      "comhard": "Comhard GmbH, Berlin (2017–2019)",
+      "hours": "2,640 training hours • 9 modules"
+    },
+    "currentPosition": "Current position",
+    "selfEmployed": "Self-employed / Kawai Labs",
+    "since2025": "since Feb 2025",
+    "languages": "Languages",
+    "location": "Location",
+    "skills": "Skills",
+    "githubTitle": "GitHub activity",
+    "githubStats": "399 contributions in the last year\n31 repositories • 2 followers • 4 following",
+    "githubCta": "View GitHub profile",
+    "certsTitle": "Certifications & certificates",
+    "detailedEducationTitle": "Detailed education",
+    "telLabel": "Tel.",
+    "certs": {
+      "php-frameworks": {
+        "title": "PHP Frameworks",
+        "subtitle": "Laravel, Vue, React",
+        "meta": "BTA GmbH • August 2020"
+      },
+      "ui-ux": {
+        "title": "UI/UX Design",
+        "subtitle": "User Interface & Experience Design",
+        "meta": "BTA GmbH • July 2020"
+      },
+      "agile": {
+        "title": "Agile Management",
+        "subtitle": "Agile Consulting & Management",
+        "meta": "BTA GmbH • June 2020"
+      },
+      "software-dev": {
+        "title": "Software Development",
+        "subtitle": "Fundamentals",
+        "meta": "Certiport • October 2018",
+        "id": "ID: v8dm-XVN9"
+      },
+      "database": {
+        "title": "Database Administration",
+        "subtitle": "Fundamentals",
+        "meta": "Certiport • March 2018",
+        "id": "ID: wdeU5-HaMm"
+      },
+      "network-admin": {
+        "title": "Network Administrator",
+        "subtitle": "Network Administration",
+        "meta": "dama.go GmbH • August 2012"
+      },
+      "ms-specialist": {
+        "title": "Microsoft Specialist",
+        "subtitle": "Windows 7 Configuration",
+        "meta": "Microsoft • December 2015",
+        "id": "ID: F503-5040"
+      },
+      "mcts": {
+        "title": "MCTS Windows Server 2008",
+        "subtitle": "Applications Infrastructure",
+        "meta": "Microsoft • July 2012",
+        "id": "ID: D952-3585"
+      },
+      "mcp": {
+        "title": "Microsoft Certified Professional",
+        "subtitle": "MCP Certification",
+        "meta": "Microsoft • May 2012",
+        "id": "ID: E924-7529"
+      }
+    },
+    "modules": {
+      "business": {
+        "title": "Business and business processes",
+        "hours": "500 hours",
+        "items": [
+          "General business studies",
+          "Legal and social studies",
+          "MS Office for IT business processes",
+          "Mathematics for computer scientists"
+        ]
+      },
+      "communication": {
+        "title": "Communication",
+        "hours": "168 hours",
+        "items": [
+          "Communication policy",
+          "Self-marketing",
+          "Technical English"
+        ]
+      },
+      "itSystems": {
+        "title": "IT systems",
+        "hours": "396 hours",
+        "items": [
+          "Fundamentals of data processing",
+          "PC system hardware architecture",
+          "Basic electrical engineering",
+          "Practical training"
+        ]
+      },
+      "networks": {
+        "title": "Networked IT systems",
+        "hours": "348 hours",
+        "items": [
+          "Network fundamentals",
+          "Linux operating system",
+          "Practical training"
+        ]
+      },
+      "appDev": {
+        "title": "Application development",
+        "hours": "908 hours",
+        "items": [
+          "HTML, CSS (40h)",
+          "Database development (144h)",
+          "Java SE OOP (260h)",
+          ".NET Framework C# (220h)",
+          "JavaScript and PHP (120h)",
+          "Application system design",
+          "Microsoft exam preparation"
+        ]
+      },
+      "projectWork": {
+        "title": "Project work & internship",
+        "hours": "1,200 hours",
+        "items": [
+          "Java SE project (80h)",
+          "IHK specialization (80h)",
+          "Professional tasks (80h)",
+          "Corporate internship (960h)"
+        ]
+      }
+    }
+  },
+  "skills": {
+    "title": "My skills",
+    "subtitle": "Technologies and tools I use to bring ideas to life",
+    "additionalKnowledge": "Additional knowledge",
+    "skillCategories": {
+      "Frontend": "Frontend",
+      "Backend": "Backend",
+      "Framework": "Framework",
+      "Database": "Database",
+      "Programming": "Programming",
+      "Architecture": "Architecture",
+      "Tools": "Tools",
+      "System": "System",
+      "Hardware": "Hardware",
+      "Language": "Language"
+    },
+    "categories": {
+      "design": {
+        "title": "Design & graphics",
+        "items": ["Inkscape", "GIMP", "Blender"]
+      },
+      "animation": {
+        "title": "3D & animation",
+        "items": ["Blender", "Unity"]
+      },
+      "hardware": {
+        "title": "Hardware & IoT",
+        "items": ["Raspberry Pi", "3D printing", "drone flights"]
+      },
+      "office": {
+        "title": "Office & productivity",
+        "items": ["Microsoft Office", "Microsoft 365", "SharePoint"]
+      },
+      "industry": {
+        "title": "Industry knowledge",
+        "items": ["Healthcare sector", "Product management"]
+      },
+      "apis": {
+        "title": "Web APIs",
+        "items": ["REST APIs", "Programming interfaces"]
+      }
+    }
+  },
+  "projects": {
+    "title": "My projects",
+    "subtitle": "Platforms, integrations, ML and internal tools from professional work",
+    "leadershipTitle": "Project leadership & technical acceptance",
+    "leadershipDesc": "Technically led and accepted team projects — from conception to release.",
+    "viewGuided": "View guided projects →",
+    "viewAll": "View all {count} projects"
+  },
+  "experience": {
+    "title": "Professional experience",
+    "subtitle": "Work experience per résumé (as of May 2026)",
+    "current": "Current",
+    "educationTraining": "Education & training",
+    "trainingEdu": "Education",
+    "trainingFurther": "Further training",
+    "positions": {
+      "kawai": "Independent software development, consulting and project delivery. Additional services for companies through Kawai Labs.",
+      "bagobag": "PHP web applications, product management, HTML5, interfaces and cross-team project work.",
+      "ore": "Development and operation of IT systems, network administration.",
+      "giata": "PHP development and support on customer projects.",
+      "comhard": "IHK qualification as IT specialist for application development. 2,640 hours in 9 modules — business, communication, IT systems, networks, application development (Java, C#, PHP, HTML/CSS, databases), project work and internship."
+    },
+    "education": {
+      "ihk-fach": {
+        "title": "IHK IT specialist — application development",
+        "company": "Comhard GmbH, Berlin",
+        "period": "11/2016 – 11/2018"
+      },
+      "ihk-gastro": {
+        "title": "Hospitality specialist (IHK)",
+        "company": "Kiezküchen gGmbH, Berlin",
+        "period": "01/2006 – 07/2009"
+      },
+      "bta-php": {
+        "title": "PHP frameworks, UI/UX design, agile management",
+        "company": "BTA GmbH, Berlin",
+        "period": "05/2020 – 08/2020"
+      },
+      "damago-netz": {
+        "title": "Network administrator",
+        "company": "Damago GmbH, Berlin",
+        "period": "03/2012 – 08/2012"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's talk about your next project",
+    "infoTitle": "Contact information",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "links": "Links",
+    "availability": "Availability",
+    "avail1": "Available for new projects",
+    "avail2": "Remote work possible",
+    "avail3": "Ready to travel",
+    "formTitle": "Send message",
+    "name": "Name",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send message",
+    "sending": "Sending…",
+    "success": "Thank you! Your message has been sent successfully.",
+    "error": "There was an error sending your message. Please try again.",
+    "placeholders": {
+      "name": "Your name",
+      "email": "your@email.com",
+      "subject": "Subject of your message",
+      "message": "Describe your project or inquiry…"
+    }
+  },
+  "overview": {
+    "title": "Overview",
+    "totalHours": "Total hours",
+    "modules": "Modules",
+    "certification": "Certification",
+    "years": "Years"
+  },
+  "pages": {
+    "education": {
+      "title": "Education",
+      "subtitle": "Learning content from the portfolio (2019 edition) — plus JavaScript and business studies from the earlier website. Old /akademie links redirect automatically."
+    },
+    "exercises": {
+      "title": "Exercises",
+      "subtitle": "PHP exercises from the portfolio and earlier website — interactive demos where possible.",
+      "portfolioSection": "Portfolio",
+      "websiteSection": "Earlier website"
+    },
+    "blog": {
+      "title": "My blog",
+      "subtitle": "Thoughts, tutorials and insights into software development",
+      "noPostsTitle": "No posts available yet",
+      "noPostsDesc": "The blog is still under construction. Soon you will find interesting articles about web development and more here.",
+      "getInTouch": "Get in touch",
+      "newsletterTitle": "Subscribe to newsletter",
+      "newsletterDesc": "Receive the latest articles and updates directly in your inbox.",
+      "subscribe": "Subscribe",
+      "emailPlaceholder": "Your email address"
+    },
+    "projects": {
+      "title": "Projects",
+      "subtitle": "{count} professional projects — platforms, integrations, tools and automation.",
+      "featured": "Featured",
+      "all": "All",
+      "leadershipTitle": "Project leadership & technical acceptance",
+      "leadershipDesc": "{count} guided projects — DataConverter, Prompt-Doc, task management and more.",
+      "viewGuided": "View guided projects →",
+      "legacyTitle": "Need the full legacy scope?",
+      "legacyDesc": "See both historical PHP systems and all legacy modules in one consolidated view.",
+      "legacyCta": "Open legacy systems →",
+      "getInTouch": "Get in touch"
+    },
+    "educationOpen": "Open →"
+  }
+}

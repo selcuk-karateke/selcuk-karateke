@@ -10,6 +10,7 @@ import {
   useState,
   type ReactNode,
 } from 'react'
+import { useTranslations } from 'next-intl'
 import {
   defaultPomodoroState,
   formatPomodoroTime,
@@ -73,6 +74,7 @@ function hydrateRunningState(state: PomodoroPersistedState): PomodoroPersistedSt
 }
 
 export function PomodoroProvider({ children }: { children: ReactNode }) {
+  const t = useTranslations('pomodoro')
   const [state, setState] = useState<PomodoroPersistedState>(defaultPomodoroState)
   const [hydrated, setHydrated] = useState(false)
   const [tick, setTick] = useState(0)
@@ -135,12 +137,12 @@ export function PomodoroProvider({ children }: { children: ReactNode }) {
     if (prev === 'running' && state.status === 'expired') {
       playPiep(piepRef.current)
       window.setTimeout(() => {
-        if (window.confirm('Pomodoro abgelaufen (EXPIRED). Timer zurücksetzen?')) {
+        if (window.confirm(t('expiredConfirm'))) {
           persist(defaultPomodoroState())
         }
       }, 500)
     }
-  }, [hydrated, persist, state.status])
+  }, [hydrated, persist, state.status, t])
 
   const start = useCallback(
     (mode: PomodoroMode) => {

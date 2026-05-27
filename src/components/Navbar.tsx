@@ -3,22 +3,25 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useSession, signIn, signOut } from 'next-auth/react'
+import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import DarkModeToggle from './DarkModeToggle'
+import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Navbar() {
     const { data: session } = useSession()
     const [isOpen, setIsOpen] = useState(false)
+    const t = useTranslations('nav')
 
     const navigation = [
-        { name: 'Home', href: '/' },
-        { name: 'About', href: '/about' },
-        { name: 'Projects', href: '/projects' },
-        { name: 'Bildung', href: '/education' },
-        { name: 'Übungen', href: '/uebungen' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'Contact', href: '/contact' },
+        { name: t('home'), href: '/' },
+        { name: t('about'), href: '/about' },
+        { name: t('projects'), href: '/projects' },
+        { name: t('education'), href: '/education' },
+        { name: t('exercises'), href: '/uebungen' },
+        { name: t('blog'), href: '/blog' },
+        { name: t('contact'), href: '/contact' },
     ]
 
     return (
@@ -38,10 +41,10 @@ export default function Navbar() {
                         </Link>
                     </div>
 
-                    <div className="hidden md:flex items-center space-x-8">
+                    <div className="hidden md:flex items-center space-x-6">
                         {navigation.map((item) => (
                             <Link
-                                key={item.name}
+                                key={item.href}
                                 href={item.href}
                                 className="theme-text-secondary hover:theme-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 hover:theme-bg-secondary"
                             >
@@ -49,7 +52,8 @@ export default function Navbar() {
                             </Link>
                         ))}
 
-                        <div className="flex items-center space-x-4">
+                        <div className="flex items-center space-x-3">
+                            <LanguageSwitcher compact />
                             <DarkModeToggle />
                             {session ? (
                                 <>
@@ -57,13 +61,13 @@ export default function Navbar() {
                                         href="/admin"
                                         className="theme-text-secondary hover:theme-primary px-3 py-2 rounded-md text-sm font-medium"
                                     >
-                                        Admin
+                                        {t('admin')}
                                     </Link>
                                     <button
                                         onClick={() => signOut()}
                                         className="theme-primary-bg hover:opacity-90 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
                                     >
-                                        Sign Out
+                                        {t('signOut')}
                                     </button>
                                 </>
                             ) : (
@@ -71,16 +75,18 @@ export default function Navbar() {
                                     onClick={() => signIn()}
                                     className="theme-primary-bg hover:opacity-90 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
                                 >
-                                    Sign In
+                                    {t('signIn')}
                                 </button>
                             )}
                         </div>
                     </div>
 
-                    <div className="md:hidden flex items-center">
+                    <div className="md:hidden flex items-center gap-2">
+                        <LanguageSwitcher compact />
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+                            className="theme-text-secondary hover:theme-primary focus:outline-none p-2"
+                            aria-label={isOpen ? t('closeMenu') : t('openMenu')}
                         >
                             {isOpen ? (
                                 <XMarkIcon className="h-6 w-6" />
@@ -92,36 +98,40 @@ export default function Navbar() {
                 </div>
 
                 {isOpen && (
-                    <div className="md:hidden">
+                    <div className="md:hidden border-t theme-border">
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                             {navigation.map((item) => (
                                 <Link
-                                    key={item.name}
+                                    key={item.href}
                                     href={item.href}
-                                    className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+                                    className="theme-text-secondary hover:theme-primary block px-3 py-2 rounded-md text-base font-medium"
                                     onClick={() => setIsOpen(false)}
                                 >
                                     {item.name}
                                 </Link>
                             ))}
 
+                            <div className="pt-3 pb-2">
+                                <DarkModeToggle />
+                            </div>
+
                             {session ? (
-                                <div className="pt-4 pb-3 border-t border-gray-200">
+                                <div className="pt-4 pb-3 border-t theme-border">
                                     <Link
                                         href="/admin"
-                                        className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+                                        className="theme-text-secondary hover:theme-primary block px-3 py-2 rounded-md text-base font-medium"
                                         onClick={() => setIsOpen(false)}
                                     >
-                                        Admin
+                                        {t('admin')}
                                     </Link>
                                     <button
                                         onClick={() => {
                                             signOut()
                                             setIsOpen(false)
                                         }}
-                                        className="bg-red-600 hover:bg-red-700 text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium mt-2"
+                                        className="theme-primary-bg hover:opacity-90 text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium mt-2"
                                     >
-                                        Sign Out
+                                        {t('signOut')}
                                     </button>
                                 </div>
                             ) : (
@@ -130,9 +140,9 @@ export default function Navbar() {
                                         signIn()
                                         setIsOpen(false)
                                     }}
-                                    className="bg-blue-600 hover:bg-blue-700 text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium mt-2"
+                                    className="theme-primary-bg hover:opacity-90 text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium mt-2"
                                 >
-                                    Sign In
+                                    {t('signIn')}
                                 </button>
                             )}
                         </div>

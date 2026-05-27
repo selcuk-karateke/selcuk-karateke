@@ -1,0 +1,381 @@
+{
+  "meta": {
+    "description": "Fachinformatiker Anwendungsentwicklung — Portfolio, Blog und Lerninhalte."
+  },
+  "nav": {
+    "home": "Start",
+    "about": "Über mich",
+    "projects": "Projekte",
+    "education": "Bildung",
+    "exercises": "Übungen",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "admin": "Admin",
+    "signIn": "Anmelden",
+    "signOut": "Abmelden",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
+  },
+  "footer": {
+    "tagline": "Portfolio & Lerninhalte.",
+    "navigation": "Navigation",
+    "legal": "Rechtliches",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "dataDeletion": "Datenlöschung",
+    "rights": "Alle Rechte vorbehalten.",
+    "tel": "Tel.",
+    "mobile": "Mobil",
+    "email": "E-Mail"
+  },
+  "lang": {
+    "label": "Sprache",
+    "de": "Deutsch",
+    "en": "Englisch",
+    "tr": "Türkisch"
+  },
+  "pomodoro": {
+    "interrupt15": "Pomodoro Unterbrechung (15 Min.)",
+    "work28": "Pomodoro Arbeit (28 Min.)",
+    "resume": "Fortsetzen",
+    "pause": "Pause",
+    "stop": "Timer stoppen",
+    "scrollTop": "Nach oben",
+    "paused": "PAUSE",
+    "expiredConfirm": "Pomodoro abgelaufen (EXPIRED). Timer zurücksetzen?"
+  },
+  "common": {
+    "today": "heute",
+    "current": "Aktuell",
+    "hours": "Stunden",
+    "details": "Details",
+    "loading": "Laden…",
+    "send": "Senden",
+    "sending": "Wird gesendet…",
+    "success": "Erfolgreich gesendet.",
+    "error": "Fehler beim Senden. Bitte erneut versuchen.",
+    "featured": "Hervorgehoben",
+    "article": "Artikel",
+    "readMore": "Weiterlesen →",
+    "backToBlog": "Zurück zum Blog",
+    "noPosts": "Keine Beiträge vorhanden.",
+    "allProjects": "Alle Projekte ansehen",
+    "viewGuided": "Geführte Projekte ansehen →",
+    "leadershipTitle": "Projektleitung & technische Abnahme",
+    "leadershipDesc": "Technisch geleitete und abgenommene Teamprojekte — von der Konzeption bis zum Release.",
+    "filterFeatured": "Hervorgehoben",
+    "countryGermany": "Deutschland"
+  },
+  "hero": {
+    "roles": [
+      "Softwareentwickler",
+      "Full-Stack-Entwickler",
+      "PHP-Spezialist",
+      "Problemlöser"
+    ],
+    "tagline": "Leidenschaftlicher Entwickler mit Fokus auf moderne Webtechnologien, Full-Stack-Entwicklung und innovative Lösungen für komplexe Aufgaben.",
+    "ctaProjects": "Meine Projekte",
+    "ctaContact": "Kontakt aufnehmen"
+  },
+  "about": {
+    "title": "Über mich",
+    "subtitle": "Erfahren Sie mehr über meinen beruflichen Werdegang, meine Kompetenzen und meine Leidenschaft für die Programmierung.",
+    "storyTitle": "Meine Geschichte",
+    "storyP1": "👋 Hi, ich bin Selçuk — Fachinformatiker für Anwendungsentwicklung in Berlin. Nach der IHK-Umschulung bei Comhard war ich u. a. PHP-Entwickler und Produktmanager bei bagobag GmbH (2021–2026). Seit 2025 arbeite ich freiberuflich über <kawai>Kawai Labs</kawai>.",
+    "storyP2": "👀 Ich interessiere mich für Coding — ich arbeite leidenschaftlich mit Technologien wie PHP, JavaScript, Laravel, Vue.js, React und Node.js. Meine Expertise umfasst Backend- und Frontend-Entwicklung mit Schwerpunkt Produktmanagement, HTML5, REST-APIs, MVC-Architektur und objektorientierte Programmierung.",
+    "storyP3": "🌱 Aktuell lerne ich die Grundlagen des Entwickleralltags — mein Motto: „Create a world beyond our mind“. Ich bin ständig motiviert, innovative Lösungen zu entwickeln und Ideen weiterzuentwickeln. 👯 Ich suche Kooperationen an spannenden Projekten!",
+    "educationCard": {
+      "title": "Ausbildung",
+      "ihk": "IHK-Zertifikat: Fachinformatiker — Anwendungsentwicklung",
+      "comhard": "Comhard GmbH, Berlin (2017–2019)",
+      "hours": "2.640 Ausbildungsstunden • 9 Module"
+    },
+    "currentPosition": "Aktuelle Position",
+    "selfEmployed": "Selbstständig / Kawai Labs",
+    "since2025": "seit Feb. 2025",
+    "languages": "Sprachen",
+    "location": "Standort",
+    "skills": "Kompetenzen",
+    "githubTitle": "GitHub-Aktivität",
+    "githubStats": "399 Beiträge im letzten Jahr\n31 Repositories • 2 Follower • 4 Following",
+    "githubCta": "GitHub-Profil ansehen",
+    "certsTitle": "Zertifikate & Bescheinigungen",
+    "detailedEducationTitle": "Detaillierte Ausbildung",
+    "telLabel": "Tel.",
+    "certs": {
+      "php-frameworks": {
+        "title": "PHP Frameworks",
+        "subtitle": "Laravel, Vue, React",
+        "meta": "BTA GmbH • August 2020"
+      },
+      "ui-ux": {
+        "title": "UI/UX Design",
+        "subtitle": "User Interface & Experience Design",
+        "meta": "BTA GmbH • Juli 2020"
+      },
+      "agile": {
+        "title": "Agiles Management",
+        "subtitle": "Agile Consulting & Management",
+        "meta": "BTA GmbH • Juni 2020"
+      },
+      "software-dev": {
+        "title": "Softwareentwicklung",
+        "subtitle": "Grundlagen",
+        "meta": "Certiport • Oktober 2018",
+        "id": "ID: v8dm-XVN9"
+      },
+      "database": {
+        "title": "Datenbankadministration",
+        "subtitle": "Grundlagen",
+        "meta": "Certiport • März 2018",
+        "id": "ID: wdeU5-HaMm"
+      },
+      "network-admin": {
+        "title": "Netzwerkadministrator",
+        "subtitle": "Netzwerkadministration",
+        "meta": "dama.go GmbH • August 2012"
+      },
+      "ms-specialist": {
+        "title": "Microsoft Specialist",
+        "subtitle": "Windows 7 Configuration",
+        "meta": "Microsoft • Dezember 2015",
+        "id": "ID: F503-5040"
+      },
+      "mcts": {
+        "title": "MCTS Windows Server 2008",
+        "subtitle": "Applications Infrastructure",
+        "meta": "Microsoft • Juli 2012",
+        "id": "ID: D952-3585"
+      },
+      "mcp": {
+        "title": "Microsoft Certified Professional",
+        "subtitle": "MCP-Zertifizierung",
+        "meta": "Microsoft • Mai 2012",
+        "id": "ID: E924-7529"
+      }
+    },
+    "modules": {
+      "business": {
+        "title": "Betrieb und betriebliche Prozesse",
+        "hours": "500 Stunden",
+        "items": [
+          "Allgemeine Betriebswirtschaftslehre",
+          "Rechts- und Sozialkunde",
+          "MS Office für IT-Betriebsprozesse",
+          "Mathematik für Informatiker"
+        ]
+      },
+      "communication": {
+        "title": "Kommunikation",
+        "hours": "168 Stunden",
+        "items": [
+          "Kommunikationspolitik",
+          "Selbstmarketing",
+          "Technisches Englisch"
+        ]
+      },
+      "itSystems": {
+        "title": "IT-Systeme",
+        "hours": "396 Stunden",
+        "items": [
+          "Grundlagen der Datenverarbeitung",
+          "PC-System-Hardwarearchitektur",
+          "Grundlagen der Elektrotechnik",
+          "Praktische Ausbildung"
+        ]
+      },
+      "networks": {
+        "title": "Vernetzte IT-Systeme",
+        "hours": "348 Stunden",
+        "items": [
+          "Netzwerkgrundlagen",
+          "Linux-Betriebssystem",
+          "Praktische Ausbildung"
+        ]
+      },
+      "appDev": {
+        "title": "Anwendungsentwicklung",
+        "hours": "908 Stunden",
+        "items": [
+          "HTML, CSS (40h)",
+          "Datenbankentwicklung (144h)",
+          "Java SE OOP (260h)",
+          ".NET Framework C# (220h)",
+          "JavaScript und PHP (120h)",
+          "Anwendungssystemdesign",
+          "Microsoft-Prüfungsvorbereitung"
+        ]
+      },
+      "projectWork": {
+        "title": "Projektarbeit & Praktikum",
+        "hours": "1.200 Stunden",
+        "items": [
+          "Java-SE-Projekt (80h)",
+          "IHK-Spezialisierung (80h)",
+          "Berufliche Aufgaben (80h)",
+          "Betriebliches Praktikum (960h)"
+        ]
+      }
+    }
+  },
+  "skills": {
+    "title": "Meine Fähigkeiten",
+    "subtitle": "Technologien und Werkzeuge, mit denen ich Ideen umsetze",
+    "additionalKnowledge": "Zusätzliches Wissen",
+    "skillCategories": {
+      "Frontend": "Frontend",
+      "Backend": "Backend",
+      "Framework": "Framework",
+      "Database": "Datenbank",
+      "Programming": "Programmierung",
+      "Architecture": "Architektur",
+      "Tools": "Tools",
+      "System": "System",
+      "Hardware": "Hardware",
+      "Language": "Sprache"
+    },
+    "categories": {
+      "design": {
+        "title": "Design & Grafik",
+        "items": ["Inkscape", "GIMP", "Blender"]
+      },
+      "animation": {
+        "title": "3D & Animation",
+        "items": ["Blender", "Unity"]
+      },
+      "hardware": {
+        "title": "Hardware & IoT",
+        "items": ["Raspberry Pi", "3D-Druck", "Drohnenflüge"]
+      },
+      "office": {
+        "title": "Office & Produktivität",
+        "items": ["Microsoft Office", "Microsoft 365", "SharePoint"]
+      },
+      "industry": {
+        "title": "Branchenwissen",
+        "items": ["Gesundheitsbranche", "Produktmanagement"]
+      },
+      "apis": {
+        "title": "Web-APIs",
+        "items": ["REST APIs", "Programmierschnittstellen"]
+      }
+    }
+  },
+  "projects": {
+    "title": "Meine Projekte",
+    "subtitle": "Plattformen, Integrationen, ML und interne Tools aus der Berufspraxis",
+    "leadershipTitle": "Projektleitung & technische Abnahme",
+    "leadershipDesc": "Technisch geleitete und abgenommene Teamprojekte — von der Konzeption bis zum Release.",
+    "viewGuided": "Geführte Projekte ansehen →",
+    "viewAll": "Alle {count} Projekte ansehen"
+  },
+  "experience": {
+    "title": "Berufserfahrung",
+    "subtitle": "Berufserfahrung laut Lebenslauf (Stand 05/2026)",
+    "current": "Aktuell",
+    "educationTraining": "Ausbildung & Weiterbildung",
+    "trainingEdu": "Ausbildung",
+    "trainingFurther": "Weiterbildung",
+    "positions": {
+      "kawai": "Selbstständige Softwareentwicklung, Beratung und Projektabwicklung. Ergänzend Dienstleistungen für Unternehmen über Kawai Labs.",
+      "bagobag": "PHP-Webanwendungen, Produktmanagement, HTML5, Schnittstellen und teamübergreifende Projektarbeit.",
+      "ore": "Entwicklung und Betrieb von IT-Systemen, Netzwerkadministration.",
+      "giata": "PHP-Entwicklung und Unterstützung bei Kundenprojekten.",
+      "comhard": "IHK-Abschluss Fachinformatiker Anwendungsentwicklung. 2.640 Std. in 9 Modulen — Wirtschaft, Kommunikation, IT-Systeme, Netzwerke, Anwendungsentwicklung (Java, C#, PHP, HTML/CSS, Datenbanken), Projektarbeit und Betriebspraktikum."
+    },
+    "education": {
+      "ihk-fach": {
+        "title": "IHK Fachinformatiker — Anwendungsentwicklung",
+        "company": "Comhard GmbH, Berlin",
+        "period": "11/2016 – 11/2018"
+      },
+      "ihk-gastro": {
+        "title": "Fachkraft im Gastgewerbe (IHK)",
+        "company": "Kiezküchen gGmbH, Berlin",
+        "period": "01/2006 – 07/2009"
+      },
+      "bta-php": {
+        "title": "PHP-Frameworks, UI/UX Design, Agiles Management",
+        "company": "BTA GmbH, Berlin",
+        "period": "05/2020 – 08/2020"
+      },
+      "damago-netz": {
+        "title": "Netzwerkadministrator",
+        "company": "Damago GmbH, Berlin",
+        "period": "03/2012 – 08/2012"
+      }
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Sprechen wir über Ihr nächstes Projekt",
+    "infoTitle": "Kontaktinformationen",
+    "address": "Adresse",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "links": "Links",
+    "availability": "Verfügbarkeit",
+    "avail1": "Verfügbar für neue Projekte",
+    "avail2": "Remote-Arbeit möglich",
+    "avail3": "Reisebereitschaft vorhanden",
+    "formTitle": "Nachricht senden",
+    "name": "Name",
+    "subject": "Betreff",
+    "message": "Nachricht",
+    "send": "Nachricht senden",
+    "sending": "Wird gesendet…",
+    "success": "Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.",
+    "error": "Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+    "placeholders": {
+      "name": "Ihr Name",
+      "email": "ihre@email.de",
+      "subject": "Betreff Ihrer Nachricht",
+      "message": "Beschreiben Sie Ihr Projekt oder Ihre Anfrage…"
+    }
+  },
+  "overview": {
+    "title": "Überblick",
+    "totalHours": "Gesamtstunden",
+    "modules": "Module",
+    "certification": "Zertifizierung",
+    "years": "Jahre"
+  },
+  "pages": {
+    "education": {
+      "title": "Bildung",
+      "subtitle": "Lerninhalte aus dem Portfolio (Stand 2019) — plus JavaScript und WISO von der früheren Website. Alte Links unter /akademie leiten automatisch um."
+    },
+    "exercises": {
+      "title": "Übungen",
+      "subtitle": "PHP-Übungen aus Portfolio und früherer Website — interaktive Demos wo möglich.",
+      "portfolioSection": "Portfolio",
+      "websiteSection": "Frühere Website"
+    },
+    "blog": {
+      "title": "Mein Blog",
+      "subtitle": "Gedanken, Tutorials und Einblicke in die Welt der Softwareentwicklung",
+      "noPostsTitle": "Noch keine Beiträge",
+      "noPostsDesc": "Der Blog befindet sich noch im Aufbau. Bald finden Sie hier interessante Artikel zu Webentwicklung und mehr.",
+      "getInTouch": "Kontakt aufnehmen",
+      "newsletterTitle": "Newsletter abonnieren",
+      "newsletterDesc": "Erhalten Sie die neuesten Artikel und Updates direkt in Ihr Postfach.",
+      "subscribe": "Abonnieren",
+      "emailPlaceholder": "Ihre E-Mail-Adresse"
+    },
+    "projects": {
+      "title": "Projekte",
+      "subtitle": "{count} professionelle Projekte — Plattformen, Integrationen, Tools und Automatisierung.",
+      "featured": "Hervorgehoben",
+      "all": "Alle",
+      "leadershipTitle": "Projektleitung & technische Abnahme",
+      "leadershipDesc": "{count} geführte Projekte — DataConverter, Prompt-Doc, Aufgabenverwaltung und mehr.",
+      "viewGuided": "Geführte Projekte ansehen →",
+      "legacyTitle": "Vollständiger Legacy-Umfang?",
+      "legacyDesc": "Historische PHP-Systeme und alle Legacy-Module in einer konsolidierten Ansicht.",
+      "legacyCta": "Legacy-Systeme öffnen →",
+      "getInTouch": "Kontakt aufnehmen"
+    },
+    "educationOpen": "Öffnen →"
+  }
+}

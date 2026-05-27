@@ -1,21 +1,27 @@
 import Link from 'next/link'
+import { getTranslations } from 'next-intl/server'
 import { exerciseCatalog } from '@/data/exerciseCatalog'
 
-export default function UebungenIndexPage() {
+export default async function UebungenIndexPage() {
+  const t = await getTranslations('pages.exercises')
+  const tPages = await getTranslations('pages')
   const portfolio = exerciseCatalog.filter((e) => e.source === 'portfolio')
   const website = exerciseCatalog.filter((e) => e.source === 'own_website')
 
   return (
     <div className="min-h-screen theme-bg">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h1 className="text-4xl font-bold theme-text mb-3">Übungen</h1>
-        <p className="theme-text-secondary mb-10">
-          PHP-Übungen aus Portfolio und früherer Website — interaktive Demos wo möglich.
-        </p>
+        <h1 className="text-4xl font-bold theme-text mb-3">{t('title')}</h1>
+        <p className="theme-text-secondary mb-10">{t('subtitle')}</p>
 
-        <Section title="Portfolio" items={portfolio} />
+        <Section title={t('portfolioSection')} items={portfolio} openLabel={tPages('educationOpen')} />
         {website.length > 0 && (
-          <Section title="Frühere Website" items={website} className="mt-10" />
+          <Section
+            title={t('websiteSection')}
+            items={website}
+            openLabel={tPages('educationOpen')}
+            className="mt-10"
+          />
         )}
       </div>
     </div>
@@ -25,10 +31,12 @@ export default function UebungenIndexPage() {
 function Section({
   title,
   items,
+  openLabel,
   className = '',
 }: {
   title: string
   items: typeof exerciseCatalog
+  openLabel: string
   className?: string
 }) {
   return (
@@ -45,7 +53,7 @@ function Section({
               <p className="font-semibold theme-text">{ex.title}</p>
               <p className="text-sm theme-text-secondary">{ex.description}</p>
             </div>
-            <span className="text-sm theme-primary shrink-0">Öffnen →</span>
+            <span className="text-sm theme-primary shrink-0">{openLabel}</span>
           </Link>
         ))}
       </div>

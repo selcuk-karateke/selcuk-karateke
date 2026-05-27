@@ -2,27 +2,23 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import { ChevronDownIcon } from '@heroicons/react/24/outline'
 
 export default function Hero() {
+    const t = useTranslations('hero')
     const [currentText, setCurrentText] = useState(0)
-    const texts = [
-        'Software Developer',
-        'Full-Stack Developer',
-        'PHP Specialist',
-        'Problem Solver'
-    ]
+    const roles = t.raw('roles') as string[]
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentText((prev) => (prev + 1) % texts.length)
+            setCurrentText((prev) => (prev + 1) % roles.length)
         }, 3000)
         return () => clearInterval(interval)
-    }, [texts.length])
+    }, [roles.length])
 
     return (
         <section className="relative min-h-screen flex items-center justify-center theme-bg-secondary theme-text overflow-hidden">
-            {/* Animated background elements */}
             <div className="absolute inset-0">
                 <div className="absolute top-20 left-10 w-72 h-72 bg-brand-secondary/10 rounded-full blur-3xl floating"></div>
                 <div className="absolute top-40 right-20 w-96 h-96 bg-brand-primary/10 rounded-full blur-3xl floating-delay-2"></div>
@@ -35,7 +31,6 @@ export default function Hero() {
                     transition={{ duration: 0.8 }}
                     className="flex flex-col lg:flex-row items-center justify-center gap-12"
                 >
-                    {/* Profile Image */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -49,7 +44,6 @@ export default function Hero() {
                         />
                     </motion.div>
 
-                    {/* Text Content */}
                     <div className="flex-1">
                         <motion.h1
                             className="text-5xl md:text-7xl font-black mb-6 theme-text"
@@ -69,7 +63,7 @@ export default function Hero() {
                                 transition={{ duration: 0.5 }}
                                 className="theme-primary"
                             >
-                                {texts[currentText]}
+                                {roles[currentText]}
                             </motion.span>
                         </div>
 
@@ -79,8 +73,7 @@ export default function Hero() {
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.8, delay: 0.4 }}
                         >
-                            Passionate developer focused on modern web technologies,
-                            full-stack development and innovative solutions for complex problems.
+                            {t('tagline')}
                         </motion.p>
 
                         <motion.div
@@ -95,7 +88,7 @@ export default function Hero() {
                                 whileHover={{ scale: 1.05, y: -2 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                View My Projects
+                                {t('ctaProjects')}
                             </motion.a>
                             <motion.a
                                 href="/contact"
@@ -103,7 +96,7 @@ export default function Hero() {
                                 whileHover={{ scale: 1.05, y: -2 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                Get In Touch
+                                {t('ctaContact')}
                             </motion.a>
                         </motion.div>
                     </div>

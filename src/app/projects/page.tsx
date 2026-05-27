@@ -4,6 +4,7 @@ import { type ReactNode, useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { UserGroupIcon } from '@heroicons/react/24/outline'
+import { useTranslations } from 'next-intl'
 import ProjectCard from '@/components/projects/ProjectCard'
 import {
   professionalProjects,
@@ -26,6 +27,7 @@ const CATEGORY_ORDER: ProjectCategory[] = [
 ]
 
 export default function ProjectsPage() {
+  const t = useTranslations('pages.projects')
   const [filter, setFilter] = useState<ProjectCategory | 'all' | 'featured'>('featured')
 
   const displayed = useMemo(() => {
@@ -42,18 +44,18 @@ export default function ProjectsPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-10"
         >
-          <h1 className="text-4xl md:text-5xl font-bold theme-text mb-4">Projects</h1>
+          <h1 className="text-4xl md:text-5xl font-bold theme-text mb-4">{t('title')}</h1>
           <p className="text-xl theme-text-secondary max-w-2xl mx-auto">
-            {professionalProjects.length} professional projects — platforms, integrations, tools, and automation.
+            {t('subtitle', { count: professionalProjects.length })}
           </p>
         </motion.div>
 
         <div className="flex flex-wrap justify-center gap-2 mb-12">
           <FilterBtn active={filter === 'featured'} onClick={() => setFilter('featured')}>
-            Featured ({featuredProjects.length})
+            {t('featured')} ({featuredProjects.length})
           </FilterBtn>
           <FilterBtn active={filter === 'all'} onClick={() => setFilter('all')}>
-            All ({professionalProjects.length})
+            {t('all')} ({professionalProjects.length})
           </FilterBtn>
           {CATEGORY_ORDER.map((cat) => {
             const count = professionalProjects.filter((p) => p.category === cat).length
@@ -89,17 +91,17 @@ export default function ProjectsPage() {
             <div>
               <h2 className="text-2xl font-bold theme-text mb-2 flex items-center gap-2">
                 <UserGroupIcon className="w-8 h-8" />
-                Project Leadership & Technical Acceptance
+                {t('leadershipTitle')}
               </h2>
               <p className="theme-text-secondary max-w-2xl">
-                {guidedProjects.length} guided projects — DataConverter, Prompt-Doc, Aufgabenverwaltung, and more.
+                {t('leadershipDesc', { count: guidedProjects.length })}
               </p>
             </div>
             <Link
               href="/projects/leadership"
               className="inline-flex items-center theme-primary-bg hover:opacity-90 text-white px-6 py-3 rounded-lg font-semibold shrink-0"
             >
-              View Guided Projects →
+              {t('viewGuided')}
             </Link>
           </div>
         </motion.div>
@@ -112,16 +114,14 @@ export default function ProjectsPage() {
         >
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
-              <h3 className="text-xl font-semibold theme-text">Need the full legacy scope?</h3>
-              <p className="theme-text-secondary">
-                See both historical PHP systems and all legacy modules in one consolidated view.
-              </p>
+              <h3 className="text-xl font-semibold theme-text">{t('legacyTitle')}</h3>
+              <p className="theme-text-secondary">{t('legacyDesc')}</p>
             </div>
             <Link
               href="/legacy"
               className="inline-flex items-center theme-primary-bg hover:opacity-90 text-white px-5 py-2.5 rounded-lg font-medium shrink-0"
             >
-              Open Legacy Systems →
+              {t('legacyCta')}
             </Link>
           </div>
         </motion.div>
@@ -131,7 +131,7 @@ export default function ProjectsPage() {
             href="/contact"
             className="inline-flex theme-primary-bg hover:opacity-90 text-white px-6 py-3 rounded-lg font-semibold"
           >
-            Get in Touch
+            {t('getInTouch')}
           </Link>
         </div>
       </div>
