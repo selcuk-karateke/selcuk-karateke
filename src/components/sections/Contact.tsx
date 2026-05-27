@@ -1,7 +1,8 @@
+'use client'
+
+import { useState, useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 import { profileContact } from '@/data/profile'
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
-import { useRef } from 'react'
 
 export default function Contact() {
     const ref = useRef(null)
