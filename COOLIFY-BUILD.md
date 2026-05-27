@@ -69,6 +69,21 @@ Das spart beim `npm ci` grob **~400–600 MB** und oft **1–3 Minuten** Install
 | Nur Code geändert (Cache) | **2–4 min** |
 | `package-lock.json` geändert | 4–6 min |
 
+## NextAuth (Admin-Login, `/api/auth/session`)
+
+Ohne diese Variablen kommt im Browser **500** auf `/api/auth/session`:
+
+| Variable | Beispiel |
+|----------|----------|
+| `NEXTAUTH_URL` | `https://selcuk.karateke.org` |
+| `NEXTAUTH_SECRET` | `openssl rand -base64 32` |
+| `ADMIN_EMAIL` | deine Admin-E-Mail (optional, ohne DB) |
+| `ADMIN_PASSWORD` | Admin-Passwort (optional, ohne DB) |
+
+OAuth nur bei Bedarf: `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET`, `GITHUB_CLIENT_ID` / `GITHUB_CLIENT_SECRET`.
+
+Mit `DATABASE_URL` stattdessen: Nutzer aus Prisma (`file:./dev.db` nur mit persistentem Volume).
+
 ## Prüfen ob es geklappt hat
 
 Im Deploy-Log muss stehen:

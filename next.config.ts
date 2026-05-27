@@ -18,6 +18,9 @@ const nextConfig: NextConfig = {
   /** Muss relativ zum Projektroot sein — Next.js unterstützt kein absolutes distDir. */
   distDir: isNextDevCommand() ? '.next-dev' : '.next',
   output: 'standalone',
+  env: {
+    NEXT_PUBLIC_AUTH_ENABLED: process.env.NEXTAUTH_SECRET ? 'true' : 'false',
+  },
   async redirects() {
     return buildLegacyRedirects()
   },

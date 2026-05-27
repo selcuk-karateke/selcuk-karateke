@@ -1,89 +1,137 @@
-import { NextAuthOptions } from 'next-auth'
-import { PrismaAdapter } from '@next-auth/prisma-adapter'
+import type { NextAuthOptions } from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
-import GoogleProvider from 'next-auth/providers/google'
 import GitHubProvider from 'next-auth/providers/github'
-import { prisma } from '@/lib/prisma'
+import GoogleProvider from 'next-auth/providers/google'
 import bcrypt from 'bcryptjs'
+import { prisma } from '@/lib/prisma'
 
 declare module 'next-auth' {
-    interface Session {
-        user: {
-            id: string
-            name?: string | null
-            email?: string | null
-            image?: string | null
-        }
+  interface Session {
+    user: {
+      id: string
+      name?: string | null
+      email?: string | null
+      image?: string | null
     }
+  }
 }
 
-export const authOptions: NextAuthOptions = {
-    adapter: PrismaAdapter(prisma),
-    providers: [
-        GoogleProvider({
-            clientId: process.env.GOOGLE_CLIENT_ID!,
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
-        }),
-        GitHubProvider({
-            clientId: process.env.GITHUB_CLIENT_ID!,
-            clientSecret: process.env.GITHUB_CLIENT_SECRET!,
-        }),
-        CredentialsProvider({
-            name: 'credentials',
-            credentials: {
-                email: { label: 'Email', type: 'email' },
-                password: { label: 'Password', type: 'password' }
-            },
-            async authorize(credentials) {
-                if (!credentials?.email || !credentials?.password) {
-                    return null
-                }
+export function isAuthConfigured(): boolean {
+  return Boolean(process.env.NEXTAUTH_SECRET?.trim())
+}
 
-                const user = await prisma.user.findUnique({
-                    where: {
-                        email: credentials.email
-                    }
-                })
+function buildProviders(): NextAuthOptions['providers'] {
+  const providers: NextAuthOptions['providers'] = []
 
-                if (!user) {
-                    return null
-                }
+  const googleId = process.env.GOOGLE_CLIENT_ID?.trim()
+  const googleSecret = process.env.GOOGLE_CLIENT_SECRET?.trim()
+  if (googleId && googleSecret) {
+    providers.push(
+      GoogleProvider({
+        clientId: googleId,
+        clientSecret: googleSecret,
+      })
+    )
+  }
 
-                // For demo purposes, we'll create a simple password check
-                // In production, you should hash passwords properly
-                const isPasswordValid = await bcrypt.compare(credentials.password, user.password || '')
+  const githubId = process.env.GITHUB_CLIENT_ID?.trim()
+  const githubSecret = process.env.GITHUB_CLIENT_SECRET?.trim()
+  if (githubId && githubSecret) {
+    providers.push(
+      GitHubProvider({
+        clientId: githubId,
+        clientSecret: githubSecret,
+      })
+    )
+  }
 
-                if (!isPasswordValid) {
-                    return null
-                }
+  providers.push(
+    CredentialsProvider({
+      name: 'credentials',
+      credentials: {
+        email: { label: 'Email', type: 'email' },
+        password: { label: 'Password', type: 'password' },
+      },
+      async authorize(credentials) {
+        if (!credentials?.email || !credentials?.password) {
+          return null
+        }
 
-                return {
-                    id: user.id,
-                    email: user.email,
-                    name: user.name,
-                    image: user.image,
-                }
+        const adminEmail = process.env.ADMIN_EMAIL?.trim()
+        const adminPassword = process.env.ADMIN_PASSWORD?.trim()
+        if (adminEmail && adminPassword) {
+          if (
+            credentials.email === adminEmail &&
+            credentials.password === adminPassword
+          ) {
+            return {
+              id: 'admin',
+              email: adminEmail,
+              name: 'Admin',
             }
-        })
-    ],
+          }
+          return null
+        }
+
+        try {
+          const user = await prisma.user.findUnique({
+            where: { email: credentials.email },
+          })
+
+          if (!user?.password) {
+            return null
+          }
+
+          const isPasswordValid = await bcrypt.compare(credentials.password, user.password)
+          if (!isPasswordValid) {
+            return null
+          }
+
+          return {
+            id: user.id,
+            email: user.email,
+            name: user.name,
+            image: user.image,
+          }
+        } catch (error) {
+          console.error('[auth] Database login failed:', error)
+          return null
+        }
+      },
+    })
+  )
+
+  return providers
+}
+
+export function buildAuthOptions(): NextAuthOptions {
+  if (!isAuthConfigured()) {
+    throw new Error('NEXTAUTH_SECRET is required to build auth options')
+  }
+
+  return {
+    secret: process.env.NEXTAUTH_SECRET,
+    providers: buildProviders(),
     session: {
-        strategy: 'jwt',
+      strategy: 'jwt',
     },
     pages: {
-        signIn: '/auth/signin',
+      signIn: '/auth/signin',
     },
     callbacks: {
-        async jwt({ token, user }) {
-            if (user) {
-                token.id = user.id
-            }
-            return token
-        },
-        async session({ session, token }) {
-            if (token && session.user) {
-                session.user.id = token.id as string
-            }
-            return session
-        },
+      async jwt({ token, user }) {
+        if (user) {
+          token.id = user.id
+        }
+        return token
+      },
+      async session({ session, token }) {
+        if (token && session.user) {
+          session.user.id = token.id as string
+        }
+        return session
+      },
     },
+  }
 }
+

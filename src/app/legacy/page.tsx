@@ -13,10 +13,18 @@ export default function LegacySystemsPage() {
     <div className="min-h-screen theme-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="mb-10">
-          <h1 className="text-4xl md:text-5xl font-bold theme-text mb-4">Legacy Systems</h1>
+          <h1 className="text-4xl md:text-5xl font-bold theme-text mb-4">Schulprojekt-Archiv</h1>
           <p className="text-lg theme-text-secondary max-w-3xl">
-            Unified overview of both older PHP codebases that are being consolidated into this
-            platform. This page keeps all legacy scope visible during migration.
+            Übungen und Bildung sind unter{' '}
+            <Link href="/uebungen" className="theme-primary hover:opacity-80">
+              /uebungen
+            </Link>{' '}
+            und{' '}
+            <Link href="/education" className="theme-primary hover:opacity-80">
+              /education
+            </Link>{' '}
+            migriert. Hier verbleiben nur alte PHP-Schulprojekte (proj/*) aus Portfolio und
+            own_website.
           </p>
           <Link href="/legacy/matrix" className="inline-block mt-4 theme-primary hover:opacity-80">
             Open full migration matrix →

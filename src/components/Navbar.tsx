@@ -9,6 +9,8 @@ import { Bars3Icon, ChevronDownIcon, XMarkIcon } from '@heroicons/react/24/outli
 import DarkModeToggle from './DarkModeToggle'
 import LanguageSwitcher from './LanguageSwitcher'
 
+const authConfigured = process.env.NEXT_PUBLIC_AUTH_ENABLED === 'true'
+
 const linkClass =
   'theme-text-secondary hover:theme-primary px-2 py-1.5 rounded-md text-sm font-medium transition-colors whitespace-nowrap hover:theme-bg-secondary'
 
@@ -113,7 +115,7 @@ export default function Navbar() {
             <div className="flex items-center gap-1.5 pl-1 xl:pl-2 border-l theme-border ml-1 shrink-0">
               <LanguageSwitcher compact />
               <DarkModeToggle />
-              {session ? (
+              {authConfigured && session ? (
                 <>
                   <Link href="/admin" className={`${linkClass} hidden xl:inline`}>
                     {t('admin')}
@@ -126,7 +128,7 @@ export default function Navbar() {
                     {t('signOut')}
                   </button>
                 </>
-              ) : (
+              ) : authConfigured ? (
                 <button
                   type="button"
                   onClick={() => signIn()}
@@ -134,7 +136,7 @@ export default function Navbar() {
                 >
                   {t('signIn')}
                 </button>
-              )}
+              ) : null}
             </div>
           </div>
 
@@ -167,7 +169,7 @@ export default function Navbar() {
                 </Link>
               ))}
 
-              {session ? (
+              {authConfigured && session ? (
                 <div className="pt-2 mt-2 border-t theme-border space-y-0.5">
                   <Link
                     href="/admin"
@@ -187,7 +189,7 @@ export default function Navbar() {
                     {t('signOut')}
                   </button>
                 </div>
-              ) : (
+              ) : authConfigured ? (
                 <button
                   type="button"
                   onClick={() => {
@@ -198,7 +200,7 @@ export default function Navbar() {
                 >
                   {t('signIn')}
                 </button>
-              )}
+              ) : null}
             </div>
           </div>
         )}
