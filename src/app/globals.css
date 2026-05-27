@@ -4,6 +4,7 @@
 
 @layer base {
   :root {
+    --nav-height: 3.5rem; /* h-14 — Navbar fixed */
     --color-primary: #A63D33;
     --color-secondary: #D9985F;
     --color-bg: #ffffff;
@@ -21,6 +22,12 @@
     --color-text: #f1f5f9;
     --color-text-secondary: #cbd5e1;
     --color-border: #334155;
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --nav-height: 4rem; /* lg:h-16 */
+    }
   }
 
   html {

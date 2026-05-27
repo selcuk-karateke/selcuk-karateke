@@ -52,9 +52,9 @@ export default function Navbar() {
   }, [moreOpen])
 
   return (
-    <nav className="theme-bg/95 backdrop-blur-md border-b theme-border sticky top-0 z-50 shadow-sm overflow-x-clip">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-3 h-14 lg:h-16 min-w-0">
+    <nav className="theme-bg/95 backdrop-blur-md border-b theme-border fixed top-0 inset-x-0 z-50 shadow-sm overflow-x-clip">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[var(--nav-height)]">
+        <div className="flex items-center justify-between gap-3 h-full min-w-0">
           <Link href="/" className="flex items-center gap-2 min-w-0 shrink-0">
             <Image
               src="/logo.png"

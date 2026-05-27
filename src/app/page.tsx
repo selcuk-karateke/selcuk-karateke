@@ -7,13 +7,13 @@ import Contact from '@/components/sections/Contact'
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen">
+    <>
       <Hero />
       <About />
       <Skills />
       <Projects />
       <Experience />
       <Contact />
-    </div>
+    </>
   )
 }

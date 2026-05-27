@@ -18,7 +18,7 @@ export default function Hero() {
     }, [roles.length])
 
     return (
-        <section className="relative min-h-screen flex items-center justify-center theme-bg-secondary theme-text overflow-hidden">
+        <section className="relative -mt-[var(--nav-height)] min-h-dvh pt-[var(--nav-height)] flex items-center justify-center theme-bg-secondary theme-text overflow-hidden">
             <div className="absolute inset-0">
                 <div className="absolute top-20 left-10 w-72 h-72 bg-brand-secondary/10 rounded-full blur-3xl floating"></div>
                 <div className="absolute top-40 right-20 w-96 h-96 bg-brand-primary/10 rounded-full blur-3xl floating-delay-2"></div>

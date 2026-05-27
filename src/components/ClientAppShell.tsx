@@ -25,7 +25,7 @@ export default function ClientAppShell({ children, locale, messages }: ClientApp
       <AuthProvider>
         <PomodoroProvider>
           <Navbar />
-          <main>{children}</main>
+          <main className="pt-[var(--nav-height)]">{children}</main>
           <PageFloatingControls />
         </PomodoroProvider>
       </AuthProvider>
