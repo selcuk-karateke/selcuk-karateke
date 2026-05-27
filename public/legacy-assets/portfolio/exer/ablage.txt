@@ -1,0 +1,1 @@
+				  <input type="text" id="x" name="name" onblur="xyz('Text eingeben')" onfocus="xyz('')" required placeholder="Vor- und Nachname" />

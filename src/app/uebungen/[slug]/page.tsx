@@ -1,15 +1,15 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import EducationProseView from '@/components/education/EducationProseView'
-import EducationRawHtml from '@/components/education/EducationRawHtml'
-import LegacyFeaturePanel from '@/components/legacy/LegacyFeaturePanel'
-import { getExercise, portfolioExercises } from '@/data/exercises'
+import ExerciseRunner from '@/components/exercises/ExerciseRunner'
+import ExerciseInteractiveHtml from '@/components/exercises/ExerciseInteractiveHtml'
+import { PlaceholderExercise } from '@/components/exercises/builtins'
+import { exerciseCatalog, getExercise } from '@/data/exerciseCatalog'
+import { hasBuiltinExercise } from '@/lib/exerciseBuiltins'
 import { loadExerciseContent, loadExerciseRawHtml } from '@/lib/loadExercise'
-import { legacyRoutes } from '@/data/legacyRoutes'
 import '@/app/legacy/legacy.css'
 
 export function generateStaticParams() {
-  return portfolioExercises.map((ex) => ({ slug: ex.slug }))
+  return exerciseCatalog.map((ex) => ({ slug: ex.slug }))
 }
 
 export default async function UebungPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -17,14 +17,22 @@ export default async function UebungPage({ params }: { params: Promise<{ slug: s
   const meta = getExercise(slug)
   if (!meta) notFound()
 
+  if (hasBuiltinExercise(slug)) {
+    return (
+      <div className="min-h-screen theme-bg">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <header className="mb-8">
+            <h1 className="text-4xl font-bold theme-text">{meta.title}</h1>
+            <p className="theme-text-secondary mt-1">{meta.description}</p>
+          </header>
+          <ExerciseRunner meta={meta} />
+        </div>
+      </div>
+    )
+  }
+
   const prose = loadExerciseContent(slug)
   const rawHtml = loadExerciseRawHtml(slug)
-  const legacyRoute = legacyRoutes.find(
-    (r) => r.source === 'portfolio' && r.route === meta.legacyRoute
-  )
-
-  const useRaw =
-    slug !== 'index' && prose && prose.sections.length === 0 && Boolean(rawHtml)
 
   return (
     <div className="min-h-screen theme-bg">
@@ -37,21 +45,22 @@ export default async function UebungPage({ params }: { params: Promise<{ slug: s
           <p className="theme-text-secondary mt-1">{meta.description}</p>
         </header>
 
-        {useRaw && rawHtml ? (
-          <EducationRawHtml html={rawHtml} />
-        ) : prose && prose.sections.length > 0 ? (
-          <EducationProseView floor={prose} />
-        ) : rawHtml ? (
-          <EducationRawHtml html={rawHtml} />
-        ) : (
-          <p className="theme-text-secondary">Kein Inhalt verfügbar.</p>
-        )}
-
-        {legacyRoute && legacyRoute.feature !== 'none' && (
-          <div className="mt-10">
-            <h2 className="text-lg font-semibold theme-text mb-3">Interaktive Demo</h2>
-            <LegacyFeaturePanel route={legacyRoute} />
+        {prose && prose.sections.length > 0 ? (
+          <div className="space-y-6">
+            {prose.sections.map((s) => (
+              <section key={s.id} className="theme-bg-card border theme-border rounded-xl p-6">
+                <h2 className="text-lg font-semibold theme-text mb-3">{s.title}</h2>
+                <ExerciseInteractiveHtml html={s.html} source={meta.source} />
+              </section>
+            ))}
           </div>
+        ) : rawHtml ? (
+          <ExerciseInteractiveHtml html={rawHtml} source={meta.source} />
+        ) : (
+          <PlaceholderExercise
+            title={meta.title}
+            body="Inhalt konnte nicht geladen werden. Bitte npm run content:import ausführen."
+          />
         )}
       </div>
     </div>

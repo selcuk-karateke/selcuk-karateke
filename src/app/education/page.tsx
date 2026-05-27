@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { portfolioEducationFloors } from '@/data/educationFloors'
+import { educationCatalog } from '@/data/educationCatalog'
 
 export default function EducationIndexPage() {
   return (
@@ -7,32 +7,25 @@ export default function EducationIndexPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h1 className="text-4xl font-bold theme-text mb-3">Bildung</h1>
         <p className="theme-text-secondary mb-10">
-          Lerninhalte wie im Portfolio: strukturierte Karten mit Formel, Frage, Rechnung und Antwort —
-          inklusive Mathematik-Darstellung (MathJax).
+          Lerninhalte aus dem Portfolio (Stand 2019) — plus JavaScript und WISO von der früheren Website.
+          Alte Links unter <code className="text-sm">/akademie</code> leiten automatisch um.
         </p>
 
         <div className="grid gap-3">
-          {portfolioEducationFloors.map((floor) => (
+          {educationCatalog.map((item) => (
             <Link
-              key={floor.id}
-              href={`/education/${floor.id}`}
-              className="theme-bg-card border theme-border rounded-xl p-5 hover:shadow-md transition-shadow flex justify-between items-center"
+              key={item.slug}
+              href={`/education/${item.slug}`}
+              className="theme-bg-card border theme-border rounded-xl p-5 hover:shadow-md transition-shadow flex justify-between items-center gap-4"
             >
-              <div>
-                <p className="font-semibold theme-text">{floor.title}</p>
-                <p className="text-sm theme-text-secondary">{floor.subtitle}</p>
+              <div className="min-w-0">
+                <p className="font-semibold theme-text">{item.title}</p>
+                <p className="text-sm theme-text-secondary">{item.subtitle}</p>
               </div>
-              <span className="text-sm theme-primary">Öffnen →</span>
+              <span className="text-sm theme-primary shrink-0">Öffnen →</span>
             </Link>
           ))}
         </div>
-
-        <p className="mt-10 text-sm theme-text-secondary">
-          Ältere Website mit anderem Aufbau:{' '}
-          <Link href="/akademie" className="theme-primary hover:opacity-80">
-            Akademie (own_website)
-          </Link>
-        </p>
       </div>
     </div>
   )

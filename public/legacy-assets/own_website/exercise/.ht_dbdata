@@ -1,0 +1,6 @@
+﻿<?php
+// Konstanten definieren
+define('DBHOST','localhost');
+define('DBNAME','test');
+define('DBUSER','');
+define('DBPASS','');

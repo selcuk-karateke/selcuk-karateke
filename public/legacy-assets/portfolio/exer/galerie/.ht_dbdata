@@ -1,0 +1,13 @@
+﻿<?php
+if ($_SERVER["REMOTE_ADDR"] == "::1"){
+	// Konstanten definieren
+	define('DBHOST','localhost');
+	define('DBNAME','bildergalerie');
+	define('DBUSER','root');
+	define('DBPASS','');
+} else {
+	define('DBHOST','http://webm52.ckb.comhard.de/phpmyadmin');
+	define('DBNAME','sekaratekedb');
+	define('DBUSER','sekaratekedb');
+	define('DBPASS','comhardsk');
+}

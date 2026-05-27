@@ -1,0 +1,88 @@
+﻿	<audio id="audiofile" preload="auto">
+	<source src="/audio/piep.mp3" />
+	<source src="/audio/piep.ogg" />
+	<source src="/audio/piep.wav" />
+	</audio>
+	<button id="btn1" onclick="t(15,1);">Interrupt</button>
+	<button id="btn2" onclick="t(28,2);">Work</button>
+	<span id="time"></span>
+	<script>
+	function startTimer(duration, display, type) {
+		var timer = duration, minutes, seconds;
+		console.log(timer);
+		var x = setInterval(function () {
+			minutes = parseInt(timer / 60, 10)
+			seconds = parseInt(timer % 60, 10);
+
+			minutes = minutes < 10 ? "0" + minutes : minutes;
+			seconds = seconds < 10 ? "0" + seconds : seconds;
+
+			display.textContent = minutes + ":" + seconds;
+
+			if (--timer < 0) {
+				timer = duration;
+				setTimeout(function() { alert('EXPIRED'); }, 500);
+				document.body.style.background = "lightgreen";
+				document.getElementById("time").innerHTML = "EXPIRED";
+				document.getElementById("btn1").style.background='lightgrey';
+				document.getElementById("btn2").style.background='lightgrey';
+				document.getElementById('audiofile').play();
+				clearInterval(x);
+			}
+		}, 1000);
+	}
+	function t(min,type){
+		if(type == 1){
+			document.getElementById("btn1").style.background='lightgreen';
+		}else{
+			document.getElementById("btn2").style.background='lightgreen';
+		}
+		
+		var today = new Date().getHours();
+		if (today >= 8 && today <= 16) {
+			var ms = 60 * min,
+			display = document.querySelector('#time');
+			startTimer(ms, display, type);
+			document.body.style.background = "lightred";
+		} else {
+			document.body.style.background = "lightblue";
+		}
+	}
+	//document.getElementById('audiofile').volume=50;
+	//document.getElementById('audiofile').pause();
+	</script>
+	<br/>
+	<a href="nettoBrutto.php">Netto-/ Bruttorechner</a></br>
+	<a href="farbcode.php">Farbtabelle</a></br>
+	<a href="server.php">Server</a></br>
+	<a href="phpinfo.php">PHPInfo</a></br>
+	<a href="obstgemuese.php">Obst/ Gemüse</a></br>
+	<a href="fileupload.php">Fileupload</a></br>
+	<a href="getpostrequest.php">getpostrequest</a></br>
+	<a href="nutzerprofil.php">Nutzerprofil (in Txt- Datei speichern)</a></br>
+	<a href="gehaltsabrechnung.php">Gehaltsabrechnung erstellen (in Txt- Datei speichern)</a></br>
+	<a href="multiplikationsfunktion.php">Multiplikation</a></br>
+	<a href="multiplikationstabelle.php">Multiplikationstabelle</a></br>
+	<a href="multiplikationstabelleumleiten.php">Multiplikationstabelle (Umleitung)</a></br>
+	<a href="assoArray.php">Assoziatives Array</a></br>
+	<a href="oop.php">Klasse Person/ Wohnort</a></br>
+	<a href="elementeanzahl.php">Anzahl an Elemente (FOR VS FOREACH)</a></br>
+	<a href="pdotest.php">DB Zugriff, erstellt Tabelle "Bücher" mit Testdaten</a></br>
+	<a href="galerie/SQL-Anweisungen.php">DB Zugriff, erstellt Tabellen "Besucher, Bilder u. Bewertungen" mit Testdaten</a></br>
+	<a href="buechererfassung.php">Büchererfassung</a></br>
+	<a href="testentity.php">Entity</a></br>
+	<a href="menue.php">Auswahl der Lieblingsspeise</a></br>
+	<a href="galerie/index.php">Bildergalerie</a></br>
+	<p>
+	<a href="news/newdb.php">Newsdatenbank</a></br>
+	<a href="news/sql.php">SQL- Anweisungen (Reset!)</a></br>
+	DB Zugriff, erstellt neue Tabellen "Kategorien, Êreignisse u. Bilder":</p>  
+	<p>
+	<a href="menutest/menutest.html">Menü (Test)</a></br>
+	Menu</p>
+
+
+<a href="uebung/index.php">Übungen</a></br>
+JSON, SOAP, XML und CSV</p>  
+
+

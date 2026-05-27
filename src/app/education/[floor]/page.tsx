@@ -1,13 +1,17 @@
 import Link from 'next/link'
-import { notFound } from 'next/navigation'
+import { notFound, redirect } from 'next/navigation'
 import EducationFloorBody from '@/components/education/EducationFloorBody'
-import { getEducationFloor, portfolioEducationFloors } from '@/data/educationFloors'
+import {
+  educationCatalog,
+  getCatalogItemBySlug,
+  resolveEducationSlug,
+} from '@/data/educationCatalog'
 import { loadEducationFloorData } from '@/lib/loadEducationFloor'
 import { loadEducationRawHtml } from '@/lib/loadEducationRaw'
 import '@/app/legacy/legacy.css'
 
 export function generateStaticParams() {
-  return portfolioEducationFloors.map((floor) => ({ floor: floor.id }))
+  return educationCatalog.map((item) => ({ floor: item.slug }))
 }
 
 export default async function EducationFloorPage({
@@ -15,14 +19,17 @@ export default async function EducationFloorPage({
 }: {
   params: Promise<{ floor: string }>
 }) {
-  const { floor } = await params
-  const meta = getEducationFloor('portfolio', floor)
-  if (!meta) notFound()
+  const { floor: rawSlug } = await params
+  const slug = resolveEducationSlug(rawSlug)
+  if (slug !== rawSlug) redirect(`/education/${slug}`)
 
-  const data = loadEducationFloorData('portfolio', floor)
+  const item = getCatalogItemBySlug(slug)
+  if (!item) notFound()
+
+  const data = loadEducationFloorData(item.source, item.floorId)
   if (!data) notFound()
 
-  const rawHtml = loadEducationRawHtml('portfolio', floor)
+  const rawHtml = loadEducationRawHtml(item.source, item.floorId)
   const hasContent =
     data.kind === 'structured' || data.sections.length > 0 || Boolean(rawHtml)
   if (!hasContent) notFound()
@@ -35,11 +42,15 @@ export default async function EducationFloorPage({
         </Link>
         <header className="mt-3 mb-10">
           <p className="text-sm theme-text-secondary">Stockwerk {data.entryId}</p>
-          <h1 className="text-4xl font-bold theme-text">{meta.title}</h1>
-          <p className="theme-text-secondary mt-1">{meta.subtitle}</p>
+          <h1 className="text-4xl font-bold theme-text">{item.title}</h1>
+          <p className="theme-text-secondary mt-1">{item.subtitle}</p>
         </header>
 
-        <EducationFloorBody data={data} rawHtml={rawHtml} imageSource="portfolio" />
+        <EducationFloorBody
+          data={data}
+          rawHtml={rawHtml}
+          imageSource={item.source === 'portfolio' ? 'portfolio' : 'own_website'}
+        />
       </div>
     </div>
   )

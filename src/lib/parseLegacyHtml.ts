@@ -91,5 +91,34 @@ export function parseLegacyHtml(html: string): ParsedLegacyPage {
     })
   }
 
+  if (sections.length === 0) {
+    const h4Matches = [...html.matchAll(/<h4([^>]*)>([\s\S]*?)<\/h4>/gi)]
+    for (let i = 0; i < h4Matches.length; i++) {
+      const m = h4Matches[i]
+      const start = m.index! + m[0].length
+      const end = i + 1 < h4Matches.length ? h4Matches[i + 1].index! : html.length
+      const idMatch = m[1].match(/id=['"]([^'"]+)['"]/i)
+      const title = stripTags(m[2])
+      const baseId =
+        idMatch?.[1] ||
+        title
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/^-|-$/g, '') ||
+        `section-${i + 1}`
+      let id = baseId
+      let n = 2
+      while (seenIds.has(id)) {
+        id = `${baseId}-${n++}`
+      }
+      seenIds.add(id)
+      sections.push({
+        id,
+        title: title || id,
+        html: html.slice(start, end).trim(),
+      })
+    }
+  }
+
   return { headings, toc, sections }
 }

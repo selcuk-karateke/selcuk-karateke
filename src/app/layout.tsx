@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import AuthProvider from '@/components/providers/AuthProvider'
+import { PomodoroProvider } from '@/components/pomodoro/PomodoroProvider'
+import PageFloatingControls from '@/components/pomodoro/PageFloatingControls'
 // import Web3Provider from '@/components/providers/Web3Provider'
 import './globals.css'
 
@@ -17,9 +19,11 @@ export default function RootLayout({ children }: LayoutProps) {
     <html lang="en">
       <body className={`min-h-screen bg-gray-50 dark:bg-gray-900 ${inter.className}`}>
         <AuthProvider>
+          <PomodoroProvider>
           {/* <Web3Provider> */}
           <Navbar />
           <main>{children}</main>
+          <PageFloatingControls />
           <footer className="bg-gray-900 text-white py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -44,7 +48,6 @@ export default function RootLayout({ children }: LayoutProps) {
                     <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">About</Link></li>
                     <li><Link href="/projects" className="text-gray-300 hover:text-white transition-colors">Projects</Link></li>
                     <li><Link href="/education" className="text-gray-300 hover:text-white transition-colors">Bildung</Link></li>
-                    <li><Link href="/akademie" className="text-gray-300 hover:text-white transition-colors">Akademie</Link></li>
                     <li><Link href="/uebungen" className="text-gray-300 hover:text-white transition-colors">Übungen</Link></li>
                     <li><Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
                     <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
@@ -70,6 +73,7 @@ export default function RootLayout({ children }: LayoutProps) {
             </div>
           </footer>
           {/* </Web3Provider> */}
+          </PomodoroProvider>
         </AuthProvider>
       </body>
     </html>

@@ -1,0 +1,42 @@
+body {
+    background-color: white;
+	font-family: verdana;
+}
+
+h1 {
+	 color:rgba(233,233,233,1.0);
+}
+h2 {
+     color: grey;
+}
+p {
+     font-size: 14px;
+}
+
+li {
+	 margin: 0px 0px 0px 20px;
+}
+
+table {
+	 color: white;
+	 border: 0px solid red;
+     border-radius: 5px;
+	 padding: 0px 30px 10px 80px;
+
+}
+th { 
+
+}
+td {
+	 color: white;
+	 border: 0px solid black;
+	 border-left: 3px solid gray;
+	 border-radius: 5px;
+     background-color: lightgrey;
+	 padding: 5px 5px 5px 5px;
+	 vertical-align: top;
+}
+
+img {
+	border-radius: 5px;
+}

@@ -1,0 +1,15 @@
+.src{
+    background-color: white;
+    background-image: url('../img/searchicon.png');
+    background-position: 96% 50%;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+
+.error {
+	color: #FF0000;
+}
+
+.ok {
+	color: #00FF00;
+}

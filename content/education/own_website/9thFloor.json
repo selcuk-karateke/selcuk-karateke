@@ -1,7 +1,13 @@
 {
   "kind": "prose",
   "entryId": 9,
-  "sections": [],
+  "sections": [
+    {
+      "id": "vokabeln",
+      "title": "Vokabeln",
+      "html": ""
+    }
+  ],
   "toc": [],
   "headings": []
 }

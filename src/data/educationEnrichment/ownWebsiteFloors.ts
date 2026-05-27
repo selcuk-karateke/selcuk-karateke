@@ -16,12 +16,7 @@ const bwlIntro: FloorEnrichmentConfig = {
       section: {
         id: 'bwl-grundlagen',
         title: 'BWL — Überblick',
-        html: '<p>Grundbegriffe: Bedarf, Angebot, Kosten, Erlöse, Gewinn. Nutze die Abschnitte unten oder die Übungsaufgabe zum Einstieg.</p>',
-        practice: {
-          prompt: 'Erkläre den Unterschied zwischen <strong>fixen</strong> und <strong>variablen</strong> Kosten.',
-          solution:
-            'Fix: unabhängig von der Menge (z. B. Miete). Variabel: hängen von der Produktionsmenge ab (z. B. Material).',
-        },
+        html: '<p>Grundbegriffe: Bedarf, Angebot, Kosten, Erlöse, Gewinn. Weitere Inhalte folgen mit dem Import aus dem Legacy-System.</p>',
       },
     },
   ],

@@ -1,0 +1,42 @@
+<h2>$_GET:</h2>
+<pre>
+
+</pre>
+	
+<form action="#" method="get">
+	<input type="hidden" name="hidden_input" value="hidden content"/>
+	<p><input type="text" name="name"/> Name</p>
+	<p><input type="checkbox" name="obst[]" value="Apfel"/> Apfel</p>
+	<p><input type="checkbox" name="obst[]" value="Birne"/> Birne</p>
+	<p><input type="checkbox" name="obst[]" value="Pflaume"/> Pflaume</p>
+	<p><input type="submit" value="GET-Daten senden"/></p>
+	
+</form>
+<h2>$_POST:</h2>
+<pre>
+
+</pre>
+
+<form action="?view=exercise&id=7" method="post">
+	<input type="hidden" name="hidden_input" value="hidden content"/>
+	<p><input type="text" name="name"/> Name</p>
+	<p><input type="checkbox" name="obst[]" value="Apfel"/> Apfel</p>
+	<p><input type="checkbox" name="obst[]" value="Birne"/> Birne</p>
+	<p><input type="checkbox" name="obst[]" value="Pflaume"/> Pflaume</p>
+	<p><input type="submit" value="POST-Daten senden"/></p>
+</form>
+
+<h2>$_REQUEST:</h2>
+<pre>
+
+</pre>
+
+<form action="?view=exercise&id=7" method="request">
+	<input type="hidden" name="hidden_input" value="hidden content"/>
+	<p><input type="text" name="name"/> Name</p>
+	<p><input type="checkbox" name="obst[]" value="Apfel"/> Apfel</p>
+	<p><input type="checkbox" name="obst[]" value="Birne"/> Birne</p>
+	<p><input type="checkbox" name="obst[]" value="Pflaume"/> Pflaume</p>
+	
+	<p><input type="submit" value="REQUEST-Daten senden"/></p>
+</form>

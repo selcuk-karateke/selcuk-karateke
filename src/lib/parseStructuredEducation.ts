@@ -2,6 +2,7 @@ import type { EducationSection, EducationSubEntry } from '@/types/education'
 import { rewriteLegacyImagePaths } from '@/lib/mathHtml'
 import { decodeHtmlEntities } from '@/lib/decodeHtmlEntities'
 import { normalizeLegacyHtml } from '@/lib/normalizeLegacyHtml'
+import { splitLegacyEducationFields } from '@/lib/splitLegacyEducationFields'
 
 const FIELD_LABELS: Record<string, keyof EducationSubEntry> = {
   beschreibung: 'description',
@@ -76,11 +77,11 @@ function parseCollapseInner(subtitle: string, id: string, innerHtml: string): Ed
 
   const withoutImg = innerHtml.replace(/<img[^>]*>/gi, '').trim()
   if (withoutImg) {
-    if (/`/.test(withoutImg) || /<pre/i.test(withoutImg)) {
+    if (/`/.test(withoutImg) || /<pre/i.test(withoutImg) || /Frage:/i.test(withoutImg)) {
       entry.formula = withoutImg
-    } else {
-      entry.description = withoutImg
+      return splitLegacyEducationFields(entry)
     }
+    entry.description = withoutImg
   }
 
   return entry

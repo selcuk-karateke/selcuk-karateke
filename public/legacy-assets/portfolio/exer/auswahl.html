@@ -1,0 +1,11 @@
+﻿<a href="index.php">Zurück</a><br>
+<form action="menue.php" method="POST">
+	<p>Ihre Lieblingsspeise:</p>
+	<select name="speise" required>
+		<option value="" selected="selected">-- Ihre Wahl --</option>
+<?php foreach ($speisen as $key => $value) { ?>
+		<option value="<?= $key ?>"><?= $value ?></option>
+<?php } ?>
+	</select>
+	<p><input type="submit" value="Speichern"/></p>
+</form>

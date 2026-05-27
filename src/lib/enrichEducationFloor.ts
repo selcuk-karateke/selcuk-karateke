@@ -10,5 +10,5 @@ export function enrichEducationFloor(
 ): EducationFloorData {
   const config = getEducationEnrichment(source, floorId)
   const manual = applyEducationEnrichment(data, config)
-  return applyAutoEducationEnrichment(manual, floorId, source)
+  return applyAutoEducationEnrichment(manual)
 }

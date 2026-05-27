@@ -1,0 +1,11 @@
+{
+  "kind": "prose",
+  "entryId": 0,
+  "sections": [],
+  "toc": [],
+  "headings": [
+    "$_GET:",
+    "$_POST:",
+    "$_REQUEST:"
+  ]
+}

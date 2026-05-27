@@ -1,0 +1,3 @@
+﻿<?php
+header("Location: multiplikationstabelle.php?bis=12");
+die();

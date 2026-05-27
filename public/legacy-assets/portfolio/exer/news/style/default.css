@@ -1,0 +1,208 @@
+﻿html, body {
+	height: 100%;
+}
+body {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	background: lightsteelblue;
+}
+header, footer {
+	background: navy;
+	color: #fff;
+}
+header {
+	display: flex;
+}
+footer {
+	margin-top: auto;
+}
+.switch {
+	position: relative;
+	top: -5em;
+}
+header label {
+	display: inline-block;
+	height: 48px;
+	width: 48px;
+	background-image: url(../pics/menu.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0;
+}
+header h1 {
+	margin-left: 1em;
+	font-size: 4vh;
+}
+label {
+	cursor: pointer;
+}
+#m0:checked~header label {
+	background-image: url(../pics/back.png);
+}
+#m0:checked~.menu {
+	margin-left: 0;
+}
+.menu {
+	margin: 112px 0 0 0;
+	padding: 0;
+	width: 150px;
+	position: absolute;
+	margin-left: -180px;
+	transition: all 1s;
+}
+.menu ul {
+	list-style-type: none;
+	background-color: white;
+	padding: 0;
+	margin: 0;
+}
+.menu li {
+	padding: .5em;
+	margin-left: 1em;
+}
+.menu li label {
+	display: block;
+}
+.menu li:nth-child(n+2) {
+	border-top: 1px solid navy;
+}
+.menu li:hover {
+	background-color: #99f;
+	color: #fff;
+}
+body {
+	background-color: white;
+	font-family: arial;
+}
+* {
+	margin: 0 0 0 0;
+	/*Abstand außen */
+	padding: 0 0 0 0;
+	/*Abstand innen */
+}
+main {
+	padding: 16px;
+}
+table {
+	width: 20%;
+	color: black;
+	border-radius: 5px;
+}
+th {
+	font-color: black;
+}
+td {
+	padding: 5px 5px 5px 5px;
+	margin: 0px 0px 0px 0px;
+	border-left: 3px solid gray;
+	border-radius: 5px;
+	background-color: lightgrey;
+	vertical-align: top;
+}
+img {
+	border-radius: 5px;
+}
+/* Kontaktbox in der Sidebar - Startseite */
+
+input, input[type=text], [type=text], [type=email], select, option {
+	width: 100%;
+	padding: 8px 10px;
+	margin: 5px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+input[type=textarea] {
+	width: 100%;
+	height: 150px;
+	padding: 8px 10px;
+	margin: 5px 0px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: #f8f8f8;
+}
+input[type=submit] {
+	width: 100%;
+	background-color: lightgrey;
+	border: none;
+	padding: 16px 32px;
+	margin: 5px 0px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+input[type=submit]:hover {
+	background-color: grey;
+}
+input[type=submit]:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+.flexed {
+	display: flex;
+	align-items: stretch;
+}
+div.pictures {
+	display: flex;
+	flex-wrap: wrap;
+}
+figure {
+	box-shadow: 0 0 2px #333;
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	min-width: 240px;
+}
+figure div {
+	background: #eee;
+	min-height: 320px;
+}
+figure img {
+	display: table;
+	margin: auto;
+	border: 20px solid #eee;
+	border-bottom-width: 100px;
+}
+figure dl {
+	color: #666;
+	margin-top: auto;
+	position: relative;
+}
+figure:hover dl {
+	color: #000;
+}
+figure form {
+	position: absolute;
+	background: orange;
+}
+figure dd:nth-child(6) {
+	display: inline-block;
+}
+figure dd:nth-child(6):after {
+	content: "*";
+}
+figure dd:nth-child(7) {
+	font-size: 83.3%;
+	margin-left: 0;
+	font-style: italic;
+}
+figure dd:nth-child(7):before {
+	content: "*";
+}
+figure form {
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+figcaption {
+	position: relative;
+	top: -4em;
+	left: 20px;
+	width: 200px;
+}

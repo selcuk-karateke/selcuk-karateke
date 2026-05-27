@@ -1,4 +1,5 @@
 import { legacyRoutes } from '../src/data/legacyRoutes'
+import { exerciseCatalogAsLegacyRoutes } from '../src/data/exerciseCatalog'
 import {
   processLegacyFileContent,
   resolveLegacyPhpPath,
@@ -6,10 +7,17 @@ import {
 } from '../src/lib/legacyContent'
 import fs from 'fs'
 
+const routes = [
+  ...legacyRoutes,
+  ...exerciseCatalogAsLegacyRoutes().filter(
+    (ex) => !legacyRoutes.some((r) => r.source === ex.source && r.route === ex.route)
+  ),
+]
+
 let extracted = 0
 let missing = 0
 
-for (const route of legacyRoutes) {
+for (const route of routes) {
   const phpPath = resolveLegacyPhpPath(route)
   if (!phpPath) {
     console.warn(`[skip] ${route.source}/${route.route} — source not found`)

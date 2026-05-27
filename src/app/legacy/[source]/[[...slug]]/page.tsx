@@ -4,6 +4,8 @@ import { getLegacyRoute, getLegacyRoutesBySource, legacyRoutes } from '@/data/le
 import LegacyFeaturePanel from '@/components/legacy/LegacyFeaturePanel'
 import LegacyPageContent from '@/components/legacy/LegacyPageContent'
 import { loadParsedLegacyPage } from '@/lib/legacyPage'
+import { akademieFloorToEducationSlug } from '@/data/educationCatalog'
+import { legacyExerciseToSlug } from '@/data/exerciseCatalog'
 import { ownWebsiteFloors, portfolioEducationFloors } from '@/data/educationFloors'
 import '../../legacy.css'
 
@@ -42,8 +44,8 @@ export default async function LegacyRoutePage({
             ) : (
               <>
                 Stockwerke der alten Website unter{' '}
-                <Link href="/akademie" className="theme-primary hover:opacity-80">
-                  /akademie
+                <Link href="/education" className="theme-primary hover:opacity-80">
+                  /education
                 </Link>
                 .
               </>
@@ -80,19 +82,18 @@ export default async function LegacyRoutePage({
   if (source === 'own_website' && slug.length === 1) {
     const floorId = slug[0]
     if (ownWebsiteFloors.some((f) => f.id === floorId)) {
-      redirect(`/akademie/${floorId}`)
+      redirect(`/education/${akademieFloorToEducationSlug(floorId)}`)
     }
   }
 
   if (source === 'portfolio' && slug[0] === 'exer') {
-    if (slug[0] === 'exer' && slug.length === 1) redirect('/uebungen/index')
-    if (slug[0] === 'exer' && slug[1] === 'buecheranzeige') redirect('/uebungen/buecheranzeige')
-    if (slug[0] === 'exer' && slug[1] === 'buechererfassung') redirect('/uebungen/buechererfassung')
-    if (slug[0] === 'exer' && slug[1] === 'pdotest') redirect('/uebungen/pdotest')
-    if (slug[0] === 'exer' && slug[1] === 'exer_11') redirect('/uebungen/exer-11')
-    if (slug[0] === 'exer' && slug[1] === 'galerie' && slug[2] === 'upload') redirect('/uebungen/galerie-upload')
-    if (slug[0] === 'exer' && slug[1] === 'galerie') redirect('/uebungen/galerie')
-    if (slug[0] === 'exer' && slug[1] === 'news' && slug[2] === 'test') redirect('/uebungen/news-test')
+    const exerciseSlug = legacyExerciseToSlug('portfolio', slug.join('/'))
+    if (exerciseSlug) redirect(`/uebungen/${exerciseSlug}`)
+  }
+
+  if (source === 'own_website' && slug[0] === 'exercise') {
+    const exerciseSlug = legacyExerciseToSlug('own_website', slug.join('/'))
+    if (exerciseSlug) redirect(`/uebungen/${exerciseSlug}`)
   }
 
   const page = loadParsedLegacyPage(source, slug.join('/'))

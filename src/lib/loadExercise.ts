@@ -1,41 +1,48 @@
 import fs from 'fs'
 import path from 'path'
 import { enrichExercise } from '@/data/exerciseEnrichment'
-import { applyAutoExerciseEnrichment } from '@/lib/autoEnrichExercise'
+import { getExercise } from '@/data/exerciseCatalog'
 import type { ProseEducationFloor } from '@/types/education'
 
 export function loadExerciseContent(slug: string): ProseEducationFloor | null {
-  const jsonPath = path.join(process.cwd(), 'content', 'exercises', 'portfolio', `${slug}.json`)
-  if (!fs.existsSync(jsonPath)) {
-    const empty: ProseEducationFloor = {
-      kind: 'prose',
-      entryId: 0,
-      sections: [],
-      toc: [],
-      headings: [],
-    }
-    return applyAutoExerciseEnrichment(enrichExercise(empty, slug), slug)
+  const meta = getExercise(slug)
+  if (!meta) return null
+
+  const jsonPath = path.join(
+    process.cwd(),
+    'content',
+    'exercises',
+    meta.source,
+    `${slug}.json`
+  )
+
+  const empty: ProseEducationFloor = {
+    kind: 'prose',
+    entryId: 0,
+    sections: [],
+    toc: [],
+    headings: [],
   }
+
+  if (!fs.existsSync(jsonPath)) {
+    return enrichExercise(empty, slug)
+  }
+
   const raw = JSON.parse(fs.readFileSync(jsonPath, 'utf8')) as ProseEducationFloor
-  return applyAutoExerciseEnrichment(enrichExercise(raw, slug), slug)
+  return enrichExercise(raw, slug)
 }
 
 export function loadExerciseRawHtml(slug: string): string | null {
-  const htmlPath = path.join(process.cwd(), 'content', 'legacy', 'portfolio', `${slug.replace(/-/g, '/')}.html`)
-  // fallback: read from legacy content path by route
-  const legacyPaths: Record<string, string> = {
-    index: 'exer/index',
-    buecheranzeige: 'exer/buecheranzeige',
-    buechererfassung: 'exer/buechererfassung',
-    pdotest: 'exer/pdotest',
-    'exer-11': 'exer/exer_11/index',
-    galerie: 'exer/galerie/index',
-    'galerie-upload': 'exer/galerie/upload',
-    'news-test': 'exer/news/test',
-  }
-  const route = legacyPaths[slug]
-  if (!route) return null
-  const file = path.join(process.cwd(), 'content', 'legacy', 'portfolio', `${route}.html`)
+  const meta = getExercise(slug)
+  if (!meta) return null
+
+  const file = path.join(
+    process.cwd(),
+    'content',
+    'legacy',
+    meta.source,
+    `${meta.legacyRoute}.html`
+  )
   if (!fs.existsSync(file)) return null
   return fs.readFileSync(file, 'utf8')
 }

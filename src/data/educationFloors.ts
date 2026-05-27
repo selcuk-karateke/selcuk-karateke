@@ -30,8 +30,8 @@ export const ownWebsiteFloors: EducationFloor[] = [
   { id: '8thFloor', title: '8. Stock', subtitle: 'Lerninhalte', source: 'own_website', legacyRoute: '8thFloor' },
   { id: '9thFloor', title: '9. Stock', subtitle: 'Lerninhalte', source: 'own_website', legacyRoute: '9thFloor' },
   { id: '10thFloor', title: '10. Stock', subtitle: 'Lerninhalte', source: 'own_website', legacyRoute: '10thFloor' },
-  { id: '11thFloor', title: '11. Stock', subtitle: 'Lerninhalte', source: 'own_website', legacyRoute: '11thFloor' },
-  { id: '12thFloor', title: '12. Stock', subtitle: 'Lerninhalte', source: 'own_website', legacyRoute: '12thFloor' },
+  { id: '11thFloor', title: 'JavaScript', subtitle: 'DOM, document.write, Events — interaktive Beispiele', source: 'own_website', legacyRoute: '11thFloor' },
+  { id: '12thFloor', title: 'WISO', subtitle: 'Rechtsordnung, Wirtschaft und Soziales', source: 'own_website', legacyRoute: '12thFloor' },
 ]
 
 export function getEducationFloor(source: 'portfolio' | 'own_website', floorId: string) {

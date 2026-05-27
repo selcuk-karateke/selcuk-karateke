@@ -158,12 +158,16 @@
         {
           "id": "proportional",
           "subtitle": "Proportional",
-          "formula": "<p>Frage: Ein Pkw verbraucht auf 100 km 9,6 Liter Benzin.<br>\r\n\t\tMit einer Tankf&uuml;llung kommt er 540 km weit.<br>\r\n\t\tWie viel Liter fasst der Tank?<br>\r\n\t\tDas Ergebnis ist auf ganze Liter aufzurunden.</p>\r\n\t\t<p>Rechnung:</p>\r\n<pre>100 km = 9,6 Liter\r\n540 km = ? Liter\r\n---\r\n100 km = 9,6 Liter\r\n1 km = der 100. Teil\r\n540 km = 540 mal soviel\r\n---\r\n9,6 l * 540 / 100 = 51,84 l ~ 52 l</pre>\r\n\t\t<p>Antwort: Der Tank fasst 52 Liter.</p>"
+          "question": "Ein Pkw verbraucht auf 100 km 9,6 Liter Benzin.<br>\r\n\t\tMit einer Tankf&uuml;llung kommt er 540 km weit.<br>\r\n\t\tWie viel Liter fasst der Tank?<br>\r\n\t\tDas Ergebnis ist auf ganze Liter aufzurunden.",
+          "calculation": "<pre>100 km = 9,6 Liter\r\n540 km = ? Liter\r\n---\r\n100 km = 9,6 Liter\r\n1 km = der 100. Teil\r\n540 km = 540 mal soviel\r\n---\r\n9,6 l * 540 / 100 = 51,84 l ~ 52 l</pre>",
+          "answer": "Der Tank fasst 52 Liter."
         },
         {
           "id": "antiproportional",
           "subtitle": "Antiproportional",
-          "formula": "<p>Frage: Drei Arbeiter ben&ouml;tigen f&uuml;r eine Hofeinfahrt 11,5 Stunden.<br>\r\n\t\tWie lange brauchen 5 Arbeiter?</p>\r\n\t\t<p>Rechnung:</p>\r\n<pre>3 Arbeiter = 11,5 h\r\n5 Arbeiter =    ? h\r\n---\r\n3 Arbeiter = 11,5 h\r\n1 Arbeiter = 3 mal solange\r\n5 Arbeiter = den 5. Teil der Zeit\r\n---\r\n11,5 h * 3 / 5 = 6,9 h</pre>\r\n\t\t<p>Antwort: 5 Arbeiter brauchen 6,9 Stunden, also etwa 7 Stunden.</p>"
+          "question": "Drei Arbeiter ben&ouml;tigen f&uuml;r eine Hofeinfahrt 11,5 Stunden.<br>\r\n\t\tWie lange brauchen 5 Arbeiter?",
+          "calculation": "<pre>3 Arbeiter = 11,5 h\r\n5 Arbeiter =    ? h\r\n---\r\n3 Arbeiter = 11,5 h\r\n1 Arbeiter = 3 mal solange\r\n5 Arbeiter = den 5. Teil der Zeit\r\n---\r\n11,5 h * 3 / 5 = 6,9 h</pre>",
+          "answer": "5 Arbeiter brauchen 6,9 Stunden, also etwa 7 Stunden."
         },
         {
           "id": "col21Content",
@@ -190,12 +194,19 @@
         {
           "id": "grund-prozentwert",
           "subtitle": "Grund- /Prozentwert",
-          "formula": "<p>`W = p * G / 100` | oder | `G = 100 * W / p`</p>\r\n\t\t<p>Frage: Es wurde ein Bus gemietet um eine Gruppe von 50 Personen ins Theater zu fahren. Von diesen 50 Personen haben jedoch erst 30% die Fahrt bezahlt. Wie viele Personen haben bereits bezahlt?</p>\r\n\t\t<p>Rechnung:</p>\r\n<pre>W = p * G / 100\r\nW = 30 * 50 Personen / 100\r\nW = 15 Personen</pre>\r\n\t\t<p>Antwort: Dem Text entnehmen wir, dass G = 50 Personen sein muss. Der Prozentsatz ergibt sich zu p% = 30% und damit ist die Prozentzahl p = 30. Den Prozentwert W suchen wir. Mit diesen Angaben gehen wir in die Gleichung und erhalten W = 15 Personen. Es haben somit erst 15 Personen die Fahrt bezahlt.Dem Text entnehmen wir, dass G = 50 Personen sein muss. Der Prozentsatz ergibt sich zu p% = 30% und damit ist die Prozentzahl p = 30. Den Prozentwert W suchen wir. Mit diesen Angaben gehen wir in die Gleichung und erhalten W = 15 Personen. Es haben somit erst 15 Personen die Fahrt bezahlt.</p>"
+          "formula": "<p>`W = p * G / 100` | oder | `G = 100 * W / p`</p>",
+          "question": "Es wurde ein Bus gemietet um eine Gruppe von 50 Personen ins Theater zu fahren. Von diesen 50 Personen haben jedoch erst 30% die Fahrt bezahlt. Wie viele Personen haben bereits bezahlt?",
+          "calculation": "<pre>W = p * G / 100\r\nW = 30 * 50 Personen / 100\r\nW = 15 Personen</pre>",
+          "answer": "Antwort: Dem Text entnehmen wir, dass G = 50 Personen sein muss. Der Prozentsatz ergibt sich zu p% = 30% und damit ist die Prozentzahl p = 30. Den Prozentwert W suchen wir. Mit diesen Angaben gehen wir in die Gleichung und erhalten W = 15 Personen. Es haben somit erst 15 Personen die Fahrt bezahlt.Dem Text entnehmen wir, dass G = 50 Personen sein muss. Der Prozentsatz ergibt sich zu p% = 30% und damit ist die Prozentzahl p = 30. Den Prozentwert W suchen wir. Mit diesen Angaben gehen wir in die Gleichung und erhalten W = 15 Personen. Es haben somit erst 15 Personen die Fahrt bezahlt."
         },
         {
           "id": "prozentsatz",
           "subtitle": "Prozentsatz",
-          "formula": "<p>`p = 100 * W / G`</p>\r\n\t\t<p>Frage: Ein Autoh&auml;ndler kauft ein Auto f&uuml;r 10.000 Euro. Zwei Monate sp&auml;ter schafft er es dieses f&uuml;r 12.000 Euro wieder zu verkaufen. Wie viel Prozent Gewinn hat er damit erwirtschaftet?</p>\r\n\t\t<p>Rechnung:</p>\r\n<pre>p = 100 * W / G\r\np = 100 * 2000 Euro / 10000 Euro\r\np = 20\r\np% = 20%</pre>\r\n\t\t<p>Antwort: Wir entnehmen der Aufgabenstellung, dass G = 10.000 Euro ist. Außerdem können wir W = 12.000 Euro - 10.000 Euro = 2.000 Euro ermitteln. Der Händler verkauft den Wagen somit 2.000 Euro teurer als er ihn eingekauft hat. Mit diesen Angaben gehen wir in die Gleichung und ermitteln die Prozentzahl zu p = 20 und den Prozentsatz zu p% = 20%. Also hat der Händler 20% Gewinn erwirtschaftet.</p><mark>Merke: Die Prozentrechnung und der Dreisatz hängen mathematisch ganz Eng zusammen.</mark>"
+          "formula": "<p>`p = 100 * W / G`</p>",
+          "note": "<mark>Merke: Die Prozentrechnung und der Dreisatz hängen mathematisch ganz Eng zusammen.</mark>",
+          "question": "Ein Autoh&auml;ndler kauft ein Auto f&uuml;r 10.000 Euro. Zwei Monate sp&auml;ter schafft er es dieses f&uuml;r 12.000 Euro wieder zu verkaufen. Wie viel Prozent Gewinn hat er damit erwirtschaftet?",
+          "calculation": "<pre>p = 100 * W / G\r\np = 100 * 2000 Euro / 10000 Euro\r\np = 20\r\np% = 20%</pre>",
+          "answer": "Antwort: Wir entnehmen der Aufgabenstellung, dass G = 10.000 Euro ist. Außerdem können wir W = 12.000 Euro - 10.000 Euro = 2.000 Euro ermitteln. Der Händler verkauft den Wagen somit 2.000 Euro teurer als er ihn eingekauft hat. Mit diesen Angaben gehen wir in die Gleichung und ermitteln die Prozentzahl zu p = 20 und den Prozentsatz zu p% = 20%. Also hat der Händler 20% Gewinn erwirtschaftet."
         }
       ]
     },
@@ -205,17 +216,27 @@
         {
           "id": "jahreszins",
           "subtitle": "Jahreszins",
-          "formula": "<p>`Z = K * P / 100`</p>\r\n\t\t<p>Frage: Auf einem Sparbuch werden 1200 Euro f&uuml;r einen Zeitraum von einem Jahr mit 3 Prozent verzinst. Wie viel Zinsen erh&auml;lt der Inhaber des Sparbuchs nach einem Jahr?</p>\r\n\t\t<p>Rechnung:</p>\r\n<pre>Z = K * p / 100\r\nZ = 1200 Euro * 3 / 100 = 36 Euro</pre>\r\n\t\t<p>Antwort: Dem Text entnehmen wir, dass K = 1200 Euro und p = 3 ist. Dies setzen wir in die eben genannte Formel ein.</p><mark>Merke: Der Grundwert wird in der Zinsrechnung als Kapital bezeichnet, der Prozentsatz wird zum Zinssatz und der Prozentwert wird zu den Zinsen. Deutsche Banken rechnen das Jahr mit 360 Tagen und den Monat mit 30 Tagen.</mark>"
+          "formula": "<p>`Z = K * P / 100`</p>",
+          "note": "<mark>Merke: Der Grundwert wird in der Zinsrechnung als Kapital bezeichnet, der Prozentsatz wird zum Zinssatz und der Prozentwert wird zu den Zinsen. Deutsche Banken rechnen das Jahr mit 360 Tagen und den Monat mit 30 Tagen.</mark>",
+          "question": "Auf einem Sparbuch werden 1200 Euro f&uuml;r einen Zeitraum von einem Jahr mit 3 Prozent verzinst. Wie viel Zinsen erh&auml;lt der Inhaber des Sparbuchs nach einem Jahr?",
+          "calculation": "<pre>Z = K * p / 100\r\nZ = 1200 Euro * 3 / 100 = 36 Euro</pre>",
+          "answer": "Antwort: Dem Text entnehmen wir, dass K = 1200 Euro und p = 3 ist. Dies setzen wir in die eben genannte Formel ein."
         },
         {
           "id": "monatszins",
           "subtitle": "Monatszins",
-          "formula": "<p>`Z = K * p * m / 100 * 12`</p>\r\n\t\t<p>Frage: Ein Guthaben von 18000 Euro wird f&uuml;r einen Zeitraum von 7 Monaten und einem Zinssatz von 4% festgelegt. Wie viel Zinsen fallen an?</p>\r\n\t\t<p>Rechnung:</p>\r\n<pre>Z = K * p * m / 100 * 12\r\nZ = 18000 Euro * 4 * 7 / 100 * 12 = 420 Euro</pre>\r\n\t\t<p>Dem Text entnehmen wir, dass K = 18000 Euro, p = 4 und m = 7 ist. Diese Angaben setzen wir in die Formel ein und berechnen die Zinsen.</p>"
+          "formula": "<p>`Z = K * p * m / 100 * 12`</p>",
+          "question": "Ein Guthaben von 18000 Euro wird f&uuml;r einen Zeitraum von 7 Monaten und einem Zinssatz von 4% festgelegt. Wie viel Zinsen fallen an?",
+          "calculation": "<pre>Z = K * p * m / 100 * 12\r\nZ = 18000 Euro * 4 * 7 / 100 * 12 = 420 Euro</pre>",
+          "answer": "Dem Text entnehmen wir, dass K = 18000 Euro, p = 4 und m = 7 ist. Diese Angaben setzen wir in die Formel ein und berechnen die Zinsen."
         },
         {
           "id": "tageszins",
           "subtitle": "Tageszins",
-          "formula": "<p>`Z = K * P * t / 100 * 360`</p>\r\n\t\t<p>Frage: Ein Guthaben von 7600 Euro wird f&uuml;r 120 Tage zu einem Zinssatz von 5 Prozent festgelegt. Wie viel Zinsen fallen f&uuml;r diesen Zeitraum an?</p>\r\n\t\t<p>Rechnung:</p>\r\n<pre>Z = K * p * t / 100 * 360\r\nZ = 7600 Euro * 5 * 120 / 100 * 360 = 126.67 Euro</pre>\r\n\t\t<p>Wir entnehmen dem Text, dass K = 7600 Euro, p = 5 und t = 120 ist. Diese Informationen setzen wir in die Formel ein und berechnen die Zinsen.</p>"
+          "formula": "<p>`Z = K * P * t / 100 * 360`</p>",
+          "question": "Ein Guthaben von 7600 Euro wird f&uuml;r 120 Tage zu einem Zinssatz von 5 Prozent festgelegt. Wie viel Zinsen fallen f&uuml;r diesen Zeitraum an?",
+          "calculation": "<pre>Z = K * p * t / 100 * 360\r\nZ = 7600 Euro * 5 * 120 / 100 * 360 = 126.67 Euro</pre>",
+          "answer": "Wir entnehmen dem Text, dass K = 7600 Euro, p = 5 und t = 120 ist. Diese Informationen setzen wir in die Formel ein und berechnen die Zinsen."
         },
         {
           "id": "zinssatz",
@@ -241,22 +262,34 @@
         {
           "id": "endkapital",
           "subtitle": "Endkapital",
-          "formula": "<p>`K_(VERZINST) = K_(ANFANG) * (1 + p/100)^n`</p>\r\n\t\t<p>Frage: Ein Guthaben von 1200 Euro wird zu einem Zinssatz von 4 Prozent f&uuml;r einen Zeitraum von 5 Jahren festgelegt. Wie hoch ist das Guthaben nach dieser Zeit?</p>\r\n<pre>K_v = K_a * (1 + P / 100)^n\r\nK_v = K_a * (1 + P / 100)^n\r\nK_v = 1200 Euro * (1 + 4 / 100)^5\r\nK_v = 1200 Euro * (1,04)^5\r\nK_v = 1200 Euro * 1,21665\r\nK_v = 1459,98 Euro</pre>\r\n\t\t<p>Antwort: Wir entnehmen dem Text, dass K<sub>ANFANG</sub> = 1200 Euro, p = 4 und n = 5 ist. Diese Angaben setzen wir in die Formel zum Zinseszins ein und berechnen das Ergebnis K<sub>VERZINST</sub>. Nach 5 Jahren beträgt das verzinste Kapital 1459,98 Euro.</p>"
+          "formula": "<p>`K_(VERZINST) = K_(ANFANG) * (1 + p/100)^n`</p>",
+          "question": "Ein Guthaben von 1200 Euro wird zu einem Zinssatz von 4 Prozent f&uuml;r einen Zeitraum von 5 Jahren festgelegt. Wie hoch ist das Guthaben nach dieser Zeit?",
+          "calculation": "<pre>K_v = K_a * (1 + P / 100)^n\r\nK_v = K_a * (1 + P / 100)^n\r\nK_v = 1200 Euro * (1 + 4 / 100)^5\r\nK_v = 1200 Euro * (1,04)^5\r\nK_v = 1200 Euro * 1,21665\r\nK_v = 1459,98 Euro</pre>",
+          "answer": "Antwort: Wir entnehmen dem Text, dass K<sub>ANFANG</sub> = 1200 Euro, p = 4 und n = 5 ist. Diese Angaben setzen wir in die Formel zum Zinseszins ein und berechnen das Ergebnis K<sub>VERZINST</sub>. Nach 5 Jahren beträgt das verzinste Kapital 1459,98 Euro."
         },
         {
           "id": "anfangskapital",
           "subtitle": "Anfangskapital",
-          "formula": "<p>`K_(ANFANG) = K_(VERZINST) / (1 + p/100)^n`</p>\r\n\t\t<p>Frage: Wie viel Geld muss man anlegen, um nach 4 Jahren und bei einem Zinssatz von 3 Prozent ein Guthaben von 8000 Euro zu erhalten?</p>\r\n<pre>K_a = K_v / (1 + P / 100)^n\r\nK_a = 8000 Euro / (1 + 3 / 100)^4\r\nK_a = 8000 Euro / (1,03)^4\r\nK_a = 1200 Euro / 1,1255\r\nK_a = 7107,90 Euro</pre>\r\n\t\t<p>Antwort: Dem Text entnehmen wir, dass K<sub>VERZINST</sub> = 8000 Euro, p = 3 und n = 4 ist. Diese Angaben setzen wir in die Formel ein.</p>"
+          "formula": "<p>`K_(ANFANG) = K_(VERZINST) / (1 + p/100)^n`</p>",
+          "question": "Wie viel Geld muss man anlegen, um nach 4 Jahren und bei einem Zinssatz von 3 Prozent ein Guthaben von 8000 Euro zu erhalten?",
+          "calculation": "<pre>K_a = K_v / (1 + P / 100)^n\r\nK_a = 8000 Euro / (1 + 3 / 100)^4\r\nK_a = 8000 Euro / (1,03)^4\r\nK_a = 1200 Euro / 1,1255\r\nK_a = 7107,90 Euro</pre>",
+          "answer": "Antwort: Dem Text entnehmen wir, dass K<sub>VERZINST</sub> = 8000 Euro, p = 3 und n = 4 ist. Diese Angaben setzen wir in die Formel ein."
         },
         {
           "id": "zz-zinssatz",
           "subtitle": "Zinssatz",
-          "formula": "<p>`p = 100 * root(n)((K_(VERZINST) / K_(ANFANG))) -1`</p>\r\n\t\t<p>Frage: Ein Guthaben von 800 Euro wurde 4 Jahre verzinst. Das Guthaben betr&auml;gt nach der Verzinsung 980 Euro. Wie hoch war der Zinssatz?</p>\r\n<pre>p = 100 * root(n)((K_v / K_a)) - 100\r\np = 100 * root(4)((980 Euro / 800 Euro)) -100\r\np = 100 * root(4)((1,225) - 100)\r\np = 100 * 1,052 - 100\r\np = 105,2 - 100\r\np = 5,2</pre>\r\n\t\t<p>Antwort: Dem Text entnehmen wir, dass n = 4, K<sub>VERZINST</sub> = 980 Euro und K<sub>ANFANG</sub> = 800 Euro ist. Diese Daten setzen wir in die Formel ein.</p>"
+          "formula": "<p>`p = 100 * root(n)((K_(VERZINST) / K_(ANFANG))) -1`</p>",
+          "question": "Ein Guthaben von 800 Euro wurde 4 Jahre verzinst. Das Guthaben betr&auml;gt nach der Verzinsung 980 Euro. Wie hoch war der Zinssatz?",
+          "calculation": "<pre>p = 100 * root(n)((K_v / K_a)) - 100\r\np = 100 * root(4)((980 Euro / 800 Euro)) -100\r\np = 100 * root(4)((1,225) - 100)\r\np = 100 * 1,052 - 100\r\np = 105,2 - 100\r\np = 5,2</pre>",
+          "answer": "Antwort: Dem Text entnehmen wir, dass n = 4, K<sub>VERZINST</sub> = 980 Euro und K<sub>ANFANG</sub> = 800 Euro ist. Diese Daten setzen wir in die Formel ein."
         },
         {
           "id": "zz-zeit",
           "subtitle": "Zeit (Jahre)",
-          "formula": "<p>`n = (lg(K_(VERZINST)/K_(ANFANG)))/(lg(1+(p/100)))`</p>\r\n\t\t<p>Frage: Auf einem Sparbuch befinden sich 1000 Euro, der Zinssatz betr&auml;gt 5 Prozent. Nach welcher Zeit hat sich das Geld auf dem Sparbuch verdoppelt?</p>\r\n<pre>n = (lg(K_v/K_a))/(lg(1+(p/100)))\r\nn = (lg(2000 Euro/1000 Euro))/(lg(1+(5/100)))\r\nn = (0,30103/0,02119)\r\nn = 14,2</pre>\r\n\t\t<p>Antwort: Dem Text entnehmen wir, dass K<sub>ANFANG</sub> = 1000 Euro, K<sub>VERZINST</sub> = 2000 Euro und p = 5 ist. Diese Angaben setzen wir in die Formel ein. Das \"lg\" ist &uuml;brigens keine Variable, sondern steht f&uuml;r den <strong>dekadischen Logarithmus.</strong></p>"
+          "formula": "<p>`n = (lg(K_(VERZINST)/K_(ANFANG)))/(lg(1+(p/100)))`</p>",
+          "question": "Auf einem Sparbuch befinden sich 1000 Euro, der Zinssatz betr&auml;gt 5 Prozent. Nach welcher Zeit hat sich das Geld auf dem Sparbuch verdoppelt?",
+          "calculation": "<pre>n = (lg(K_v/K_a))/(lg(1+(p/100)))\r\nn = (lg(2000 Euro/1000 Euro))/(lg(1+(5/100)))\r\nn = (0,30103/0,02119)\r\nn = 14,2</pre>",
+          "answer": "Antwort: Dem Text entnehmen wir, dass K<sub>ANFANG</sub> = 1000 Euro, K<sub>VERZINST</sub> = 2000 Euro und p = 5 ist. Diese Angaben setzen wir in die Formel ein. Das \"lg\" ist &uuml;brigens keine Variable, sondern steht f&uuml;r den <strong>dekadischen Logarithmus.</strong>"
         },
         {
           "id": "col37Content",

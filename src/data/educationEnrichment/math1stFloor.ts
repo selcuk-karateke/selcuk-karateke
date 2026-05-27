@@ -1,19 +1,27 @@
 import type { FloorEnrichmentConfig } from '@/data/educationEnrichment/types'
 import {
-  MATH_1_ENTRY_PATCHES,
+  MATH_1_HIDDEN_ENTRY_IDS,
   MATH_1_PROSE_HTML_PATCHES,
-  MATH_1_PROSE_PRACTICE,
   MATH_1_SECTION_INTROS,
+  patchMath1Entry,
 } from '@/data/education1stFloorEnrichment'
-import type { EducationSubEntry } from '@/types/education'
+import type { PracticeTask } from '@/types/education'
+
+const MATH_1_PROSE_PRACTICE: Record<string, PracticeTask> = {
+  'dreisatz-grund': {
+    prompt:
+      'Mit 3 Arbeitern dauert eine Aufgabe 8 h. Wie lange brauchen 6 Arbeiter (antiproportional)?',
+    solution: '`t = 8 * 3 / 6 = 4 Stunden`.',
+  },
+}
 
 export const math1stFloorEnrichment: FloorEnrichmentConfig = {
-  hiddenEntryIds: ['test'],
+  hiddenEntryIds: [...MATH_1_HIDDEN_ENTRY_IDS],
   hiddenSectionIds: ['test'],
   sectionIntros: MATH_1_SECTION_INTROS,
-  entryPatches: MATH_1_ENTRY_PATCHES,
   proseHtmlPatches: MATH_1_PROSE_HTML_PATCHES,
   prosePractice: MATH_1_PROSE_PRACTICE,
+  patchEntry: patchMath1Entry,
   insertSections: [
     {
       beforeSectionId: 'proportional',
@@ -25,16 +33,4 @@ export const math1stFloorEnrichment: FloorEnrichmentConfig = {
       },
     },
   ],
-  patchEntry(entry: EducationSubEntry) {
-    if (entry.id !== 'pzahlen' || !entry.description) return entry
-    return {
-      ...entry,
-      description: entry.description
-        .replace(/2; 3; 5; 7; 9; 11/, '2; 3; 5; 7; 11')
-        .replace(
-          /= alle Zahlen, die nur durch sich selbst teilbar sind/,
-          '= alle Zahlen &gt; 1, die nur durch 1 und sich selbst teilbar sind'
-        ),
-    }
-  },
 }

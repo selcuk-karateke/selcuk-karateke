@@ -1,7 +1,33 @@
 {
   "kind": "prose",
   "entryId": 2,
-  "sections": [],
+  "sections": [
+    {
+      "id": "mit-php-in-datenbank-schreiben",
+      "title": "Mit PHP in Datenbank schreiben",
+      "html": "<a href=\"/proj/proj0/index.php\">Project (0)</a>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col-sm-12 text-left\">"
+    },
+    {
+      "id": "richtigen-widerstand-finden",
+      "title": "Richtigen Widerstand finden",
+      "html": "<a href=\"/proj/proj1/index.php\">Project (1)</a>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col-sm-12 text-left\">"
+    },
+    {
+      "id": "netzplantechnik",
+      "title": "Netzplantechnik",
+      "html": "<a href=\"/proj/proj2/index.php\">Project (2)</a>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col-sm-12 text-left\">"
+    },
+    {
+      "id": "ajax-mit-json-nutzen",
+      "title": "AJAX mit JSON nutzen",
+      "html": "<a href=\"/proj/proj3/index.php\">Project (3)</a>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col-sm-12 text-left\">"
+    },
+    {
+      "id": "textfelder-mit-js-generieren",
+      "title": "Textfelder mit JS generieren",
+      "html": "<a href=\"/proj/proj4/index.php\">Project (4)</a>"
+    }
+  ],
   "toc": [],
   "headings": [
     ""

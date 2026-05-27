@@ -167,6 +167,18 @@ model ContactMessage {
   updatedAt DateTime @updatedAt
 }
 
+// Legacy PHP exercises (Bücher-DB)
+model ExerciseBook {
+  id          Int      @id @default(autoincrement())
+  titel       String
+  isbn        String   @unique
+  autor       String?
+  verlag      String?
+  ausgabejahr Int?
+  auflage     Int?
+  createdAt   DateTime @default(now())
+}
+
 // Web3 Models
 model Wallet {
   id        String   @id @default(cuid())
