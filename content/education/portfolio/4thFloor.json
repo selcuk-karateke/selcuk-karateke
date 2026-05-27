@@ -19,7 +19,7 @@
     },
     {
       "id": "Rechtsgeschaefte",
-      "title": "Rechtsgesch&auml;fte (Vertr&auml;ge)",
+      "title": "Rechtsgeschäfte (Verträge)",
       "html": "<table width=\"100%\">\r\n\t  <tbody>\r\n\t\t<tr>\r\n\t\t  <td colspan=\"2\" width=\"49%\">\r\n\t\t\t<h3><strong>Einseitige Rechtsgesch&auml;fte</strong></h3>\r\n\t\t  </td>\r\n\t\t  <td colspan=\"2\" width=\"50%\">\r\n\t\t\t<h3><strong>Zweiseitige Rechtsgesch&auml;fte</strong></h3>\r\n\t\t  </td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t  <td width=\"25%\">\r\n\t\t\t<h4>Empfangsbed&uuml;rftig</h4>\r\n\t\t  </td>\r\n\t\t  <td width=\"24%\">\r\n\t\t\t<h4>Nicht empfangs-bed&uuml;rftig</h4>\r\n\t\t  </td>\r\n\t\t  <td width=\"24%\">\r\n\t\t\t<h4>Einseitig verpflichtend</h4>\r\n\t\t  </td>\r\n\t\t  <td width=\"25%\">\r\n\t\t\t<h4>zweiseitig<br>\r\n\t\t\tverpflichtend</h4>\r\n\t\t  </td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t  <td width=\"25%\">\r\n\t\t\t<p>&middot; K&uuml;ndigung</p>\r\n\t\t\t<p>&middot; R&uuml;cktrittserkl&auml;rung (Willenserkl&auml;rung)</p>\r\n\t\t\t<p>&middot; Angebot</p>\r\n\t\t\t<p>&middot; Mahnung</p>\r\n\t\t\t<p>&middot; Vollmacht</p>\r\n\t\t\t<p>&middot; Widerruf</p>\r\n\t\t\t<p>&middot; Klageschrift</p>\r\n\t\t  </td>\r\n\t\t  <td width=\"24%\">\r\n\t\t\t<p>&middot; Testament</p>\r\n\t\t\t<p>&middot; Aufgabe des Eigentums</p>\r\n\t\t\t<p>&middot; Patientenverf&uuml;gung</p>\r\n\t\t\t<p>&middot; Auslobung (beispielsweise Such- oder Vermissten-anzeigen mit\r\n\t\t\tBelohnungs-versprechen)</p>\r\n\t\t  </td>\r\n\t\t  <td width=\"24%\">\r\n\t\t\t<p>&middot; Schenkungs-vertrag</p>\r\n\t\t\t<p>&middot; B&uuml;rgschafts-vertrag</p>\r\n\t\t  </td>\r\n\t\t  <td width=\"25%\">\r\n\t\t\t<p>&middot; Kaufvertrag</p>\r\n\t\t\t<p>&middot; Dienstvertrag</p>\r\n\t\t\t<p>&middot; Werkvertrag</p>\r\n\t\t\t<p>&middot; Mietvertrag</p>\r\n\t\t\t<p>&middot; Leihvertrag</p>\r\n\t\t\t<p>&middot; Pachtvertrag</p>\r\n\t\t\t<p>&middot; Darlehensvertrag&nbsp;</p>\r\n\t\t\t<p>&middot; Versicherungsvertrag</p>\r\n\t\t  </td>\r\n\t\t</tr>\r\n\t  </tbody>\r\n\t</table>\r\n\t<p>Try to solve the new Formula Cube! It works exactly like a Rubik's Cube but it is\r\n\tonly $2, from China. Learn to solve it with the tutorial on rubiksplace.com or use the\r\n\t<a href=\"https://www.grubiks.com/solvers/rubiks-cube-3x3x3/\">solver to calculate</a>\r\n\tthe solution in a few steps.</p>"
     },
     {
@@ -29,12 +29,12 @@
     },
     {
       "id": "Besitzer",
-      "title": "Eigent&uuml;mer/Besitzer",
+      "title": "Eigentümer/Besitzer",
       "html": "<ul>\r\n\t  <li>Eigentum (rechtliche Herrschaft &uuml;ber eine Sache)</li>\r\n\t  <li>Besitz (tats&auml;chliche Herrschaft &uuml;ber eine Sache)</li>\r\n\t</ul>"
     },
     {
       "id": "Willenserklaerung",
-      "title": "Formen der Willenserkl&auml;rung",
+      "title": "Formen der Willenserklärung",
       "html": "<ul>\r\n\t  <li>rechtliche Schriftform K&uuml;ndigung, Mietvertrag</li>\r\n\t  <li>notarielle Beurkundung Grundst&uuml;ckskauf</li>\r\n\t</ul>"
     },
     {
@@ -84,7 +84,7 @@
     },
     {
       "id": "Rechtsnormen_arbeit_Regel",
-      "title": "Rechtsnormen f&uuml;r arbeitsrechtliche Regelungen",
+      "title": "Rechtsnormen für arbeitsrechtliche Regelungen",
       "html": "<ul>\r\n<li>Berufsbildungsgesetz (BBiG)</li>\r\n<li>B&uuml;rgerliche Gesetzbuch (BGB)</li>\r\n<li>Jugendarbeitsschutzgesetz (JuArbSchG)</li>\r\n<li>Arbeitszeitgesetz (ArbZG)</li>\r\n<li>Bundesurlaubsgesetz (BUrlG)</li>\r\n<li>Entgeltfortzahlungsgesetz (EFZG)</li>\r\n<li>Mutterschutzgesetz (MuschG)</li>\r\n</ul>"
     },
     {
@@ -104,7 +104,7 @@
     },
     {
       "id": "Kuendigung",
-      "title": "K&uuml;ndigung",
+      "title": "Kündigung",
       "html": "<h3>Probezeit</h3>\r\n<p>ohne Angabe von Gr&uuml;nden z. B. Azubi gef&auml;llt Ausbildung nicht, falls Minderj&auml;hrig muss Erziehungsberechtigter zustimmen.</p>\r\n<h3>K&uuml;ndigung</h3>\r\n<h4>Ordentliche:</h4>\r\n<ul>\r\n<li>Nach Probezeit, K&uuml;ndigungsfrist 4 Wochen</li>\r\n</ul>\r\n<h4>Au&szlig;erordentlich (fristlose):</h4>\r\n<p>Arbeitgeber und auch Azubis k&ouml;nnen k&uuml;ndigen, wenn ein wichtiger <strong>Grund</strong> vorliegt.</p>\r\n<p>Arbeitgeber:</p>\r\n<ul>\r\n<li>st&auml;ndige Unp&uuml;nktlichkeit</li>\r\n<li>Fernbleiben vom Unterricht</li>\r\n<li>Diebstahl</li>\r\n</ul>\r\n<p>Azubi:</p>\r\n<ul>\r\n<li>Nichtzahlung der Ausbildungsverg&uuml;tung</li>\r\n<li>Nichtgew&auml;hrung von Urlaub</li>\r\n</ul>"
     },
     {
@@ -129,7 +129,7 @@
     },
     {
       "id": "Verguetung",
-      "title": "Verg&uuml;tung",
+      "title": "Vergütung",
       "html": "<ul>\r\n<li>Zahlung und H&ouml;he</li>\r\n</ul>"
     },
     {
@@ -154,7 +154,7 @@
     },
     {
       "id": "Kuendigung_Aufhebungsvertrag",
-      "title": "K&uuml;ndigung (Aufhebungsvertrag)",
+      "title": "Kündigung (Aufhebungsvertrag)",
       "html": "<p>Betriebsrat kann die K&uuml;ndigung nicht verhindern, aber wiedersprechen. Mitglieder der Betriebsrat k&ouml;nnen nicht <strong>ordentlich*</strong> gek&uuml;ndigt werden.</p>\r\n<p>Das Arbeitsgericht kann sie verhindern (m&uuml;ndliche K&uuml;ndigung).</p>\r\n<p><strong>*</strong>Muss eine Abmahnung vorhanden sein. Angestellte in der Regel 6 Wochen zum Quartalsende. Abmahnungen verj&auml;hren nicht!<br /> Arbeiter zwischen 2 Wochen und drei Monaten (je nach Dauer der Betriebszugeh&ouml;rigkeit und Alter)</p>\r\n<h3>Gr&uuml;nde</h3>\r\n<p><strong>Au&szlig;erordentlich (fristlos):</strong> Es muss ein <strong>wichtiger Grund</strong> vorliegen:</p>\r\n<ul>\r\n<li>Betrug</li>\r\n<li>Diebstahl</li>\r\n<li>dauernde Verletzung von Pflichten</li>\r\n<li>nach einer Abmahnung</li>\r\n</ul>\r\n<h3>K&uuml;ndigungsschutz</h3>\r\n<ul>\r\n<li>Schutz vor K&uuml;ndigung in der Elternzeit</li>\r\n<li>Mutterschutz<br /> Schwangere haben von Anfang der Schwangerschaft bis zum Ablauf von vier Monaten nach der Entbindung besonderen K&uuml;ndigungsschutz</li>\r\n<li>Schwerbehinderte Arbeitnehmer (Zustimmung Integrationsamt)</li>\r\n<li>Betriebsrat (nur au&szlig;erordentlich) (4Jahre + 1 Jahr = 5 Jahre)</li>\r\n</ul>"
     },
     {
@@ -176,7 +176,7 @@
     "Unternehmen/ Betrieb",
     "Berufsschule",
     "Individueller Arbeitsvertrag",
-    "Europ&auml;ische Union&nbsp;",
+    "Europäische Union ",
     "Geschichte"
   ]
 }

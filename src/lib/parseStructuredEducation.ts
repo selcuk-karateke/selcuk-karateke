@@ -1,5 +1,6 @@
 import type { EducationSection, EducationSubEntry } from '@/types/education'
 import { rewriteLegacyImagePaths } from '@/lib/mathHtml'
+import { decodeHtmlEntities } from '@/lib/decodeHtmlEntities'
 import { normalizeLegacyHtml } from '@/lib/normalizeLegacyHtml'
 
 const FIELD_LABELS: Record<string, keyof EducationSubEntry> = {
@@ -14,7 +15,7 @@ const FIELD_LABELS: Record<string, keyof EducationSubEntry> = {
 }
 
 function stripTags(html: string): string {
-  return html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()
+  return decodeHtmlEntities(html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim())
 }
 
 function parseListItem(liHtml: string, entry: EducationSubEntry): void {

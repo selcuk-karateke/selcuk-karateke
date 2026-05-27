@@ -22,13 +22,14 @@ export interface ParsedLegacyPage {
 }
 
 function stripTags(html: string): string {
-  return html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()
+  return decodeHtmlEntities(html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim())
 }
 
 function escapeRegExp(value: string): string {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
 
+import { decodeHtmlEntities } from '@/lib/decodeHtmlEntities'
 import { normalizeLegacyHtml } from '@/lib/normalizeLegacyHtml'
 
 export function parseLegacyHtml(html: string): ParsedLegacyPage {

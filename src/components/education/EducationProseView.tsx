@@ -1,4 +1,5 @@
 import type { ProseEducationFloor } from '@/types/education'
+import { decodeHtmlEntities } from '@/lib/decodeHtmlEntities'
 import { prepareMathHtml, rewriteLegacyImagePaths } from '@/lib/mathHtml'
 
 export default function EducationProseView({
@@ -17,7 +18,7 @@ export default function EducationProseView({
             {floor.toc.map((link) => (
               <li key={link.href}>
                 <a href={link.href} className="theme-primary hover:opacity-80">
-                  {link.label}
+                  {decodeHtmlEntities(link.label)}
                 </a>
               </li>
             ))}
@@ -27,7 +28,7 @@ export default function EducationProseView({
 
       {floor.headings.map((h) => (
         <h2 key={h} className="text-2xl font-semibold theme-text scroll-mt-24">
-          {h}
+          {decodeHtmlEntities(h)}
         </h2>
       ))}
 
@@ -39,7 +40,7 @@ export default function EducationProseView({
           open
         >
           <summary className="cursor-pointer list-none p-4 font-semibold text-lg theme-text [&::-webkit-details-marker]:hidden">
-            {section.title}
+            {decodeHtmlEntities(section.title)}
           </summary>
           <div
             className="education-prose px-4 pb-5 pt-0 theme-text border-t theme-border text-sm leading-relaxed"

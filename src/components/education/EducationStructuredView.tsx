@@ -1,4 +1,5 @@
 import type { StructuredEducationFloor } from '@/types/education'
+import { decodeHtmlEntities } from '@/lib/decodeHtmlEntities'
 import { prepareMathHtml, rewriteLegacyImagePaths } from '@/lib/mathHtml'
 
 function FieldBlock({
@@ -37,7 +38,7 @@ export default function EducationStructuredView({ floor }: { floor: StructuredEd
               key={h}
               className="text-xs px-3 py-1 rounded-full border theme-border theme-text-secondary"
             >
-              {h}
+              {decodeHtmlEntities(h)}
             </span>
           ))}
         </div>
@@ -46,7 +47,7 @@ export default function EducationStructuredView({ floor }: { floor: StructuredEd
       {floor.sections.map((section) => (
         <section key={section.title} className="space-y-4">
           <h2 className="text-2xl font-bold theme-text border-b theme-border pb-2">
-            {section.title}
+            {decodeHtmlEntities(section.title)}
           </h2>
 
           <div className="space-y-3">
@@ -58,7 +59,7 @@ export default function EducationStructuredView({ floor }: { floor: StructuredEd
                 open
               >
                 <summary className="cursor-pointer list-none px-4 py-3 font-semibold text-lg theme-text bg-black/[0.02] dark:bg-white/[0.03] [&::-webkit-details-marker]:hidden">
-                  {entry.subtitle}
+                  {decodeHtmlEntities(entry.subtitle)}
                 </summary>
                 <ul className="list-none m-0 p-0">
                   {entry.description && (

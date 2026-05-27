@@ -1,11 +1,11 @@
+import { convertLegacyTexToLatex } from '@/lib/legacyTex'
+
 /** Backtick-TeX aus dem Legacy-Portfolio → MathJax-inline. */
 export function prepareMathHtml(html: string): string {
-  return html
-    .replace(/&middot;/g, '\\cdot ')
-    .replace(/`([^`]+)`/g, (_, tex: string) => {
-      const trimmed = tex.trim()
-      return `\\(${trimmed}\\)`
-    })
+  return html.replace(/`([^`]+)`/g, (_, tex: string) => {
+    const latex = convertLegacyTexToLatex(tex)
+    return `\\(${latex}\\)`
+  })
 }
 
 export function rewriteLegacyImagePaths(

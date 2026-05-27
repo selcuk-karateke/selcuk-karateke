@@ -14,7 +14,7 @@
     },
     {
       "id": "col39Content",
-      "title": "Überschrift &lt;h1&gt; ändern mit einer Prompt-Box",
+      "title": "Überschrift <h1> ändern mit einer Prompt-Box",
       "html": "<script type=\"text/javascript\">\r\n\t\tfunction ueberschriftAendern(){\r\n\t\t\tvar ue = prompt('Gib eine neue Überschrift ein');\r\n\t\t\tdocument.getElementById('a').innerHTML = ue;\r\n\t\t\talert('Überschrift wurde zu \"' + ue + '\" geändert!')\r\n\t\t}\r\n\t</script>\r\n\t<p><button onclick=\"ueberschriftAendern()\">Change</button></p>"
     },
     {

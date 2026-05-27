@@ -38,7 +38,7 @@
         },
         {
           "id": "bsystem",
-          "subtitle": "Bin&auml;rsystem",
+          "subtitle": "Binärsystem",
           "description": "<p>Im Bin&auml;rsystem bedeutet 11011: Basis = 2; Ziffern = 0; 1</p>\r\n<table>\r\n<tbody>\r\n<tr>\r\n<td>\r\n<p><strong>2<sup>4</sup></strong></p>\r\n</td>\r\n<td>\r\n<p><strong>2<sup>3</sup></strong></p>\r\n</td>\r\n<td>\r\n<p><strong>2<sup>2</sup></strong></p>\r\n</td>\r\n<td>\r\n<p><strong>2<sup>1</sup></strong></p>\r\n</td>\r\n<td>\r\n<p><strong>2<sup>0</sup></strong></p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>16</p>\r\n</td>\r\n<td>\r\n<p>8</p>\r\n</td>\r\n<td>\r\n<p>4</p>\r\n</td>\r\n<td>\r\n<p>2</p>\r\n</td>\r\n<td>\r\n<p>1</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<p>1</p>\r\n</td>\r\n<td>\r\n<p>1</p>\r\n</td>\r\n<td>\r\n<p>0</p>\r\n</td>\r\n<td>\r\n<p>1</p>\r\n</td>\r\n<td>\r\n<p>1</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>"
         },
         {

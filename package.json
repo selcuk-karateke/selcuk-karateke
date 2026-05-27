@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "dev:turbo": "next dev --turbopack",
-    "dev:clean": "node -e \"try{require('fs').rmSync('.next',{recursive:true,force:true})}catch(e){}\" && next dev",
+    "dev:clean": "node -e \"['.next','.next-dev'].forEach(d=>{try{require('fs').rmSync(d,{recursive:true,force:true})}catch(e){}})\" && next dev",
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
