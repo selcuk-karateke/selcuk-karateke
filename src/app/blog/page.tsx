@@ -41,11 +41,11 @@ export default function BlogPage() {
 
     if (loading) {
         return (
-            <div className="min-h-screen bg-gray-50 py-12">
+            <div className="min-h-screen theme-bg py-12">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center">
-                        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto"></div>
-                        <p className="mt-4 text-gray-600">Loading blog posts...</p>
+                        <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[var(--color-primary)] mx-auto" />
+                        <p className="mt-4 theme-text-secondary">Loading blog posts...</p>
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@ export default function BlogPage() {
     }
 
     return (
-        <div className="min-h-screen bg-gray-50 py-12">
+        <div className="min-h-screen theme-bg py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
@@ -61,25 +61,23 @@ export default function BlogPage() {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16"
                 >
-                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        My Blog
-                    </h1>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <h1 className="text-4xl md:text-5xl font-bold theme-text mb-6">My Blog</h1>
+                    <p className="text-xl theme-text-secondary max-w-3xl mx-auto">
                         Thoughts, tutorials and insights into the world of software development
                     </p>
                 </motion.div>
 
                 {posts.length === 0 ? (
                     <div className="text-center py-16">
-                        <div className="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
-                            <h2 className="text-2xl font-bold text-gray-900 mb-4">No posts available yet</h2>
-                            <p className="text-gray-600 mb-6">
+                        <div className="theme-bg-card rounded-lg p-8 max-w-2xl mx-auto">
+                            <h2 className="text-2xl font-bold theme-text mb-4">No posts available yet</h2>
+                            <p className="theme-text-secondary mb-6">
                                 The blog is still under construction. Soon you will find interesting articles about
-                                web development, blockchain technologies and more here.
+                                web development and more here.
                             </p>
                             <Link
                                 href="/contact"
-                                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                                className="theme-primary-bg hover:opacity-90 text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-block"
                             >
                                 Get in Touch
                             </Link>
@@ -93,39 +91,35 @@ export default function BlogPage() {
                                 initial={{ opacity: 0, y: 50 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                                className="theme-bg-card rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
                             >
                                 <div className="p-6">
                                     <div className="flex items-center justify-between mb-4">
-                                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                        <span className="theme-secondary-bg text-white px-3 py-1 rounded-full text-sm font-semibold">
                                             {post.featured ? 'Hervorgehoben' : 'Artikel'}
                                         </span>
-                                        <time className="text-gray-500 text-sm">
+                                        <time className="theme-text-secondary text-sm">
                                             {new Date(post.createdAt).toLocaleDateString('de-DE')}
                                         </time>
                                     </div>
 
-                                    <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                                        {post.title}
-                                    </h2>
+                                    <h2 className="text-xl font-bold theme-text mb-3 line-clamp-2">{post.title}</h2>
 
                                     {post.excerpt && (
-                                        <p className="text-gray-600 mb-4 line-clamp-3">
-                                            {post.excerpt}
-                                        </p>
+                                        <p className="theme-text-secondary mb-4 line-clamp-3">{post.excerpt}</p>
                                     )}
 
                                     <div className="flex flex-wrap gap-2 mb-4">
-                                        {post.tags.split(',').slice(0, 3).map((tag, index) => (
+                                        {post.tags.split(',').slice(0, 3).map((tag, tagIndex) => (
                                             <span
-                                                key={index}
-                                                className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs"
+                                                key={tagIndex}
+                                                className="theme-bg-secondary theme-text-secondary px-2 py-1 rounded text-xs"
                                             >
                                                 #{tag.trim()}
                                             </span>
                                         ))}
                                         {post.tags.split(',').length > 3 && (
-                                            <span className="text-gray-500 text-xs">
+                                            <span className="theme-text-secondary text-xs">
                                                 +{post.tags.split(',').length - 3} mehr
                                             </span>
                                         )}
@@ -133,17 +127,17 @@ export default function BlogPage() {
 
                                     <div className="flex items-center justify-between">
                                         <div className="flex items-center space-x-2">
-                                            <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                                            <div className="w-8 h-8 theme-primary-bg rounded-full flex items-center justify-center">
                                                 <span className="text-white text-sm font-semibold">
                                                     {post.author.name.charAt(0)}
                                                 </span>
                                             </div>
-                                            <span className="text-gray-600 text-sm">{post.author.name}</span>
+                                            <span className="theme-text-secondary text-sm">{post.author.name}</span>
                                         </div>
 
                                         <Link
                                             href={`/blog/${post.slug}`}
-                                            className="text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors"
+                                            className="theme-primary hover:opacity-80 font-semibold text-sm transition-colors"
                                         >
                                             Weiterlesen →
                                         </Link>
@@ -154,24 +148,26 @@ export default function BlogPage() {
                     </div>
                 )}
 
-                {/* Newsletter Signup */}
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.5 }}
-                    className="mt-16 bg-blue-600 rounded-lg p-8 text-center text-white"
+                    className="mt-16 theme-primary-bg rounded-lg p-8 text-center text-white"
                 >
                     <h3 className="text-2xl font-bold mb-4">Newsletter abonnieren</h3>
-                    <p className="text-blue-200 mb-6">
+                    <p className="text-white/80 mb-6">
                         Erhalten Sie die neuesten Artikel und Updates direkt in Ihr Postfach.
                     </p>
-                    <div className="max-w-md mx-auto flex gap-4">
+                    <div className="max-w-md mx-auto flex gap-4 flex-col sm:flex-row">
                         <input
                             type="email"
                             placeholder="Ihre E-Mail-Adresse"
-                            className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-300 focus:outline-none"
+                            className="flex-1 px-4 py-3 rounded-lg theme-text focus:ring-2 focus:ring-white/50 focus:outline-none"
                         />
-                        <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        <button
+                            type="button"
+                            className="bg-white theme-primary px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors"
+                        >
                             Abonnieren
                         </button>
                     </div>
