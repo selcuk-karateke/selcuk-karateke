@@ -1,5 +1,6 @@
 import type { NextConfig } from 'next'
 import createNextIntlPlugin from 'next-intl/plugin'
+import { buildLegacyRedirects } from './src/lib/legacyRedirects'
 
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts')
 
@@ -17,6 +18,9 @@ const nextConfig: NextConfig = {
   /** Muss relativ zum Projektroot sein — Next.js unterstützt kein absolutes distDir. */
   distDir: isNextDevCommand() ? '.next-dev' : '.next',
   output: 'standalone',
+  async redirects() {
+    return buildLegacyRedirects()
+  },
 }
 
 export default withNextIntl(nextConfig)
