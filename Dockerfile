@@ -1,17 +1,20 @@
-# Coolify: Dockerfile verwenden — Nixpacks ignoriert Layer-Cache (siehe COOLIFY-BUILD.md)
+# syntax=docker/dockerfile:1
+# Coolify: Build Pack = Dockerfile (nicht Nixpacks). Siehe COOLIFY-BUILD.md
 FROM node:20-alpine AS base
 RUN apk add --no-cache libc6-compat openssl
 WORKDIR /app
 
 FROM base AS deps
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN --mount=type=cache,target=/root/.npm \
+    npm ci
 
 FROM base AS builder
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
-RUN npm run build
+RUN --mount=type=cache,target=/app/.next/cache \
+    npm run build
 
 FROM base AS runner
 ENV NODE_ENV=production

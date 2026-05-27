@@ -6,7 +6,6 @@ import Navbar from '@/components/Navbar'
 import AuthProvider from '@/components/providers/AuthProvider'
 import { PomodoroProvider } from '@/components/pomodoro/PomodoroProvider'
 import PageFloatingControls from '@/components/pomodoro/PageFloatingControls'
-// import Web3Provider from '@/components/providers/Web3Provider'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -21,7 +20,6 @@ export default function RootLayout({ children }: LayoutProps) {
       <body className={`min-h-screen bg-gray-50 dark:bg-gray-900 ${inter.className}`}>
         <AuthProvider>
           <PomodoroProvider>
-          {/* <Web3Provider> */}
           <Navbar />
           <main>{children}</main>
           <PageFloatingControls />
@@ -88,7 +86,6 @@ export default function RootLayout({ children }: LayoutProps) {
               </div>
             </div>
           </footer>
-          {/* </Web3Provider> */}
           </PomodoroProvider>
         </AuthProvider>
       </body>
