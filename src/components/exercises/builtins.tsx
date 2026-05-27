@@ -3,6 +3,24 @@
 import Link from 'next/link'
 import { useCallback, useEffect, useState } from 'react'
 import { usePomodoro } from '@/components/pomodoro/PomodoroProvider'
+import { ExercisePhpTsCompare } from '@/components/exercises/ExercisePhpTsCompare'
+import {
+  ASSO_ARRAY_PHP_SOURCE,
+  ASSO_ARRAY_TS_SOURCE,
+  runAssoArrayDemo,
+} from '@/lib/exerciseDemos/assoArrayDemo'
+import {
+  ELEMENTEANZAHL_PHP_SOURCE,
+  ELEMENTEANZAHL_TS_SOURCE,
+  runElementeanzahlDemo,
+} from '@/lib/exerciseDemos/elementeanzahlDemo'
+import {
+  OOP_PHP_SOURCE,
+  OOP_TS_SOURCE,
+  buildPersonFromForm,
+  formatOopOutput,
+  type OopFormData,
+} from '@/lib/exerciseDemos/oopDemo'
 
 function Back() {
   return (
@@ -214,80 +232,224 @@ export function MenueExercise() {
   )
 }
 
-export function MultiplikationExercise() {
-  const [p1, setP1] = useState('0')
-  const [p2, setP2] = useState('0')
-  const [show, setShow] = useState(false)
+function parseMultiplikationFactor(raw: string): number {
+  const trimmed = raw.trim()
+  if (trimmed === '') return 0
+  const n = Number(trimmed.replace(',', '.'))
+  return Number.isFinite(n) ? n : 0
+}
 
-  const a = Number(p1) || 0
-  const b = Number(p2) || 0
+function malnehmen(a: number, b: number) {
+  return a * b
+}
+
+/** Zwei Faktoren multiplizieren (exer/multiplikationsfunktion.php). */
+export function MultiplikationFunctionExercise() {
+  const [p1, setP1] = useState('')
+  const [p2, setP2] = useState('')
+  const [factors, setFactors] = useState({ a: 0, b: 0 })
+
+  const ergebnis = malnehmen(factors.a, factors.b)
 
   return (
     <>
       <Back />
       <Card title="Multiplikation">
         <form
-          className="space-y-2 max-w-xs"
+          className="space-y-3 max-w-xs"
           onSubmit={(e) => {
             e.preventDefault()
-            setShow(true)
+            setFactors({
+              a: parseMultiplikationFactor(p1),
+              b: parseMultiplikationFactor(p2),
+            })
           }}
         >
-          <input
-            name="p1"
-            className="border theme-border rounded px-3 py-2 w-full bg-transparent"
-            value={p1}
-            onChange={(e) => setP1(e.target.value)}
-          />
-          <input
-            name="p2"
-            className="border theme-border rounded px-3 py-2 w-full bg-transparent"
-            value={p2}
-            onChange={(e) => setP2(e.target.value)}
-          />
+          <label className="block text-sm theme-text-secondary">
+            Faktor 1
+            <input
+              name="p1"
+              type="text"
+              inputMode="decimal"
+              placeholder="z. B. 7"
+              className="mt-1 border theme-border rounded px-3 py-2 w-full bg-transparent theme-text"
+              value={p1}
+              onChange={(e) => setP1(e.target.value)}
+            />
+          </label>
+          <label className="block text-sm theme-text-secondary">
+            Faktor 2
+            <input
+              name="p2"
+              type="text"
+              inputMode="decimal"
+              placeholder="z. B. 8"
+              className="mt-1 border theme-border rounded px-3 py-2 w-full bg-transparent theme-text"
+              value={p2}
+              onChange={(e) => setP2(e.target.value)}
+            />
+          </label>
           <button type="submit" className="theme-primary-bg text-white px-4 py-2 rounded">
             Multipliziere!
           </button>
         </form>
-        {show && <h3 className="text-xl font-semibold theme-text">Ergebnis: {a * b}</h3>}
+        <h2 className="text-xl font-semibold theme-text">
+          Ergebnis: {ergebnis}
+        </h2>
+        {(factors.a !== 0 || factors.b !== 0) && (
+          <p className="text-sm theme-text-secondary">
+            {factors.a} × {factors.b} = {ergebnis}
+          </p>
+        )}
       </Card>
     </>
   )
 }
 
+/** Kleines Einmaleins bis N (multiplikationstabelle.php). */
+export function MultiplikationTableExercise({ defaultBis = 10 }: { defaultBis?: number }) {
+  const [bisInput, setBisInput] = useState(String(defaultBis))
+  const [bis, setBis] = useState(defaultBis)
+  const [error, setError] = useState<string | null>(null)
+
+  const clampBis = (raw: string) => {
+    const trimmed = raw.trim()
+    if (trimmed === '' || !/^-?\d+([.,]\d+)?$/.test(trimmed.replace(',', '.'))) {
+      return { value: 10, error: 'Nicht erlaubt sind Buchstabe(n), nichts mal nichts, weniger als nix und Kommatapunkto!' }
+    }
+    let n = Math.floor(Number(trimmed.replace(',', '.')))
+    if (n < 0) n = 0
+    if (n > 30) {
+      return { value: 30, error: 'Bitte, nicht mehr als 30!' }
+    }
+    return { value: n, error: null }
+  }
+
+  const buildTable = (n: number) => {
+    const rows: React.ReactNode[] = []
+    for (let z = 0; z <= n; z++) {
+      const cells: React.ReactNode[] = []
+      for (let s = 0; s <= n; s++) {
+        let cell: string | number = ''
+        if (z === 0 && s === 0) cell = '*'
+        else if (z === 0) cell = s
+        else if (s === 0) cell = z
+        else cell = s * z
+        cells.push(
+          <td
+            key={`${z}-${s}`}
+            className={`border theme-border p-2 text-center min-w-[2.5rem] ${
+              z === 0 || s === 0 ? 'theme-bg-secondary font-medium' : ''
+            }`}
+          >
+            {cell}
+          </td>,
+        )
+      }
+      rows.push(
+        <tr key={z} className="hover:theme-bg-secondary">
+          {cells}
+        </tr>,
+      )
+    }
+    return rows
+  }
+
+  return (
+    <>
+      <Back />
+      <Card title="Multiplikationstabelle">
+        {error && (
+          <p className="text-sm bg-red-600/90 text-white rounded-lg px-4 py-3">{error}</p>
+        )}
+        <form
+          className="space-y-3 max-w-sm"
+          onSubmit={(e) => {
+            e.preventDefault()
+            const { value, error: err } = clampBis(bisInput)
+            setBis(value)
+            setBisInput(String(value))
+            setError(err)
+          }}
+        >
+          <label className="block text-sm theme-text-secondary">
+            Bis (max. 30)
+            <div className="mt-2 flex flex-col gap-2">
+              <input
+                id="range"
+                type="range"
+                min={1}
+                max={30}
+                value={Math.min(30, Math.max(1, Number(bisInput) || defaultBis))}
+                onChange={(e) => setBisInput(e.target.value)}
+                className="w-full"
+              />
+              <input
+                id="show"
+                name="bis"
+                className="border theme-border rounded px-3 py-2 w-full bg-transparent theme-text"
+                value={bisInput}
+                onChange={(e) => setBisInput(e.target.value)}
+              />
+            </div>
+          </label>
+          <button type="submit" className="theme-primary-bg text-white px-4 py-2 rounded w-full">
+            Lebe!
+          </button>
+        </form>
+        <div className="overflow-auto">
+          <table className="border-collapse text-sm">
+            <tbody>{buildTable(bis)}</tbody>
+          </table>
+        </div>
+      </Card>
+    </>
+  )
+}
+
+/** @deprecated Use MultiplikationFunctionExercise or MultiplikationTableExercise */
+export function MultiplikationExercise() {
+  return <MultiplikationFunctionExercise />
+}
+
 export function AssoArrayExercise() {
-  const dump = `array(4) {
-  ["vorname"]=> string(3) "Max"
-  ["nachname"]=> string(11) "Mustermann"
-  ["wohnort"]=> array(4) { ... }
-  ["geburtsdatum"]=> string(10) "1980-10-25"
-}`
+  const demo = runAssoArrayDemo()
+  const output = demo.sections.map((s) => `${s.dump}\n\n${s.highlight}`).join('\n\n')
+  const highlights = demo.sections.map((s) => s.highlight)
+
   return (
     <>
       <Back />
       <Card title="Assoziatives Array">
-        <pre className="text-xs overflow-auto theme-bg-secondary p-4 rounded">{dump}</pre>
-        <h3 className="font-semibold theme-text">Wohnort → Strasse: Berliner Str.</h3>
-        <p className="text-sm theme-text-secondary">Herr und Frau Mustermann / Hurtig</p>
+        <ExercisePhpTsCompare
+          phpSource={ASSO_ARRAY_PHP_SOURCE}
+          tsSource={ASSO_ARRAY_TS_SOURCE}
+          output={output}
+          highlights={highlights}
+          note="PHP-Assoziativarrays entsprechen in TypeScript typisierten Objekten (Record) — verschachtelte Keys wie p.wohnort.strasse."
+        />
       </Card>
     </>
   )
 }
 
 export function ElementeanzahlExercise() {
-  const b = ['abc', 'xyz', '123', undefined, undefined, undefined, undefined, 'äöü']
-  const shown = ['abc', 'xyz', '123', 'äöü']
+  const demo = runElementeanzahlDemo()
+
   return (
     <>
       <Back />
       <Card title="Anzahl Elemente (FOR vs. FOREACH)">
-        <p>
-          Das Array <code>$_SERVER</code> hat {typeof window !== 'undefined' ? 'viele' : '…'} Elemente
-          (im Browser simuliert).
+        <p className="text-sm theme-text-secondary">
+          Im Original: <code>$_SERVER</code> — hier im Browser:{' '}
+          <strong>{demo.serverCount}</strong> Einträge (simuliert).
         </p>
-        <pre className="text-xs theme-bg-secondary p-4 rounded overflow-auto">
-          {`count($b) = ${shown.length}\n\nFOREACH:\n${shown.map((v, i) => `  (${i}) => ${v}`).join('\n')}\n\nFOR: ignoriert Lücken im Array`}
-        </pre>
+        <ExercisePhpTsCompare
+          phpSource={ELEMENTEANZAHL_PHP_SOURCE}
+          tsSource={ELEMENTEANZAHL_TS_SOURCE}
+          output={demo.output}
+          note={`count($b) = ${demo.count} — in TS entspricht das gezählten definierten Elementen, nicht array.length (${demo.length}).`}
+        />
       </Card>
     </>
   )
@@ -746,27 +908,87 @@ export function ObstgemueseExercise({ abfr = false }: { abfr?: boolean }) {
 }
 
 export function OopExercise() {
-  const person = {
-    vorname: 'Max',
-    nachname: 'Mustermann',
-    wohnort: { strasse: 'Berliner Str.', plz: '10117', ort: 'Berlin' },
+  const empty: OopFormData = {
+    vorname: '',
+    nachname: '',
+    geburtsdatum: '',
+    strasse: '',
+    hausnr: '',
+    plz: '',
+    ort: '',
   }
-  const person2 = {
-    vorname: 'Hanna',
-    nachname: 'Hurtig',
-    wohnort: { strasse: 'Am Kai', plz: '12345', ort: 'Staaten' },
-  }
+  const [form, setForm] = useState<OopFormData>(empty)
+  const [submitted, setSubmitted] = useState<OopFormData | null>(null)
+
+  const output = submitted ? formatOopOutput(buildPersonFromForm(submitted)) : ''
+
   return (
     <>
       <Back />
       <Card title="OOP — Person / Wohnort">
-        <pre className="text-xs theme-bg-secondary p-3 rounded overflow-auto">
-          {JSON.stringify({ mann: person, frau: person2 }, null, 2)}
-        </pre>
-        <p className="text-sm mt-3">
-          Wohnort → Strasse: {person.wohnort.strasse} / {person2.wohnort.strasse}
-        </p>
-        <p className="text-sm">Herr und Frau {person.nachname} / {person2.nachname}</p>
+        <form
+          className="space-y-3 text-sm"
+          onSubmit={(e) => {
+            e.preventDefault()
+            setSubmitted({ ...form })
+          }}
+        >
+          <h3 className="font-semibold theme-text">Personendaten</h3>
+          {(
+            [
+              ['vorname', 'Vorname'],
+              ['nachname', 'Nachname'],
+              ['geburtsdatum', 'Geburtsdatum'],
+            ] as const
+          ).map(([key, label]) => (
+            <label key={key} className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
+              <span className="sm:w-36 theme-text-secondary">{label}</span>
+              <input
+                type={key === 'geburtsdatum' ? 'date' : 'text'}
+                className="border theme-border rounded px-3 py-2 flex-1 bg-transparent"
+                value={form[key]}
+                onChange={(e) => setForm((f) => ({ ...f, [key]: e.target.value }))}
+              />
+            </label>
+          ))}
+
+          <h3 className="font-semibold theme-text pt-2">Wohndaten</h3>
+          {(
+            [
+              ['strasse', 'Strasse'],
+              ['hausnr', 'Hausnr.'],
+              ['plz', 'PLZ'],
+              ['ort', 'Ort'],
+            ] as const
+          ).map(([key, label]) => (
+            <label key={key} className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
+              <span className="sm:w-36 theme-text-secondary">{label}</span>
+              <input
+                className="border theme-border rounded px-3 py-2 flex-1 bg-transparent"
+                value={form[key]}
+                onChange={(e) => setForm((f) => ({ ...f, [key]: e.target.value }))}
+              />
+            </label>
+          ))}
+
+          <button type="submit" className="theme-primary-bg text-white px-4 py-2 rounded text-sm">
+            Daten senden
+          </button>
+        </form>
+
+        {submitted && (
+          <div className="border-t theme-border pt-4">
+            <h3 className="font-semibold theme-text mb-3">
+              Aus den Klassen (TypeScript, live):
+            </h3>
+            <ExercisePhpTsCompare
+              phpSource={OOP_PHP_SOURCE}
+              tsSource={OOP_TS_SOURCE}
+              output={output}
+              note="Formular wie im PHP-Original — Instanzen von Person und Wohnort statt assoziativer Arrays."
+            />
+          </div>
+        )}
       </Card>
     </>
   )

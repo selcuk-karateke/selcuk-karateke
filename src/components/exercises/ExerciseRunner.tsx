@@ -12,7 +12,8 @@ import {
   GetPostExercise,
   JsonUebungenExercise,
   MenueExercise,
-  MultiplikationExercise,
+  MultiplikationFunctionExercise,
+  MultiplikationTableExercise,
   NettoBruttoExercise,
   NewsAdminExercise,
   NutzerprofilExercise,
@@ -40,10 +41,12 @@ export default function ExerciseRunner({ meta }: { meta: ExerciseCatalogItem }) 
     case 'menue':
       return <MenueExercise />
     case 'multiplikationsfunktion':
+      return <MultiplikationFunctionExercise />
     case 'multiplikation-umleitung':
+      return <MultiplikationTableExercise defaultBis={12} />
     case 'multiplikation':
     case 'multiplikationstabelle-ow':
-      return <MultiplikationExercise />
+      return <MultiplikationTableExercise />
     case 'asso-array':
       return <AssoArrayExercise />
     case 'elementeanzahl':
