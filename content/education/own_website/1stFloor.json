@@ -5,42 +5,42 @@
     {
       "id": "quadrat",
       "title": "Quadrat",
-      "html": "`A = a^2 = a&middot;a`<br>\r\n\t\t\t\t\t`U = 4a`<br>\r\n\t\t\t\t\t`d = a&middot;sqrt(2)`<br>\r\n\t\t\t\t\tPythagoras: `(a^2 + a^2 = d^2)` <img alt=\"Quadrat\" src=\"/legacy-assets/own_website/img/math/quadrat.png\" width=\"50%\">"
+      "html": "`A = a^2 = a&middot;a`<br>\r\n\t\t\t\t\t`U = 4a`<br>\r\n\t\t\t\t\t`d = a&middot;sqrt(2)`<br>\r\n\t\t\t\t\tPythagoras: `(a^2 + a^2 = d^2)`"
     },
     {
       "id": "rechteck",
       "title": "Rechteck",
-      "html": "<img alt=\"Rechteck\" src=\"/legacy-assets/own_website/img/math/rechteck.png\">"
+      "html": ""
     },
     {
       "id": "parallelogramm",
       "title": "Parallelogramm",
-      "html": "`A = g&middot;h`<br>\r\n\t\t\t\t\t`U = 2a + 2b` <img alt=\"Parallelogramm\" src=\"/legacy-assets/own_website/img/math/parallelogramm.png\">"
+      "html": "`A = g&middot;h`<br>\r\n\t\t\t\t\t`U = 2a + 2b`"
     },
     {
       "id": "dreieck",
       "title": "Dreieck",
-      "html": "`A = 1/2&middot;c&middot;h_c = c&middot;h_c/2`<br>\r\n\t\t\t\t\t`U = a + b + c` <img alt=\"Dreieck\" src=\"/legacy-assets/own_website/img/math/dreieck.png\">"
+      "html": "`A = 1/2&middot;c&middot;h_c = c&middot;h_c/2`<br>\r\n\t\t\t\t\t`U = a + b + c`"
     },
     {
       "id": "glschenk-dreieck",
       "title": "Gleichschenkliges Dreieck",
-      "html": "`h = sqrt(s^2 - (a/2)^2)`<br>\r\n\t\t\t\t\tPythagoras: `(a/2)^2 + h^2 = s^2` bzw. `a^2/4 + h^2 = s^2`<br>\r\n\t\t\t\t\t`A = a&middot;h/2`<br>\r\n\t\t\t\t\t`U = a + 2s` <img alt=\"Gleichschenkliges Dreieck\" src=\"/legacy-assets/own_website/img/math/gleichschenkliges_dreieck.png\">"
+      "html": "`h = sqrt(s^2 - (a/2)^2)`<br>\r\n\t\t\t\t\tPythagoras: `(a/2)^2 + h^2 = s^2` bzw. `a^2/4 + h^2 = s^2`<br>\r\n\t\t\t\t\t`A = a&middot;h/2`<br>\r\n\t\t\t\t\t`U = a + 2s`"
     },
     {
       "id": "glseit-dreieck",
       "title": "Gleichseitiges Dreieck",
-      "html": "`h = sqrt(3&middot;a/2)`<br>\r\n\t\t\t\t\t`A = a&middot;h/2`<br>\r\n\t\t\t\t\t`U = 3a` <img alt=\"Gleichseitiges Dreieck\" src=\"/legacy-assets/own_website/img/math/gleichseitiges_dreieck.png\">"
+      "html": "`h = sqrt(3&middot;a/2)`<br>\r\n\t\t\t\t\t`A = a&middot;h/2`<br>\r\n\t\t\t\t\t`U = 3a`"
     },
     {
       "id": "trapez",
       "title": "Trapez",
-      "html": "`A = 1/2&middot;(a + c) &middot;h = (a + c)&middot;h/2`<br>\r\n\t\t\t\t\t`U = a + b + c + d` <img alt=\"Trapez\" src=\"/legacy-assets/own_website/img/math/trapez.png\">"
+      "html": "`A = 1/2&middot;(a + c) &middot;h = (a + c)&middot;h/2`<br>\r\n\t\t\t\t\t`U = a + b + c + d`"
     },
     {
       "id": "glschenk-trapez",
       "title": "Gleichschenkliges Trapez",
-      "html": "`A = (a + c) &middot;h/2`<br>\r\n\t\t\t\t\t`b = sqrt(h^2 + (a - c)^2 / 4)`<br>\r\n\t\t\t\t\tPythagoras: `b^2 = h^2 + (a – c)^2/4`<br>\r\n\t\t\t\t\t`U = a + c + 2b` <img alt=\"Gleichschenkliges Trapez\" src=\"/legacy-assets/own_website/img/math/gleichschenkliges_trapez.png\">"
+      "html": "`A = (a + c) &middot;h/2`<br>\r\n\t\t\t\t\t`b = sqrt(h^2 + (a - c)^2 / 4)`<br>\r\n\t\t\t\t\tPythagoras: `b^2 = h^2 + (a – c)^2/4`<br>\r\n\t\t\t\t\t`U = a + c + 2b`"
     },
     {
       "id": "kreis",

@@ -5,6 +5,12 @@
 export function convertLegacyTexToLatex(tex: string): string {
   let s = tex.trim().replace(/&middot;/g, '\\cdot ')
 
+  // Legacy: Kreisformeln mit p statt π (Zins-p mit /100 bleibt unberührt)
+  s = s.replace(/\\cdot\s+p\s+\\cdot\s+r(\^2)?/g, '\\cdot \\pi \\cdot r$1')
+  s = s.replace(/\\cdot\s+p\s+\\cdot\s+d(\^2)?/g, '\\cdot \\pi \\cdot d$1')
+  s = s.replace(/=\s+p\s+\\cdot\s+r\b/g, '= \\pi \\cdot r')
+  s = s.replace(/\bpi\b/g, '\\pi')
+
   // K_(VERZINST) → K_{\text{VERZINST}}
   s = s.replace(/_\(([^)]+)\)/g, '_{\\text{$1}}')
 

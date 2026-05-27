@@ -1,8 +1,13 @@
 import { convertLegacyTexToLatex } from '@/lib/legacyTex'
 
+/** Entfernt eingebettete Legacy-Mathe-PNGs (ersetzt durch SVG-Skizzen). */
+export function stripMathImages(html: string): string {
+  return html.replace(/<img[^>]*\/img\/math\/[^>]*>/gi, '').trim()
+}
+
 /** Backtick-TeX aus dem Legacy-Portfolio → MathJax-inline. */
 export function prepareMathHtml(html: string): string {
-  return html.replace(/`([^`]+)`/g, (_, tex: string) => {
+  return stripMathImages(html).replace(/`([^`]+)`/g, (_, tex: string) => {
     const latex = convertLegacyTexToLatex(tex)
     return `\\(${latex}\\)`
   })

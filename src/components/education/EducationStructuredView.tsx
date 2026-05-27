@@ -1,6 +1,9 @@
 import type { StructuredEducationFloor } from '@/types/education'
 import { decodeHtmlEntities } from '@/lib/decodeHtmlEntities'
 import { prepareMathHtml, rewriteLegacyImagePaths } from '@/lib/mathHtml'
+import EducationFigure, { hasEducationFigure } from '@/components/education/figures/EducationFigure'
+import MathHtml from '@/components/education/MathHtml'
+import PracticeExercise from '@/components/education/PracticeExercise'
 
 function FieldBlock({
   label,
@@ -23,7 +26,7 @@ function HtmlField({ label, html }: { label: string; html: string }) {
   const prepared = prepareMathHtml(rewriteLegacyImagePaths(html, 'portfolio'))
   return (
     <FieldBlock label={label}>
-      <div dangerouslySetInnerHTML={{ __html: prepared }} />
+      <MathHtml html={prepared} />
     </FieldBlock>
   )
 }
@@ -50,25 +53,36 @@ export default function EducationStructuredView({ floor }: { floor: StructuredEd
             {decodeHtmlEntities(section.title)}
           </h2>
 
+          {section.introHtml?.replace(/\s/g, '') && (
+            <div className="theme-bg-card border theme-border rounded-xl p-4">
+              <MathHtml
+                html={prepareMathHtml(rewriteLegacyImagePaths(section.introHtml, 'portfolio'))}
+                className="text-sm theme-text leading-relaxed"
+              />
+            </div>
+          )}
+
           <div className="space-y-3">
             {section.entries.map((entry) => (
               <details
                 key={entry.id}
                 id={entry.id}
                 className="theme-bg-card border theme-border rounded-xl overflow-hidden group"
-                open
               >
                 <summary className="cursor-pointer list-none px-4 py-3 font-semibold text-lg theme-text bg-black/[0.02] dark:bg-white/[0.03] [&::-webkit-details-marker]:hidden">
                   {decodeHtmlEntities(entry.subtitle)}
                 </summary>
                 <ul className="list-none m-0 p-0">
+                  {hasEducationFigure(entry.id) && (
+                    <FieldBlock label="Skizze">
+                      <EducationFigure figureId={entry.id} question={entry.question} />
+                    </FieldBlock>
+                  )}
                   {entry.description && (
                     <HtmlField label="Beschreibung" html={entry.description} />
                   )}
-                  {entry.tableHtml && (
-                    <HtmlField label="Tabelle" html={entry.tableHtml} />
-                  )}
-                  {entry.imageSrc && (
+                  {entry.tableHtml && <HtmlField label="Tabelle" html={entry.tableHtml} />}
+                  {entry.imageSrc && !hasEducationFigure(entry.id) && (
                     <FieldBlock label="Grafik">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
@@ -85,7 +99,7 @@ export default function EducationStructuredView({ floor }: { floor: StructuredEd
                     <HtmlField label="Zusatz" html={entry.supplement} />
                   )}
                   {entry.question?.replace(/\s/g, '') && (
-                    <HtmlField label="Frage" html={entry.question} />
+                    <HtmlField label="Beispielaufgabe" html={entry.question} />
                   )}
                   {entry.calculation?.replace(/<[^>]+>/g, '').trim() && (
                     <HtmlField label="Rechnung" html={entry.calculation} />
@@ -94,6 +108,11 @@ export default function EducationStructuredView({ floor }: { floor: StructuredEd
                     <HtmlField label="Antwort" html={entry.answer} />
                   )}
                   {entry.note?.replace(/\s/g, '') && <HtmlField label="Merke" html={entry.note} />}
+                  {entry.practice && (
+                    <li className="border-t theme-border px-4 py-3">
+                      <PracticeExercise task={entry.practice} />
+                    </li>
+                  )}
                 </ul>
               </details>
             ))}

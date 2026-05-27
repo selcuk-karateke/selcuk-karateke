@@ -5,13 +5,16 @@ import { legacyAssetScopes } from '../src/data/legacyAssets'
 const REPO_ROOT = process.cwd()
 const OUT_ROOT = path.join(REPO_ROOT, 'public', 'legacy-assets')
 
-function copyDir(src: string, dest: string) {
+const SKIP_IMG_SUBDIRS = new Set(['math'])
+
+function copyDir(src: string, dest: string, skipSubdirs = false) {
   if (!fs.existsSync(src)) return
   fs.mkdirSync(dest, { recursive: true })
   for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
+    if (skipSubdirs && entry.isDirectory() && SKIP_IMG_SUBDIRS.has(entry.name)) continue
     const from = path.join(src, entry.name)
     const to = path.join(dest, entry.name)
-    if (entry.isDirectory()) copyDir(from, to)
+    if (entry.isDirectory()) copyDir(from, to, skipSubdirs)
     else fs.copyFileSync(from, to)
   }
 }
@@ -32,8 +35,9 @@ for (const scope of legacyAssetScopes) {
       console.warn(`[skip] ${scope.source}/${folder} — not found at ${src}`)
       continue
     }
-    copyDir(src, dest)
-    console.log(`[ok] ${scope.source}/${folder}`)
+    const skipMath = folder === 'img'
+    copyDir(src, dest, skipMath)
+    console.log(`[ok] ${scope.source}/${folder}${skipMath ? ' (ohne math/)' : ''}`)
   }
 }
 

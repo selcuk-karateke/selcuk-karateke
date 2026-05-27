@@ -1,11 +1,23 @@
 import fs from 'fs'
 import path from 'path'
+import { enrichExercise } from '@/data/exerciseEnrichment'
+import { applyAutoExerciseEnrichment } from '@/lib/autoEnrichExercise'
 import type { ProseEducationFloor } from '@/types/education'
 
 export function loadExerciseContent(slug: string): ProseEducationFloor | null {
   const jsonPath = path.join(process.cwd(), 'content', 'exercises', 'portfolio', `${slug}.json`)
-  if (!fs.existsSync(jsonPath)) return null
-  return JSON.parse(fs.readFileSync(jsonPath, 'utf8')) as ProseEducationFloor
+  if (!fs.existsSync(jsonPath)) {
+    const empty: ProseEducationFloor = {
+      kind: 'prose',
+      entryId: 0,
+      sections: [],
+      toc: [],
+      headings: [],
+    }
+    return applyAutoExerciseEnrichment(enrichExercise(empty, slug), slug)
+  }
+  const raw = JSON.parse(fs.readFileSync(jsonPath, 'utf8')) as ProseEducationFloor
+  return applyAutoExerciseEnrichment(enrichExercise(raw, slug), slug)
 }
 
 export function loadExerciseRawHtml(slug: string): string | null {

@@ -23,7 +23,8 @@ export default async function UebungPage({ params }: { params: Promise<{ slug: s
     (r) => r.source === 'portfolio' && r.route === meta.legacyRoute
   )
 
-  const useRaw = slug === 'index' || (prose && prose.sections.length === 0 && rawHtml)
+  const useRaw =
+    slug !== 'index' && prose && prose.sections.length === 0 && Boolean(rawHtml)
 
   return (
     <div className="min-h-screen theme-bg">

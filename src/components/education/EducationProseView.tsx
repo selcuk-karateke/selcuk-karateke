@@ -1,6 +1,9 @@
 import type { ProseEducationFloor } from '@/types/education'
 import { decodeHtmlEntities } from '@/lib/decodeHtmlEntities'
 import { prepareMathHtml, rewriteLegacyImagePaths } from '@/lib/mathHtml'
+import EducationFigure, { hasEducationFigure } from '@/components/education/figures/EducationFigure'
+import MathHtml from '@/components/education/MathHtml'
+import PracticeExercise from '@/components/education/PracticeExercise'
 
 export default function EducationProseView({
   floor,
@@ -37,17 +40,33 @@ export default function EducationProseView({
           key={section.id}
           id={section.id}
           className="theme-bg-card border theme-border rounded-xl group"
-          open
         >
           <summary className="cursor-pointer list-none p-4 font-semibold text-lg theme-text [&::-webkit-details-marker]:hidden">
             {decodeHtmlEntities(section.title)}
           </summary>
-          <div
-            className="education-prose px-4 pb-5 pt-0 theme-text border-t theme-border text-sm leading-relaxed"
-            dangerouslySetInnerHTML={{
-              __html: prepareMathHtml(rewriteLegacyImagePaths(section.html, imageSource)),
-            }}
-          />
+          <div className="border-t theme-border">
+            {(section.figureId || hasEducationFigure(section.id)) && (
+              <div className="px-4 pt-4">
+                <p className="text-xs font-semibold uppercase tracking-wide theme-text-secondary mb-2">
+                  Skizze
+                </p>
+                <EducationFigure
+                  figureId={section.figureId ?? section.id}
+                />
+              </div>
+            )}
+            {section.html?.replace(/\s/g, '') && (
+              <MathHtml
+                html={prepareMathHtml(rewriteLegacyImagePaths(section.html, imageSource))}
+                className="education-prose px-4 py-4 theme-text text-sm leading-relaxed"
+              />
+            )}
+            {section.practice && (
+              <div className="px-4 pb-4">
+                <PracticeExercise task={section.practice} />
+              </div>
+            )}
+          </div>
         </details>
       ))}
     </article>

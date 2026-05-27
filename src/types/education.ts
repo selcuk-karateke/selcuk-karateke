@@ -1,3 +1,9 @@
+export interface PracticeTask {
+  prompt: string
+  hint?: string
+  solution: string
+}
+
 export interface EducationSubEntry {
   id: string
   subtitle: string
@@ -11,11 +17,14 @@ export interface EducationSubEntry {
   imageSrc?: string
   imageAlt?: string
   tableHtml?: string
+  practice?: PracticeTask
 }
 
 export interface EducationSection {
   title: string
   entries: EducationSubEntry[]
+  /** Absatz direkt unter der Abschnitts-Überschrift (z. B. Dreisatz-Grundformel). */
+  introHtml?: string
 }
 
 export interface StructuredEducationFloor {
@@ -25,10 +34,19 @@ export interface StructuredEducationFloor {
   introHeadings: string[]
 }
 
+export interface ProseSection {
+  id: string
+  title: string
+  html: string
+  practice?: PracticeTask
+  /** SVG-Skizze aus Anreicherung (z. B. ee-series, topo-bus). */
+  figureId?: string
+}
+
 export interface ProseEducationFloor {
   kind: 'prose'
   entryId: number
-  sections: { id: string; title: string; html: string }[]
+  sections: ProseSection[]
   toc: { href: string; label: string }[]
   headings: string[]
 }

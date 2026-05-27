@@ -59,8 +59,7 @@
           "question": "Wie groß ist der Flächeninhalt eines Quadrats mit der Seitenlänge `a=4m`?",
           "calculation": "<pre>\r\na * a = a²\r\n4 cm * 4 cm = 16 cm²\r\n</pre>",
           "answer": "Der Fläche ist 16 cm².",
-          "note": "",
-          "imageSrc": "/legacy-assets/portfolio/img/math/quadrat.png"
+          "note": ""
         },
         {
           "id": "test",
@@ -70,55 +69,40 @@
           "question": "",
           "calculation": "<pre>\r\n</pre>",
           "answer": "",
-          "note": "",
-          "imageSrc": "/legacy-assets/portfolio/img/math/quadrat.png"
+          "note": ""
         },
         {
           "id": "rechteck",
-          "subtitle": "Rechteck",
-          "imageSrc": "/legacy-assets/portfolio/img/math/rechteck.png",
-          "imageAlt": "Rechteck"
+          "subtitle": "Rechteck"
         },
         {
           "id": "parallelogramm",
           "subtitle": "Parallelogramm",
-          "imageSrc": "/legacy-assets/portfolio/img/math/parallelogramm.png",
-          "imageAlt": "Parallelogramm",
           "formula": "`A = g&middot;h`<br>\r\n\t`U = 2a + 2b`"
         },
         {
           "id": "dreieck",
           "subtitle": "Dreieck",
-          "imageSrc": "/legacy-assets/portfolio/img/math/dreieck.png",
-          "imageAlt": "Dreieck",
           "formula": "`A = 1/2&middot;c&middot;h_c = c&middot;h_c/2`<br>\r\n\t`U = a + b + c`"
         },
         {
           "id": "glschenk-dreieck",
           "subtitle": "Gleichschenkliges Dreieck",
-          "imageSrc": "/legacy-assets/portfolio/img/math/gleichschenkliges_dreieck.png",
-          "imageAlt": "Gleichschenkliges Dreieck",
           "formula": "`h = sqrt(s^2 - (a/2)^2)`<br>\r\n\tPythagoras: `(a/2)^2 + h^2 = s^2` bzw. `a^2/4 + h^2 = s^2`<br>\r\n\t`A = a&middot;h/2`<br>\r\n\t`U = a + 2s`"
         },
         {
           "id": "glseit-dreieck",
           "subtitle": "Gleichseitiges Dreieck",
-          "imageSrc": "/legacy-assets/portfolio/img/math/gleichseitiges_dreieck.png",
-          "imageAlt": "Gleichseitiges Dreieck",
           "formula": "`h = sqrt(3&middot;a/2)`<br>\r\n\t`A = a&middot;h/2`<br>\r\n\t`U = 3a`"
         },
         {
           "id": "trapez",
           "subtitle": "Trapez",
-          "imageSrc": "/legacy-assets/portfolio/img/math/trapez.png",
-          "imageAlt": "Trapez",
           "formula": "`A = 1/2&middot;(a + c) &middot;h = (a + c)&middot;h/2`<br>\r\n\t`U = a + b + c + d`"
         },
         {
           "id": "glschenk-trapez",
           "subtitle": "Gleichschenkliges Trapez",
-          "imageSrc": "/legacy-assets/portfolio/img/math/gleichschenkliges_trapez.png",
-          "imageAlt": "Gleichschenkliges Trapez",
           "formula": "`A = (a + c) &middot;h/2`<br>\r\n\t`b = sqrt(h^2 + (a - c)^2 / 4)`<br>\r\n\tPythagoras: `b^2 = h^2 + (a – c)^2/4`<br>\r\n\t`U = a + c + 2b`"
         },
         {
@@ -197,7 +181,8 @@
           "id": "col24Content",
           "subtitle": "leer"
         }
-      ]
+      ],
+      "introHtml": "<p>`a/b = c/x` | umstellen | `x = (c*b)/a`</p>"
     },
     {
       "title": "Prozent- /Zinsrechnung",
@@ -247,7 +232,8 @@
           "subtitle": "Zeit",
           "formula": "<p>`m = Z * 1200 / K * p`</p>\r\n\t\t<p>`t = Z * 36000 / K * p`</p>"
         }
-      ]
+      ],
+      "introHtml": "<p></p>"
     },
     {
       "title": "Zinseszins",
@@ -288,7 +274,8 @@
           "id": "col40Content",
           "subtitle": "leer"
         }
-      ]
+      ],
+      "introHtml": "<p></p>"
     }
   ],
   "introHeadings": [

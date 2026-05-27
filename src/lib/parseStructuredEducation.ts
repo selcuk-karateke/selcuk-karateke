@@ -24,7 +24,7 @@ function parseListItem(liHtml: string, entry: EducationSubEntry): void {
 
   if (lower.startsWith('grafik') || /<img/i.test(liHtml)) {
     const img = liHtml.match(/<img[^>]*src="([^"]+)"[^>]*(?:alt="([^"]*)")?/i)
-    if (img) {
+    if (img && !/\/img\/math\//i.test(img[1])) {
       entry.imageSrc = rewriteLegacyImagePaths(img[1], 'portfolio')
       entry.imageAlt = img[2]
     }
@@ -69,7 +69,7 @@ function parseCollapseInner(subtitle: string, id: string, innerHtml: string): Ed
   }
 
   const img = innerHtml.match(/<img[^>]*src="([^"]+)"[^>]*(?:alt="([^"]*)")?/i)
-  if (img) {
+  if (img && !/\/img\/math\//i.test(img[1])) {
     entry.imageSrc = rewriteLegacyImagePaths(img[1], 'portfolio')
     entry.imageAlt = img[2] ?? subtitle
   }
@@ -84,6 +84,14 @@ function parseCollapseInner(subtitle: string, id: string, innerHtml: string): Ed
   }
 
   return entry
+}
+
+function extractAfterH2(block: string): string | undefined {
+  const m = block.match(/<h2[^>]*>[\s\S]*?<\/h2>\s*([\s\S]*)/i)
+  if (!m) return undefined
+  const rest = m[1].replace(/<\/div>\s*$/i, '').trim()
+  if (!rest || /^<div class="collapse"/i.test(rest)) return undefined
+  return rest
 }
 
 function extractCollapses(block: string): { id: string; subtitle: string; inner: string }[] {
@@ -136,7 +144,8 @@ export function parseStructuredEducationHtml(html: string): {
     if (h2Match && collapses.length === 0) {
       const title = stripTags(h2Match[1])
       introHeadings.push(title)
-      currentSection = { title, entries: [] }
+      const introHtml = extractAfterH2(block)
+      currentSection = { title, entries: [], introHtml }
       sections.push(currentSection)
       continue
     }

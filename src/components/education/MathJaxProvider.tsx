@@ -1,28 +1,18 @@
 'use client'
 
 import Script from 'next/script'
-import { useEffect } from 'react'
 
 declare global {
   interface Window {
     MathJax?: {
       typesetPromise?: (elements?: Element[]) => Promise<void>
+      typesetClear?: (elements?: Element[]) => void
       startup?: { promise: Promise<void> }
     }
   }
 }
 
 export default function MathJaxProvider({ children }: { children: React.ReactNode }) {
-  useEffect(() => {
-    const run = async () => {
-      if (window.MathJax?.startup?.promise) {
-        await window.MathJax.startup.promise
-      }
-      await window.MathJax?.typesetPromise?.()
-    }
-    void run()
-  })
-
   return (
     <>
       <Script id="mathjax-config" strategy="beforeInteractive">
@@ -33,16 +23,17 @@ export default function MathJaxProvider({ children }: { children: React.ReactNod
               displayMath: [['\\\\[', '\\\\]']],
               processEscapes: true
             },
-            options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+            startup: { typeset: false },
+            options: {
+              skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+              renderActions: { addMenu: [0, '', ''] }
+            }
           };
         `}
       </Script>
       <Script
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
-        strategy="afterInteractive"
-        onLoad={() => {
-          void window.MathJax?.typesetPromise?.()
-        }}
+        strategy="lazyOnload"
       />
       {children}
     </>
