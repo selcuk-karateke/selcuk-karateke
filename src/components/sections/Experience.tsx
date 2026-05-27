@@ -26,15 +26,25 @@ export default function Experience() {
         const mockExperiences: Experience[] = [
             {
                 id: '1',
-                company: 'Bagobag GmbH',
-                position: 'PHP Developer',
-                description: 'Development of PHP-based web applications with focus on product management and HTML5. Working with modern frameworks and technologies.',
-                startDate: '2020-01',
+                company: 'Kawai Labs',
+                position: 'Self-employed / Freelance Developer',
+                description: 'Independent software development, consulting, and project delivery. Full-stack development, integrations, and technical project leadership.',
+                startDate: '2025-02',
                 current: true,
                 location: 'Berlin'
             },
             {
                 id: '2',
+                company: 'Bagobag GmbH',
+                position: 'PHP Developer',
+                description: 'Development of PHP-based web applications with focus on product management and HTML5. Working with modern frameworks and technologies.',
+                startDate: '2020-01',
+                endDate: '2025-01',
+                current: false,
+                location: 'Berlin'
+            },
+            {
+                id: '4',
                 company: 'Comhard GmbH',
                 position: 'IT Specialist Application Development (Retraining)',
                 description: 'Retraining as IT Specialist with IHK certification. Specialization: Application Development. 2,640 training hours in 9 modules: Business and Business Processes, Communication, IT Systems, Networked IT Systems, Application Development (Java, C#, PHP, HTML/CSS, Databases), Project Work and Corporate Internship.',

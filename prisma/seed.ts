@@ -85,11 +85,20 @@ async function main() {
     // Create sample experience
     const experiences = [
         {
+            company: 'Kawai Labs',
+            position: 'Selbstständig / Freelance Developer',
+            description: 'Unabhängige Softwareentwicklung, Beratung und Projektabwicklung. Full-Stack-Entwicklung, Integrationen und technische Projektleitung.',
+            startDate: new Date('2025-02-01'),
+            current: true,
+            location: 'Berlin'
+        },
+        {
             company: 'Bagobag GmbH',
             position: 'PHP-Entwickler',
             description: 'Entwicklung von PHP-basierten Webanwendungen mit Fokus auf Produktmanagement und HTML5. Arbeit mit modernen Frameworks und Technologien.',
             startDate: new Date('2020-01-01'),
-            current: true,
+            endDate: new Date('2025-01-31'),
+            current: false,
             location: 'Berlin'
         },
         {

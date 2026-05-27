@@ -1,163 +1,142 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { ArrowTopRightOnSquareIcon, CodeBracketIcon } from '@heroicons/react/24/outline'
+import { UserGroupIcon } from '@heroicons/react/24/outline'
+import ProjectCard from '@/components/projects/ProjectCard'
+import {
+  professionalProjects,
+  featuredProjects,
+  guidedProjects,
+  PROJECT_CATEGORIES,
+  type ProjectCategory,
+} from '@/data/projects'
 
-interface Project {
-    id: string
-    title: string
-    description: string
-    technologies: string[]
-    githubUrl?: string
-    liveUrl?: string
-    featured: boolean
-}
+const CATEGORY_ORDER: ProjectCategory[] = [
+  'platforms',
+  'integrations',
+  'ecommerce',
+  'ml-data',
+  'internal-tools',
+  'content-media',
+  'frontend-perf',
+  'data-import',
+  'other',
+]
 
 export default function ProjectsPage() {
-    const [projects, setProjects] = useState<Project[]>([])
+  const [filter, setFilter] = useState<ProjectCategory | 'all' | 'featured'>('featured')
 
-    useEffect(() => {
-        // Mock data - in production, this would come from the API
-        const mockProjects: Project[] = [
-            {
-                id: '1',
-                title: 'Laravel Backend',
-                description: 'Robustes Laravel Backend mit API-Entwicklung und Datenbankintegration. Vollständige REST API mit Authentifizierung und Autorisierung.',
-                technologies: ['Laravel', 'PHP', 'MySQL', 'API', 'Authentication'],
-                githubUrl: 'https://github.com/selcuk-karateke/laravel-backend',
-                liveUrl: undefined,
-                featured: true
-            },
-            {
-                id: '2',
-                title: 'Counter App',
-                description: 'Interaktive Counter-Anwendung mit modernem UI/UX Design. Demonstrates state management und responsive design principles.',
-                technologies: ['PHP', 'JavaScript', 'HTML5', 'CSS3'],
-                githubUrl: 'https://github.com/selcuk-karateke/counter',
-                liveUrl: undefined,
-                featured: true
-            },
-            {
-                id: '3',
-                title: 'Event Einladung',
-                description: 'Event Management System für Einladungen und Veranstaltungen. Features include RSVP tracking und guest management.',
-                technologies: ['JavaScript', 'HTML5', 'CSS3', 'Event Management'],
-                githubUrl: 'https://github.com/selcuk-karateke/event-einladung',
-                liveUrl: undefined,
-                featured: true
-            },
-            {
-                id: '4',
-                title: 'Dev Environment',
-                description: 'Lokale Entwicklungsumgebung mit Docker und automatisierten Deployment-Skripten. Optimiert für PHP-Entwicklung.',
-                technologies: ['PHP', 'Docker', 'Development Environment', 'Automation'],
-                githubUrl: 'https://github.com/selcuk-karateke/dev.karafinds.local',
-                liveUrl: undefined,
-                featured: false
-            },
-            {
-                id: '5',
-                title: 'GitHub Profile',
-                description: 'Konfigurationsdateien für GitHub-Profil mit automatisierten README-Updates und Contribution-Graph.',
-                technologies: ['GitHub Actions', 'Markdown', 'Automation', 'Profile'],
-                githubUrl: 'https://github.com/selcuk-karateke/selcuk-karateke',
-                liveUrl: 'https://github.com/selcuk-karateke',
-                featured: false
-            },
-            {
-                id: '6',
-                title: 'Portfolio Website',
-                description: 'Moderne Portfolio-Website mit Next.js, TypeScript und Tailwind CSS. Features: CMS, Blog, Kontaktformular und responsive Design.',
-                technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'NextAuth.js'],
-                githubUrl: 'https://github.com/selcuk-karateke/portfolio-selcuk',
-                liveUrl: 'https://selcuk-karateke.dev',
-                featured: true
-            }
-        ]
-        setProjects(mockProjects)
-    }, [])
+  const displayed = useMemo(() => {
+    if (filter === 'all') return professionalProjects
+    if (filter === 'featured') return featuredProjects
+    return professionalProjects.filter((p) => p.category === filter)
+  }, [filter])
 
-    return (
-        <div className="min-h-screen bg-gray-50">
-            <div className="container mx-auto px-4 py-16">
+  return (
+    <div className="min-h-screen theme-bg">
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-10"
+        >
+          <h1 className="text-4xl md:text-5xl font-bold theme-text mb-4">Projects</h1>
+          <p className="text-xl theme-text-secondary max-w-2xl mx-auto">
+            {professionalProjects.length} professional projects — platforms, integrations, tools, and automation.
+          </p>
+        </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project, index) => (
-                        <motion.div
-                            key={project.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-                        >
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                                    {project.title}
-                                </h3>
-
-                                <p className="text-gray-600 mb-4 line-clamp-3">
-                                    {project.description}
-                                </p>
-
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    {project.technologies.map((tech, techIndex) => (
-                                        <span
-                                            key={techIndex}
-                                            className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs"
-                                        >
-                                            {tech}
-                                        </span>
-                                    ))}
-                                </div>
-
-                                <div className="flex space-x-3">
-                                    {project.githubUrl && (
-                                        <a
-                                            href={project.githubUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-flex items-center px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-800 transition-colors"
-                                        >
-                                            <CodeBracketIcon className="w-4 h-4 mr-2" />
-                                            Code
-                                        </a>
-                                    )}
-                                    {project.liveUrl && (
-                                        <a
-                                            href={project.liveUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
-                                        >
-                                            <ArrowTopRightOnSquareIcon className="w-4 h-4 mr-2" />
-                                            Live Demo
-                                        </a>
-                                    )}
-                                </div>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.8 }}
-                    className="text-center mt-12"
-                >
-                    <p className="text-gray-600 mb-4">
-                        Interested in a project or have questions?
-                    </p>
-                    <Link
-                        href="/contact"
-                        className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                    >
-                        Get in Touch
-                    </Link>
-                </motion.div>
-            </div>
+        <div className="flex flex-wrap justify-center gap-2 mb-12">
+          <FilterBtn active={filter === 'featured'} onClick={() => setFilter('featured')}>
+            Featured ({featuredProjects.length})
+          </FilterBtn>
+          <FilterBtn active={filter === 'all'} onClick={() => setFilter('all')}>
+            All ({professionalProjects.length})
+          </FilterBtn>
+          {CATEGORY_ORDER.map((cat) => {
+            const count = professionalProjects.filter((p) => p.category === cat).length
+            if (count === 0) return null
+            return (
+              <FilterBtn key={cat} active={filter === cat} onClick={() => setFilter(cat)}>
+                {PROJECT_CATEGORIES[cat].label} ({count})
+              </FilterBtn>
+            )
+          })}
         </div>
-    )
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {displayed.map((project, index) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: Math.min(index * 0.03, 0.4) }}
+            >
+              <ProjectCard project={project} compact />
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="theme-bg-card rounded-xl border-2 border-dashed border-blue-300 dark:border-blue-700 p-8 md:p-12"
+        >
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div>
+              <h2 className="text-2xl font-bold theme-text mb-2 flex items-center gap-2">
+                <UserGroupIcon className="w-8 h-8" />
+                Project Leadership & Technical Acceptance
+              </h2>
+              <p className="theme-text-secondary max-w-2xl">
+                {guidedProjects.length} guided projects — DataConverter, Prompt-Doc, Aufgabenverwaltung, and more.
+              </p>
+            </div>
+            <Link
+              href="/projects/leadership"
+              className="inline-flex items-center theme-primary-bg hover:opacity-90 text-white px-6 py-3 rounded-lg font-semibold shrink-0"
+            >
+              View Guided Projects →
+            </Link>
+          </div>
+        </motion.div>
+
+        <div className="text-center mt-16">
+          <Link
+            href="/contact"
+            className="inline-flex theme-primary-bg hover:opacity-90 text-white px-6 py-3 rounded-lg font-semibold"
+          >
+            Get in Touch
+          </Link>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function FilterBtn({
+  children,
+  active,
+  onClick,
+}: {
+  children: React.ReactNode
+  active: boolean
+  onClick: () => void
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+        active
+          ? 'theme-primary-bg text-white'
+          : 'theme-bg-card theme-text-secondary hover:theme-text border border-gray-200 dark:border-gray-700'
+      }`}
+    >
+      {children}
+    </button>
+  )
 }

@@ -44,8 +44,8 @@ export default function About() {
                                 <p>
                                     👋 Hi, I&apos;m Selçuk! As a software developer, I am motivated, ready and open to any
                                     programming language and environment. My journey began with training as a
-                                    computer science specialist at Comhard GmbH in Berlin and led me to my
-                                    current position as a PHP developer at Bagobag GmbH.
+                                    computer science specialist at Comhard GmbH in Berlin. I worked as a PHP developer
+                                    at Bagobag GmbH until 2025 and am now self-employed at Kawai Labs.
                                 </p>
                                 <p>
                                     👀 I&apos;m interested in coding - I passionately work with technologies like PHP, JavaScript,
@@ -80,8 +80,8 @@ export default function About() {
                         <div className="theme-secondary-bg rounded-2xl p-6 text-white card-hover shadow-sm">
                             <h4 className="text-xl font-bold mb-3">Current Position</h4>
                             <p className="text-white">
-                                PHP Developer<br />
-                                Bagobag GmbH (since 2020)
+                                Self-employed<br />
+                                Kawai Labs (since Feb 2025)
                             </p>
                         </div>
 
