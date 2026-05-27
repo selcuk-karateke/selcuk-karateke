@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import {
   ArrowUpIcon,
@@ -9,6 +10,8 @@ import {
 } from '@heroicons/react/24/solid'
 import { useTranslations } from 'next-intl'
 import { usePomodoro } from '@/components/pomodoro/PomodoroProvider'
+
+const TYPEDEAD_URL = 'https://www.typedead.com/'
 
 function ControlButton({
   label,
@@ -58,10 +61,29 @@ export default function PageFloatingControls() {
   const running = status === 'running'
 
   return (
-    <div
-      className="fixed bottom-5 right-5 z-[60] flex items-center gap-2"
-      aria-live="polite"
-    >
+    <>
+      <a
+        href={TYPEDEAD_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        title={t('typedeadLink')}
+        aria-label={t('typedeadLink')}
+        className="fixed bottom-5 left-5 z-[60] block rounded-md shadow-lg ring-1 ring-black/10 dark:ring-white/10 hover:ring-brand-primary/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary transition-shadow"
+      >
+        <Image
+          src="/typedead-favicon-32x32.png"
+          alt=""
+          width={32}
+          height={32}
+          className="rounded-md"
+          unoptimized
+        />
+      </a>
+
+      <div
+        className="fixed bottom-5 right-5 z-[60] flex items-center gap-2"
+        aria-live="polite"
+      >
       {active && (
         <div className="theme-bg-card border theme-border rounded-full px-3 h-11 flex items-center gap-2 shadow-lg text-sm font-mono theme-text">
           <span
@@ -111,6 +133,7 @@ export default function PageFloatingControls() {
           <ArrowUpIcon className="h-5 w-5" />
         </ControlButton>
       )}
-    </div>
+      </div>
+    </>
   )
 }

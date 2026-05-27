@@ -44,7 +44,8 @@
     "stop": "Zamanlayıcıyı durdur",
     "scrollTop": "Yukarı",
     "paused": "DURAKLAT",
-    "expiredConfirm": "Pomodoro bitti (EXPIRED). Sıfırlansın mı?"
+    "expiredConfirm": "Pomodoro bitti (EXPIRED). Sıfırlansın mı?",
+    "typedeadLink": "The Typing Dead — yazma oyununu aç"
   },
   "common": {
     "today": "bugün",

@@ -44,7 +44,8 @@
     "stop": "Stop timer",
     "scrollTop": "Back to top",
     "paused": "PAUSED",
-    "expiredConfirm": "Pomodoro finished (EXPIRED). Reset timer?"
+    "expiredConfirm": "Pomodoro finished (EXPIRED). Reset timer?",
+    "typedeadLink": "The Typing Dead — open typing game"
   },
   "common": {
     "today": "today",
