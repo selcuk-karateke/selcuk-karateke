@@ -21,6 +21,11 @@ import {
   formatOopOutput,
   type OopFormData,
 } from '@/lib/exerciseDemos/oopDemo'
+import { getExercise } from '@/data/exerciseCatalog'
+
+function exerciseTitle(slug: string, fallback = slug) {
+  return getExercise(slug)?.title ?? fallback
+}
 
 function Back() {
   return (
@@ -455,7 +460,7 @@ export function ElementeanzahlExercise() {
   )
 }
 
-export function FarbcodeExercise({ step = 51 }: { step?: number }) {
+export function FarbcodeExercise({ step = 51, title }: { step?: number; title?: string }) {
   const tables = []
   for (let b = 0; b < 256; b += step) {
     const rows = []
@@ -481,7 +486,7 @@ export function FarbcodeExercise({ step = 51 }: { step?: number }) {
   return (
     <>
       <Back />
-      <Card title="Farbtabelle RGB">
+      <Card title={title ?? exerciseTitle('farbcode', 'Farbtabelle RGB')}>
         <div className="overflow-auto">{tables}</div>
       </Card>
     </>
@@ -714,7 +719,7 @@ export function FileUploadExercise() {
   )
 }
 
-export function GetPostExercise() {
+export function GetPostExercise({ title }: { title?: string }) {
   const [method, setMethod] = useState<'GET' | 'POST'>('GET')
   const [fields, setFields] = useState({ name: '', age: '' })
   const [result, setResult] = useState<Record<string, string> | null>(null)
@@ -722,7 +727,7 @@ export function GetPostExercise() {
   return (
     <>
       <Back />
-      <Card title="GET / POST Request">
+      <Card title={title ?? exerciseTitle('getpostrequest', 'GET / POST Request')}>
         <div className="flex gap-2 mb-4">
           <button
             type="button"
@@ -822,7 +827,7 @@ export function NutzerprofilExercise() {
 const GEMUESE = ['Tomaten', 'Gurken', 'Kopfsalat', 'Mohrrüben', 'Spargel', 'Paprika']
 const OBST = ['Apfel', 'Birne', 'Pflaume', 'Erdbeeren', 'Himbeeren', 'Brombeeren']
 
-export function ObstgemueseExercise({ abfr = false }: { abfr?: boolean }) {
+export function ObstgemueseExercise({ abfr = false, title }: { abfr?: boolean; title?: string }) {
   const [selG, setSelG] = useState<string[]>(['Tomaten'])
   const [selO, setSelO] = useState<string[]>(['Apfel'])
   const [sent, setSent] = useState(false)
@@ -835,7 +840,14 @@ export function ObstgemueseExercise({ abfr = false }: { abfr?: boolean }) {
   return (
     <>
       <Back />
-      <Card title={abfr ? 'Obst/Gemüse Abfrage' : 'Obst / Gemüse'}>
+      <Card
+        title={
+          title ??
+          (abfr
+            ? exerciseTitle('obstgemuese-abfr', 'Obst / Gemüse Abfrage')
+            : exerciseTitle('obstgemuese', 'Obst / Gemüse'))
+        }
+      >
         {sent && (
           <div className="space-y-4 mb-4">
             {selG.length > 0 && (
@@ -1000,7 +1012,7 @@ export function EraseExercise() {
   return (
     <>
       <Back />
-      <Card title="Erase — Element entfernen">
+      <Card title={exerciseTitle('erase', 'Array-Element entfernen')}>
         <ul className="text-sm space-y-1 mb-4">
           {items.map((item) => (
             <li key={item} className="flex justify-between items-center border theme-border rounded px-3 py-1">
@@ -1035,7 +1047,7 @@ export function TestentityExercise() {
   return (
     <>
       <Back />
-      <Card title="Entity">
+      <Card title={exerciseTitle('testentity', 'Entity-Klasse')}>
         <form
           className="flex gap-2 mb-4"
           onSubmit={(e) => {
@@ -1082,7 +1094,7 @@ export function MultiFileUploadExercise() {
   return (
     <>
       <Back />
-      <Card title="Übung 16 — Mehrfach-Upload">
+      <Card title={exerciseTitle('exer-16', 'Mehrfach-Dateiupload')}>
         {previews.length > 0 && (
           <div className="grid grid-cols-2 gap-3 mb-4">
             {previews.map((p) => (
@@ -1148,7 +1160,7 @@ export function Exer18ProfileExercise() {
   return (
     <>
       <Back />
-      <Card title="Übung 18 — Profil serialisieren">
+      <Card title={exerciseTitle('exer-18', 'Profil serialisieren')}>
         {dump && (
           <pre className="text-xs theme-bg-secondary p-3 rounded mb-4 overflow-auto">{dump}</pre>
         )}
@@ -1179,16 +1191,39 @@ export function Exer18ProfileExercise() {
   )
 }
 
-export function ServerInfoExercise({ variant }: { variant: 'phpinfo' | 'server' | 'exer-13' }) {
+function useBrowserServerVars() {
+  const [vars, setVars] = useState({
+    host: 'localhost',
+    userAgent: 'Mozilla/5.0 …',
+  })
+
+  useEffect(() => {
+    setVars({
+      host: window.location.host,
+      userAgent: `${navigator.userAgent.slice(0, 60)}…`,
+    })
+  }, [])
+
+  return vars
+}
+
+export function ServerInfoExercise({
+  variant,
+  title,
+}: {
+  variant: 'phpinfo' | 'server' | 'exer-13'
+  title?: string
+}) {
   const [authed, setAuthed] = useState(variant !== 'exer-13')
   const [user, setUser] = useState('')
   const [pass, setPass] = useState('')
+  const browser = useBrowserServerVars()
 
   if (variant === 'exer-13' && !authed) {
     return (
       <>
         <Back />
-        <Card title="Übung 13 — HTTP Basic Auth">
+        <Card title={title ?? exerciseTitle('exer-13', 'Serverinfo (HTTP Basic Auth)')}>
           <p className="text-sm mb-3">Login: admin / admin</p>
           <form
             className="space-y-2 max-w-xs"
@@ -1220,20 +1255,26 @@ export function ServerInfoExercise({ variant }: { variant: 'phpinfo' | 'server' 
     )
   }
 
-  const serverRows =
-    typeof window !== 'undefined'
-      ? [
-          ['REMOTE_ADDR', '127.0.0.1'],
-          ['REQUEST_METHOD', 'GET'],
-          ['HTTP_HOST', window.location.host],
-          ['HTTP_USER_AGENT', navigator.userAgent.slice(0, 60) + '…'],
-        ]
-      : []
+  const serverRows = [
+    ['REMOTE_ADDR', '127.0.0.1'],
+    ['REQUEST_METHOD', 'GET'],
+    ['HTTP_HOST', browser.host],
+    ['HTTP_USER_AGENT', browser.userAgent],
+  ]
 
   return (
     <>
       <Back />
-      <Card title={variant === 'exer-13' ? 'Serverinfo' : variant === 'phpinfo' ? 'PHPInfo (Auszug)' : 'Server-Variablen'}>
+      <Card
+        title={
+          title ??
+          (variant === 'exer-13'
+            ? exerciseTitle('exer-13', 'Serverinfo (HTTP Basic Auth)')
+            : variant === 'phpinfo'
+              ? exerciseTitle('phpinfo', 'PHPInfo')
+              : exerciseTitle('server', 'Server-Variablen'))
+        }
+      >
         {variant === 'exer-13' && (
           <h3 className="text-sm mb-3">Ihr PC hat die IP-Adresse: 127.0.0.1</h3>
         )}
@@ -1242,7 +1283,7 @@ export function ServerInfoExercise({ variant }: { variant: 'phpinfo' | 'server' 
             {(variant === 'exer-13' ? serverRows : variant === 'server'
               ? [
                   ['REQUEST_METHOD', 'GET'],
-                  ['HTTP_HOST', typeof window !== 'undefined' ? window.location.host : 'localhost'],
+                  ['HTTP_HOST', browser.host],
                 ]
               : [
                   ['PHP Version', '8.x (Next.js — kein PHP-Runtime)'],
@@ -1284,7 +1325,7 @@ export function RegistrationFormExercise() {
   return (
     <>
       <Back />
-      <Card title="Übung 11 — Formularvalidierung">
+      <Card title={exerciseTitle('exer-11', 'Registrierungsformular mit Validierung')}>
         {ok && <p className="text-green-600 mb-4">Formular gültig — würde in DB gespeichert (Demo).</p>}
         <form onSubmit={submit} className="space-y-3 max-w-md">
           {(['firstname', 'lastname', 'email'] as const).map((name) => (

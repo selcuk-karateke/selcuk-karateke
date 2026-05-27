@@ -58,21 +58,21 @@ export default function ExerciseRunner({ meta }: { meta: ExerciseCatalogItem }) 
     case 'testentity':
       return <TestentityExercise />
     case 'farbcode':
-      return <FarbcodeExercise step={51} />
+      return <FarbcodeExercise step={51} title={meta.title} />
     case 'fileupload':
       return <FileUploadExercise />
     case 'getpostrequest':
-      return <GetPostExercise />
+      return <GetPostExercise title={meta.title} />
     case 'nutzerprofil':
       return <NutzerprofilExercise />
     case 'obstgemuese':
-      return <ObstgemueseExercise />
+      return <ObstgemueseExercise title={meta.title} />
     case 'obstgemuese-abfr':
-      return <ObstgemueseExercise abfr />
+      return <ObstgemueseExercise abfr title={meta.title} />
     case 'phpinfo':
-      return <ServerInfoExercise variant="phpinfo" />
+      return <ServerInfoExercise variant="phpinfo" title={meta.title} />
     case 'server':
-      return <ServerInfoExercise variant="server" />
+      return <ServerInfoExercise variant="server" title={meta.title} />
     case 'buecheranzeige':
       return <BooksTableExercise />
     case 'buechererfassung':
@@ -104,17 +104,17 @@ export default function ExerciseRunner({ meta }: { meta: ExerciseCatalogItem }) 
     case 'exer-11':
       return <RegistrationFormExercise />
     case 'exer-12':
-      return <FarbcodeExercise step={32} />
+      return <FarbcodeExercise step={32} title={meta.title} />
     case 'exer-13':
-      return <ServerInfoExercise variant="exer-13" />
+      return <ServerInfoExercise variant="exer-13" title={meta.title} />
     case 'exer-14':
-      return <ServerInfoExercise variant="phpinfo" />
+      return <ServerInfoExercise variant="phpinfo" title={meta.title} />
     case 'exer-15':
-      return <ObstgemueseExercise />
+      return <ObstgemueseExercise title={meta.title} />
     case 'exer-16':
       return <MultiFileUploadExercise />
     case 'exer-17':
-      return <GetPostExercise />
+      return <GetPostExercise title={meta.title} />
     case 'exer-18':
       return <Exer18ProfileExercise />
     default:

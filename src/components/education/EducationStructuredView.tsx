@@ -1,5 +1,6 @@
 import type { StructuredEducationFloor } from '@/types/education'
 import { decodeHtmlEntities } from '@/lib/decodeHtmlEntities'
+import { slugifyHeading } from '@/lib/toc/slugifyHeading'
 import { prepareMathHtml, rewriteLegacyImagePaths } from '@/lib/mathHtml'
 import EducationFigure, { hasEducationFigure } from '@/components/education/figures/EducationFigure'
 import MathHtml from '@/components/education/MathHtml'
@@ -47,8 +48,10 @@ export default function EducationStructuredView({ floor }: { floor: StructuredEd
         </div>
       )}
 
-      {floor.sections.map((section) => (
-        <section key={section.title} className="space-y-4">
+      {floor.sections.map((section) => {
+        const sectionId = slugifyHeading(section.title)
+        return (
+        <section key={section.title} id={sectionId} className="space-y-4 scroll-mt-28">
           <h2 className="text-2xl font-bold theme-text border-b theme-border pb-2">
             {decodeHtmlEntities(section.title)}
           </h2>
@@ -67,7 +70,7 @@ export default function EducationStructuredView({ floor }: { floor: StructuredEd
               <details
                 key={entry.id}
                 id={entry.id}
-                className="theme-bg-card border theme-border rounded-xl overflow-hidden group"
+                className="theme-bg-card border theme-border rounded-xl overflow-hidden group scroll-mt-28"
               >
                 <summary className="cursor-pointer list-none px-4 py-3 font-semibold text-lg theme-text bg-black/[0.02] dark:bg-white/[0.03] [&::-webkit-details-marker]:hidden">
                   {decodeHtmlEntities(entry.subtitle)}
@@ -118,7 +121,8 @@ export default function EducationStructuredView({ floor }: { floor: StructuredEd
             ))}
           </div>
         </section>
-      ))}
+        )
+      })}
     </div>
   )
 }

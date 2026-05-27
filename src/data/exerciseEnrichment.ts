@@ -72,7 +72,7 @@ export const exerciseEnrichment: Record<string, ExerciseEnrichment> = {
     sections: [
       {
         id: 'php-io',
-        title: 'PHP Input / Output',
+        title: 'Registrierungsformular mit Validierung',
         html: '<p>Übung zu Formularen: Daten mit <code>$_POST</code> lesen, validieren und ausgeben.</p>',
         practice: {
           prompt: 'Welche Superglobale enthält POST-Daten eines Formulars?',

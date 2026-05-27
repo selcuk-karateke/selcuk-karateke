@@ -36,14 +36,16 @@ export default async function EducationFloorPage({
 
   return (
     <div className="min-h-screen theme-bg">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <Link href="/education" className="text-sm theme-primary hover:opacity-80">
           ← Alle Stockwerke
         </Link>
         <header className="mt-3 mb-10">
           <p className="text-sm theme-text-secondary">Stockwerk {data.entryId}</p>
           <h1 className="text-4xl font-bold theme-text">{item.title}</h1>
-          <p className="theme-text-secondary mt-1">{item.subtitle}</p>
+          {item.subtitle && item.subtitle !== item.title && (
+            <p className="theme-text-secondary mt-1">{item.subtitle}</p>
+          )}
         </header>
 
         <EducationFloorBody

@@ -1,6 +1,8 @@
 import EducationProseView from '@/components/education/EducationProseView'
 import EducationRawHtml from '@/components/education/EducationRawHtml'
 import EducationStructuredView from '@/components/education/EducationStructuredView'
+import ContentWithToc from '@/components/toc/ContentWithToc'
+import { buildEducationToc } from '@/lib/toc/buildEducationToc'
 import type { EducationFloorData } from '@/types/education'
 
 export default function EducationFloorBody({
@@ -12,17 +14,18 @@ export default function EducationFloorBody({
   rawHtml: string | null
   imageSource: 'portfolio' | 'own_website'
 }) {
+  const toc = buildEducationToc(data)
+
+  let body: React.ReactNode
   if (data.kind === 'structured') {
-    return <EducationStructuredView floor={data} />
+    body = <EducationStructuredView floor={data} />
+  } else if (data.sections.length > 0) {
+    body = <EducationProseView floor={data} imageSource={imageSource} />
+  } else if (rawHtml) {
+    body = <EducationRawHtml html={rawHtml} imageSource={imageSource} />
+  } else {
+    body = <p className="theme-text-secondary">Kein Inhalt verfügbar.</p>
   }
 
-  if (data.sections.length > 0) {
-    return <EducationProseView floor={data} imageSource={imageSource} />
-  }
-
-  if (rawHtml) {
-    return <EducationRawHtml html={rawHtml} imageSource={imageSource} />
-  }
-
-  return <p className="theme-text-secondary">Kein Inhalt verfügbar.</p>
+  return <ContentWithToc items={toc}>{body}</ContentWithToc>
 }

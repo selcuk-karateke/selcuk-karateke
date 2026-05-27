@@ -30,13 +30,52 @@ function ow(
   return { slug, title, description, source: 'own_website', legacyRoute, feature }
 }
 
+/** Portfolio exer_11 … exer_18 — sprechende Titel statt „Übung N“. */
+const portfolioExerBlocks: Record<
+  11 | 12 | 13 | 14 | 15 | 16 | 17 | 18,
+  { title: string; description: string }
+> = {
+  11: {
+    title: 'Registrierungsformular mit Validierung',
+    description: 'Formular prüfen und Gästedaten in der Datenbank speichern',
+  },
+  12: {
+    title: 'Farbtabelle RGB (32er-Schritte)',
+    description: 'RGB-Matrix mit Blauanteil pro Tabelle',
+  },
+  13: {
+    title: 'Serverinfo (HTTP Basic Auth)',
+    description: '$_SERVER ausgeben — mit und ohne Zugangsschutz',
+  },
+  14: {
+    title: 'PHPInfo (geschützt)',
+    description: 'phpinfo() nach HTTP-Basic-Authentifizierung',
+  },
+  15: {
+    title: 'Obst und Gemüse (Kartenauswahl)',
+    description: 'Checkbox-Auswahl mit Bildkarten',
+  },
+  16: {
+    title: 'Mehrfach-Dateiupload',
+    description: 'Mehrere Bilder gleichzeitig hochladen',
+  },
+  17: {
+    title: 'GET, POST und REQUEST',
+    description: 'Superglobals $_GET, $_POST und $_REQUEST vergleichen',
+  },
+  18: {
+    title: 'Profil serialisieren',
+    description: 'Formulardaten mit serialize/unserialize in Datei speichern',
+  },
+}
+
 /** Alle importierbaren Übungsseiten — Portfolio zuerst, Website nur wo kein Duplikat. */
 export const exerciseCatalog: ExerciseCatalogItem[] = [
   pf('index', 'exer/index', 'Übungen — Übersicht', 'Pomodoro-Timer und Linkliste'),
   pf('netto-brutto', 'exer/nettoBrutto', 'Netto-/Bruttorechner'),
   pf('asso-array', 'exer/assoArray', 'Assoziatives Array'),
   pf('elementeanzahl', 'exer/elementeanzahl', 'Anzahl Elemente (FOR vs. FOREACH)'),
-  pf('erase', 'exer/erase', 'Erase'),
+  pf('erase', 'exer/erase', 'Array-Element entfernen', 'Element mit unset() löschen'),
   pf('json-uebungen', 'exer/exer/index', 'JSON, SOAP, XML und CSV'),
   pf('multiplikationsfunktion', 'exer/multiplikationsfunktion', 'Multiplikation'),
   pf('multiplikation-umleitung', 'exer/multiplikationstabelleumleiten', 'Multiplikationstabelle (Umleitung)'),
@@ -46,7 +85,7 @@ export const exerciseCatalog: ExerciseCatalogItem[] = [
   pf('pdotest', 'exer/pdotest', 'PDO Test — Bücher-Tabelle', 'Datenbankzugriff mit PDO', 'crud'),
   pf('buecheranzeige', 'exer/buecheranzeige', 'Bücheranzeige', 'Datenbank: Bücher anzeigen', 'crud'),
   pf('buechererfassung', 'exer/buechererfassung', 'Büchererfassung', 'Datenbank: Bücher erfassen', 'crud'),
-  pf('testentity', 'exer/testentity', 'Entity'),
+  pf('testentity', 'exer/testentity', 'Entity-Klasse', 'Einfaches Entity-Muster'),
   pf('galerie', 'exer/galerie/index', 'Bildergalerie', 'Galerie anzeigen', 'crud'),
   pf('galerie-upload', 'exer/galerie/upload', 'Galerie Upload', 'Bilder hochladen', 'crud'),
   pf('galerie-sql', 'exer/galerie/SQL-Anweisungen', 'Galerie DB Setup', 'Tabellen Besucher, Bilder, Bewertungen', 'crud'),
@@ -57,9 +96,10 @@ export const exerciseCatalog: ExerciseCatalogItem[] = [
   pf('news-kategorien', 'exer/news/kategorien', 'News Kategorien', 'Kategorien verwalten', 'crud'),
   pf('news-ereignisse', 'exer/news/ereignisse', 'News Ereignisse', 'Ereignisse verwalten', 'crud'),
   pf('news-bilder', 'exer/news/bilder', 'News Bilder', 'Bilder verwalten', 'crud'),
-  ...([11, 12, 13, 14, 15, 16, 17, 18] as const).map((n) =>
-    pf(`exer-${n}`, `exer/exer_${n}/index`, `Übung ${n}`)
-  ),
+  ...([11, 12, 13, 14, 15, 16, 17, 18] as const).map((n) => {
+    const block = portfolioExerBlocks[n]
+    return pf(`exer-${n}`, `exer/exer_${n}/index`, block.title, block.description)
+  }),
   // Website-only (kein Portfolio-Duplikat oder nur dort)
   ow('farbcode', 'exercise/farbcode', 'Farbtabelle'),
   ow('fileupload', 'exercise/fileupload', 'Fileupload', 'Datei hochladen', 'crud'),
@@ -67,8 +107,8 @@ export const exerciseCatalog: ExerciseCatalogItem[] = [
   ow('nutzerprofil', 'exercise/nutzerprofil', 'Nutzerprofil', 'Profil in Textdatei speichern'),
   ow('obstgemuese', 'exercise/obstgemuese', 'Obst / Gemüse'),
   ow('obstgemuese-abfr', 'exercise/obstgemuese_abfr', 'Obst / Gemüse Abfrage'),
-  ow('phpinfo', 'exercise/phpinfo', 'PHPInfo'),
-  ow('server', 'exercise/server', 'Server'),
+  ow('phpinfo', 'exercise/phpinfo', 'PHPInfo', 'PHP-Konfiguration anzeigen'),
+  ow('server', 'exercise/server', 'Server-Variablen', '$_SERVER im Auszug'),
   ow('multiplikationstabelle-ow', 'exercise/multiplikationstabelle', 'Multiplikationstabelle (Website)'),
 ]
 

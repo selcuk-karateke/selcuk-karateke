@@ -8,15 +8,15 @@ export interface EducationFloor {
 
 export const portfolioEducationFloors: EducationFloor[] = [
   { id: '1stFloor', title: 'Mathematik', subtitle: 'Zahlen, Flächen, Volumen, Zinsen — mit Formeln', source: 'portfolio', legacyRoute: 'educ/1stFloor' },
-  { id: '2ndFloor', title: '2. Stock', subtitle: 'Vokabeln', source: 'portfolio', legacyRoute: 'educ/2ndFloor' },
+  { id: '2ndFloor', title: 'Englisch', subtitle: 'Vokabeln', source: 'portfolio', legacyRoute: 'educ/2ndFloor' },
   { id: '3rdFloor', title: 'Spezielle Wirtschaftslehre', subtitle: 'SWL — Unternehmen, CI, Organisation', source: 'portfolio', legacyRoute: 'educ/3rdFloor' },
   { id: '4thFloor', title: 'Wirtschaftsrecht', subtitle: 'Rechtsordnung, Verträge, Kaufrecht', source: 'portfolio', legacyRoute: 'educ/4thFloor' },
   { id: '5thFloor', title: 'Netzwerke', subtitle: 'LAN, Topologie, Protokolle', source: 'portfolio', legacyRoute: 'educ/5thFloor' },
   { id: '6thFloor', title: 'Elektrotechnik', subtitle: 'Stromkreise, Ohmsches Gesetz', source: 'portfolio', legacyRoute: 'educ/6thFloor' },
-  { id: '7thFloor', title: '7. Stock', subtitle: 'Bildungsinhalte', source: 'portfolio', legacyRoute: 'educ/7thFloor' },
+  { id: '7thFloor', title: 'Java', subtitle: 'Begriffe, JDK/JRE, Algorithmen & OOP', source: 'portfolio', legacyRoute: 'educ/7thFloor' },
   { id: '8thFloor', title: 'Datenbanken', subtitle: 'DBMS, SQL, Normalformen', source: 'portfolio', legacyRoute: 'educ/8thFloor' },
-  { id: '9thFloor', title: '9. Stock', subtitle: 'Bildungsinhalte', source: 'portfolio', legacyRoute: 'educ/9thFloor' },
-  { id: '10thFloor', title: '10. Stock', subtitle: 'Bildungsinhalte', source: 'portfolio', legacyRoute: 'educ/10thFloor' },
+  { id: '9thFloor', title: 'JavaScript', subtitle: 'DOM, document.write & interaktive Beispiele', source: 'portfolio', legacyRoute: 'educ/9thFloor' },
+  { id: '10thFloor', title: 'Lern- und Arbeitstechniken', subtitle: 'Gedächtnis, Lernmethoden, Lerntypen', source: 'portfolio', legacyRoute: 'educ/10thFloor' },
 ]
 
 export const ownWebsiteFloors: EducationFloor[] = [
