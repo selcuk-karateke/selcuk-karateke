@@ -41,3 +41,12 @@ yarn-error.log*
 next-env.d.ts
 
 /src/generated/prisma
+
+# Internal documentation (local only, not for the website)
+API_ANALYSE.md
+DASHBOARD_ANALYSE.md
+INTERNS_ANALYSE.md
+TOOLS_ANALYSE.md
+PORTFOLIO_PROJEKTE_GRUPPIERT.md
+SOFTWARE_BESCHREIBUNG.md
+SOFTWARE_BESCHREIBUNG_Co.md
