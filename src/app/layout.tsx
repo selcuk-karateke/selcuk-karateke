@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { ReactNode } from 'react'
 import Link from 'next/link'
 import { Inter } from 'next/font/google'
@@ -9,6 +10,15 @@ import PageFloatingControls from '@/components/pomodoro/PageFloatingControls'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  metadataBase: new URL(profileContact.portfolioUrl),
+  title: {
+    default: 'Selçuk Karateke',
+    template: '%s | Selçuk Karateke',
+  },
+  description: `${profileContact.title} — Portfolio, Blog und Lerninhalte.`,
+}
 
 interface LayoutProps {
   children: ReactNode

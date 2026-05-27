@@ -41,6 +41,25 @@ const PomodoroContext = createContext<PomodoroContextValue | null>(null)
 
 const AUDIO_SRC = '/legacy-assets/portfolio/audio/piep.mp3'
 
+function playPiep(audio: HTMLAudioElement | null) {
+  if (!audio) return
+  audio.currentTime = 0
+  void audio.play().catch(() => {})
+}
+
+/** Browser erlauben Ton erst nach Nutzeraktion — einmalig „entsperren“. */
+function unlockAudio(audio: HTMLAudioElement | null) {
+  if (!audio) return
+  audio.volume = 1
+  void audio
+    .play()
+    .then(() => {
+      audio.pause()
+      audio.currentTime = 0
+    })
+    .catch(() => {})
+}
+
 function isWorkHours(now = new Date()) {
   const hour = now.getHours()
   return hour >= 8 && hour <= 16
@@ -59,6 +78,7 @@ export function PomodoroProvider({ children }: { children: ReactNode }) {
   const [tick, setTick] = useState(0)
   const baseTitleRef = useRef<string>('')
   const prevStatusRef = useRef<PomodoroStatus>('idle')
+  const piepRef = useRef<HTMLAudioElement | null>(null)
 
   const persist = useCallback((next: PomodoroPersistedState) => {
     setState(next)
@@ -67,11 +87,17 @@ export function PomodoroProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     baseTitleRef.current = document.title
+    const audio = new Audio(AUDIO_SRC)
+    audio.preload = 'auto'
+    piepRef.current = audio
     const stored = hydrateRunningState(readPomodoroState())
     prevStatusRef.current = stored.status
     setState(stored)
     writePomodoroState(stored)
     setHydrated(true)
+    return () => {
+      piepRef.current = null
+    }
   }, [])
 
   const remainingSeconds = useMemo(() => {
@@ -107,8 +133,7 @@ export function PomodoroProvider({ children }: { children: ReactNode }) {
     prevStatusRef.current = state.status
 
     if (prev === 'running' && state.status === 'expired') {
-      const audio = new Audio(AUDIO_SRC)
-      void audio.play().catch(() => {})
+      playPiep(piepRef.current)
       window.setTimeout(() => {
         if (window.confirm('Pomodoro abgelaufen (EXPIRED). Timer zurücksetzen?')) {
           persist(defaultPomodoroState())
@@ -119,6 +144,7 @@ export function PomodoroProvider({ children }: { children: ReactNode }) {
 
   const start = useCallback(
     (mode: PomodoroMode) => {
+      unlockAudio(piepRef.current)
       const seconds = POMODORO_DURATIONS[mode]
       persist({
         mode,
