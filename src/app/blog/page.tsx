@@ -47,7 +47,7 @@ export default function BlogPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen theme-bg py-12">
+      <div className="min-h-page theme-bg py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[var(--color-primary)] mx-auto" />
@@ -59,7 +59,7 @@ export default function BlogPage() {
   }
 
   return (
-    <div className="min-h-screen theme-bg py-12">
+    <div className="min-h-page theme-bg py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

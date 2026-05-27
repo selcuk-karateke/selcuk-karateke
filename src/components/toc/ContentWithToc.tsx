@@ -23,10 +23,10 @@ export default function ContentWithToc({
       </div>
       <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_15rem] xl:grid-cols-[minmax(0,1fr)_17rem] lg:gap-10 lg:items-start">
         <div className="min-w-0">{children}</div>
-        <aside className="hidden lg:block lg:sticky lg:top-[calc(4rem+0.75rem)] lg:self-start lg:z-10 w-full">
+        <aside className="hidden lg:block lg:sticky lg:top-[calc(var(--nav-height)+0.75rem)] lg:self-start lg:z-10 w-full">
           <div
             data-toc-scroll
-            className="theme-bg-card rounded-xl border theme-border p-4 max-h-[calc(100vh-5.25rem)] overflow-y-auto toc-scroll"
+            className="theme-bg-card rounded-xl border theme-border p-4 max-h-[calc(100dvh-var(--nav-height)-1.25rem)] overflow-y-auto toc-scroll"
           >
             <TableOfContents items={items} />
           </div>

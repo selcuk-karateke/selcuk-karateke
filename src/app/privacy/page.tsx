@@ -3,7 +3,7 @@ import { profileContact } from '@/data/profile'
 
 export default function Privacy() {
     return (
-        <div className="min-h-screen theme-bg py-12">
+        <div className="min-h-page theme-bg py-12">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <Breadcrumb />
                 <div className="theme-bg-card rounded-lg p-8">

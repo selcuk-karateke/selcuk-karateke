@@ -24,7 +24,7 @@ export default async function ProjectDetailPage({
   const category = PROJECT_CATEGORIES[project.category as ProjectCategory]
 
   return (
-    <div className="min-h-screen theme-bg">
+    <div className="min-h-page theme-bg">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <Link
           href="/projects"

@@ -36,7 +36,7 @@ function SignInForm() {
   }
 
   return (
-    <div className="min-h-screen theme-bg flex items-center justify-center px-4">
+    <div className="min-h-page theme-bg flex items-center justify-center px-4">
       <div className="w-full max-w-md theme-bg-card border theme-border rounded-xl p-8 shadow-lg">
         <h1 className="text-2xl font-bold theme-text mb-2">Anmelden</h1>
         <p className="theme-text-secondary text-sm mb-6">Admin-Bereich des Portfolios</p>
@@ -94,7 +94,7 @@ function SignInForm() {
 
 export default function SignInPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen theme-bg" />}>
+    <Suspense fallback={<div className="min-h-page theme-bg" />}>
       <SignInForm />
     </Suspense>
   )

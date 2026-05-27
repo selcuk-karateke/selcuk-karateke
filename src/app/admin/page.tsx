@@ -46,7 +46,7 @@ export default function AdminDashboard() {
 
     if (status === 'loading') {
         return (
-            <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+            <div className="min-h-page bg-gray-50 flex items-center justify-center">
                 <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
             </div>
         )
@@ -54,7 +54,7 @@ export default function AdminDashboard() {
 
     if (!session) {
         return (
-            <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+            <div className="min-h-page bg-gray-50 flex items-center justify-center">
                 <div className="text-center">
                     <h1 className="text-2xl font-bold text-gray-900 mb-4">Zugriff verweigert</h1>
                     <p className="text-gray-600 mb-6">Sie müssen angemeldet sein, um auf das Admin-Panel zuzugreifen.</p>
@@ -70,7 +70,7 @@ export default function AdminDashboard() {
     }
 
     return (
-        <div className="min-h-screen bg-gray-50 py-12">
+        <div className="min-h-page bg-gray-50 py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}

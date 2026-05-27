@@ -7,7 +7,7 @@ import { ArrowLeftIcon } from '@heroicons/react/24/outline'
 
 export default function LeadershipPage() {
     return (
-        <div className="min-h-screen theme-bg">
+        <div className="min-h-page theme-bg">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <Link
                     href="/projects"

@@ -10,7 +10,7 @@ export default function LegacySystemsPage() {
   )
 
   return (
-    <div className="min-h-screen theme-bg">
+    <div className="min-h-page theme-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="mb-10">
           <h1 className="text-4xl md:text-5xl font-bold theme-text mb-4">Schulprojekt-Archiv</h1>

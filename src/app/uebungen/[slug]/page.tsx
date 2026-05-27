@@ -19,7 +19,7 @@ export default async function UebungPage({ params }: { params: Promise<{ slug: s
 
   if (hasBuiltinExercise(slug)) {
     return (
-      <div className="min-h-screen theme-bg">
+      <div className="min-h-page theme-bg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <header className="mb-8">
             <h1 className="text-4xl font-bold theme-text">{meta.title}</h1>
@@ -35,7 +35,7 @@ export default async function UebungPage({ params }: { params: Promise<{ slug: s
   const rawHtml = loadExerciseRawHtml(slug)
 
   return (
-    <div className="min-h-screen theme-bg">
+    <div className="min-h-page theme-bg">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <Link href="/uebungen" className="text-sm theme-primary hover:opacity-80">
           ← Alle Übungen

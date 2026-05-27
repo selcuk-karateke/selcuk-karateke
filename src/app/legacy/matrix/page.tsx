@@ -3,7 +3,7 @@ import { legacyRoutes } from '@/data/legacyRoutes'
 
 export default function LegacyMatrixPage() {
   return (
-    <div className="min-h-screen theme-bg">
+    <div className="min-h-page theme-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="mb-8">
           <Link href="/legacy" className="text-sm theme-primary hover:opacity-80">

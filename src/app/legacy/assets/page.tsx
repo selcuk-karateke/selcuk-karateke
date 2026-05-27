@@ -3,7 +3,7 @@ import { legacyAssetScopes } from '@/data/legacyAssets'
 
 export default function LegacyAssetsPage() {
   return (
-    <div className="min-h-screen theme-bg">
+    <div className="min-h-page theme-bg">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="mb-8">
           <Link href="/legacy" className="text-sm theme-primary hover:opacity-80">

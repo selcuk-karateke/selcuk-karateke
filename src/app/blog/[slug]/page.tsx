@@ -98,7 +98,7 @@ export default function BlogPost() {
 
     if (loading) {
         return (
-            <div className="min-h-screen theme-bg py-12">
+            <div className="min-h-page theme-bg py-12">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center">
                         <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[var(--color-primary)] mx-auto" />
@@ -111,7 +111,7 @@ export default function BlogPost() {
 
     if (!post) {
         return (
-            <div className="min-h-screen theme-bg py-12">
+            <div className="min-h-page theme-bg py-12">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center">
                         <h1 className="text-4xl font-bold theme-text mb-4">Artikel nicht gefunden</h1>
@@ -131,7 +131,7 @@ export default function BlogPost() {
     }
 
     return (
-        <div className="min-h-screen theme-bg py-12">
+        <div className="min-h-page theme-bg py-12">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.article
                     initial={{ opacity: 0, y: 50 }}

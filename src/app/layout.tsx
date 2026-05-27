@@ -33,7 +33,7 @@ export default async function RootLayout({ children }: LayoutProps) {
 
   return (
     <html lang={locale}>
-      <body className={`min-h-screen theme-bg overflow-x-clip ${inter.className}`}>
+      <body className={`min-h-page theme-bg overflow-x-clip ${inter.className}`}>
         <ClientAppShell locale={locale} messages={messages}>
           {children}
         </ClientAppShell>

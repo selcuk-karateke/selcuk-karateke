@@ -20,13 +20,16 @@ const CERT_IDS = [
 
 const MODULE_KEYS = ['business', 'communication', 'itSystems', 'networks', 'appDev', 'projectWork'] as const
 
-export default function About() {
+export default function About({ compactTop = false }: { compactTop?: boolean }) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
   const t = useTranslations('about')
 
   return (
-    <section ref={ref} className="py-20 theme-bg relative overflow-hidden">
+    <section
+      ref={ref}
+      className={`${compactTop ? 'pt-8 pb-20' : 'py-20'} theme-bg relative overflow-hidden`}
+    >
       <div className="absolute inset-0">
         <div className="absolute top-10 right-10 w-64 h-64 bg-brand-secondary/10 rounded-full blur-3xl floating" />
         <div className="absolute bottom-10 left-10 w-80 h-80 bg-brand-primary/10 rounded-full blur-3xl floating-delay-3" />

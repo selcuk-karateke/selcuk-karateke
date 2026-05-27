@@ -10,7 +10,7 @@ export default async function EducationIndexPage() {
   const toc = buildEducationCatalogToc()
 
   return (
-    <div className="min-h-screen theme-bg">
+    <div className="min-h-page theme-bg">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h1 className="text-4xl font-bold theme-text mb-3">{t('title')}</h1>
         <p className="theme-text-secondary mb-10">{t('subtitle')}</p>

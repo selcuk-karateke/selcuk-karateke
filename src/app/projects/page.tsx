@@ -37,7 +37,7 @@ export default function ProjectsPage() {
   }, [filter])
 
   return (
-    <div className="min-h-screen theme-bg">
+    <div className="min-h-page theme-bg">
       <div className="container mx-auto px-4 py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
